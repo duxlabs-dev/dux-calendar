@@ -37,6 +37,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version-file: ./core/go.mod
+          cache-dependency-path: core/go.sum
 
       - name: Format check
         run: |
@@ -68,6 +69,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version-file: ./core/go.mod
+          cache-dependency-path: core/go.sum
 
       - name: Run tests
         run: go test -v ./...
@@ -97,6 +99,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version-file: ./core/go.mod
+          cache-dependency-path: core/go.sum
 
       - name: Build
         run: make build
