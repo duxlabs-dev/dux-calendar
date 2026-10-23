@@ -11,8 +11,8 @@ Built with [Quickshell](https://quickshell.org/) and [Go](https://go.dev/)
 
 [![GitHub stars](https://img.shields.io/github/stars/duxlabs-dev/dux-calendar?style=for-the-badge&labelColor=101418&color=ffd700)](https://github.com/duxlabs-dev/dux-calendar/stargazers)
 [![GitHub License](https://img.shields.io/github/license/duxlabs-dev/dux-calendar?style=for-the-badge&labelColor=101418&color=b9c8da)](https://github.com/duxlabs-dev/dux-calendar/blob/master/LICENSE)
-[![AUR version (bin)](<https://img.shields.io/aur/version/dankcalendar-bin?style=for-the-badge&labelColor=101418&color=9ccbfb&label=AUR%20(bin)>)](https://aur.archlinux.org/packages/dankcalendar-bin)
-[![AUR version (git)](<https://img.shields.io/aur/version/dankcalendar-git?style=for-the-badge&labelColor=101418&color=9ccbfb&label=AUR%20(git)>)](https://aur.archlinux.org/packages/dankcalendar-git)
+[![AUR version (bin)](<https://img.shields.io/aur/version/dux-calendar-bin?style=for-the-badge&labelColor=101418&color=9ccbfb&label=AUR%20(bin)>)](https://aur.archlinux.org/packages/dux-calendar-bin)
+[![AUR version (git)](<https://img.shields.io/aur/version/dux-calendar-git?style=for-the-badge&labelColor=101418&color=9ccbfb&label=AUR%20(git)>)](https://aur.archlinux.org/packages/dux-calendar-git)
 [![Flathub version](https://img.shields.io/flathub/v/dev.duxlabs.calendar?style=for-the-badge&labelColor=101418&color=9ccbfb&label=Flathub)](https://flathub.org/apps/dev.duxlabs.calendar)
 [![Discord](https://img.shields.io/badge/discord-join?style=for-the-badge&logo=discord&logoColor=ffffff&label=discord&labelColor=101418&color=5865f2)](https://discord.gg/ppWTpKmPgT)
 [![Ko-Fi donate](https://img.shields.io/badge/donate-kofi?style=for-the-badge&logo=ko-fi&logoColor=ffffff&label=ko-fi&labelColor=101418&color=f16061&link=https%3A%2F%2Fko-fi.com%2Fduxlabs)](https://ko-fi.com/duxlabs)
@@ -67,10 +67,10 @@ flatpak run dev.duxlabs.calendar
 
 ```bash
 # Prebuilt binary
-yay -S dankcalendar-bin
+yay -S dux-calendar-bin
 
 # Build from latest git
-yay -S dankcalendar-git
+yay -S dux-calendar-git
 ```
 
 ### From Source
