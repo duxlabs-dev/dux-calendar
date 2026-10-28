@@ -12,7 +12,7 @@ SettingsRow {
     property alias minButtonWidth: buttonGroup.minButtonWidth
     property alias checkEnabled: buttonGroup.checkEnabled
 
-    readonly property bool compact: width - buttonGroup.width - SettingsMetrics.rowPaddingH * 2 - SettingsMetrics.rowContentSpacing < SettingsMetrics.buttonGroupCompactThreshold
+    readonly property bool compact: width - buttonGroup.naturalWidth - SettingsMetrics.rowPaddingH * 2 - SettingsMetrics.rowContentSpacing < SettingsMetrics.buttonGroupCompactThreshold
 
     signal selectionChanged(int index, bool selected)
 
