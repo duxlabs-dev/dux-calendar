@@ -12,7 +12,7 @@
     "%1 events selected": "تم تحديد %1 من الأحداث"
   },
   "%1 overlapping events": {
-    "%1 overlapping events": ""
+    "%1 overlapping events": "%1 من الأحداث المتداخلة"
   },
   "%1 selected": {
     "%1 selected": "تم تحديد %1"
@@ -75,7 +75,7 @@
     "1 minute": "1 دقيقة"
   },
   "1 overlapping event": {
-    "1 overlapping event": ""
+    "1 overlapping event": "حدث متداخل واحد"
   },
   "1 week before": {
     "1 week before": "قبل اسبوع"
@@ -201,7 +201,7 @@
     "Add title": "إضافة عنوان"
   },
   "Add to calendar": {
-    "Add to calendar": ""
+    "Add to calendar": "إضافة إلى التقويم"
   },
   "Adding…": {
     "Adding…": "جاري الإضافة…"
@@ -242,6 +242,9 @@
   "Already in %1": {
     "Already in %1": "موجود بالفعل في %1"
   },
+  "Also in these calendars": {
+    "Also in these calendars": ""
+  },
   "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
     "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: عودة • F1/I: معلومات الملف • F10: مساعدة • Esc: إغلاق"
   },
@@ -265,6 +268,9 @@
   },
   "Apple iCloud calendars via app-specific password.": {
     "Apple iCloud calendars via app-specific password.": "تقاويم Apple iCloud عبر كلمة مرور خاصة بالتطبيق."
+  },
+  "Apply and restart": {
+    "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "يرجى الموافقة على الوصول في متصفحك. ستعود النافذة إلى هنا تلقائياً عندما يرسل %1 رمز المصادقة إلينا."
@@ -307,6 +313,9 @@
   },
   "Begin setup": {
     "Begin setup": "بدء الإعداد"
+  },
+  "Busy": {
+    "Busy": ""
   },
   "Calendar": {
     "Calendar": "التقويم"
@@ -390,7 +399,7 @@
     "Coming soon": "قريباً"
   },
   "Community": {
-    "Community": ""
+    "Community": "المجتمع"
   },
   "Completed": {
     "Completed": "مكتملة"
@@ -402,7 +411,10 @@
     "Confirm delete": "تأكيد الحذف"
   },
   "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": "تستخدم التعارضات الأحداث التي تتم مزامنتها حاليًا مع DankCalendar. لا يزال بإمكانك استيراد حدث متداخل."
+  },
+  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "ربط"
@@ -471,7 +483,7 @@
     "Could not read that file.": "تعذر قراءة هذا الملف."
   },
   "Couldn't reconnect. Add the account again to sign in.": {
-    "Couldn't reconnect. Add the account again to sign in.": ""
+    "Couldn't reconnect. Add the account again to sign in.": "تعذر إعادة الاتصال. أضف الحساب مرة أخرى لتسجيل الدخول."
   },
   "Couldn't update task": {
     "Couldn't update task": "تعذر تحديث المهمة"
@@ -556,6 +568,9 @@
   },
   "Decrease": {
     "Decrease": "نقصان"
+  },
+  "Default": {
+    "Default": ""
   },
   "Default calendar": {
     "Default calendar": "التقويم الافتراضي"
@@ -644,6 +659,9 @@
   "Display ISO week numbers in month view.": {
     "Display ISO week numbers in month view.": "عرض أرقام أسابيع ISO في عرض الشهر."
   },
+  "Display family": {
+    "Display family": ""
+  },
   "Display name (optional)": {
     "Display name (optional)": "اسم العرض (اختياري)"
   },
@@ -683,6 +701,18 @@
   "Duration": {
     "Duration": "المدة"
   },
+  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
+    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
+  },
+  "Dux Calendar will close and reopen with the new zoom.": {
+    "Dux Calendar will close and reopen with the new zoom.": ""
+  },
+  "Dux Shell not detected — using the %1 preset.": {
+    "Dux Shell not detected — using the %1 preset.": ""
+  },
+  "Dux Shell not detected, using %1.": {
+    "Dux Shell not detected, using %1.": ""
+  },
   "Edit": {
     "Edit": "تعديل"
   },
@@ -702,7 +732,7 @@
     "Enable sync": "تفعيل المزامنة"
   },
   "End": {
-    "End": ""
+    "End": "النهاية"
   },
   "Ends": {
     "Ends": "ينتهي"
@@ -749,6 +779,9 @@
   "F1/I: Toggle • F10: Help": {
     "F1/I: Toggle • F10: Help": "F1/I: تبديل • F10: مساعدة"
   },
+  "Family": {
+    "Family": ""
+  },
   "Feed URL": {
     "Feed URL": "رابط الاشتراك"
   },
@@ -776,14 +809,20 @@
   "Follow DankMaterialShell colors, falling back to a preset.": {
     "Follow DankMaterialShell colors, falling back to a preset.": "اتبع ألوان DankMaterialShell، مع العودة إلى إعداد مسبق في حال عدم توفرها."
   },
+  "Follow Dux Shell colors, falling back to a preset.": {
+    "Follow Dux Shell colors, falling back to a preset.": ""
+  },
   "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+    "Follow colors generated by Matugen.": "اتبع الألوان التي تم إنشاؤها بواسطة Matugen."
   },
   "Follow language": {
     "Follow language": "اتبع اللغة"
   },
   "Following the system color scheme (currently %1).": {
     "Following the system color scheme (currently %1).": "متابعة نظام الألوان الخاص بالنظام (حاليًا %1)."
+  },
+  "Font source": {
+    "Font source": ""
   },
   "General": {
     "General": "عام"
@@ -878,6 +917,9 @@
   "Launch Dank Calendar in the background when you log in.": {
     "Launch Dank Calendar in the background when you log in.": "تشغيل Dank Calendar في الخلفية عند تسجيل الدخول."
   },
+  "Launch Dux Calendar in the background when you log in.": {
+    "Launch Dux Calendar in the background when you log in.": ""
+  },
   "Length used when creating events.": {
     "Length used when creating events.": "المدة المستخدمة عند إنشاء الأحداث."
   },
@@ -921,10 +963,10 @@
     "Marked as not done": "تَمّ تعيينها كغير منجزة"
   },
   "Matugen": {
-    "Matugen": ""
+    "Matugen": "Matugen"
   },
   "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
+    "Matugen theme missing or invalid — using the %1 preset.": "سمة Matugen مفقودة أو غير صالحة - يتم استخدام الإعداد المسبق %1."
   },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "الحد الأقصى لأسطر العنوان لكل حدث في عرض الشهر."
@@ -950,6 +992,9 @@
   "Menu": {
     "Menu": "قائمة"
   },
+  "Merge duplicate events": {
+    "Merge duplicate events": ""
+  },
   "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
     "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "لم يتم منح صلاحية الوصول إلى Microsoft To Do. أعد الاتصال بهذا الحساب لمزامنة المهام."
   },
@@ -964,6 +1009,9 @@
   },
   "Modified": {
     "Modified": "مُعدَّل"
+  },
+  "Monospace family": {
+    "Monospace family": ""
   },
   "Month": {
     "Month": "الشهر"
@@ -1101,7 +1149,7 @@
     "No matching events": "لا توجد أحداث مطابقة"
   },
   "No overlapping busy events": {
-    "No overlapping busy events": ""
+    "No overlapping busy events": "لا توجد أحداث مشغولة متداخلة"
   },
   "No task list available": {
     "No task list available": "لا توجد قائمة مهام متاحة"
@@ -1143,7 +1191,7 @@
     "Off": "إيقاف"
   },
   "Off lets the compositor decorate windows. Open windows update when reopened.": {
-    "Off lets the compositor decorate windows. Open windows update when reopened.": ""
+    "Off lets the compositor decorate windows. Open windows update when reopened.": "بإيقاف التشغيل يسمح للمركب بتزيين النوافذ. يتم تحديث النوافذ المفتوحة عند إعادة فتحها."
   },
   "Offline": {
     "Offline": "غير متصل"
@@ -1173,7 +1221,7 @@
     "Open or create event": "فتح الحدث أو إنشاؤه"
   },
   "Open the existing meeting to handle this reply or cancellation.": {
-    "Open the existing meeting to handle this reply or cancellation.": ""
+    "Open the existing meeting to handle this reply or cancellation.": "افتح الاجتماع الحالي للتعامل مع هذا الرد أو الإلغاء."
   },
   "Order": {
     "Order": "ترتيب"
@@ -1329,7 +1377,7 @@
     "Reconnect": "إعادة الاتصال"
   },
   "Recurring event · conflicts checked through %1": {
-    "Recurring event · conflicts checked through %1": ""
+    "Recurring event · conflicts checked through %1": "حدث متكرر · تم فحص التعارضات حتى %1"
   },
   "Recurring tasks are managed in Google Tasks.": {
     "Recurring tasks are managed in Google Tasks.": "يتم إدارة المهام المتكررة في مهام Google."
@@ -1370,8 +1418,14 @@
   "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
     "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "يؤدي هذا إلى إزالة هذا الحساب والتقاويم والأحداث الخاصة به من Dank Calendar. لن يتم حذف أي شيء من موفر الخدمة."
   },
+  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
+  },
   "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
     "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "يؤدي هذا إلى إزالة هذا التقويم والأحداث الخاصة به من Dank Calendar. إذا كان موفر الخدمة لا يزال يقدمه، فستتم استعادته في المزامنة القادمة."
+  },
+  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "إزالة…"
@@ -1412,6 +1466,9 @@
   "Reset to global": {
     "Reset to global": "إعادة التعيين إلى الوضع العام"
   },
+  "Restart required": {
+    "Restart required": ""
+  },
   "Ripple effects": {
     "Ripple effects": "تأثيرات التموج"
   },
@@ -1423,6 +1480,9 @@
   },
   "Scale": {
     "Scale": "مقياس"
+  },
+  "Scales the whole app. Takes effect after a restart.": {
+    "Scales the whole app. Takes effect after a restart.": ""
   },
   "Search": {
     "Search": "بحث"
@@ -1472,6 +1532,9 @@
   "Server URL": {
     "Server URL": "رابط خادم"
   },
+  "Set by QT_SCALE_FACTOR.": {
+    "Set by QT_SCALE_FACTOR.": ""
+  },
   "Settings": {
     "Settings": "الإعدادات"
   },
@@ -1484,11 +1547,17 @@
   "Show Dank Calendar in the system tray.": {
     "Show Dank Calendar in the system tray.": "إظهار Dank Calendar في منطقة الإشعارات."
   },
+  "Show Dux Calendar in the system tray.": {
+    "Show Dux Calendar in the system tray.": ""
+  },
   "Show all events in month view": {
     "Show all events in month view": "إظهار جميع الأحداث في عرض الشهر"
   },
   "Show all-day reminders": {
     "Show all-day reminders": "عرض التذكيرات طوال اليوم"
+  },
+  "Show an event that appears in several calendars once, with dots for the other calendars.": {
+    "Show an event that appears in several calendars once, with dots for the other calendars.": ""
   },
   "Show calendar": {
     "Show calendar": "إظهار التقويم"
@@ -1506,7 +1575,7 @@
     "Show week numbers": "عرض أرقام الأسابيع"
   },
   "Showing the first 20 overlaps.": {
-    "Showing the first 20 overlaps.": ""
+    "Showing the first 20 overlaps.": "عرض أول 20 تداخلاً."
   },
   "Sidebar": {
     "Sidebar": "الشريط الجانبي"
@@ -1517,8 +1586,14 @@
   "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
     "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "سجّل الدخول باستخدام جوجل في متصفحك وقد انتهيت — لا حاجة للإعداد. يقوم تقويم Dank بمزامنة تقويماتك وفعالياتك ومهامك."
   },
+  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
+    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
+  },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
     "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "سجّل الدخول باستخدام مايكروسوفت في متصفحك وقد انتهيت — لا حاجة للإعداد. يقوم تقويم Dank بمزامنة تقويمات Outlook الخاصة بك وفعالياتك ومهامك."
+  },
+  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "سجل الدخول باستخدام Apple ID الخاص بك وكلمة مرور خاصة بالتطبيق. لن تعمل كلمات مرور Apple ID العادية."
@@ -1557,7 +1632,7 @@
     "Square": "مربع"
   },
   "Start": {
-    "Start": ""
+    "Start": "البداية"
   },
   "Start at login": {
     "Start at login": "البدء عند تسجيل الدخول"
@@ -1590,7 +1665,10 @@
     "Subscribing…": "جاري الاشتراك…"
   },
   "Support Dank Linux": {
-    "Support Dank Linux": ""
+    "Support Dank Linux": "ادعم Dank Linux"
+  },
+  "Support Dux Labs": {
+    "Support Dux Labs": ""
   },
   "Sync interval": {
     "Sync interval": "معدل المزامنة"
@@ -1603,6 +1681,12 @@
   },
   "Synced as \"%1\". The name only changes in Dank Calendar.": {
     "Synced as \"%1\". The name only changes in Dank Calendar.": "تمت المزامنة باسم \"%1\". يتغير الاسم في Dank Calendar فقط."
+  },
+  "Synced as \"%1\". The name only changes in Dux Calendar.": {
+    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  },
+  "System": {
+    "System": ""
   },
   "System default": {
     "System default": "إعدادات النظام الافتراضية"
@@ -1668,7 +1752,7 @@
     "Time format": "تنسيق الوقت"
   },
   "Title bars": {
-    "Title bars": ""
+    "Title bars": "أشرطة العنوان"
   },
   "Title is required": {
     "Title is required": "العنوان مطلوب"
@@ -1739,8 +1823,11 @@
   "Using DankMaterialShell dynamic colors.": {
     "Using DankMaterialShell dynamic colors.": "يتم استخدام ألوان DankMaterialShell الديناميكية."
   },
+  "Using Dux Shell dynamic colors.": {
+    "Using Dux Shell dynamic colors.": ""
+  },
   "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+    "Using Matugen colors.": "استخدام ألوان Matugen."
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "تحقق من أن إشعارات سطح المكتب تعمل."
@@ -1791,7 +1878,7 @@
     "When all-day event reminders fire.": "وقت انطلاق تذكيرات الأحداث الممتدة طوال اليوم."
   },
   "Windows": {
-    "Windows": ""
+    "Windows": "النوافذ"
   },
   "Yearly": {
     "Yearly": "سنويًا"
@@ -1807,6 +1894,9 @@
   },
   "Your response": {
     "Your response": "استجابتك"
+  },
+  "Zoom": {
+    "Zoom": ""
   },
   "all day": {
     "all day": "طوال اليوم"
