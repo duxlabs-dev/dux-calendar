@@ -9,13 +9,13 @@
     "%1 appointments fall outside core hours": "Встреч вне рабочего времени: %1"
   },
   "%1 events selected": {
-    "%1 events selected": ""
+    "%1 events selected": "Выбрано событий: %1"
   },
   "%1 overlapping events": {
-    "%1 overlapping events": ""
+    "%1 overlapping events": "Пересекающихся событий: %1"
   },
   "%1 selected": {
-    "%1 selected": ""
+    "%1 selected": "Выбрано: %1"
   },
   "%1 times": {
     "%1 times": "Раз: %1"
@@ -51,10 +51,10 @@
     "+%1 more": "ещё %1"
   },
   "+1 day": {
-    "+1 day": ""
+    "+1 day": "+1 день"
   },
   "+1 week": {
-    "+1 week": ""
+    "+1 week": "+1 неделя"
   },
   "1 appointment falls outside core hours": {
     "1 appointment falls outside core hours": "1 встреча выпадает за пределы рабочего времени"
@@ -75,7 +75,7 @@
     "1 minute": "1 минута"
   },
   "1 overlapping event": {
-    "1 overlapping event": ""
+    "1 overlapping event": "1 пересекающееся событие"
   },
   "1 week before": {
     "1 week before": "За 1 неделю"
@@ -138,7 +138,7 @@
     "5 minutes before": "За 5 минут"
   },
   "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": {
-    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": ""
+    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": "Значение 50 использует формы Material. Меньшие значения уменьшают скругление; большие — увеличивают."
   },
   "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": {
     "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">Лицензия MIT</a>"
@@ -162,7 +162,7 @@
     "Account connected": "Аккаунт подключён"
   },
   "Account options": {
-    "Account options": ""
+    "Account options": "Параметры учетной записи"
   },
   "Account problem — click for options": {
     "Account problem — click for options": "Проблема с аккаунтом — нажмите для вариантов"
@@ -171,7 +171,7 @@
     "Accounts": "Аккаунты"
   },
   "Actions apply to the whole selection": {
-    "Actions apply to the whole selection": ""
+    "Actions apply to the whole selection": "Действия применяются ко всему выбранному"
   },
   "Add": {
     "Add": "Добавить"
@@ -189,7 +189,7 @@
     "Add description": "Добавить описание"
   },
   "Add or remove an event from the selection": {
-    "Add or remove an event from the selection": ""
+    "Add or remove an event from the selection": "Добавить событие в выбор или удалить его из выбора"
   },
   "Add reminder": {
     "Add reminder": "Добавить напоминание"
@@ -201,7 +201,7 @@
     "Add title": "Добавить название"
   },
   "Add to calendar": {
-    "Add to calendar": ""
+    "Add to calendar": "Добавить в календарь"
   },
   "Adding…": {
     "Adding…": "Добавление…"
@@ -228,10 +228,10 @@
     "All done": "Всё выполнено"
   },
   "All events": {
-    "All events": ""
+    "All events": "Все события"
   },
   "All-day events": {
-    "All-day events": ""
+    "All-day events": "События на весь день"
   },
   "All-day reminder time": {
     "All-day reminder time": "Время напоминания на весь день"
@@ -240,7 +240,10 @@
     "All-day reminder timing": "Время напоминания на весь день"
   },
   "Already in %1": {
-    "Already in %1": ""
+    "Already in %1": "Уже в %1"
+  },
+  "Also in these calendars": {
+    "Also in these calendars": ""
   },
   "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
     "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: Назад • F1/I: Сведения • F10: Справка • Esc: Закрыть"
@@ -252,7 +255,7 @@
     "Always use the light theme.": "Всегда использовать светлую тему."
   },
   "App": {
-    "App": ""
+    "App": "Приложение"
   },
   "App-specific password": {
     "App-specific password": "Пароль приложения"
@@ -265,6 +268,9 @@
   },
   "Apple iCloud calendars via app-specific password.": {
     "Apple iCloud calendars via app-specific password.": "Календари Apple iCloud через пароль приложения."
+  },
+  "Apply and restart": {
+    "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "Подтвердите доступ в браузере. Окно вернётся сюда автоматически, когда %1 отправит код авторизации."
@@ -303,10 +309,13 @@
     "Backend not connected.": "Сервер не подключён."
   },
   "Balanced": {
-    "Balanced": ""
+    "Balanced": "Сбалансированная"
   },
   "Begin setup": {
     "Begin setup": "Начать настройку"
+  },
+  "Busy": {
+    "Busy": ""
   },
   "Calendar": {
     "Calendar": "Календарь"
@@ -315,16 +324,16 @@
     "Calendar Settings": "Настройки календаря"
   },
   "Calendar file": {
-    "Calendar file": ""
+    "Calendar file": "Файл календаря"
   },
   "Calendar name": {
     "Calendar name": "Название календаря"
   },
   "Calendar options": {
-    "Calendar options": ""
+    "Calendar options": "Параметры календаря"
   },
   "Calendar preselected when creating events.": {
-    "Calendar preselected when creating events.": ""
+    "Calendar preselected when creating events.": "Календарь, предварительно выбранный при создании событий."
   },
   "Calendars": {
     "Calendars": "Календари"
@@ -351,7 +360,7 @@
     "Choose calendar directory": "Выберите папку календаря"
   },
   "Clear": {
-    "Clear": ""
+    "Clear": "Очистить"
   },
   "Clear event selection": {
     "Clear event selection": "Снять выделение события"
@@ -366,7 +375,7 @@
     "Client Secret": "Секрет клиента"
   },
   "Close": {
-    "Close": ""
+    "Close": "Закрыть"
   },
   "Close behavior": {
     "Close behavior": "Поведение при закрытии"
@@ -378,7 +387,7 @@
     "Collapse or expand a section": "Свернуть или развернуть раздел"
   },
   "Color": {
-    "Color": ""
+    "Color": "Цвет"
   },
   "Color source": {
     "Color source": "Источник цвета"
@@ -390,7 +399,7 @@
     "Coming soon": "Скоро"
   },
   "Community": {
-    "Community": ""
+    "Community": "Сообщество"
   },
   "Completed": {
     "Completed": "Завершённые"
@@ -402,7 +411,10 @@
     "Confirm delete": "Подтвердить удаление"
   },
   "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": "Конфликты определяются по событиям, синхронизированным с DankCalendar на данный момент. Вы все равно можете импортировать пересекающееся событие."
+  },
+  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "Подключить"
@@ -411,10 +423,10 @@
     "Connect %1": "Подключить %1"
   },
   "Connect Google Account": {
-    "Connect Google Account": ""
+    "Connect Google Account": "Подключить аккаунт Google"
   },
   "Connect Microsoft Account": {
-    "Connect Microsoft Account": ""
+    "Connect Microsoft Account": "Подключить аккаунт Microsoft"
   },
   "Connect any CalDAV-compatible server.": {
     "Connect any CalDAV-compatible server.": "Подключите любой CalDAV-совместимый сервер."
@@ -426,7 +438,7 @@
     "Connected calendar providers.": "Подключённые провайдеры календарей."
   },
   "Connected providers": {
-    "Connected providers": ""
+    "Connected providers": "Подключенные поставщики"
   },
   "Connecting…": {
     "Connecting…": "Подключение…"
@@ -435,22 +447,22 @@
     "Continue": "Продолжить"
   },
   "Copied %1 events": {
-    "Copied %1 events": ""
+    "Copied %1 events": "Скопировано событий: %1"
   },
   "Copied 1 event": {
-    "Copied 1 event": ""
+    "Copied 1 event": "Скопировано 1 событие"
   },
   "Copied to clipboard": {
     "Copied to clipboard": "Скопировано в буфер обмена"
   },
   "Copy": {
-    "Copy": ""
+    "Copy": "Копировать"
   },
   "Copy %1 events": {
-    "Copy %1 events": ""
+    "Copy %1 events": "Копировать %1 событий"
   },
   "Copy event": {
-    "Copy event": ""
+    "Copy event": "Копировать событие"
   },
   "Copy link": {
     "Copy link": "Копировать ссылку"
@@ -459,7 +471,7 @@
     "Copy path": "Копировать путь"
   },
   "Copy selected events": {
-    "Copy selected events": ""
+    "Copy selected events": "Копировать выбранные события"
   },
   "Core hours": {
     "Core hours": "Рабочие часы"
@@ -471,7 +483,7 @@
     "Could not read that file.": "Не удалось прочитать файл."
   },
   "Couldn't reconnect. Add the account again to sign in.": {
-    "Couldn't reconnect. Add the account again to sign in.": ""
+    "Couldn't reconnect. Add the account again to sign in.": "Не удалось переподключиться. Добавьте аккаунт снова, чтобы войти."
   },
   "Couldn't update task": {
     "Couldn't update task": "Не удалось обновить задачу"
@@ -483,13 +495,13 @@
     "Create event": "Создать событие"
   },
   "Created %1 events": {
-    "Created %1 events": ""
+    "Created %1 events": "Создано событий: %1"
   },
   "Created %1 of %2 events": {
-    "Created %1 of %2 events": ""
+    "Created %1 of %2 events": "Создано %1 из %2 событий"
   },
   "Created 1 event": {
-    "Created 1 event": ""
+    "Created 1 event": "Создано 1 событие"
   },
   "Credentials stay on this machine": {
     "Credentials stay on this machine": "Учётные данные остаются на этом устройстве"
@@ -498,19 +510,19 @@
     "Custom": "Пользовательская"
   },
   "Cut": {
-    "Cut": ""
+    "Cut": "Вырезать"
   },
   "Cut %1 events": {
-    "Cut %1 events": ""
+    "Cut %1 events": "Вырезать %1 событий"
   },
   "Cut 1 event": {
-    "Cut 1 event": ""
+    "Cut 1 event": "Вырезать 1 событие"
   },
   "Cut event": {
-    "Cut event": ""
+    "Cut event": "Вырезать событие"
   },
   "Cut selected events": {
-    "Cut selected events": ""
+    "Cut selected events": "Вырезать выбранные события"
   },
   "DMS dynamic": {
     "DMS dynamic": "Динамические DMS"
@@ -537,16 +549,16 @@
     "Dark": "Тёмная"
   },
   "Date": {
-    "Date": ""
+    "Date": "Дата"
   },
   "Date and time locale": {
-    "Date and time locale": ""
+    "Date and time locale": "Региональные стандарты даты и времени"
   },
   "Day": {
     "Day": "День"
   },
   "Day actions": {
-    "Day actions": ""
+    "Day actions": "Действия для дня"
   },
   "Day view": {
     "Day view": "Режим дня"
@@ -555,10 +567,13 @@
     "Decline": "Отклонить"
   },
   "Decrease": {
-    "Decrease": ""
+    "Decrease": "Уменьшить"
+  },
+  "Default": {
+    "Default": ""
   },
   "Default calendar": {
-    "Default calendar": ""
+    "Default calendar": "Календарь по умолчанию"
   },
   "Default event duration": {
     "Default event duration": "Длительность события по умолчанию"
@@ -576,40 +591,40 @@
     "Delete \"%1\"?": "Удалить «%1»?"
   },
   "Delete %1 events": {
-    "Delete %1 events": ""
+    "Delete %1 events": "Удалить %1 событий"
   },
   "Delete %1 events?": {
-    "Delete %1 events?": ""
+    "Delete %1 events?": "Удалить %1 событий?"
   },
   "Delete %1 events…": {
-    "Delete %1 events…": ""
+    "Delete %1 events…": "Удалить %1 событий…"
   },
   "Delete event": {
-    "Delete event": ""
+    "Delete event": "Удалить событие"
   },
   "Delete event?": {
-    "Delete event?": ""
+    "Delete event?": "Удалить событие?"
   },
   "Delete event…": {
-    "Delete event…": ""
+    "Delete event…": "Удалить событие…"
   },
   "Delete occurrence": {
     "Delete occurrence": "Удалить только это событие"
   },
   "Delete selected events": {
-    "Delete selected events": ""
+    "Delete selected events": "Удалить выбранные события"
   },
   "Delete series": {
     "Delete series": "Удалить всю серию"
   },
   "Deleted %1 events": {
-    "Deleted %1 events": ""
+    "Deleted %1 events": "Удалено событий: %1"
   },
   "Deleted %1 of %2 events": {
-    "Deleted %1 of %2 events": ""
+    "Deleted %1 of %2 events": "Удалено %1 из %2 событий"
   },
   "Deleted 1 event": {
-    "Deleted 1 event": ""
+    "Deleted 1 event": "Удалено 1 событие"
   },
   "Delete…": {
     "Delete…": "Удалить…"
@@ -627,7 +642,7 @@
     "Desktop notifications for upcoming events.": "Уведомления на рабочем столе о предстоящих событиях."
   },
   "Diagnostics": {
-    "Diagnostics": ""
+    "Diagnostics": "Диагностика"
   },
   "Directory": {
     "Directory": "Папка"
@@ -636,13 +651,16 @@
     "Disable core hours": "Отключить рабочие часы"
   },
   "Disable sync": {
-    "Disable sync": ""
+    "Disable sync": "Отключить синхронизацию"
   },
   "Dismiss": {
-    "Dismiss": ""
+    "Dismiss": "Закрыть"
   },
   "Display ISO week numbers in month view.": {
     "Display ISO week numbers in month view.": "Отображать номера недель ISO в режиме месяца."
+  },
+  "Display family": {
+    "Display family": ""
   },
   "Display name (optional)": {
     "Display name (optional)": "Отображаемое имя (необязательно)"
@@ -669,22 +687,34 @@
     "Due date": "Срок выполнения"
   },
   "Duplicate": {
-    "Duplicate": ""
+    "Duplicate": "Дублировать"
   },
   "Duplicate %1 events": {
-    "Duplicate %1 events": ""
+    "Duplicate %1 events": "Дублировать %1 событий"
   },
   "Duplicate selected events": {
-    "Duplicate selected events": ""
+    "Duplicate selected events": "Дублировать выбранные события"
   },
   "Duplicate selected events to the next day": {
-    "Duplicate selected events to the next day": ""
+    "Duplicate selected events to the next day": "Дублировать выбранные события на следующий день"
   },
   "Duration": {
-    "Duration": ""
+    "Duration": "Продолжительность"
+  },
+  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
+    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
+  },
+  "Dux Calendar will close and reopen with the new zoom.": {
+    "Dux Calendar will close and reopen with the new zoom.": ""
+  },
+  "Dux Shell not detected — using the %1 preset.": {
+    "Dux Shell not detected — using the %1 preset.": ""
+  },
+  "Dux Shell not detected, using %1.": {
+    "Dux Shell not detected, using %1.": ""
   },
   "Edit": {
-    "Edit": ""
+    "Edit": "Редактировать"
   },
   "Edit event": {
     "Edit event": "Редактировать событие"
@@ -699,10 +729,10 @@
     "Enable reminders": "Включить напоминания"
   },
   "Enable sync": {
-    "Enable sync": ""
+    "Enable sync": "Включить синхронизацию"
   },
   "End": {
-    "End": ""
+    "End": "Конец"
   },
   "Ends": {
     "Ends": "Окончание"
@@ -729,7 +759,7 @@
     "Event": "Событие"
   },
   "Event actions": {
-    "Event actions": ""
+    "Event actions": "Действия для события"
   },
   "Event details": {
     "Event details": "Сведения о событии"
@@ -738,7 +768,7 @@
     "Every": "Каждый"
   },
   "Everything in this file is already on your calendar.": {
-    "Everything in this file is already on your calendar.": ""
+    "Everything in this file is already on your calendar.": "Все события из этого файла уже есть в вашем календаре."
   },
   "Evolution": {
     "Evolution": "Evolution"
@@ -748,6 +778,9 @@
   },
   "F1/I: Toggle • F10: Help": {
     "F1/I: Toggle • F10: Help": "F1/I: Переключить • F10: Справка"
+  },
+  "Family": {
+    "Family": ""
   },
   "Feed URL": {
     "Feed URL": "Ссылка на фид"
@@ -762,7 +795,7 @@
     "Files - %1": "Файлы — %1"
   },
   "First calendar": {
-    "First calendar": ""
+    "First calendar": "Первый календарь"
   },
   "First day shown in week and month views.": {
     "First day shown in week and month views.": "Первый день, отображаемый в режимах недели и месяца."
@@ -771,19 +804,25 @@
     "Focus or leave the sidebar": "Перейти к боковой панели или покинуть её"
   },
   "Focus ring": {
-    "Focus ring": ""
+    "Focus ring": "Индикатор фокуса"
   },
   "Follow DankMaterialShell colors, falling back to a preset.": {
     "Follow DankMaterialShell colors, falling back to a preset.": "Использовать цвета DankMaterialShell с переходом на пресет при отсутствии."
   },
+  "Follow Dux Shell colors, falling back to a preset.": {
+    "Follow Dux Shell colors, falling back to a preset.": ""
+  },
   "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+    "Follow colors generated by Matugen.": "Использовать цвета, сгенерированные Matugen."
   },
   "Follow language": {
-    "Follow language": ""
+    "Follow language": "Как в языке интерфейса"
   },
   "Following the system color scheme (currently %1).": {
     "Following the system color scheme (currently %1).": "Следует системной цветовой схеме (сейчас %1)."
+  },
+  "Font source": {
+    "Font source": ""
   },
   "General": {
     "General": "Общие"
@@ -825,25 +864,25 @@
     "How often accounts are polled for changes.": "Как часто опрашивать аккаунты на наличие изменений."
   },
   "Import": {
-    "Import": ""
+    "Import": "Импорт"
   },
   "Import %1 events": {
-    "Import %1 events": ""
+    "Import %1 events": "Импортировать события (%1)"
   },
   "Import client_secret.json": {
     "Import client_secret.json": "Импортировать client_secret.json"
   },
   "Import events": {
-    "Import events": ""
+    "Import events": "Импорт событий"
   },
   "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": {
     "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": "Импортируйте скачанный при создании клиента файл client_secret_….json или вставьте ID клиента и секрет вручную."
   },
   "Importing...": {
-    "Importing...": ""
+    "Importing...": "Импортирование..."
   },
   "Increase": {
-    "Increase": ""
+    "Increase": "Увеличить"
   },
   "Initial reminder set on new events.": {
     "Initial reminder set on new events.": "Начальное напоминание для новых событий."
@@ -861,22 +900,25 @@
     "Keyboard shortcuts": "Сочетания клавиш"
   },
   "Keyring locked — unlock it to sync": {
-    "Keyring locked — unlock it to sync": ""
+    "Keyring locked — unlock it to sync": "Связка ключей заблокирована — разблокируйте её для синхронизации"
   },
   "Ko-fi": {
     "Ko-fi": "Ko-fi"
   },
   "Language": {
-    "Language": ""
+    "Language": "Язык"
   },
   "Language and time": {
-    "Language and time": ""
+    "Language and time": "Язык и время"
   },
   "Language of the interface.": {
-    "Language of the interface.": ""
+    "Language of the interface.": "Язык интерфейса."
   },
   "Launch Dank Calendar in the background when you log in.": {
     "Launch Dank Calendar in the background when you log in.": "Запускать Dank Calendar в фоне при входе в систему."
+  },
+  "Launch Dux Calendar in the background when you log in.": {
+    "Launch Dux Calendar in the background when you log in.": ""
   },
   "Length used when creating events.": {
     "Length used when creating events.": "Длительность, используемая при создании событий."
@@ -906,10 +948,10 @@
     "Local calendars": "Локальные календари"
   },
   "Locale used for day and month names, time format and week start.": {
-    "Locale used for day and month names, time format and week start.": ""
+    "Locale used for day and month names, time format and week start.": "Региональные настройки для названий дней и месяцев, формата времени и начала недели."
   },
   "Locale, views and defaults": {
-    "Locale, views and defaults": ""
+    "Locale, views and defaults": "Региональные стандарты, виды и значения по умолчанию"
   },
   "Location": {
     "Location": "Местоположение"
@@ -921,10 +963,10 @@
     "Marked as not done": "Отмечено как невыполненное"
   },
   "Matugen": {
-    "Matugen": ""
+    "Matugen": "Matugen"
   },
   "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
+    "Matugen theme missing or invalid — using the %1 preset.": "Тема Matugen отсутствует или недействительна — используется пресет %1."
   },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "Максимальное количество строк в названии события в режиме месяца."
@@ -939,16 +981,19 @@
     "Medium": "Средний"
   },
   "Meeting cancellation": {
-    "Meeting cancellation": ""
+    "Meeting cancellation": "Отмена встречи"
   },
   "Meeting invitation": {
-    "Meeting invitation": ""
+    "Meeting invitation": "Приглашение на встречу"
   },
   "Meeting reply": {
-    "Meeting reply": ""
+    "Meeting reply": "Ответ на приглашение"
   },
   "Menu": {
-    "Menu": ""
+    "Menu": "Меню"
+  },
+  "Merge duplicate events": {
+    "Merge duplicate events": ""
   },
   "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
     "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "Доступ к Microsoft To Do не предоставлен. Переподключите этот аккаунт для синхронизации задач."
@@ -965,6 +1010,9 @@
   "Modified": {
     "Modified": "Изменён"
   },
+  "Monospace family": {
+    "Monospace family": ""
+  },
   "Month": {
     "Month": "Месяц"
   },
@@ -978,22 +1026,22 @@
     "Monthly": "Ежемесячно"
   },
   "Motion": {
-    "Motion": ""
+    "Motion": "Анимация"
   },
   "Move": {
-    "Move": ""
+    "Move": "Переместить"
   },
   "Move %1 events": {
-    "Move %1 events": ""
+    "Move %1 events": "Переместить %1 событий"
   },
   "Move %1 events here": {
-    "Move %1 events here": ""
+    "Move %1 events here": "Переместить %1 событий сюда"
   },
   "Move 1 event here": {
-    "Move 1 event here": ""
+    "Move 1 event here": "Переместить 1 событие сюда"
   },
   "Move recurring events?": {
-    "Move recurring events?": ""
+    "Move recurring events?": "Переместить повторяющиеся события?"
   },
   "Move through sidebar items": {
     "Move through sidebar items": "Перемещение по элементам боковой панели"
@@ -1002,19 +1050,19 @@
     "Move to Trash": "Переместить в корзину"
   },
   "Move to selected day": {
-    "Move to selected day": ""
+    "Move to selected day": "Переместить на выбранный день"
   },
   "Moved %1 events": {
-    "Moved %1 events": ""
+    "Moved %1 events": "Перемещено событий: %1"
   },
   "Moved %1 of %2 events": {
-    "Moved %1 of %2 events": ""
+    "Moved %1 of %2 events": "Перемещено %1 из %2 событий"
   },
   "Moved 1 event": {
-    "Moved 1 event": ""
+    "Moved 1 event": "Перемещено 1 событие"
   },
   "Moving a recurring event moves its entire series.": {
-    "Moving a recurring event moves its entire series.": ""
+    "Moving a recurring event moves its entire series.": "Перемещение повторяющегося события переместит всю серию."
   },
   "Music": {
     "Music": "Музыка"
@@ -1029,7 +1077,7 @@
     "Name": "Имя"
   },
   "Names, visibility, removal": {
-    "Names, visibility, removal": ""
+    "Names, visibility, removal": "Имена, видимость, удаление"
   },
   "Navigation": {
     "Navigation": "Навигация"
@@ -1047,13 +1095,13 @@
     "New event": "Новое событие"
   },
   "New events": {
-    "New events": ""
+    "New events": "Новые события"
   },
   "New task": {
     "New task": "Новая задача"
   },
   "Next": {
-    "Next": ""
+    "Next": "Далее"
   },
   "Next day": {
     "Next day": "Следующий день"
@@ -1071,7 +1119,7 @@
     "Next event (next week in month view)": "Следующее событие (следующая неделя в режиме месяца)"
   },
   "Next month": {
-    "Next month": ""
+    "Next month": "Следующий месяц"
   },
   "Next week": {
     "Next week": "Следующая неделя"
@@ -1101,7 +1149,7 @@
     "No matching events": "Ничего не найдено"
   },
   "No overlapping busy events": {
-    "No overlapping busy events": ""
+    "No overlapping busy events": "Нет пересекающихся событий со статусом «Занят»"
   },
   "No task list available": {
     "No task list available": "Нет доступных списков задач"
@@ -1140,10 +1188,10 @@
     "Notify for all-day events without their own reminders.": "Уведомлять о событиях на весь день без собственных напоминаний."
   },
   "Off": {
-    "Off": ""
+    "Off": "Выкл."
   },
   "Off lets the compositor decorate windows. Open windows update when reopened.": {
-    "Off lets the compositor decorate windows. Open windows update when reopened.": ""
+    "Off lets the compositor decorate windows. Open windows update when reopened.": "При значении «Выкл.» оформлением окон занимается композитор. Открытые окна обновятся после перезапуска."
   },
   "Offline": {
     "Offline": "Не в сети"
@@ -1164,28 +1212,28 @@
     "Open browser again": "Открыть браузер снова"
   },
   "Open event": {
-    "Open event": ""
+    "Open event": "Открыть событие"
   },
   "Open event actions": {
-    "Open event actions": ""
+    "Open event actions": "Открыть действия события"
   },
   "Open or create event": {
     "Open or create event": "Открыть или создать событие"
   },
   "Open the existing meeting to handle this reply or cancellation.": {
-    "Open the existing meeting to handle this reply or cancellation.": ""
+    "Open the existing meeting to handle this reply or cancellation.": "Откройте существующую встречу, чтобы обработать этот ответ или отмену."
   },
   "Order": {
     "Order": "Порядок"
   },
   "Organized by %1": {
-    "Organized by %1": ""
+    "Organized by %1": "Организатор: %1"
   },
   "Outline": {
-    "Outline": ""
+    "Outline": "Контур"
   },
   "Outline the control that has keyboard focus.": {
-    "Outline the control that has keyboard focus.": ""
+    "Outline the control that has keyboard focus.": "Выделять контуром элемент управления, находящийся в фокусе клавиатуры."
   },
   "Outlook, Office 365 and Exchange Online calendars.": {
     "Outlook, Office 365 and Exchange Online calendars.": "Календари Outlook, Office 365 и Exchange Online."
@@ -1215,22 +1263,22 @@
     "Password (optional)": "Пароль (необязательно)"
   },
   "Paste %1 events": {
-    "Paste %1 events": ""
+    "Paste %1 events": "Вставить %1 событий"
   },
   "Paste %1 events here": {
-    "Paste %1 events here": ""
+    "Paste %1 events here": "Вставить %1 событий сюда"
   },
   "Paste 1 event": {
-    "Paste 1 event": ""
+    "Paste 1 event": "Вставить 1 событие"
   },
   "Paste 1 event here": {
-    "Paste 1 event here": ""
+    "Paste 1 event here": "Вставить 1 событие сюда"
   },
   "Paste credentials": {
     "Paste credentials": "Вставить учётные данные"
   },
   "Paste events on the selected day": {
-    "Paste events on the selected day": ""
+    "Paste events on the selected day": "Вставить события в выбранный день"
   },
   "Paste the Application (client) ID from your app registration's Overview page.": {
     "Paste the Application (client) ID from your app registration's Overview page.": "Вставьте ID приложения (клиента) со страницы обзора регистрации приложения."
@@ -1242,19 +1290,19 @@
     "Paste your credentials": "Вставьте учётные данные"
   },
   "Pasted %1 events": {
-    "Pasted %1 events": ""
+    "Pasted %1 events": "Вставлено событий: %1"
   },
   "Pasted %1 of %2 events": {
-    "Pasted %1 of %2 events": ""
+    "Pasted %1 of %2 events": "Вставлено %1 из %2 событий"
   },
   "Pasted 1 event": {
-    "Pasted 1 event": ""
+    "Pasted 1 event": "Вставлено 1 событие"
   },
   "Pick a color source, palette, or your own theme file.": {
     "Pick a color source, palette, or your own theme file.": "Выберите источник цвета, палитру или собственный файл темы."
   },
   "Pick time": {
-    "Pick time": ""
+    "Pick time": "Выбрать время"
   },
   "Pictures": {
     "Pictures": "Изображения"
@@ -1263,7 +1311,7 @@
     "Play a sound when a reminder fires.": "Воспроизводить звук при срабатывании напоминания."
   },
   "Playful": {
-    "Playful": ""
+    "Playful": "Игривая"
   },
   "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": {
     "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": "Укажите папку с файлами .ics. Каждый подкаталог или файл .ics становится календарём — совместимо с vdirsyncer/khal. Папка создаётся, если не существует."
@@ -1272,7 +1320,7 @@
     "Preset": "Пресет"
   },
   "Previous": {
-    "Previous": ""
+    "Previous": "Назад"
   },
   "Previous day": {
     "Previous day": "Предыдущий день"
@@ -1290,7 +1338,7 @@
     "Previous event (previous week in month view)": "Предыдущее событие (предыдущая неделя в режиме месяца)"
   },
   "Previous month": {
-    "Previous month": ""
+    "Previous month": "Предыдущий месяц"
   },
   "Previous week": {
     "Previous week": "Предыдущая неделя"
@@ -1299,7 +1347,7 @@
     "Previous year": "Предыдущий год"
   },
   "Primary": {
-    "Primary": ""
+    "Primary": "Основной"
   },
   "Priority": {
     "Priority": "Приоритет"
@@ -1311,37 +1359,37 @@
     "Quit": "Выход"
   },
   "Radius strength": {
-    "Radius strength": ""
+    "Radius strength": "Степень скругления"
   },
   "Read-only events can't be cut": {
-    "Read-only events can't be cut": ""
+    "Read-only events can't be cut": "События только для чтения нельзя вырезать"
   },
   "Read-only events can't be deleted": {
-    "Read-only events can't be deleted": ""
+    "Read-only events can't be deleted": "События только для чтения нельзя удалить"
   },
   "Read-only events can't be moved": {
-    "Read-only events can't be moved": ""
+    "Read-only events can't be moved": "События только для чтения нельзя переместить"
   },
   "Reading file...": {
-    "Reading file...": ""
+    "Reading file...": "Чтение файла..."
   },
   "Reconnect": {
     "Reconnect": "Переподключить"
   },
   "Recurring event · conflicts checked through %1": {
-    "Recurring event · conflicts checked through %1": ""
+    "Recurring event · conflicts checked through %1": "Повторяющееся событие · проверка конфликтов до %1"
   },
   "Recurring tasks are managed in Google Tasks.": {
     "Recurring tasks are managed in Google Tasks.": "Повторяющиеся задачи управляются в Google Задачах."
   },
   "Reduce motion": {
-    "Reduce motion": ""
+    "Reduce motion": "Уменьшить движение"
   },
   "Reminders": {
-    "Reminders": ""
+    "Reminders": "Напоминания"
   },
   "Reminders and alerts": {
-    "Reminders and alerts": ""
+    "Reminders and alerts": "Напоминания и уведомления"
   },
   "Reminders and desktop alerts.": {
     "Reminders and desktop alerts.": "Напоминания и уведомления на рабочем столе."
@@ -1365,19 +1413,25 @@
     "Remove calendar or account": "Удалить календарь или аккаунт"
   },
   "Remove reminder": {
-    "Remove reminder": ""
+    "Remove reminder": "Удалить напоминание"
   },
   "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
     "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "Удаляет этот аккаунт, его календари и события из Dank Calendar. У провайдера ничего не удаляется."
   },
+  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
+  },
   "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
     "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "Удаляет этот календарь и его события из Dank Calendar. Если провайдер его ещё предоставляет, он вернётся при следующей синхронизации."
+  },
+  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "Удалить…"
   },
   "Rename": {
-    "Rename": ""
+    "Rename": "Переименовать"
   },
   "Rename calendar": {
     "Rename calendar": "Переименовать календарь"
@@ -1389,16 +1443,16 @@
     "Repeat": "Повтор"
   },
   "Repeat %1 events next week": {
-    "Repeat %1 events next week": ""
+    "Repeat %1 events next week": "Повторить %1 событий на следующей неделе"
   },
   "Repeat %1 events tomorrow": {
-    "Repeat %1 events tomorrow": ""
+    "Repeat %1 events tomorrow": "Повторить %1 событий завтра"
   },
   "Repeat next week": {
-    "Repeat next week": ""
+    "Repeat next week": "Повторить на следующей неделе"
   },
   "Repeat tomorrow": {
-    "Repeat tomorrow": ""
+    "Repeat tomorrow": "Повторить завтра"
   },
   "Repeats": {
     "Repeats": "Повторяется"
@@ -1412,8 +1466,11 @@
   "Reset to global": {
     "Reset to global": "Сбросить к глобальным"
   },
+  "Restart required": {
+    "Restart required": ""
+  },
   "Ripple effects": {
-    "Ripple effects": ""
+    "Ripple effects": "Эффект ряби"
   },
   "Save": {
     "Save": "Сохранить"
@@ -1422,7 +1479,10 @@
     "Saving...": "Сохранение..."
   },
   "Scale": {
-    "Scale": ""
+    "Scale": "Масштаб"
+  },
+  "Scales the whole app. Takes effect after a restart.": {
+    "Scales the whole app. Takes effect after a restart.": ""
   },
   "Search": {
     "Search": "Поиск"
@@ -1437,19 +1497,19 @@
     "Searching": "Поиск…"
   },
   "Secondary": {
-    "Secondary": ""
+    "Secondary": "Вторичный"
   },
   "Select File": {
     "Select File": "Выбрать файл"
   },
   "Select a range of events": {
-    "Select a range of events": ""
+    "Select a range of events": "Выбрать диапазон событий"
   },
   "Select all %1 events": {
-    "Select all %1 events": ""
+    "Select all %1 events": "Выбрать все события (%1)"
   },
   "Select all events on the selected day": {
-    "Select all events on the selected day": ""
+    "Select all events on the selected day": "Выбрать все события за выбранный день"
   },
   "Select client_secret.json": {
     "Select client_secret.json": "Выберите client_secret.json"
@@ -1458,7 +1518,7 @@
     "Select days for a new event (month view)": "Выберите дни для нового события (режим месяца)"
   },
   "Select event": {
-    "Select event": ""
+    "Select event": "Выбрать событие"
   },
   "Select file": {
     "Select file": "Выберите файл"
@@ -1472,11 +1532,14 @@
   "Server URL": {
     "Server URL": "URL сервера"
   },
+  "Set by QT_SCALE_FACTOR.": {
+    "Set by QT_SCALE_FACTOR.": ""
+  },
   "Settings": {
     "Settings": "Настройки"
   },
   "Shape": {
-    "Shape": ""
+    "Shape": "Форма"
   },
   "Show": {
     "Show": "Показать"
@@ -1484,14 +1547,20 @@
   "Show Dank Calendar in the system tray.": {
     "Show Dank Calendar in the system tray.": "Показывать Dank Calendar в системном трее."
   },
+  "Show Dux Calendar in the system tray.": {
+    "Show Dux Calendar in the system tray.": ""
+  },
   "Show all events in month view": {
     "Show all events in month view": "Показывать все события в режиме месяца"
   },
   "Show all-day reminders": {
     "Show all-day reminders": "Показывать напоминания на весь день"
   },
+  "Show an event that appears in several calendars once, with dots for the other calendars.": {
+    "Show an event that appears in several calendars once, with dots for the other calendars.": ""
+  },
   "Show calendar": {
-    "Show calendar": ""
+    "Show calendar": "Показать календарь"
   },
   "Show task lists and the Tasks view when an account provides them.": {
     "Show task lists and the Tasks view when an account provides them.": "Показывать списки задач и режим «Задачи», если аккаунт их предоставляет."
@@ -1506,7 +1575,7 @@
     "Show week numbers": "Показывать номера недель"
   },
   "Showing the first 20 overlaps.": {
-    "Showing the first 20 overlaps.": ""
+    "Showing the first 20 overlaps.": "Отображаются первые 20 пересечений."
   },
   "Sidebar": {
     "Sidebar": "Боковая панель"
@@ -1515,10 +1584,16 @@
     "Sign in with %1": "Войти через %1"
   },
   "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": ""
+    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "Войдите через Google в браузере, и всё готово — настройка не требуется. Dank Calendar синхронизирует ваши календари, события и задачи."
+  },
+  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
+    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
   },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": ""
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "Войдите через Microsoft в браузере, и всё готово — настройка не требуется. Dank Calendar синхронизирует ваши календари Outlook, события и задачи."
+  },
+  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Войдите с Apple ID и паролем приложения. Обычные пароли Apple ID не подойдут."
@@ -1539,25 +1614,25 @@
     "Skip certificate verification": "Пропустить проверку сертификата"
   },
   "Smooth": {
-    "Smooth": ""
+    "Smooth": "Плавная"
   },
   "Snooze duration": {
     "Snooze duration": "Время откладывания"
   },
   "Some calendars couldn't be synced; their events may be missing or out of date.": {
-    "Some calendars couldn't be synced; their events may be missing or out of date.": ""
+    "Some calendars couldn't be synced; their events may be missing or out of date.": "Не удалось синхронизировать некоторые календари; их события могут отсутствовать или быть устаревшими."
   },
   "Sort By": {
     "Sort By": "Сортировка"
   },
   "Spring": {
-    "Spring": ""
+    "Spring": "Упругая"
   },
   "Square": {
-    "Square": ""
+    "Square": "Квадрат"
   },
   "Start": {
-    "Start": ""
+    "Start": "Начало"
   },
   "Start at login": {
     "Start at login": "Запускать при входе"
@@ -1590,13 +1665,16 @@
     "Subscribing…": "Подписка…"
   },
   "Support Dank Linux": {
-    "Support Dank Linux": ""
+    "Support Dank Linux": "Поддержать Dank Linux"
+  },
+  "Support Dux Labs": {
+    "Support Dux Labs": ""
   },
   "Sync interval": {
     "Sync interval": "Интервал синхронизации"
   },
   "Sync is off — click to re-enable": {
-    "Sync is off — click to re-enable": ""
+    "Sync is off — click to re-enable": "Синхронизация отключена — нажмите, чтобы включить снова"
   },
   "Sync now": {
     "Sync now": "Синхронизировать"
@@ -1604,8 +1682,14 @@
   "Synced as \"%1\". The name only changes in Dank Calendar.": {
     "Synced as \"%1\". The name only changes in Dank Calendar.": "Синхронизировано как «%1». Имя изменяется только в Dank Calendar."
   },
+  "Synced as \"%1\". The name only changes in Dux Calendar.": {
+    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  },
+  "System": {
+    "System": ""
+  },
   "System default": {
-    "System default": ""
+    "System default": "Системный по умолчанию"
   },
   "System default (%1)": {
     "System default (%1)": "Системное (%1)"
@@ -1635,40 +1719,40 @@
     "Test notification": "Тестовое уведомление"
   },
   "Text color": {
-    "Text color": ""
+    "Text color": "Цвет текста"
   },
   "That file is not valid JSON.": {
     "That file is not valid JSON.": "Этот файл не является допустимым JSON."
   },
   "The server refused to return some events or tasks, so they were skipped; the rest of the calendar is syncing.": {
-    "The server refused to return some events or tasks, so they were skipped; the rest of the calendar is syncing.": ""
+    "The server refused to return some events or tasks, so they were skipped; the rest of the calendar is syncing.": "Сервер отклонил передачу некоторых событий или задач, поэтому они были пропущены; остальная часть календаря синхронизируется."
   },
   "Theme": {
     "Theme": "Тема"
   },
   "Theme, shape and motion": {
-    "Theme, shape and motion": ""
+    "Theme, shape and motion": "Тема, форма и анимация"
   },
   "These events will be deleted from their calendars. Recurring selections delete only the selected occurrences.": {
-    "These events will be deleted from their calendars. Recurring selections delete only the selected occurrences.": ""
+    "These events will be deleted from their calendars. Recurring selections delete only the selected occurrences.": "Эти события будут удалены из своих календарей. Для повторяющихся событий будут удалены только выбранные повторения."
   },
   "Thickness": {
-    "Thickness": ""
+    "Thickness": "Толщина"
   },
   "This account cannot be reconnected — remove it and add it again.": {
     "This account cannot be reconnected — remove it and add it again.": "Этот аккаунт невозможно переподключить — удалите его и добавьте заново."
   },
   "This event": {
-    "This event": ""
+    "This event": "Это событие"
   },
   "This event will be deleted from its calendar.": {
-    "This event will be deleted from its calendar.": ""
+    "This event will be deleted from its calendar.": "Это событие будет удалено из календаря."
   },
   "Time format": {
     "Time format": "Формат времени"
   },
   "Title bars": {
-    "Title bars": ""
+    "Title bars": "Заголовки окон"
   },
   "Title is required": {
     "Title is required": "Требуется название"
@@ -1680,7 +1764,7 @@
     "Toggle calendar, switch view or sync account": "Переключить календарь, сменить вид или синхронизировать аккаунт"
   },
   "Toggle sidebar": {
-    "Toggle sidebar": ""
+    "Toggle sidebar": "Переключить боковую панель"
   },
   "Toggle this help": {
     "Toggle this help": "Показать/скрыть справку"
@@ -1704,7 +1788,7 @@
     "Type at least 2 characters to search events.": "Введите не менее 2 символов для поиска событий."
   },
   "Typography": {
-    "Typography": ""
+    "Typography": "Типографика"
   },
   "Undo": {
     "Undo": "Отменить"
@@ -1728,7 +1812,7 @@
     "Use this folder": "Выбрать эту папку"
   },
   "Use your own OAuth client": {
-    "Use your own OAuth client": ""
+    "Use your own OAuth client": "Использовать собственный клиент OAuth"
   },
   "Username": {
     "Username": "Имя пользователя"
@@ -1739,8 +1823,11 @@
   "Using DankMaterialShell dynamic colors.": {
     "Using DankMaterialShell dynamic colors.": "Используются динамические цвета DankMaterialShell."
   },
+  "Using Dux Shell dynamic colors.": {
+    "Using Dux Shell dynamic colors.": ""
+  },
   "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+    "Using Matugen colors.": "Используются цвета Matugen."
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "Проверьте, работают ли уведомления."
@@ -1749,7 +1836,7 @@
     "Version": "Версия"
   },
   "Version and links": {
-    "Version and links": ""
+    "Version and links": "Версия и ссылки"
   },
   "Videos": {
     "Videos": "Видео"
@@ -1758,7 +1845,7 @@
     "View": "Вид"
   },
   "Views": {
-    "Views": ""
+    "Views": "Виды"
   },
   "Visibility, names, and removal per calendar.": {
     "Visibility, names, and removal per calendar.": "Видимость, названия и удаление для каждого календаря."
@@ -1782,7 +1869,7 @@
     "Weekly": "Еженедельно"
   },
   "Weight": {
-    "Weight": ""
+    "Weight": "Начертание"
   },
   "What the window's close button does.": {
     "What the window's close button does.": "Действие кнопки закрытия окна."
@@ -1791,7 +1878,7 @@
     "When all-day event reminders fire.": "Когда срабатывают напоминания о событиях на весь день."
   },
   "Windows": {
-    "Windows": ""
+    "Windows": "Окна"
   },
   "Yearly": {
     "Yearly": "Ежегодно"
@@ -1807,6 +1894,9 @@
   },
   "Your response": {
     "Your response": "Ваш ответ"
+  },
+  "Zoom": {
+    "Zoom": ""
   },
   "all day": {
     "all day": "весь день"
@@ -1848,7 +1938,7 @@
     "read-only": "только чтение"
   },
   "sync off": {
-    "sync off": ""
+    "sync off": "синхр. откл."
   },
   "synced as \"%1": {
     "synced as \"%1\"": "синхронизировано как «%1»"

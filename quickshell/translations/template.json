@@ -660,7 +660,7 @@
   {
     "term": "Auto",
     "translation": "",
-    "context": "color source button group option following DMS | theme mode button group option | time format button group option",
+    "context": "color source button group option following DMS | font source button group option following DMS | theme mode button group option | time format button group option",
     "reference": "",
     "comment": ""
   },
@@ -1136,7 +1136,7 @@
   {
     "term": "Custom",
     "translation": "",
-    "context": "color source button group option for a custom theme file | recurrence dropdown option",
+    "context": "color source button group option for a custom theme file | font source button group option for app-chosen fonts | recurrence dropdown option",
     "reference": "",
     "comment": ""
   },
@@ -1242,6 +1242,13 @@
     "term": "Decrease",
     "translation": "",
     "context": "slider row step down button",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Default",
+    "translation": "",
+    "context": "font family dropdown option for the bundled font",
     "reference": "",
     "comment": ""
   },
@@ -1435,6 +1442,13 @@
     "comment": ""
   },
   {
+    "term": "Display family",
+    "translation": "",
+    "context": "display font family dropdown label",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Display name (optional)",
     "translation": "",
     "context": "optional account display name field label",
@@ -1529,6 +1543,13 @@
     "term": "Dux Shell not detected — using the %1 preset.",
     "translation": "",
     "context": "auto color source status when DMS is missing",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Dux Shell not detected, using %1.",
+    "translation": "",
+    "context": "auto font source status when DMS is missing",
     "reference": "",
     "comment": ""
   },
@@ -1673,6 +1694,13 @@
     "comment": ""
   },
   {
+    "term": "Family",
+    "translation": "",
+    "context": "font family dropdown label",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Feed URL",
     "translation": "",
     "context": "ical feed url field label",
@@ -1732,6 +1760,13 @@
     "term": "Following the system color scheme (currently %1).",
     "translation": "",
     "context": "theme mode setting description",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Font source",
+    "translation": "",
+    "context": "font source setting label",
     "reference": "",
     "comment": ""
   },
@@ -2124,6 +2159,13 @@
     "term": "Minimize",
     "translation": "",
     "context": "close behavior button group option to hide to tray",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Monospace family",
+    "translation": "",
+    "context": "monospace font family dropdown label",
     "reference": "",
     "comment": ""
   },
@@ -3531,6 +3573,13 @@
     "term": "Synced as \"%1\". The name only changes in Dux Calendar.",
     "translation": "",
     "context": "rename calendar dialog note showing provider name",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "System",
+    "translation": "",
+    "context": "font source button group option for the Qt system font",
     "reference": "",
     "comment": ""
   },

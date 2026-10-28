@@ -12,7 +12,7 @@
     "%1 events selected": "%1 אירועים נבחרו"
   },
   "%1 overlapping events": {
-    "%1 overlapping events": ""
+    "%1 overlapping events": "%1 אירועים חופפים"
   },
   "%1 selected": {
     "%1 selected": "%1 נבחרו"
@@ -75,7 +75,7 @@
     "1 minute": "דקה אחת"
   },
   "1 overlapping event": {
-    "1 overlapping event": ""
+    "1 overlapping event": "אירוע חופף אחד"
   },
   "1 week before": {
     "1 week before": "שבוע אחד לפני"
@@ -201,7 +201,7 @@
     "Add title": "הוסף/י כותרת"
   },
   "Add to calendar": {
-    "Add to calendar": ""
+    "Add to calendar": "הוספה ליומן"
   },
   "Adding…": {
     "Adding…": "מוסיף…"
@@ -242,6 +242,9 @@
   "Already in %1": {
     "Already in %1": "כבר קיים ב-%1"
   },
+  "Also in these calendars": {
+    "Also in these calendars": ""
+  },
   "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
     "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: חזרה • F1/I: מידע על הקובץ • F10: עזרה • Esc: סגירה"
   },
@@ -265,6 +268,9 @@
   },
   "Apple iCloud calendars via app-specific password.": {
     "Apple iCloud calendars via app-specific password.": "יומני Apple iCloud באמצעות סיסמה ספציפית לאפליקציה."
+  },
+  "Apply and restart": {
+    "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "אשר/י גישה בדפדפן שלך. החלון יחזור לכאן אוטומטית כאשר %1 ישלח לנו בחזרה את קוד האימות."
@@ -307,6 +313,9 @@
   },
   "Begin setup": {
     "Begin setup": "התחל/י התקנה"
+  },
+  "Busy": {
+    "Busy": ""
   },
   "Calendar": {
     "Calendar": "יומן"
@@ -384,13 +393,13 @@
     "Color source": "מקור הצבע"
   },
   "Colors are shared with DankMaterialShell when available.": {
-    "Colors are shared with DankMaterialShell when available.": "צבעים משותפים עם DankMaterialShell כשהם זמינים."
+    "Colors are shared with DankMaterialShell when available.": "צבעים משותפים עם Dux Shell כשהם זמינים."
   },
   "Coming soon": {
     "Coming soon": "בקרוב"
   },
   "Community": {
-    "Community": ""
+    "Community": "קהילה"
   },
   "Completed": {
     "Completed": "הושלם"
@@ -402,7 +411,10 @@
     "Confirm delete": "אשר/י מחיקה"
   },
   "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": "זיהוי התנגשויות מבוסס על אירועים שמסונכרנים כעת עם Dux Calendar. עדיין ניתן לייבא אירוע חופף."
+  },
+  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "התחבר/י"
@@ -471,7 +483,7 @@
     "Could not read that file.": "לא ניתן לקרוא את הקובץ הזה."
   },
   "Couldn't reconnect. Add the account again to sign in.": {
-    "Couldn't reconnect. Add the account again to sign in.": ""
+    "Couldn't reconnect. Add the account again to sign in.": "לא ניתן היה להתחבר מחדש. הוסף/י את החשבון שוב כדי להתחבר."
   },
   "Couldn't update task": {
     "Couldn't update task": "לא ניתן היה לעדכן את המשימה"
@@ -525,13 +537,13 @@
     "Daily": "יומי"
   },
   "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "הפרויקט Dank Calendar הוא יומן למחשבי לינוקס מודרניים עם עיצוב בהשראת <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">Material Design 3</a> של גוגל, יחד עם ממשק שורת פקודה (CLI) הניתן להתאמה וAPI של Socket לאינטגרציות.<br /><br/>הוא נבנה עם שפת התכנות <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a> ו<a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, ספריית Qt6 לבניית מעטפות לשולחן העבודה."
+    "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "הפרויקט Dux Calendar הוא יומן למחשבי לינוקס מודרניים עם עיצוב בהשראת <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">Material Design 3</a> של גוגל, יחד עם ממשק שורת פקודה (CLI) הניתן להתאמה וAPI של Socket לאינטגרציות.<br /><br/>הוא נבנה עם שפת התכנות <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a> ו<a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, ספריית Qt6 לבניית מעטפות לשולחן העבודה."
   },
   "Dank Linux Discord": {
-    "Dank Linux Discord": "ה-Discord של Dank Linux"
+    "Dank Linux Discord": "הDiscord של Dux Labs"
   },
   "DankMaterialShell not detected — using the %1 preset.": {
-    "DankMaterialShell not detected — using the %1 preset.": "המעטפת DankMaterialShell לא זוהתה — משתמש בהגדרה המוכנה מראש %1."
+    "DankMaterialShell not detected — using the %1 preset.": "המעטפת Dux Shell לא זוהתה — משתמש בהגדרה המוכנה מראש %1."
   },
   "Dark": {
     "Dark": "כהה"
@@ -556,6 +568,9 @@
   },
   "Decrease": {
     "Decrease": "הקטן/י"
+  },
+  "Default": {
+    "Default": ""
   },
   "Default calendar": {
     "Default calendar": "יומן ברירת מחדל"
@@ -644,6 +659,9 @@
   "Display ISO week numbers in month view.": {
     "Display ISO week numbers in month view.": "הצג/י מספרי שבוע בתקן ISO בתצוגת חודש."
   },
+  "Display family": {
+    "Display family": ""
+  },
   "Display name (optional)": {
     "Display name (optional)": "שם תצוגה (אופציונלי)"
   },
@@ -683,6 +701,18 @@
   "Duration": {
     "Duration": "משך"
   },
+  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
+    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
+  },
+  "Dux Calendar will close and reopen with the new zoom.": {
+    "Dux Calendar will close and reopen with the new zoom.": ""
+  },
+  "Dux Shell not detected — using the %1 preset.": {
+    "Dux Shell not detected — using the %1 preset.": ""
+  },
+  "Dux Shell not detected, using %1.": {
+    "Dux Shell not detected, using %1.": ""
+  },
   "Edit": {
     "Edit": "ערוך/ערכי"
   },
@@ -702,7 +732,7 @@
     "Enable sync": "הפעל/י סנכרון"
   },
   "End": {
-    "End": ""
+    "End": "סיום"
   },
   "Ends": {
     "Ends": "מסתיים"
@@ -749,6 +779,9 @@
   "F1/I: Toggle • F10: Help": {
     "F1/I: Toggle • F10: Help": "F1/I: החלפה • F10: עזרה"
   },
+  "Family": {
+    "Family": ""
+  },
   "Feed URL": {
     "Feed URL": "כתובת URL של הפיד"
   },
@@ -774,16 +807,22 @@
     "Focus ring": "מסגרת מיקוד"
   },
   "Follow DankMaterialShell colors, falling back to a preset.": {
-    "Follow DankMaterialShell colors, falling back to a preset.": "עקוב/י אחר הצבעים של DankMaterialShell, עם גיבוי להגדרה מוכנה מראש."
+    "Follow DankMaterialShell colors, falling back to a preset.": "עקוב/י אחר הצבעים של Dux Shell, עם גיבוי להגדרה מוכנה מראש."
+  },
+  "Follow Dux Shell colors, falling back to a preset.": {
+    "Follow Dux Shell colors, falling back to a preset.": ""
   },
   "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+    "Follow colors generated by Matugen.": "עקוב/י אחר הצבעים שנוצרים על ידי Matugen."
   },
   "Follow language": {
     "Follow language": "מעקב אחר שפת הממשק"
   },
   "Following the system color scheme (currently %1).": {
     "Following the system color scheme (currently %1).": "עוקב אחר ערכת הצבעים של המערכת (כרגע %1)."
+  },
+  "Font source": {
+    "Font source": ""
   },
   "General": {
     "General": "כללי"
@@ -876,7 +915,10 @@
     "Language of the interface.": "שפת הממשק."
   },
   "Launch Dank Calendar in the background when you log in.": {
-    "Launch Dank Calendar in the background when you log in.": "הפעל/י את Dank Calendar ברקע בעת ההתחברות."
+    "Launch Dank Calendar in the background when you log in.": "הפעל/י את Dux Calendar ברקע בעת ההתחברות."
+  },
+  "Launch Dux Calendar in the background when you log in.": {
+    "Launch Dux Calendar in the background when you log in.": ""
   },
   "Length used when creating events.": {
     "Length used when creating events.": "האורך שמוגדר בעת יצירת אירועים."
@@ -921,10 +963,10 @@
     "Marked as not done": "סומן כלא הושלם"
   },
   "Matugen": {
-    "Matugen": ""
+    "Matugen": "Matugen"
   },
   "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
+    "Matugen theme missing or invalid — using the %1 preset.": "ערכת הנושא של Matugen חסרה או אינה תקינה — משתמש בהגדרה המוכנה מראש %1."
   },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "מספר השורות המקסימלי לכותרת אירוע בתצוגת חודש."
@@ -950,6 +992,9 @@
   "Menu": {
     "Menu": "תפריט"
   },
+  "Merge duplicate events": {
+    "Merge duplicate events": ""
+  },
   "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
     "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "לא ניתנה גישה אל Microsoft To Do. התחבר/י מחדש לחשבון זה כדי לסנכרן משימות."
   },
@@ -964,6 +1009,9 @@
   },
   "Modified": {
     "Modified": "שונה"
+  },
+  "Monospace family": {
+    "Monospace family": ""
   },
   "Month": {
     "Month": "חודש"
@@ -1101,7 +1149,7 @@
     "No matching events": "אין אירועים תואמים"
   },
   "No overlapping busy events": {
-    "No overlapping busy events": ""
+    "No overlapping busy events": "אין חפיפות עם אירועים המסומנים כעסוקים"
   },
   "No task list available": {
     "No task list available": "אין רשימת משימות זמינה"
@@ -1143,7 +1191,7 @@
     "Off": "כבוי"
   },
   "Off lets the compositor decorate windows. Open windows update when reopened.": {
-    "Off lets the compositor decorate windows. Open windows update when reopened.": ""
+    "Off lets the compositor decorate windows. Open windows update when reopened.": "כשהאפשרות כבויה, עיצוב החלונות נעשה על ידי מנהל התצוגה. חלונות שכבר פתוחים יתעדכנו לאחר פתיחתם מחדש."
   },
   "Offline": {
     "Offline": "לא מקוון"
@@ -1173,7 +1221,7 @@
     "Open or create event": "פתח/י או צור/צרי אירוע"
   },
   "Open the existing meeting to handle this reply or cancellation.": {
-    "Open the existing meeting to handle this reply or cancellation.": ""
+    "Open the existing meeting to handle this reply or cancellation.": "פתח/י את הפגישה הקיימת כדי לטפל בתגובה זו או בביטול."
   },
   "Order": {
     "Order": "סדר"
@@ -1206,7 +1254,7 @@
     "Palette: %1": "פלטת צבעים: %1"
   },
   "Part of the Dank Linux suite.": {
-    "Part of the Dank Linux suite.": "חלק מחבילת Dank Linux."
+    "Part of the Dank Linux suite.": "חלק מהחבילות של Dux Labs."
   },
   "Password": {
     "Password": "סיסמה"
@@ -1329,7 +1377,7 @@
     "Reconnect": "התחבר/י מחדש"
   },
   "Recurring event · conflicts checked through %1": {
-    "Recurring event · conflicts checked through %1": ""
+    "Recurring event · conflicts checked through %1": "אירוע מחזורי · התנגשויות נבדקו עד לתאריך %1"
   },
   "Recurring tasks are managed in Google Tasks.": {
     "Recurring tasks are managed in Google Tasks.": "משימות חוזרות מנוהלות ב-Google Tasks."
@@ -1368,10 +1416,16 @@
     "Remove reminder": "הסר/י תזכורת"
   },
   "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "מסיר את החשבון הזה ואת היומנים והאירועים שלו מ-Dank Calendar. שום דבר לא נמחק מהספק."
+    "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "מסיר את החשבון הזה ואת היומנים והאירועים שלו מDux Calendar. שום דבר לא נמחק מהספק."
+  },
+  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
   },
   "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "מסיר את היומן הזה ואת האירועים שלו מ-Dank Calendar. אם הספק עדיין מציע אותו, הוא יחזור בסנכרון הבא."
+    "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "מסיר את היומן הזה ואת האירועים שלו מDux Calendar. אם הספק עדיין מציע אותו, הוא יחזור בסנכרון הבא."
+  },
+  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "הסרה…"
@@ -1412,6 +1466,9 @@
   "Reset to global": {
     "Reset to global": "איפוס להגדרות גלובליות"
   },
+  "Restart required": {
+    "Restart required": ""
+  },
   "Ripple effects": {
     "Ripple effects": "אפקטי אדווה"
   },
@@ -1423,6 +1480,9 @@
   },
   "Scale": {
     "Scale": "קנה מידה"
+  },
+  "Scales the whole app. Takes effect after a restart.": {
+    "Scales the whole app. Takes effect after a restart.": ""
   },
   "Search": {
     "Search": "חיפוש"
@@ -1472,6 +1532,9 @@
   "Server URL": {
     "Server URL": "כתובת URL של השרת"
   },
+  "Set by QT_SCALE_FACTOR.": {
+    "Set by QT_SCALE_FACTOR.": ""
+  },
   "Settings": {
     "Settings": "הגדרות"
   },
@@ -1482,13 +1545,19 @@
     "Show": "הצג/י"
   },
   "Show Dank Calendar in the system tray.": {
-    "Show Dank Calendar in the system tray.": "הצג/י את Dank Calendar במגש המערכת."
+    "Show Dank Calendar in the system tray.": "הצג/י את Dux Calendar במגש המערכת."
+  },
+  "Show Dux Calendar in the system tray.": {
+    "Show Dux Calendar in the system tray.": ""
   },
   "Show all events in month view": {
     "Show all events in month view": "הצג/י את כל האירועים בתצוגת חודש"
   },
   "Show all-day reminders": {
     "Show all-day reminders": "הצג/י תזכורות לאירועים של כל היום"
+  },
+  "Show an event that appears in several calendars once, with dots for the other calendars.": {
+    "Show an event that appears in several calendars once, with dots for the other calendars.": ""
   },
   "Show calendar": {
     "Show calendar": "הצג/י יומן"
@@ -1506,7 +1575,7 @@
     "Show week numbers": "הצג/י מספרי שבוע"
   },
   "Showing the first 20 overlaps.": {
-    "Showing the first 20 overlaps.": ""
+    "Showing the first 20 overlaps.": "מוצגות 20 החפיפות הראשונות."
   },
   "Sidebar": {
     "Sidebar": "סרגל צדדי"
@@ -1515,10 +1584,16 @@
     "Sign in with %1": "התחבר/י עם %1"
   },
   "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "התחבר/י עם Google בדפדפן שלך וסיימת — אין צורך בהגדרה נוספת. Dank Calendar מסנכרן את היומנים, האירועים והמשימות שלך."
+    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "התחבר/י עם Google בדפדפן שלך וסיימת — אין צורך בהגדרה נוספת. Dux Calendar מסנכרן את היומנים, האירועים והמשימות שלך."
+  },
+  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
+    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
   },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "התחבר/י עם Microsoft בדפדפן שלך וסיימת — אין צורך בהגדרה נוספת. Dank Calendar מסנכרן את יומני הOutlook, האירועים והמשימות שלך."
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "התחבר/י עם Microsoft בדפדפן שלך וסיימת — אין צורך בהגדרה נוספת. Dux Calendar מסנכרן את יומני הOutlook, האירועים והמשימות שלך."
+  },
+  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "התחבר/י עם ה-Apple ID שלך ועם סיסמה ספציפית לאפליקציה. סיסמאות רגילות של Apple ID לא יעבדו."
@@ -1557,7 +1632,7 @@
     "Square": "מרובע"
   },
   "Start": {
-    "Start": ""
+    "Start": "התחלה"
   },
   "Start at login": {
     "Start at login": "הפעל/י בעת ההתחברות"
@@ -1590,7 +1665,10 @@
     "Subscribing…": "נרשם…"
   },
   "Support Dank Linux": {
-    "Support Dank Linux": ""
+    "Support Dank Linux": "תמיכה בDux Linux"
+  },
+  "Support Dux Labs": {
+    "Support Dux Labs": ""
   },
   "Sync interval": {
     "Sync interval": "מרווח סנכרון"
@@ -1602,7 +1680,13 @@
     "Sync now": "סנכרן/י עכשיו"
   },
   "Synced as \"%1\". The name only changes in Dank Calendar.": {
-    "Synced as \"%1\". The name only changes in Dank Calendar.": "מסונכרן בתור \"%1\". השם משתנה רק בDank Calendar."
+    "Synced as \"%1\". The name only changes in Dank Calendar.": "מסונכרן בתור \"%1\". השם משתנה רק בDux Calendar."
+  },
+  "Synced as \"%1\". The name only changes in Dux Calendar.": {
+    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  },
+  "System": {
+    "System": ""
   },
   "System default": {
     "System default": "ברירת מחדל של המערכת"
@@ -1668,7 +1752,7 @@
     "Time format": "תבנית זמן"
   },
   "Title bars": {
-    "Title bars": ""
+    "Title bars": "סרגלי כותרת"
   },
   "Title is required": {
     "Title is required": "נדרשת כותרת"
@@ -1737,10 +1821,13 @@
     "Username (optional)": "שם משתמש (אופציונלי)"
   },
   "Using DankMaterialShell dynamic colors.": {
-    "Using DankMaterialShell dynamic colors.": "משתמש בצבעים הדינמיים של DankMaterialShell."
+    "Using DankMaterialShell dynamic colors.": "משתמש בצבעים הדינמיים של Dux Shell."
+  },
+  "Using Dux Shell dynamic colors.": {
+    "Using Dux Shell dynamic colors.": ""
   },
   "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+    "Using Matugen colors.": "משתמש בצבעים של Matugen."
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "אמת/י שהתראות שולחן העבודה עובדות."
@@ -1767,7 +1854,7 @@
     "Waiting for browser…": "ממתין לדפדפן…"
   },
   "Waiting for the dankcalendar daemon...": {
-    "Waiting for the dankcalendar daemon...": "ממתין לdaemon של dankcalendar..."
+    "Waiting for the dankcalendar daemon...": "ממתין לdaemon של duxcalendar..."
   },
   "Week": {
     "Week": "שבוע"
@@ -1791,7 +1878,7 @@
     "When all-day event reminders fire.": "מתי תזכורות לאירועים של כל היום יופעלו."
   },
   "Windows": {
-    "Windows": ""
+    "Windows": "חלונות"
   },
   "Yearly": {
     "Yearly": "שנתי"
@@ -1807,6 +1894,9 @@
   },
   "Your response": {
     "Your response": "התגובה שלך"
+  },
+  "Zoom": {
+    "Zoom": ""
   },
   "all day": {
     "all day": "כל היום"

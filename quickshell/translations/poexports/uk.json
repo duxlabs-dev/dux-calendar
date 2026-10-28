@@ -9,13 +9,13 @@
     "%1 appointments fall outside core hours": "Зустрічей поза робочим часом: %1"
   },
   "%1 events selected": {
-    "%1 events selected": ""
+    "%1 events selected": "Вибрано %1 подій"
   },
   "%1 overlapping events": {
-    "%1 overlapping events": ""
+    "%1 overlapping events": "%1 подій, що перетинаються"
   },
   "%1 selected": {
-    "%1 selected": ""
+    "%1 selected": "%1 вибрано"
   },
   "%1 times": {
     "%1 times": "Разів: %1"
@@ -51,10 +51,10 @@
     "+%1 more": "+%1 ще"
   },
   "+1 day": {
-    "+1 day": ""
+    "+1 day": "+1 день"
   },
   "+1 week": {
-    "+1 week": ""
+    "+1 week": "+1 тиждень"
   },
   "1 appointment falls outside core hours": {
     "1 appointment falls outside core hours": "1 зустріч випадає за межі робочого часу"
@@ -75,7 +75,7 @@
     "1 minute": "1 хвилина"
   },
   "1 overlapping event": {
-    "1 overlapping event": ""
+    "1 overlapping event": "1 подія, що перетинається"
   },
   "1 week before": {
     "1 week before": "за 1 тиждень"
@@ -138,7 +138,7 @@
     "5 minutes before": "за 5 хвилин"
   },
   "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": {
-    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": ""
+    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": "Значення 50 використовує форми Material. Менші значення зменшують заокруглення, більші — збільшують."
   },
   "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": {
     "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">Ліцензія MIT</a>"
@@ -162,7 +162,7 @@
     "Account connected": "Обліковий запис підключено"
   },
   "Account options": {
-    "Account options": ""
+    "Account options": "Параметри облікового запису"
   },
   "Account problem — click for options": {
     "Account problem — click for options": "Проблема з обліковим записом — натисніть для вибору дій"
@@ -171,7 +171,7 @@
     "Accounts": "Облікові записи"
   },
   "Actions apply to the whole selection": {
-    "Actions apply to the whole selection": ""
+    "Actions apply to the whole selection": "Дії застосовуються до всієї вибірки"
   },
   "Add": {
     "Add": "Додати"
@@ -189,7 +189,7 @@
     "Add description": "Додати опис"
   },
   "Add or remove an event from the selection": {
-    "Add or remove an event from the selection": ""
+    "Add or remove an event from the selection": "Додати або вилучити подію з вибірки"
   },
   "Add reminder": {
     "Add reminder": "Додати нагадування"
@@ -201,7 +201,7 @@
     "Add title": "Додати заголовок"
   },
   "Add to calendar": {
-    "Add to calendar": ""
+    "Add to calendar": "Додати до календаря"
   },
   "Adding…": {
     "Adding…": "Додавання…"
@@ -228,10 +228,10 @@
     "All done": "Усе виконано"
   },
   "All events": {
-    "All events": ""
+    "All events": "Усі події"
   },
   "All-day events": {
-    "All-day events": ""
+    "All-day events": "Події на весь день"
   },
   "All-day reminder time": {
     "All-day reminder time": "Час нагадування для подій на весь день"
@@ -240,7 +240,10 @@
     "All-day reminder timing": "Час нагадування про подію на весь день"
   },
   "Already in %1": {
-    "Already in %1": ""
+    "Already in %1": "Уже в %1"
+  },
+  "Also in these calendars": {
+    "Also in these calendars": ""
   },
   "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
     "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: Назад • F1/I: Властивості файлу • F10: Довідка • Esc: Закрити"
@@ -252,7 +255,7 @@
     "Always use the light theme.": "Завжди використовувати світлу тему."
   },
   "App": {
-    "App": ""
+    "App": "Застосунок"
   },
   "App-specific password": {
     "App-specific password": "Пароль додатка"
@@ -265,6 +268,9 @@
   },
   "Apple iCloud calendars via app-specific password.": {
     "Apple iCloud calendars via app-specific password.": "Календарі Apple iCloud через пароль додатка."
+  },
+  "Apply and restart": {
+    "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "Підтвердьте доступ у браузері. Це вікно автоматично повернеться сюди, щойно %1 надішле код авторизації."
@@ -303,10 +309,13 @@
     "Backend not connected.": "Служба не підключена."
   },
   "Balanced": {
-    "Balanced": ""
+    "Balanced": "Збалансовано"
   },
   "Begin setup": {
     "Begin setup": "Розпочати налаштування"
+  },
+  "Busy": {
+    "Busy": ""
   },
   "Calendar": {
     "Calendar": "Календар"
@@ -315,16 +324,16 @@
     "Calendar Settings": "Налаштування календаря"
   },
   "Calendar file": {
-    "Calendar file": ""
+    "Calendar file": "Файл календаря"
   },
   "Calendar name": {
     "Calendar name": "Назва календаря"
   },
   "Calendar options": {
-    "Calendar options": ""
+    "Calendar options": "Параметри календаря"
   },
   "Calendar preselected when creating events.": {
-    "Calendar preselected when creating events.": ""
+    "Calendar preselected when creating events.": "Календар, попередньо вибраний під час створення подій."
   },
   "Calendars": {
     "Calendars": "Календарі"
@@ -351,7 +360,7 @@
     "Choose calendar directory": "Виберіть папку календаря"
   },
   "Clear": {
-    "Clear": ""
+    "Clear": "Очистити"
   },
   "Clear event selection": {
     "Clear event selection": "Зняти виділення події"
@@ -366,7 +375,7 @@
     "Client Secret": "Секрет клієнта"
   },
   "Close": {
-    "Close": ""
+    "Close": "Закрити"
   },
   "Close behavior": {
     "Close behavior": "Поведінка при закритті"
@@ -378,7 +387,7 @@
     "Collapse or expand a section": "Згорнути або розгорнути розділ"
   },
   "Color": {
-    "Color": ""
+    "Color": "Колір"
   },
   "Color source": {
     "Color source": "Джерело кольору"
@@ -390,7 +399,7 @@
     "Coming soon": "У розробці"
   },
   "Community": {
-    "Community": ""
+    "Community": "Спільнота"
   },
   "Completed": {
     "Completed": "Завершені"
@@ -402,7 +411,10 @@
     "Confirm delete": "Підтвердити видалення"
   },
   "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": "Для виявлення конфліктів використовуються події, синхронізовані з DankCalendar. Ви все одно можете імпортувати подію, що перетинається."
+  },
+  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "Підключити"
@@ -411,10 +423,10 @@
     "Connect %1": "Підключити %1"
   },
   "Connect Google Account": {
-    "Connect Google Account": ""
+    "Connect Google Account": "Підключити обліковий запис Google"
   },
   "Connect Microsoft Account": {
-    "Connect Microsoft Account": ""
+    "Connect Microsoft Account": "Підключити обліковий запис Microsoft"
   },
   "Connect any CalDAV-compatible server.": {
     "Connect any CalDAV-compatible server.": "Підключіть будь-який CalDAV-сумісний сервер."
@@ -426,7 +438,7 @@
     "Connected calendar providers.": "Підключені провайдери календарів."
   },
   "Connected providers": {
-    "Connected providers": ""
+    "Connected providers": "Підключені провайдери"
   },
   "Connecting…": {
     "Connecting…": "Підключення…"
@@ -435,22 +447,22 @@
     "Continue": "Продовжити"
   },
   "Copied %1 events": {
-    "Copied %1 events": ""
+    "Copied %1 events": "Скопійовано %1 подій"
   },
   "Copied 1 event": {
-    "Copied 1 event": ""
+    "Copied 1 event": "Скопійовано 1 подію"
   },
   "Copied to clipboard": {
     "Copied to clipboard": "Скопійовано до буфера обміну"
   },
   "Copy": {
-    "Copy": ""
+    "Copy": "Копіювати"
   },
   "Copy %1 events": {
-    "Copy %1 events": ""
+    "Copy %1 events": "Копіювати %1 подій"
   },
   "Copy event": {
-    "Copy event": ""
+    "Copy event": "Копіювати подію"
   },
   "Copy link": {
     "Copy link": "Копіювати посилання"
@@ -459,7 +471,7 @@
     "Copy path": "Копіювати шлях"
   },
   "Copy selected events": {
-    "Copy selected events": ""
+    "Copy selected events": "Копіювати вибрані події"
   },
   "Core hours": {
     "Core hours": "Робочі години"
@@ -471,7 +483,7 @@
     "Could not read that file.": "Не вдалося прочитати цей файл."
   },
   "Couldn't reconnect. Add the account again to sign in.": {
-    "Couldn't reconnect. Add the account again to sign in.": ""
+    "Couldn't reconnect. Add the account again to sign in.": "Не вдалося відновити з'єднання. Додайте обліковий запис знову, щоб увійти."
   },
   "Couldn't update task": {
     "Couldn't update task": "Не вдалося оновити завдання"
@@ -483,13 +495,13 @@
     "Create event": "Створити подію"
   },
   "Created %1 events": {
-    "Created %1 events": ""
+    "Created %1 events": "Створено %1 подій"
   },
   "Created %1 of %2 events": {
-    "Created %1 of %2 events": ""
+    "Created %1 of %2 events": "Створено %1 із %2 подій"
   },
   "Created 1 event": {
-    "Created 1 event": ""
+    "Created 1 event": "Створено 1 подію"
   },
   "Credentials stay on this machine": {
     "Credentials stay on this machine": "Облікові дані залишаються на цьому комп'ютері"
@@ -498,19 +510,19 @@
     "Custom": "Власна"
   },
   "Cut": {
-    "Cut": ""
+    "Cut": "Вирізати"
   },
   "Cut %1 events": {
-    "Cut %1 events": ""
+    "Cut %1 events": "Вирізати %1 подій"
   },
   "Cut 1 event": {
-    "Cut 1 event": ""
+    "Cut 1 event": "Вирізано 1 подію"
   },
   "Cut event": {
-    "Cut event": ""
+    "Cut event": "Вирізати подію"
   },
   "Cut selected events": {
-    "Cut selected events": ""
+    "Cut selected events": "Вирізати вибрані події"
   },
   "DMS dynamic": {
     "DMS dynamic": "Динамічний DMS"
@@ -537,16 +549,16 @@
     "Dark": "Темна"
   },
   "Date": {
-    "Date": ""
+    "Date": "Дата"
   },
   "Date and time locale": {
-    "Date and time locale": ""
+    "Date and time locale": "Локаль дати й часу"
   },
   "Day": {
     "Day": "День"
   },
   "Day actions": {
-    "Day actions": ""
+    "Day actions": "Дії для дня"
   },
   "Day view": {
     "Day view": "Режим дня"
@@ -555,10 +567,13 @@
     "Decline": "Відхилити"
   },
   "Decrease": {
-    "Decrease": ""
+    "Decrease": "Зменшити"
+  },
+  "Default": {
+    "Default": ""
   },
   "Default calendar": {
-    "Default calendar": ""
+    "Default calendar": "Календар за замовчуванням"
   },
   "Default event duration": {
     "Default event duration": "Тривалість події за замовчуванням"
@@ -576,40 +591,40 @@
     "Delete \"%1\"?": "Видалити «%1»?"
   },
   "Delete %1 events": {
-    "Delete %1 events": ""
+    "Delete %1 events": "Видалити %1 подій"
   },
   "Delete %1 events?": {
-    "Delete %1 events?": ""
+    "Delete %1 events?": "Видалити %1 подій?"
   },
   "Delete %1 events…": {
-    "Delete %1 events…": ""
+    "Delete %1 events…": "Видалити %1 подій…"
   },
   "Delete event": {
-    "Delete event": ""
+    "Delete event": "Видалити подію"
   },
   "Delete event?": {
-    "Delete event?": ""
+    "Delete event?": "Видалити подію?"
   },
   "Delete event…": {
-    "Delete event…": ""
+    "Delete event…": "Видалити подію…"
   },
   "Delete occurrence": {
     "Delete occurrence": "Видалити лише цю подію"
   },
   "Delete selected events": {
-    "Delete selected events": ""
+    "Delete selected events": "Видалити вибрані події"
   },
   "Delete series": {
     "Delete series": "Видалити всю серію"
   },
   "Deleted %1 events": {
-    "Deleted %1 events": ""
+    "Deleted %1 events": "Видалено %1 подій"
   },
   "Deleted %1 of %2 events": {
-    "Deleted %1 of %2 events": ""
+    "Deleted %1 of %2 events": "Видалено %1 із %2 подій"
   },
   "Deleted 1 event": {
-    "Deleted 1 event": ""
+    "Deleted 1 event": "Видалено 1 подію"
   },
   "Delete…": {
     "Delete…": "Видалити…"
@@ -627,7 +642,7 @@
     "Desktop notifications for upcoming events.": "Спливаючі сповіщення про майбутні події."
   },
   "Diagnostics": {
-    "Diagnostics": ""
+    "Diagnostics": "Діагностика"
   },
   "Directory": {
     "Directory": "Папка"
@@ -636,13 +651,16 @@
     "Disable core hours": "Вимкнути робочі години"
   },
   "Disable sync": {
-    "Disable sync": ""
+    "Disable sync": "Вимкнути синхронізацію"
   },
   "Dismiss": {
-    "Dismiss": ""
+    "Dismiss": "Закрити"
   },
   "Display ISO week numbers in month view.": {
     "Display ISO week numbers in month view.": "Відображати номери тижнів ISO в режимі місяця."
+  },
+  "Display family": {
+    "Display family": ""
   },
   "Display name (optional)": {
     "Display name (optional)": "Відображуване ім'я (необов'язково)"
@@ -669,22 +687,34 @@
     "Due date": "Термін виконання"
   },
   "Duplicate": {
-    "Duplicate": ""
+    "Duplicate": "Дублювати"
   },
   "Duplicate %1 events": {
-    "Duplicate %1 events": ""
+    "Duplicate %1 events": "Дублювати %1 подій"
   },
   "Duplicate selected events": {
-    "Duplicate selected events": ""
+    "Duplicate selected events": "Дублювати вибрані події"
   },
   "Duplicate selected events to the next day": {
-    "Duplicate selected events to the next day": ""
+    "Duplicate selected events to the next day": "Дублювати вибрані події на наступний день"
   },
   "Duration": {
-    "Duration": ""
+    "Duration": "Тривалість"
+  },
+  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
+    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
+  },
+  "Dux Calendar will close and reopen with the new zoom.": {
+    "Dux Calendar will close and reopen with the new zoom.": ""
+  },
+  "Dux Shell not detected — using the %1 preset.": {
+    "Dux Shell not detected — using the %1 preset.": ""
+  },
+  "Dux Shell not detected, using %1.": {
+    "Dux Shell not detected, using %1.": ""
   },
   "Edit": {
-    "Edit": ""
+    "Edit": "Редагувати"
   },
   "Edit event": {
     "Edit event": "Редагувати подію"
@@ -699,10 +729,10 @@
     "Enable reminders": "Увімкнути нагадування"
   },
   "Enable sync": {
-    "Enable sync": ""
+    "Enable sync": "Увімкнути синхронізацію"
   },
   "End": {
-    "End": ""
+    "End": "Кінець"
   },
   "Ends": {
     "Ends": "Завершення"
@@ -729,7 +759,7 @@
     "Event": "Подія"
   },
   "Event actions": {
-    "Event actions": ""
+    "Event actions": "Дії з подіями"
   },
   "Event details": {
     "Event details": "Деталі події"
@@ -738,7 +768,7 @@
     "Every": "Кожен"
   },
   "Everything in this file is already on your calendar.": {
-    "Everything in this file is already on your calendar.": ""
+    "Everything in this file is already on your calendar.": "Усе з цього файлу вже є у вашому календарі."
   },
   "Evolution": {
     "Evolution": "Evolution"
@@ -748,6 +778,9 @@
   },
   "F1/I: Toggle • F10: Help": {
     "F1/I: Toggle • F10: Help": "F1/I: Переключити • F10: Довідка"
+  },
+  "Family": {
+    "Family": ""
   },
   "Feed URL": {
     "Feed URL": "Посилання на фід"
@@ -762,7 +795,7 @@
     "Files - %1": "Файли — %1"
   },
   "First calendar": {
-    "First calendar": ""
+    "First calendar": "Перший календар"
   },
   "First day shown in week and month views.": {
     "First day shown in week and month views.": "Перший день тижня в режимах тижня та місяця."
@@ -771,19 +804,25 @@
     "Focus or leave the sidebar": "Перейти до бічної панелі або залишити її"
   },
   "Focus ring": {
-    "Focus ring": ""
+    "Focus ring": "Рамка фокусу"
   },
   "Follow DankMaterialShell colors, falling back to a preset.": {
     "Follow DankMaterialShell colors, falling back to a preset.": "Використовувати кольори DankMaterialShell з переходом на пресет за відсутності."
   },
+  "Follow Dux Shell colors, falling back to a preset.": {
+    "Follow Dux Shell colors, falling back to a preset.": ""
+  },
   "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+    "Follow colors generated by Matugen.": "Використовувати кольори, згенеровані Matugen."
   },
   "Follow language": {
-    "Follow language": ""
+    "Follow language": "Як у мові інтерфейсу"
   },
   "Following the system color scheme (currently %1).": {
     "Following the system color scheme (currently %1).": "Відповідно до системної колірної схеми (зараз %1)."
+  },
+  "Font source": {
+    "Font source": ""
   },
   "General": {
     "General": "Загальні"
@@ -825,25 +864,25 @@
     "How often accounts are polled for changes.": "Як часто опитувати облікові записи на наявність змін."
   },
   "Import": {
-    "Import": ""
+    "Import": "Імпортувати"
   },
   "Import %1 events": {
-    "Import %1 events": ""
+    "Import %1 events": "Імпортувати %1 подій"
   },
   "Import client_secret.json": {
     "Import client_secret.json": "Імпортувати client_secret.json"
   },
   "Import events": {
-    "Import events": ""
+    "Import events": "Імпорт подій"
   },
   "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": {
     "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": "Імпортуйте файл client_secret_….json, завантажений під час створення клієнта, або вставте ID та секрет клієнта вручну."
   },
   "Importing...": {
-    "Importing...": ""
+    "Importing...": "Імпортування..."
   },
   "Increase": {
-    "Increase": ""
+    "Increase": "Збільшити"
   },
   "Initial reminder set on new events.": {
     "Initial reminder set on new events.": "Нагадування за замовчуванням для нових подій."
@@ -861,22 +900,25 @@
     "Keyboard shortcuts": "Комбінації клавіш"
   },
   "Keyring locked — unlock it to sync": {
-    "Keyring locked — unlock it to sync": ""
+    "Keyring locked — unlock it to sync": "В'язку ключів заблоковано — розблокуйте для синхронізації"
   },
   "Ko-fi": {
     "Ko-fi": "Ko-fi"
   },
   "Language": {
-    "Language": ""
+    "Language": "Мова"
   },
   "Language and time": {
-    "Language and time": ""
+    "Language and time": "Мова та час"
   },
   "Language of the interface.": {
-    "Language of the interface.": ""
+    "Language of the interface.": "Мова інтерфейсу."
   },
   "Launch Dank Calendar in the background when you log in.": {
     "Launch Dank Calendar in the background when you log in.": "Запускати Dank Calendar у фоновому режимі під час входу в систему."
+  },
+  "Launch Dux Calendar in the background when you log in.": {
+    "Launch Dux Calendar in the background when you log in.": ""
   },
   "Length used when creating events.": {
     "Length used when creating events.": "Тривалість, що використовується при створенні подій."
@@ -906,10 +948,10 @@
     "Local calendars": "Локальні календарі"
   },
   "Locale used for day and month names, time format and week start.": {
-    "Locale used for day and month names, time format and week start.": ""
+    "Locale used for day and month names, time format and week start.": "Локаль для назв днів і місяців, формату часу та початку тижня."
   },
   "Locale, views and defaults": {
-    "Locale, views and defaults": ""
+    "Locale, views and defaults": "Локаль, режими перегляду та параметри за замовчуванням"
   },
   "Location": {
     "Location": "Місце"
@@ -921,10 +963,10 @@
     "Marked as not done": "Позначено як невиконане"
   },
   "Matugen": {
-    "Matugen": ""
+    "Matugen": "Matugen"
   },
   "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
+    "Matugen theme missing or invalid — using the %1 preset.": "Тема Matugen відсутня або недійсна — використовується пресет %1."
   },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "Максимальна кількість рядків у назві події в режимі місяця."
@@ -939,16 +981,19 @@
     "Medium": "Середній"
   },
   "Meeting cancellation": {
-    "Meeting cancellation": ""
+    "Meeting cancellation": "Скасування зустрічі"
   },
   "Meeting invitation": {
-    "Meeting invitation": ""
+    "Meeting invitation": "Запрошення на зустріч"
   },
   "Meeting reply": {
-    "Meeting reply": ""
+    "Meeting reply": "Відповідь на зустріч"
   },
   "Menu": {
-    "Menu": ""
+    "Menu": "Меню"
+  },
+  "Merge duplicate events": {
+    "Merge duplicate events": ""
   },
   "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
     "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "Доступ до Microsoft To Do не надано. Перепід'єднайте цей обліковий запис для синхронізації завдань."
@@ -965,6 +1010,9 @@
   "Modified": {
     "Modified": "Змінено"
   },
+  "Monospace family": {
+    "Monospace family": ""
+  },
   "Month": {
     "Month": "Місяць"
   },
@@ -978,22 +1026,22 @@
     "Monthly": "Щомісяця"
   },
   "Motion": {
-    "Motion": ""
+    "Motion": "Рух"
   },
   "Move": {
-    "Move": ""
+    "Move": "Перемістити"
   },
   "Move %1 events": {
-    "Move %1 events": ""
+    "Move %1 events": "Перемістити %1 подій"
   },
   "Move %1 events here": {
-    "Move %1 events here": ""
+    "Move %1 events here": "Перемістити %1 подій сюди"
   },
   "Move 1 event here": {
-    "Move 1 event here": ""
+    "Move 1 event here": "Перемістити 1 подію сюди"
   },
   "Move recurring events?": {
-    "Move recurring events?": ""
+    "Move recurring events?": "Перемістити повторювані події?"
   },
   "Move through sidebar items": {
     "Move through sidebar items": "Переміщення елементами бічної панелі"
@@ -1002,19 +1050,19 @@
     "Move to Trash": "Перемістити в кошик"
   },
   "Move to selected day": {
-    "Move to selected day": ""
+    "Move to selected day": "Перемістити на вибраний день"
   },
   "Moved %1 events": {
-    "Moved %1 events": ""
+    "Moved %1 events": "Переміщено %1 подій"
   },
   "Moved %1 of %2 events": {
-    "Moved %1 of %2 events": ""
+    "Moved %1 of %2 events": "Переміщено %1 із %2 подій"
   },
   "Moved 1 event": {
-    "Moved 1 event": ""
+    "Moved 1 event": "Переміщено 1 подію"
   },
   "Moving a recurring event moves its entire series.": {
-    "Moving a recurring event moves its entire series.": ""
+    "Moving a recurring event moves its entire series.": "Переміщення повторюваної події переміщує всю її серію."
   },
   "Music": {
     "Music": "Музика"
@@ -1029,7 +1077,7 @@
     "Name": "Назва"
   },
   "Names, visibility, removal": {
-    "Names, visibility, removal": ""
+    "Names, visibility, removal": "Назви, видимість, вилучення"
   },
   "Navigation": {
     "Navigation": "Навігація"
@@ -1047,13 +1095,13 @@
     "New event": "Нова подія"
   },
   "New events": {
-    "New events": ""
+    "New events": "Нові події"
   },
   "New task": {
     "New task": "Нове завдання"
   },
   "Next": {
-    "Next": ""
+    "Next": "Наступний"
   },
   "Next day": {
     "Next day": "Наступний день"
@@ -1071,7 +1119,7 @@
     "Next event (next week in month view)": "Наступна подія (наступний тиждень у режимі місяця)"
   },
   "Next month": {
-    "Next month": ""
+    "Next month": "Наступний місяць"
   },
   "Next week": {
     "Next week": "Наступний тиждень"
@@ -1101,7 +1149,7 @@
     "No matching events": "Подій не знайдено"
   },
   "No overlapping busy events": {
-    "No overlapping busy events": ""
+    "No overlapping busy events": "Немає зайнятих подій, що перетинаються"
   },
   "No task list available": {
     "No task list available": "Немає доступних списків завдань"
@@ -1140,10 +1188,10 @@
     "Notify for all-day events without their own reminders.": "Сповіщати про події на весь день без власних нагадувань."
   },
   "Off": {
-    "Off": ""
+    "Off": "Вимк."
   },
   "Off lets the compositor decorate windows. Open windows update when reopened.": {
-    "Off lets the compositor decorate windows. Open windows update when reopened.": ""
+    "Off lets the compositor decorate windows. Open windows update when reopened.": "У вимкненому стані вікна оформлює композитор. Відкриті вікна оновляться після повторного відкриття."
   },
   "Offline": {
     "Offline": "Поза мережею"
@@ -1164,28 +1212,28 @@
     "Open browser again": "Відкрити браузер знову"
   },
   "Open event": {
-    "Open event": ""
+    "Open event": "Відкрити подію"
   },
   "Open event actions": {
-    "Open event actions": ""
+    "Open event actions": "Відкрити дії з подіями"
   },
   "Open or create event": {
     "Open or create event": "Відкрити або створити подію"
   },
   "Open the existing meeting to handle this reply or cancellation.": {
-    "Open the existing meeting to handle this reply or cancellation.": ""
+    "Open the existing meeting to handle this reply or cancellation.": "Відкрийте наявну зустріч, щоб опрацювати цю відповідь або скасування."
   },
   "Order": {
     "Order": "Порядок"
   },
   "Organized by %1": {
-    "Organized by %1": ""
+    "Organized by %1": "Організатор: %1"
   },
   "Outline": {
-    "Outline": ""
+    "Outline": "Контур"
   },
   "Outline the control that has keyboard focus.": {
-    "Outline the control that has keyboard focus.": ""
+    "Outline the control that has keyboard focus.": "Виділяти контуром елемент керування у фокусі клавіатури."
   },
   "Outlook, Office 365 and Exchange Online calendars.": {
     "Outlook, Office 365 and Exchange Online calendars.": "Календарі Outlook, Office 365 та Exchange Online."
@@ -1215,22 +1263,22 @@
     "Password (optional)": "Пароль (необов'язково)"
   },
   "Paste %1 events": {
-    "Paste %1 events": ""
+    "Paste %1 events": "Вставити %1 подій"
   },
   "Paste %1 events here": {
-    "Paste %1 events here": ""
+    "Paste %1 events here": "Вставити %1 подій сюди"
   },
   "Paste 1 event": {
-    "Paste 1 event": ""
+    "Paste 1 event": "Вставити 1 подію"
   },
   "Paste 1 event here": {
-    "Paste 1 event here": ""
+    "Paste 1 event here": "Вставити 1 подію сюди"
   },
   "Paste credentials": {
     "Paste credentials": "Вставити облікові дані"
   },
   "Paste events on the selected day": {
-    "Paste events on the selected day": ""
+    "Paste events on the selected day": "Вставити події на вибраний день"
   },
   "Paste the Application (client) ID from your app registration's Overview page.": {
     "Paste the Application (client) ID from your app registration's Overview page.": "Вставте ID додатка (клієнта) зі сторінки «Огляд» реєстрації вашого додатка."
@@ -1242,19 +1290,19 @@
     "Paste your credentials": "Вставте ваші облікові дані"
   },
   "Pasted %1 events": {
-    "Pasted %1 events": ""
+    "Pasted %1 events": "Вставлено %1 подій"
   },
   "Pasted %1 of %2 events": {
-    "Pasted %1 of %2 events": ""
+    "Pasted %1 of %2 events": "Вставлено %1 із %2 подій"
   },
   "Pasted 1 event": {
-    "Pasted 1 event": ""
+    "Pasted 1 event": "Вставлено 1 подію"
   },
   "Pick a color source, palette, or your own theme file.": {
     "Pick a color source, palette, or your own theme file.": "Виберіть джерело кольору, палітру або власний файл теми."
   },
   "Pick time": {
-    "Pick time": ""
+    "Pick time": "Вибрати час"
   },
   "Pictures": {
     "Pictures": "Зображення"
@@ -1263,7 +1311,7 @@
     "Play a sound when a reminder fires.": "Відтворювати звук під час спрацьовування нагадування."
   },
   "Playful": {
-    "Playful": ""
+    "Playful": "Грайливий"
   },
   "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": {
     "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": "Укажіть папку з файлами .ics. Кожна підпапка або файл .ics стане календарем — сумісно зі структурами vdirsyncer/khal. Якщо папка не існує, її буде створено."
@@ -1272,7 +1320,7 @@
     "Preset": "Пресет"
   },
   "Previous": {
-    "Previous": ""
+    "Previous": "Попередній"
   },
   "Previous day": {
     "Previous day": "Попередній день"
@@ -1290,7 +1338,7 @@
     "Previous event (previous week in month view)": "Попередня подія (попередній тиждень у режимі місяця)"
   },
   "Previous month": {
-    "Previous month": ""
+    "Previous month": "Попередній місяць"
   },
   "Previous week": {
     "Previous week": "Попередній тиждень"
@@ -1299,7 +1347,7 @@
     "Previous year": "Попередній рік"
   },
   "Primary": {
-    "Primary": ""
+    "Primary": "Основний"
   },
   "Priority": {
     "Priority": "Пріоритет"
@@ -1311,37 +1359,37 @@
     "Quit": "Вийти"
   },
   "Radius strength": {
-    "Radius strength": ""
+    "Radius strength": "Радіус заокруглення"
   },
   "Read-only events can't be cut": {
-    "Read-only events can't be cut": ""
+    "Read-only events can't be cut": "Події лише для читання не можна вирізати"
   },
   "Read-only events can't be deleted": {
-    "Read-only events can't be deleted": ""
+    "Read-only events can't be deleted": "Події лише для читання не можна видалити"
   },
   "Read-only events can't be moved": {
-    "Read-only events can't be moved": ""
+    "Read-only events can't be moved": "Події лише для читання не можна перемістити"
   },
   "Reading file...": {
-    "Reading file...": ""
+    "Reading file...": "Зчитування файлу..."
   },
   "Reconnect": {
     "Reconnect": "Перепідключити"
   },
   "Recurring event · conflicts checked through %1": {
-    "Recurring event · conflicts checked through %1": ""
+    "Recurring event · conflicts checked through %1": "Повторювана подія · конфлікти перевірено до %1"
   },
   "Recurring tasks are managed in Google Tasks.": {
     "Recurring tasks are managed in Google Tasks.": "Повторювані завдання керуються в Google Завданнях."
   },
   "Reduce motion": {
-    "Reduce motion": ""
+    "Reduce motion": "Зменшити рух"
   },
   "Reminders": {
-    "Reminders": ""
+    "Reminders": "Нагадування"
   },
   "Reminders and alerts": {
-    "Reminders and alerts": ""
+    "Reminders and alerts": "Нагадування та сповіщення"
   },
   "Reminders and desktop alerts.": {
     "Reminders and desktop alerts.": "Нагадування та сповіщення на робочому столі."
@@ -1365,19 +1413,25 @@
     "Remove calendar or account": "Видалити календар або обліковий запис"
   },
   "Remove reminder": {
-    "Remove reminder": ""
+    "Remove reminder": "Вилучити нагадування"
   },
   "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
     "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "Вилучає цей обліковий запис, його календарі та події з Dank Calendar. У провайдера нічого не видаляється."
   },
+  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
+  },
   "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
     "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "Вилучає цей календар та його події з Dank Calendar. Якщо провайдер усе ще надає його, він повернеться при наступній синхронізації."
+  },
+  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "Вилучити…"
   },
   "Rename": {
-    "Rename": ""
+    "Rename": "Перейменувати"
   },
   "Rename calendar": {
     "Rename calendar": "Перейменувати календар"
@@ -1389,16 +1443,16 @@
     "Repeat": "Повтор"
   },
   "Repeat %1 events next week": {
-    "Repeat %1 events next week": ""
+    "Repeat %1 events next week": "Повторити %1 подій наступного тижня"
   },
   "Repeat %1 events tomorrow": {
-    "Repeat %1 events tomorrow": ""
+    "Repeat %1 events tomorrow": "Повторити %1 подій завтра"
   },
   "Repeat next week": {
-    "Repeat next week": ""
+    "Repeat next week": "Повторити наступного тижня"
   },
   "Repeat tomorrow": {
-    "Repeat tomorrow": ""
+    "Repeat tomorrow": "Повторити завтра"
   },
   "Repeats": {
     "Repeats": "Повторюється"
@@ -1412,8 +1466,11 @@
   "Reset to global": {
     "Reset to global": "Скинути до глобальних"
   },
+  "Restart required": {
+    "Restart required": ""
+  },
   "Ripple effects": {
-    "Ripple effects": ""
+    "Ripple effects": "Ефекти пульсації"
   },
   "Save": {
     "Save": "Зберегти"
@@ -1422,7 +1479,10 @@
     "Saving...": "Збереження..."
   },
   "Scale": {
-    "Scale": ""
+    "Scale": "Масштаб"
+  },
+  "Scales the whole app. Takes effect after a restart.": {
+    "Scales the whole app. Takes effect after a restart.": ""
   },
   "Search": {
     "Search": "Пошук"
@@ -1437,19 +1497,19 @@
     "Searching": "Пошук…"
   },
   "Secondary": {
-    "Secondary": ""
+    "Secondary": "Вторинний"
   },
   "Select File": {
     "Select File": "Вибрати файл"
   },
   "Select a range of events": {
-    "Select a range of events": ""
+    "Select a range of events": "Вибрати діапазон подій"
   },
   "Select all %1 events": {
-    "Select all %1 events": ""
+    "Select all %1 events": "Вибрати всі %1 подій"
   },
   "Select all events on the selected day": {
-    "Select all events on the selected day": ""
+    "Select all events on the selected day": "Вибрати всі події на вибраний день"
   },
   "Select client_secret.json": {
     "Select client_secret.json": "Виберіть client_secret.json"
@@ -1458,7 +1518,7 @@
     "Select days for a new event (month view)": "Виберіть дні для нової події (режим місяця)"
   },
   "Select event": {
-    "Select event": ""
+    "Select event": "Вибрати подію"
   },
   "Select file": {
     "Select file": "Виберіть файл"
@@ -1472,11 +1532,14 @@
   "Server URL": {
     "Server URL": "URL сервера"
   },
+  "Set by QT_SCALE_FACTOR.": {
+    "Set by QT_SCALE_FACTOR.": ""
+  },
   "Settings": {
     "Settings": "Налаштування"
   },
   "Shape": {
-    "Shape": ""
+    "Shape": "Форма"
   },
   "Show": {
     "Show": "Показати"
@@ -1484,14 +1547,20 @@
   "Show Dank Calendar in the system tray.": {
     "Show Dank Calendar in the system tray.": "Показувати Dank Calendar у системному треї."
   },
+  "Show Dux Calendar in the system tray.": {
+    "Show Dux Calendar in the system tray.": ""
+  },
   "Show all events in month view": {
     "Show all events in month view": "Показувати всі події в режимі місяця"
   },
   "Show all-day reminders": {
     "Show all-day reminders": "Показувати нагадування для подій на весь день"
   },
+  "Show an event that appears in several calendars once, with dots for the other calendars.": {
+    "Show an event that appears in several calendars once, with dots for the other calendars.": ""
+  },
   "Show calendar": {
-    "Show calendar": ""
+    "Show calendar": "Показати календар"
   },
   "Show task lists and the Tasks view when an account provides them.": {
     "Show task lists and the Tasks view when an account provides them.": "Показувати списки завдань і режим «Завдання», якщо обліковий запис їх надає."
@@ -1506,7 +1575,7 @@
     "Show week numbers": "Показувати номери тижнів"
   },
   "Showing the first 20 overlaps.": {
-    "Showing the first 20 overlaps.": ""
+    "Showing the first 20 overlaps.": "Показано перші 20 перетинів."
   },
   "Sidebar": {
     "Sidebar": "Бічна панель"
@@ -1515,10 +1584,16 @@
     "Sign in with %1": "Увійти за допомогою %1"
   },
   "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": ""
+    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "Увійдіть через Google у браузері, і все готово — налаштування не потрібне. Dank Calendar синхронізує ваші календарі, події та завдання."
+  },
+  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
+    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
   },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": ""
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "Увійдіть через Microsoft у браузері, і все готово — налаштування не потрібне. Dank Calendar синхронізує ваші календарі Outlook, події та завдання."
+  },
+  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Увійдіть за допомогою Apple ID та пароля додатка. Звичайні паролі Apple ID не підійдуть."
@@ -1539,25 +1614,25 @@
     "Skip certificate verification": "Пропустити перевірку сертифіката"
   },
   "Smooth": {
-    "Smooth": ""
+    "Smooth": "Плавний"
   },
   "Snooze duration": {
     "Snooze duration": "Тривалість відкладення"
   },
   "Some calendars couldn't be synced; their events may be missing or out of date.": {
-    "Some calendars couldn't be synced; their events may be missing or out of date.": ""
+    "Some calendars couldn't be synced; their events may be missing or out of date.": "Не вдалося синхронізувати деякі календарі; їхні події можуть бути відсутніми або застарілими."
   },
   "Sort By": {
     "Sort By": "Сортувати за"
   },
   "Spring": {
-    "Spring": ""
+    "Spring": "Пружність"
   },
   "Square": {
-    "Square": ""
+    "Square": "Квадратний"
   },
   "Start": {
-    "Start": ""
+    "Start": "Початок"
   },
   "Start at login": {
     "Start at login": "Запускати при вході в систему"
@@ -1590,13 +1665,16 @@
     "Subscribing…": "Підписка…"
   },
   "Support Dank Linux": {
-    "Support Dank Linux": ""
+    "Support Dank Linux": "Підтримати Dank Linux"
+  },
+  "Support Dux Labs": {
+    "Support Dux Labs": ""
   },
   "Sync interval": {
     "Sync interval": "Інтервал синхронізації"
   },
   "Sync is off — click to re-enable": {
-    "Sync is off — click to re-enable": ""
+    "Sync is off — click to re-enable": "Синхронізацію вимкнено — натисніть, щоб увімкнути"
   },
   "Sync now": {
     "Sync now": "Синхронізувати"
@@ -1604,8 +1682,14 @@
   "Synced as \"%1\". The name only changes in Dank Calendar.": {
     "Synced as \"%1\". The name only changes in Dank Calendar.": "Синхронізовано як «%1». Ім'я зміниться лише в Dank Calendar."
   },
+  "Synced as \"%1\". The name only changes in Dux Calendar.": {
+    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  },
+  "System": {
+    "System": ""
+  },
   "System default": {
-    "System default": ""
+    "System default": "Як у системі"
   },
   "System default (%1)": {
     "System default (%1)": "За замовчуванням (%1)"
@@ -1635,40 +1719,40 @@
     "Test notification": "Тестове сповіщення"
   },
   "Text color": {
-    "Text color": ""
+    "Text color": "Колір тексту"
   },
   "That file is not valid JSON.": {
     "That file is not valid JSON.": "Цей файл не є коректним JSON."
   },
   "The server refused to return some events or tasks, so they were skipped; the rest of the calendar is syncing.": {
-    "The server refused to return some events or tasks, so they were skipped; the rest of the calendar is syncing.": ""
+    "The server refused to return some events or tasks, so they were skipped; the rest of the calendar is syncing.": "Сервер відхилив запит на отримання деяких подій або завдань, тому їх було пропущено; решта календаря синхронізується."
   },
   "Theme": {
     "Theme": "Тема"
   },
   "Theme, shape and motion": {
-    "Theme, shape and motion": ""
+    "Theme, shape and motion": "Тема, форма та анімація"
   },
   "These events will be deleted from their calendars. Recurring selections delete only the selected occurrences.": {
-    "These events will be deleted from their calendars. Recurring selections delete only the selected occurrences.": ""
+    "These events will be deleted from their calendars. Recurring selections delete only the selected occurrences.": "Ці події буде видалено з їхніх календарів. Для повторюваних подій видаляються лише вибрані повторення."
   },
   "Thickness": {
-    "Thickness": ""
+    "Thickness": "Товщина"
   },
   "This account cannot be reconnected — remove it and add it again.": {
     "This account cannot be reconnected — remove it and add it again.": "Цей обліковий запис не може бути перепідключений — вилучіть і додайте його знову."
   },
   "This event": {
-    "This event": ""
+    "This event": "Ця подія"
   },
   "This event will be deleted from its calendar.": {
-    "This event will be deleted from its calendar.": ""
+    "This event will be deleted from its calendar.": "Цю подію буде видалено з її календаря."
   },
   "Time format": {
     "Time format": "Формат часу"
   },
   "Title bars": {
-    "Title bars": ""
+    "Title bars": "Заголовки вікон"
   },
   "Title is required": {
     "Title is required": "Заголовок є обов'язковим"
@@ -1680,7 +1764,7 @@
     "Toggle calendar, switch view or sync account": "Перемкнути календар, змінити режим або синхронізувати обліковий запис"
   },
   "Toggle sidebar": {
-    "Toggle sidebar": ""
+    "Toggle sidebar": "Перемкнути бічну панель"
   },
   "Toggle this help": {
     "Toggle this help": "Показати/приховати довідку"
@@ -1704,7 +1788,7 @@
     "Type at least 2 characters to search events.": "Введіть не менше 2 символів для пошуку подій."
   },
   "Typography": {
-    "Typography": ""
+    "Typography": "Типографіка"
   },
   "Undo": {
     "Undo": "Скасувати"
@@ -1728,7 +1812,7 @@
     "Use this folder": "Використовувати цю папку"
   },
   "Use your own OAuth client": {
-    "Use your own OAuth client": ""
+    "Use your own OAuth client": "Використовувати власний клієнт OAuth"
   },
   "Username": {
     "Username": "Ім'я користувача"
@@ -1739,8 +1823,11 @@
   "Using DankMaterialShell dynamic colors.": {
     "Using DankMaterialShell dynamic colors.": "Використовуються динамічні кольори DankMaterialShell."
   },
+  "Using Dux Shell dynamic colors.": {
+    "Using Dux Shell dynamic colors.": ""
+  },
   "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+    "Using Matugen colors.": "Використовуються кольори Matugen."
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "Перевірте, чи працюють спливаючі сповіщення."
@@ -1749,7 +1836,7 @@
     "Version": "Версія"
   },
   "Version and links": {
-    "Version and links": ""
+    "Version and links": "Версія та посилання"
   },
   "Videos": {
     "Videos": "Відео"
@@ -1758,7 +1845,7 @@
     "View": "Вигляд"
   },
   "Views": {
-    "Views": ""
+    "Views": "Режими перегляду"
   },
   "Visibility, names, and removal per calendar.": {
     "Visibility, names, and removal per calendar.": "Видимість, назви та вилучення для кожного календаря."
@@ -1782,7 +1869,7 @@
     "Weekly": "Щотижня"
   },
   "Weight": {
-    "Weight": ""
+    "Weight": "Насиченість"
   },
   "What the window's close button does.": {
     "What the window's close button does.": "Дія при натисканні кнопки закриття вікна."
@@ -1791,7 +1878,7 @@
     "When all-day event reminders fire.": "Коли спрацьовують нагадування про події на весь день."
   },
   "Windows": {
-    "Windows": ""
+    "Windows": "Вікна"
   },
   "Yearly": {
     "Yearly": "Щороку"
@@ -1807,6 +1894,9 @@
   },
   "Your response": {
     "Your response": "Ваша відповідь"
+  },
+  "Zoom": {
+    "Zoom": ""
   },
   "all day": {
     "all day": "весь день"
@@ -1848,7 +1938,7 @@
     "read-only": "тільки для читання"
   },
   "sync off": {
-    "sync off": ""
+    "sync off": "синхронізацію вимкнено"
   },
   "synced as \"%1": {
     "synced as \"%1\"": "синхронізовано як «%1»"
