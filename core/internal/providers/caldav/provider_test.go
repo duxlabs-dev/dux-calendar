@@ -11,6 +11,7 @@ import (
 	"regexp"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -434,4 +435,126 @@ func TestSyncFailsWhenEveryObjectIsRefused(t *testing.T) {
 	_, err = p.Sync(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, cal.SyncCursor{})
 	require.ErrorContains(t, err, "404")
 	assert.Empty(t, p.Notices())
+}
+
+const encodedObjectHref = "/dav/calendars/user/cal/abc%40client.ics"
+
+const encodedListingXML = `<?xml version="1.0" encoding="UTF-8"?>
+<d:multistatus xmlns:d="DAV:">
+  <d:response><d:href>/dav/calendars/user/cal/</d:href><d:propstat><d:prop/><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response>
+  <d:response><d:href>/dav/calendars/user/cal/abc%40client.ics</d:href><d:propstat><d:prop><d:getetag>"1"</d:getetag></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response>
+</d:multistatus>`
+
+const encodedObjectResponseXML = `<d:response>
+    <d:href>/dav/calendars/user/cal/abc%40client.ics</d:href>
+    <d:propstat>
+      <d:prop>
+        <d:getetag>"1"</d:getetag>
+        <c:calendar-data>BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//test//EN
+BEGIN:VEVENT
+UID:abc@client
+DTSTAMP:20260101T000000Z
+DTSTART:20260501T100000Z
+DTEND:20260501T110000Z
+SUMMARY:Encoded
+END:VEVENT
+END:VCALENDAR
+</c:calendar-data>
+      </d:prop>
+      <d:status>HTTP/1.1 200 OK</d:status>
+    </d:propstat>
+  </d:response>`
+
+const encodedMissingResponseXML = `<d:response>
+    <d:href>/dav/calendars/user/cal/abc@client.ics</d:href>
+    <d:status>HTTP/1.1 404 Not Found</d:status>
+  </d:response>`
+
+const noUIDConflictXML = `<error xmlns="DAV:"><no-uid-conflict xmlns="urn:ietf:params:xml:ns:caldav"><href xmlns="DAV:">/dav/calendars/user/cal/abc%40client.ics</href></no-uid-conflict></error>`
+
+// Stalwart-style server (#141): resource names keep their percent-encoding, so
+// "abc@client.ics" and "abc%40client.ics" are different objects.
+func newEncodedHrefServer(t *testing.T) *httptest.Server {
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		body, _ := io.ReadAll(r.Body)
+		path := strings.TrimSuffix(r.URL.Path, "/")
+		switch {
+		case r.Method == "PROPFIND" && path == "":
+			writeMultiStatus(w, principalXML)
+		case r.Method == "PROPFIND" && path == "/dav/principals/user":
+			writeMultiStatus(w, homeSetXML)
+		case r.Method == "PROPFIND" && path == "/dav/calendars/user/cal":
+			writeMultiStatus(w, encodedListingXML)
+		case r.Method == "REPORT" && strings.Contains(string(body), "calendar-query"):
+			w.WriteHeader(http.StatusForbidden)
+		case r.Method == "REPORT" && strings.Contains(string(body), "<d:href>"+encodedObjectHref+"</d:href>"):
+			writeMultiStatus(w, multiStatusXML(encodedObjectResponseXML))
+		case r.Method == "REPORT":
+			writeMultiStatus(w, multiStatusXML(encodedMissingResponseXML))
+		case r.URL.EscapedPath() != encodedObjectHref:
+			w.Header().Set("Content-Type", "text/xml")
+			w.WriteHeader(http.StatusPreconditionFailed)
+			w.Write([]byte(noUIDConflictXML))
+		case r.Method == "PUT":
+			w.Header().Set("ETag", `"2"`)
+			w.WriteHeader(http.StatusNoContent)
+		case r.Method == "DELETE":
+			w.WriteHeader(http.StatusNoContent)
+		default:
+			w.WriteHeader(http.StatusMethodNotAllowed)
+		}
+	}))
+	t.Cleanup(server.Close)
+	return server
+}
+
+func TestSyncKeepsHrefEncoding(t *testing.T) {
+	server := newEncodedHrefServer(t)
+
+	p, err := New(context.Background(), cal.Account{ID: "acc"}, newSecrets(t), server.URL, "user")
+	require.NoError(t, err)
+
+	result, err := p.Sync(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, cal.SyncCursor{})
+	require.NoError(t, err)
+	require.Len(t, result.Changes, 1)
+	assert.Equal(t, "abc@client", result.Changes[0].Event.UID)
+	assert.Equal(t, encodedObjectHref, result.Changes[0].Event.RemoteID)
+	assert.Equal(t, "1", result.Changes[0].Event.Etag)
+	assert.Empty(t, p.Notices())
+}
+
+func TestUpdateEventSendsHrefAsServed(t *testing.T) {
+	server := newEncodedHrefServer(t)
+
+	p, err := New(context.Background(), cal.Account{ID: "acc"}, newSecrets(t), server.URL, "user")
+	require.NoError(t, err)
+
+	start := time.Date(2026, 5, 1, 10, 0, 0, 0, time.UTC)
+	ev := &cal.Event{UID: "abc@client", RemoteID: encodedObjectHref, Summary: "Encoded", Start: start, End: start.Add(time.Hour)}
+	updated, err := p.UpdateEvent(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, ev)
+	require.NoError(t, err)
+	assert.Equal(t, "2", updated.Etag)
+
+	ev.RemoteID = "/dav/calendars/user/cal/abc@client.ics"
+	_, err = p.UpdateEvent(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, ev)
+	require.ErrorContains(t, err, "412 Precondition Failed")
+	require.ErrorContains(t, err, "no-uid-conflict")
+}
+
+func TestDeleteEventSendsHrefAsServed(t *testing.T) {
+	server := newEncodedHrefServer(t)
+
+	p, err := New(context.Background(), cal.Account{ID: "acc"}, newSecrets(t), server.URL, "user")
+	require.NoError(t, err)
+
+	err = p.DeleteEvent(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, cal.Event{RemoteID: encodedObjectHref})
+	require.NoError(t, err)
+}
+
+func TestObjectPathEscapesSegments(t *testing.T) {
+	assert.Equal(t, "/dav/calendars/user/cal/abc@client.ics", objectPath("/dav/calendars/user/cal", "abc@client"))
+	assert.Equal(t, "/dav/calendars/user/cal/a%2Fb.ics", objectPath("/dav/calendars/user/cal/", "a/b"))
+	assert.Equal(t, "/dav/calendars/user/M%C3%B6j/x.ics", objectPath("/dav/calendars/user/Möj/", "x"))
 }
