@@ -211,8 +211,8 @@ Singleton {
     readonly property color cardSurface: surfaceContainer
     readonly property color chipSurface: surfaceContainerHigh
     readonly property color chipSurfaceNested: surfaceContainerHighest
-    readonly property color tooltipSurface: surfaceContainerHighest
-    readonly property color tooltipText: Contrast.readableOn(tooltipSurface, onContainerCandidates)
+    readonly property color tooltipSurface: inverseSurface
+    readonly property color tooltipText: Contrast.readableOn(tooltipSurface, [inverseOnSurface].concat(onContainerCandidates))
     property color inverseSurface: currentThemeData.inverseSurface || surfaceText
     property color inverseOnSurface: currentThemeData.inverseOnSurface || surface
     readonly property color contrastDark: "#000000"
