@@ -296,8 +296,22 @@ func (e *Engine) SyncAccount(ctx context.Context, acc *ent.Account) error {
 	if e.recordKeyringLocked(acc.ID, errors.Is(err, keyring.ErrLocked)) {
 		retryAfter = keyringLockedRetry
 	}
+	e.recordSyncFailure(ctx, acc, err)
 	e.schedule(acc.ID, retryAfter)
 	return err
+}
+
+// A sync that dies before any calendar runs (provider build, ListCalendars)
+// would otherwise leave the account looking healthy (#138): needs_reauth stays
+// false and the notice keeps whatever the last good cycle wrote.
+func (e *Engine) recordSyncFailure(ctx context.Context, acc *ent.Account, err error) {
+	switch {
+	case err == nil, errors.Is(err, context.Canceled):
+		return
+	case errors.Is(err, keyring.ErrLocked), errors.Is(err, calendar.ErrReauthRequired):
+		return
+	}
+	e.setSyncNotice(ctx, acc, calendar.NoticeCalendarSyncFailed)
 }
 
 func (e *Engine) recordKeyringLocked(accountID string, locked bool) bool {
@@ -379,7 +393,10 @@ func (e *Engine) recordSyncNotice(ctx context.Context, acc *ent.Account, provide
 	if calendarFailed {
 		codes = append(codes, calendar.NoticeCalendarSyncFailed)
 	}
-	notice := strings.Join(codes, ",")
+	e.setSyncNotice(ctx, acc, strings.Join(codes, ","))
+}
+
+func (e *Engine) setSyncNotice(ctx context.Context, acc *ent.Account, notice string) {
 	if notice == acc.SyncNotice {
 		return
 	}
