@@ -429,9 +429,19 @@ func (p *Provider) queryComponents(ctx context.Context, calendarPath, comp strin
 		CompFilter:  caldav.CompFilter{Name: ical.CompCalendar, Comps: []caldav.CompFilter{compFilter}},
 	}
 
-	objects, queryErr := p.client.QueryCalendar(ctx, calendarPath, query)
-	if queryErr == nil {
-		return objects, nil
+	// A query is time-bounded when either end of the range is set; a full
+	// sync passes neither. Some servers answer a calendar-query without a
+	// time-range with only the recurring masters, so an unbounded query
+	// skips it and enumerates the collection instead.
+	timeBounded := !start.IsZero() || !end.IsZero()
+
+	var queryErr error
+	if timeBounded {
+		objects, err := p.client.QueryCalendar(ctx, calendarPath, query)
+		if err == nil {
+			return objects, nil
+		}
+		queryErr = err
 	}
 
 	// Some servers (notably iCloud) refuse to return calendar-data from a
