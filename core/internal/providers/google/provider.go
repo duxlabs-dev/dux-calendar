@@ -320,11 +320,7 @@ func (p *Provider) RespondToEvent(ctx context.Context, c cal.Calendar, ev *cal.E
 		return nil, fmt.Errorf("respond google event: %q is not an attendee", self)
 	}
 
-	remoteID := ev.RemoteID
-	if !ev.OriginalStart.IsZero() && ev.RecurringID != "" {
-		remoteID = googleInstanceID(ev.RemoteID, ev.OriginalStart, ev.AllDay)
-	}
-
+	remoteID := googleRespondTargetID(ev)
 	updated, err := googleCall(ctx, p, false, func() (*calendar.Event, error) {
 		return p.svc.Events.Patch(c.RemoteID, remoteID, &calendar.Event{Attendees: attendees}).Context(ctx).Do()
 	})
@@ -332,6 +328,15 @@ func (p *Provider) RespondToEvent(ctx context.Context, c cal.Calendar, ev *cal.E
 		return nil, fmt.Errorf("respond google event: %w", err)
 	}
 	return fromGoogleEvent(c, updated), nil
+}
+
+// A synced exception row already carries its instance id as RemoteID; only a
+// reply synthesized from the master (RemoteID == RecurringID) needs one built.
+func googleRespondTargetID(ev *cal.Event) string {
+	if ev.OriginalStart.IsZero() || ev.RecurringID == "" || ev.RemoteID != ev.RecurringID {
+		return ev.RemoteID
+	}
+	return googleInstanceID(ev.RemoteID, ev.OriginalStart, ev.AllDay)
 }
 
 // googleInstanceID addresses one occurrence of a recurring event: the master id

@@ -7,7 +7,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
 	"google.golang.org/api/googleapi"
+
+	cal "github.com/duxlabs-dev/dux-calendar/core/internal/calendar"
 )
 
 func TestGoogleInstanceID(t *testing.T) {
@@ -18,6 +21,41 @@ func TestGoogleInstanceID(t *testing.T) {
 	}
 	if got := googleInstanceID("master", time.Date(2026, 8, 17, 0, 0, 0, 0, time.UTC), true); got != "master_20260817" {
 		t.Errorf("all-day instance id = %q", got)
+	}
+}
+
+func TestGoogleRespondTargetID(t *testing.T) {
+	original := time.Date(2026, 10, 12, 9, 0, 0, 0, time.UTC)
+	cases := []struct {
+		name string
+		ev   cal.Event
+		want string
+	}{
+		{
+			name: "plain event",
+			ev:   cal.Event{RemoteID: "_60q30c1g"},
+			want: "_60q30c1g",
+		},
+		{
+			name: "occurrence synthesized from master",
+			ev:   cal.Event{RemoteID: "_60q30c1g", RecurringID: "_60q30c1g", OriginalStart: original},
+			want: "_60q30c1g_20261012T090000Z",
+		},
+		{
+			name: "synced exception row keeps its own id",
+			ev:   cal.Event{RemoteID: "_60q30c1g_20261012T090000Z", RecurringID: "_60q30c1g", OriginalStart: original},
+			want: "_60q30c1g_20261012T090000Z",
+		},
+		{
+			name: "all-day occurrence synthesized from master",
+			ev:   cal.Event{RemoteID: "m", RecurringID: "m", OriginalStart: original, AllDay: true},
+			want: "m_20261012",
+		},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			assert.Equal(t, tc.want, googleRespondTargetID(&tc.ev))
+		})
 	}
 }
 
