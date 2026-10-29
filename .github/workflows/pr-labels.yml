@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
   pull-requests: write
 
 concurrency:
@@ -46,7 +47,9 @@ jobs:
             const paths = files.map(f => f.filename);
             const pathRules = [
               ["packaging", p => p.startsWith("distro/") || p === "flake.nix" || p === "flake.lock"],
-              ["i18n", p => p.startsWith("quickshell/translations/")],
+              ["i18n", p => p.startsWith("quickshell/translations/poexports/")],
+              ["core", p => p.startsWith("core/")],
+              ["ui", p => p.startsWith("quickshell/") && !p.startsWith("quickshell/translations/")],
             ];
             for (const [label, matches] of pathRules) {
               if (paths.some(matches)) labels.add(label);
@@ -55,6 +58,20 @@ jobs:
             const existing = new Set(pr.labels.map(l => l.name));
             const missing = [...labels].filter(l => !existing.has(l));
             if (missing.length === 0) return core.info("nothing to add");
+
+            const areaLabels = {
+              core: ["Go daemon and CLI under core/", "1d76db"],
+              ui: ["Quickshell UI under quickshell/", "c5def5"],
+            };
+            for (const name of missing.filter(l => l in areaLabels)) {
+              const [description, color] = areaLabels[name];
+              try {
+                await github.rest.issues.getLabel({ ...context.repo, name });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({ ...context.repo, name, description, color });
+              }
+            }
 
             await github.rest.issues.addLabels({
               ...context.repo,
