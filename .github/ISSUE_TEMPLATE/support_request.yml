@@ -1,0 +1,101 @@
+name: Support Request
+description: Help with installation, usage, or general questions about Dux Calendar
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Dux Calendar Support Request
+  - type: dropdown
+    id: compositor
+    attributes:
+      label: Compositor
+      options:
+        - Niri
+        - Hyprland
+        - MangoWC (dwl)
+        - Sway
+        - Other (specify below)
+    validations:
+      required: true
+  - type: input
+    id: compositor_other
+    attributes:
+      label: If Other, please specify
+      placeholder: e.g., Wayfire, Mutter, etc.
+    validations:
+      required: false
+  - type: dropdown
+    id: distribution
+    attributes:
+      label: Distribution
+      options:
+        - Arch Linux
+        - CachyOS
+        - Fedora
+        - NixOS
+        - Debian
+        - Ubuntu
+        - Gentoo
+        - OpenSUSE
+        - Other (specify below)
+    validations:
+      required: true
+  - type: input
+    id: distribution_other
+    attributes:
+      label: If Other, please specify
+      placeholder: e.g., PikaOS, Void Linux, etc.
+    validations:
+      required: false
+  - type: dropdown
+    id: installation_method
+    attributes:
+      label: Select your Installation Method
+      options:
+        - Flatpak
+        - Distro Packaging
+        - Nix
+        - Source
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: Output of `dcal version`
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of the support needed
+      placeholder: What do you need help with?
+    validations:
+      required: true
+  - type: textarea
+    id: solutions_tried
+    attributes:
+      label: Solutions Tried
+      description: Describe what you've tried so far (commands, documentation, etc.)
+      placeholder: List steps or resources you've already tried
+    validations:
+      required: false
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration Details
+      description: Include any relevant configuration if relevant
+      placeholder: Add configuration or environment info
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots/Recordings
+      description: If applicable, add screenshots or screen recordings
+      placeholder: Attach images or videos here
+    validations:
+      required: false
