@@ -12,7 +12,7 @@
     "%1 events selected": "%1 afspraken geselecteerd"
   },
   "%1 overlapping events": {
-    "%1 overlapping events": ""
+    "%1 overlapping events": "%1 overlappende afspraken"
   },
   "%1 selected": {
     "%1 selected": "%1 geselecteerd"
@@ -75,7 +75,7 @@
     "1 minute": "1 minuut"
   },
   "1 overlapping event": {
-    "1 overlapping event": ""
+    "1 overlapping event": "1 overlappende afspraak"
   },
   "1 week before": {
     "1 week before": "1 week van tevoren"
@@ -201,7 +201,7 @@
     "Add title": "Titel toevoegen"
   },
   "Add to calendar": {
-    "Add to calendar": ""
+    "Add to calendar": "Toevoegen aan agenda"
   },
   "Adding…": {
     "Adding…": "Toevoegen…"
@@ -243,7 +243,7 @@
     "Already in %1": "Al in %1"
   },
   "Also in these calendars": {
-    "Also in these calendars": ""
+    "Also in these calendars": "Ook in deze agenda's"
   },
   "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
     "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: Terug • F1/I: Bestandsinfo • F10: Help • Esc: Sluiten"
@@ -270,7 +270,7 @@
     "Apple iCloud calendars via app-specific password.": "Apple iCloud-agenda's via app-specifiek wachtwoord."
   },
   "Apply and restart": {
-    "Apply and restart": ""
+    "Apply and restart": "Toepassen en herstarten"
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "Keur toegang goed in je browser. Dit venster keert automatisch terug wanneer %1 de autorisatiecode terugstuurt."
@@ -315,7 +315,7 @@
     "Begin setup": "Installatie starten"
   },
   "Busy": {
-    "Busy": ""
+    "Busy": "Bezet"
   },
   "Calendar": {
     "Calendar": "Agenda"
@@ -399,7 +399,7 @@
     "Coming soon": "Binnenkort beschikbaar"
   },
   "Community": {
-    "Community": ""
+    "Community": "Gemeenschap"
   },
   "Completed": {
     "Completed": "Voltooid"
@@ -411,10 +411,10 @@
     "Confirm delete": "Verwijderen bevestigen"
   },
   "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": "Conflicten zijn gebaseerd op afspraken die momenteel met DankCalendar zijn gesynchroniseerd. Je kunt een overlappende afspraak nog steeds importeren."
   },
   "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": "Conflicten zijn gebaseerd op afspraken die momenteel met Dux Calendar zijn gesynchroniseerd. Je kunt een overlappende afspraak nog steeds importeren."
   },
   "Connect": {
     "Connect": "Verbinden"
@@ -483,7 +483,7 @@
     "Could not read that file.": "Kon dat bestand niet lezen."
   },
   "Couldn't reconnect. Add the account again to sign in.": {
-    "Couldn't reconnect. Add the account again to sign in.": ""
+    "Couldn't reconnect. Add the account again to sign in.": "Opnieuw verbinden mislukt. Voeg het account opnieuw toe om je aan te melden."
   },
   "Couldn't update task": {
     "Couldn't update task": "Kon taak niet bijwerken"
@@ -570,7 +570,7 @@
     "Decrease": "Verlagen"
   },
   "Default": {
-    "Default": ""
+    "Default": "Standaard"
   },
   "Default calendar": {
     "Default calendar": "Standaardagenda"
@@ -660,7 +660,7 @@
     "Display ISO week numbers in month view.": "ISO-weeknummers weergeven in maandweergave."
   },
   "Display family": {
-    "Display family": ""
+    "Display family": "Weergavelettertype"
   },
   "Display name (optional)": {
     "Display name (optional)": "Weergavenaam (optioneel)"
@@ -702,16 +702,16 @@
     "Duration": "Duur"
   },
   "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
+    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "Dux Calendar is een agenda voor de moderne Linux-desktop met een <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">op Material 3 geïnspireerd</a> ontwerp, plus een aanpasbare CLI en socket-API voor integraties.<br /><br/>Het is gebouwd met <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, een QT6-framework voor het bouwen van desktopshells, en <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, een statisch getypeerde, gecompileerde programmeertaal."
   },
   "Dux Calendar will close and reopen with the new zoom.": {
-    "Dux Calendar will close and reopen with the new zoom.": ""
+    "Dux Calendar will close and reopen with the new zoom.": "Dux Calendar wordt gesloten en opnieuw geopend met de nieuwe zoom."
   },
   "Dux Shell not detected — using the %1 preset.": {
-    "Dux Shell not detected — using the %1 preset.": ""
+    "Dux Shell not detected — using the %1 preset.": "Dux Shell niet gevonden — de voorinstelling %1 wordt gebruikt."
   },
   "Dux Shell not detected, using %1.": {
-    "Dux Shell not detected, using %1.": ""
+    "Dux Shell not detected, using %1.": "Dux Shell niet gevonden, %1 wordt gebruikt."
   },
   "Edit": {
     "Edit": "Bewerken"
@@ -732,7 +732,7 @@
     "Enable sync": "Synchronisatie inschakelen"
   },
   "End": {
-    "End": ""
+    "End": "Einde"
   },
   "Ends": {
     "Ends": "Eindigt"
@@ -780,7 +780,7 @@
     "F1/I: Toggle • F10: Help": "F1/I: Omschakelen • F10: Help"
   },
   "Family": {
-    "Family": ""
+    "Family": "Lettertype"
   },
   "Feed URL": {
     "Feed URL": "Feed-URL"
@@ -810,10 +810,10 @@
     "Follow DankMaterialShell colors, falling back to a preset.": "Volg de kleuren van DankMaterialShell, of val terug op een preset."
   },
   "Follow Dux Shell colors, falling back to a preset.": {
-    "Follow Dux Shell colors, falling back to a preset.": ""
+    "Follow Dux Shell colors, falling back to a preset.": "Dux Shell-kleuren volgen, met een voorinstelling als terugval."
   },
   "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+    "Follow colors generated by Matugen.": "Kleuren volgen die door Matugen zijn gegenereerd."
   },
   "Follow language": {
     "Follow language": "Taal volgen"
@@ -822,7 +822,7 @@
     "Following the system color scheme (currently %1).": "Systeemkleurenschema volgen (momenteel %1)."
   },
   "Font source": {
-    "Font source": ""
+    "Font source": "Lettertypebron"
   },
   "General": {
     "General": "Algemeen"
@@ -918,7 +918,7 @@
     "Launch Dank Calendar in the background when you log in.": "Dank Calendar op de achtergrond starten wanneer je inlogt."
   },
   "Launch Dux Calendar in the background when you log in.": {
-    "Launch Dux Calendar in the background when you log in.": ""
+    "Launch Dux Calendar in the background when you log in.": "Dux Calendar op de achtergrond starten wanneer je je aanmeldt."
   },
   "Length used when creating events.": {
     "Length used when creating events.": "Gebruikte duur bij het aanmaken van afspraken."
@@ -963,10 +963,10 @@
     "Marked as not done": "Gemarkeerd als niet voltooid"
   },
   "Matugen": {
-    "Matugen": ""
+    "Matugen": "Matugen"
   },
   "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
+    "Matugen theme missing or invalid — using the %1 preset.": "Matugen-thema ontbreekt of is ongeldig — de voorinstelling %1 wordt gebruikt."
   },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "Maximaal aantal titelregels per gebeurtenis in de maandweergave."
@@ -993,7 +993,7 @@
     "Menu": "Menu"
   },
   "Merge duplicate events": {
-    "Merge duplicate events": ""
+    "Merge duplicate events": "Dubbele afspraken samenvoegen"
   },
   "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
     "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "Toegang tot Microsoft To Do is niet verleend. Verbind dit account opnieuw om taken te synchroniseren."
@@ -1011,7 +1011,7 @@
     "Modified": "Gewijzigd"
   },
   "Monospace family": {
-    "Monospace family": ""
+    "Monospace family": "Lettertype met vaste breedte"
   },
   "Month": {
     "Month": "Maand"
@@ -1149,7 +1149,7 @@
     "No matching events": "Geen overeenkomende afspraken"
   },
   "No overlapping busy events": {
-    "No overlapping busy events": ""
+    "No overlapping busy events": "Geen overlappende bezette afspraken"
   },
   "No task list available": {
     "No task list available": "Geen takenlijst beschikbaar"
@@ -1191,7 +1191,7 @@
     "Off": "Uit"
   },
   "Off lets the compositor decorate windows. Open windows update when reopened.": {
-    "Off lets the compositor decorate windows. Open windows update when reopened.": ""
+    "Off lets the compositor decorate windows. Open windows update when reopened.": "Bij uit worden vensters door de compositor gedecoreerd. Geopende vensters worden bijgewerkt wanneer ze opnieuw worden geopend."
   },
   "Offline": {
     "Offline": "Offline"
@@ -1221,7 +1221,7 @@
     "Open or create event": "Afspraak openen of maken"
   },
   "Open the existing meeting to handle this reply or cancellation.": {
-    "Open the existing meeting to handle this reply or cancellation.": ""
+    "Open the existing meeting to handle this reply or cancellation.": "Open de bestaande vergadering om dit antwoord of deze annulering te verwerken."
   },
   "Order": {
     "Order": "Volgorde"
@@ -1377,7 +1377,7 @@
     "Reconnect": "Opnieuw verbinden"
   },
   "Recurring event · conflicts checked through %1": {
-    "Recurring event · conflicts checked through %1": ""
+    "Recurring event · conflicts checked through %1": "Terugkerende afspraak · conflicten gecontroleerd tot en met %1"
   },
   "Recurring tasks are managed in Google Tasks.": {
     "Recurring tasks are managed in Google Tasks.": "Terugkerende taken worden beheerd in Google Tasks."
@@ -1419,13 +1419,13 @@
     "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "Verwijdert dit account en de bijbehorende agenda's en afspraken uit Dank Calendar. Er wordt niets verwijderd bij de provider."
   },
   "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
+    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": "Verwijdert dit account en de bijbehorende agenda's en afspraken uit Dux Calendar. Er wordt niets bij de provider verwijderd."
   },
   "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
     "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "Verwijdert deze agenda en de bijbehorende afspraken uit Dank Calendar. Als de provider deze nog aanbiedt, komt deze bij de volgende synchronisatie weer terug."
   },
   "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
+    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": "Verwijdert deze agenda en de bijbehorende afspraken uit Dux Calendar. Als de provider de agenda nog aanbiedt, komt deze bij de volgende synchronisatie terug."
   },
   "Remove…": {
     "Remove…": "Verwijderen…"
@@ -1467,7 +1467,7 @@
     "Reset to global": "Herstellen naar globaal"
   },
   "Restart required": {
-    "Restart required": ""
+    "Restart required": "Herstart vereist"
   },
   "Ripple effects": {
     "Ripple effects": "Rimpeleffecten"
@@ -1482,7 +1482,7 @@
     "Scale": "Schaal"
   },
   "Scales the whole app. Takes effect after a restart.": {
-    "Scales the whole app. Takes effect after a restart.": ""
+    "Scales the whole app. Takes effect after a restart.": "Schaalt de hele app. Wordt van kracht na een herstart."
   },
   "Search": {
     "Search": "Zoeken"
@@ -1533,7 +1533,7 @@
     "Server URL": "Server-URL"
   },
   "Set by QT_SCALE_FACTOR.": {
-    "Set by QT_SCALE_FACTOR.": ""
+    "Set by QT_SCALE_FACTOR.": "Ingesteld door QT_SCALE_FACTOR."
   },
   "Settings": {
     "Settings": "Instellingen"
@@ -1548,7 +1548,7 @@
     "Show Dank Calendar in the system tray.": "Dank Calendar in het systeemvak tonen."
   },
   "Show Dux Calendar in the system tray.": {
-    "Show Dux Calendar in the system tray.": ""
+    "Show Dux Calendar in the system tray.": "Dux Calendar tonen in het systeemvak."
   },
   "Show all events in month view": {
     "Show all events in month view": "Alle afspraken tonen in maandoverzicht"
@@ -1557,7 +1557,7 @@
     "Show all-day reminders": "Dagherinneringen tonen"
   },
   "Show an event that appears in several calendars once, with dots for the other calendars.": {
-    "Show an event that appears in several calendars once, with dots for the other calendars.": ""
+    "Show an event that appears in several calendars once, with dots for the other calendars.": "Een afspraak die in meerdere agenda's voorkomt één keer tonen, met stippen voor de andere agenda's."
   },
   "Show calendar": {
     "Show calendar": "Agenda tonen"
@@ -1575,7 +1575,7 @@
     "Show week numbers": "Weeknummers tonen"
   },
   "Showing the first 20 overlaps.": {
-    "Showing the first 20 overlaps.": ""
+    "Showing the first 20 overlaps.": "De eerste 20 overlappingen worden getoond."
   },
   "Sidebar": {
     "Sidebar": "Zijbalk"
@@ -1587,13 +1587,13 @@
     "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "Log in met Google in je browser en je bent klaar — geen configuratie nodig. Dank Calendar synchroniseert je agenda's, afspraken en taken."
   },
   "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
+    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": "Meld je aan met Google in je browser en je bent klaar — geen configuratie nodig. Dux Calendar synchroniseert je agenda's, afspraken en taken."
   },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
     "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "Log in met Microsoft in je browser en je bent klaar — geen configuratie nodig. Dank Calendar synchroniseert je Outlook-agenda's, afspraken en taken."
   },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": "Meld je aan met Microsoft in je browser en je bent klaar — geen configuratie nodig. Dux Calendar synchroniseert je Outlook-agenda's, afspraken en taken."
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Log in met je Apple ID en een app-specifiek wachtwoord. Normale Apple ID-wachtwoorden werken niet."
@@ -1632,7 +1632,7 @@
     "Square": "Vierkant"
   },
   "Start": {
-    "Start": ""
+    "Start": "Begin"
   },
   "Start at login": {
     "Start at login": "Starten bij inloggen"
@@ -1665,10 +1665,10 @@
     "Subscribing…": "Abonneren…"
   },
   "Support Dank Linux": {
-    "Support Dank Linux": ""
+    "Support Dank Linux": "Dank Linux steunen"
   },
   "Support Dux Labs": {
-    "Support Dux Labs": ""
+    "Support Dux Labs": "Dux Labs steunen"
   },
   "Sync interval": {
     "Sync interval": "Synchronisatie-interval"
@@ -1683,10 +1683,10 @@
     "Synced as \"%1\". The name only changes in Dank Calendar.": "Gesynchroniseerd als \"%1\". De naam verandert alleen in Dank Calendar."
   },
   "Synced as \"%1\". The name only changes in Dux Calendar.": {
-    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+    "Synced as \"%1\". The name only changes in Dux Calendar.": "Gesynchroniseerd als \"%1\". De naam verandert alleen in Dux Calendar."
   },
   "System": {
-    "System": ""
+    "System": "Systeem"
   },
   "System default": {
     "System default": "Systeemstandaard"
@@ -1752,7 +1752,7 @@
     "Time format": "Tijdnotatie"
   },
   "Title bars": {
-    "Title bars": ""
+    "Title bars": "Titelbalken"
   },
   "Title is required": {
     "Title is required": "Titel is verplicht"
@@ -1824,10 +1824,10 @@
     "Using DankMaterialShell dynamic colors.": "DankMaterialShell dynamische kleuren worden gebruikt."
   },
   "Using Dux Shell dynamic colors.": {
-    "Using Dux Shell dynamic colors.": ""
+    "Using Dux Shell dynamic colors.": "Dynamische kleuren van Dux Shell worden gebruikt."
   },
   "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+    "Using Matugen colors.": "Matugen-kleuren worden gebruikt."
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "Controleer of desktopnotificaties werken."
@@ -1878,7 +1878,7 @@
     "When all-day event reminders fire.": "Wanneer dagherinneringen worden gegeven."
   },
   "Windows": {
-    "Windows": ""
+    "Windows": "Vensters"
   },
   "Yearly": {
     "Yearly": "Jaarlijks"
@@ -1896,7 +1896,7 @@
     "Your response": "Je reactie"
   },
   "Zoom": {
-    "Zoom": ""
+    "Zoom": "Zoomen"
   },
   "all day": {
     "all day": "hele dag"
