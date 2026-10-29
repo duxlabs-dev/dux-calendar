@@ -77,7 +77,7 @@ yay -S dux-calendar-git
 
 ```bash
 git clone --recurse-submodules https://github.com/duxlabs-dev/dux-calendar.git
-cd dankcalendar
+cd dux-calendar
 sudo make install
 ```
 
