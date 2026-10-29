@@ -38,7 +38,7 @@
   {
     "term": "%1 times",
     "context": "%1 times",
-    "reference": "Services/DankCalService.qml:1186",
+    "reference": "Services/DankCalService.qml:1185",
     "comment": "recurrence label suffix for a fixed number of occurrences"
   },
   {
@@ -92,7 +92,7 @@
   {
     "term": "(untitled)",
     "context": "(untitled)",
-    "reference": "Services/DankCalService.qml:661",
+    "reference": "Services/DankCalService.qml:660",
     "comment": "event details fallback title when event has no title"
   },
   {
@@ -362,7 +362,7 @@
   {
     "term": "Add account",
     "context": "Add account",
-    "reference": "Modules/CalendarSidebar.qml:1025, Modals/AccountAddModal.qml:220, Modals/AccountAddModal.qml:302, Modals/SettingsContent.qml:1372, Services/DankCalService.qml:1589",
+    "reference": "Modules/CalendarSidebar.qml:1025, Modals/AccountAddModal.qml:220, Modals/AccountAddModal.qml:302, Modals/SettingsContent.qml:1372, Services/DankCalService.qml:1588",
     "comment": "account add modal header title | account add modal window title | add account button on accounts page | sidebar button to add a provider account | toast action to re-add an account that failed to reconnect"
   },
   {
@@ -608,7 +608,7 @@
   {
     "term": "Busy",
     "context": "Busy",
-    "reference": "Services/DankCalService.qml:660",
+    "reference": "Services/DankCalService.qml:659",
     "comment": "fallback title for a private event whose details are hidden"
   },
   {
@@ -926,13 +926,13 @@
   {
     "term": "Couldn't reconnect. Add the account again to sign in.",
     "context": "Couldn't reconnect. Add the account again to sign in.",
-    "reference": "Services/DankCalService.qml:1619",
+    "reference": "Services/DankCalService.qml:1618",
     "comment": "toast when reconnecting an account fails"
   },
   {
     "term": "Couldn't update task",
     "context": "Couldn't update task",
-    "reference": "Services/DankCalService.qml:1345",
+    "reference": "Services/DankCalService.qml:1344",
     "comment": "toast when a task update fails"
   },
   {
@@ -1724,7 +1724,7 @@
   {
     "term": "Local",
     "context": "Local",
-    "reference": "Modals/AccountAddModal.qml:126, Modals/AccountAddModal.qml:495, Modals/SettingsContent.qml:1223, Services/DankCalService.qml:1832",
+    "reference": "Modals/AccountAddModal.qml:126, Modals/AccountAddModal.qml:495, Modals/SettingsContent.qml:1223, Services/DankCalService.qml:1831",
     "comment": "local provider name in account add modal | local provider name in account list | provider label for a local account"
   },
   {
@@ -1766,7 +1766,7 @@
   {
     "term": "Marked as not done",
     "context": "Marked as not done",
-    "reference": "Services/DankCalService.qml:1348",
+    "reference": "Services/DankCalService.qml:1347",
     "comment": "toast after un-completing a task"
   },
   {
@@ -2660,19 +2660,19 @@
   {
     "term": "Repeats",
     "context": "Repeats",
-    "reference": "Modals/EventDetailsModal.qml:291, Services/DankCalService.qml:1167",
+    "reference": "Modals/EventDetailsModal.qml:291, Services/DankCalService.qml:1166",
     "comment": "generic recurrence label for an unrecognized rule"
   },
   {
     "term": "Repeats every %1",
     "context": "Repeats every %1",
-    "reference": "Services/DankCalService.qml:1169",
+    "reference": "Services/DankCalService.qml:1168",
     "comment": "recurrence label, %1 is a unit like 'day'"
   },
   {
     "term": "Repeats every %1 %2",
     "context": "Repeats every %1 %2",
-    "reference": "Services/DankCalService.qml:1169",
+    "reference": "Services/DankCalService.qml:1168",
     "comment": "recurrence label, %1 is a count and %2 a unit like 'weeks'"
   },
   {
@@ -3098,7 +3098,7 @@
   {
     "term": "Task completed",
     "context": "Task completed",
-    "reference": "Services/DankCalService.qml:1348",
+    "reference": "Services/DankCalService.qml:1347",
     "comment": "toast after completing a task"
   },
   {
@@ -3170,7 +3170,7 @@
   {
     "term": "This account cannot be reconnected — remove it and add it again.",
     "context": "This account cannot be reconnected — remove it and add it again.",
-    "reference": "Services/DankCalService.qml:1610",
+    "reference": "Services/DankCalService.qml:1609",
     "comment": "error when reconnect is unavailable for a provider"
   },
   {
@@ -3266,7 +3266,7 @@
   {
     "term": "Undo",
     "context": "Undo",
-    "reference": "Services/DankCalService.qml:1349",
+    "reference": "Services/DankCalService.qml:1348",
     "comment": "toast undo action"
   },
   {
@@ -3476,13 +3476,13 @@
   {
     "term": "day",
     "context": "day",
-    "reference": "Services/DankCalService.qml:1161",
+    "reference": "Services/DankCalService.qml:1160",
     "comment": "recurrence unit singular"
   },
   {
     "term": "days",
     "context": "days",
-    "reference": "Services/DankCalService.qml:1161, Widgets/DankRecurrencePicker.qml:63",
+    "reference": "Services/DankCalService.qml:1160, Widgets/DankRecurrencePicker.qml:63",
     "comment": "recurrence unit plural"
   },
   {
@@ -3506,19 +3506,19 @@
   {
     "term": "month",
     "context": "month",
-    "reference": "Services/DankCalService.qml:1163",
+    "reference": "Services/DankCalService.qml:1162",
     "comment": "recurrence unit singular"
   },
   {
     "term": "months",
     "context": "months",
-    "reference": "Services/DankCalService.qml:1163, Widgets/DankRecurrencePicker.qml:71",
+    "reference": "Services/DankCalService.qml:1162, Widgets/DankRecurrencePicker.qml:71",
     "comment": "recurrence unit plural"
   },
   {
     "term": "on %1",
     "context": "on %1",
-    "reference": "Services/DankCalService.qml:1183",
+    "reference": "Services/DankCalService.qml:1182",
     "comment": "recurrence label suffix listing weekdays, %1 like 'Mon, Wed'"
   },
   {
@@ -3566,7 +3566,7 @@
   {
     "term": "until %1",
     "context": "until %1",
-    "reference": "Services/DankCalService.qml:1188",
+    "reference": "Services/DankCalService.qml:1187",
     "comment": "recurrence label suffix with an end date"
   },
   {
@@ -3578,25 +3578,25 @@
   {
     "term": "week",
     "context": "week",
-    "reference": "Services/DankCalService.qml:1162",
+    "reference": "Services/DankCalService.qml:1161",
     "comment": "recurrence unit singular"
   },
   {
     "term": "weeks",
     "context": "weeks",
-    "reference": "Services/DankCalService.qml:1162, Widgets/DankRecurrencePicker.qml:67",
+    "reference": "Services/DankCalService.qml:1161, Widgets/DankRecurrencePicker.qml:67",
     "comment": "recurrence unit plural"
   },
   {
     "term": "year",
     "context": "year",
-    "reference": "Services/DankCalService.qml:1164",
+    "reference": "Services/DankCalService.qml:1163",
     "comment": "recurrence unit singular"
   },
   {
     "term": "years",
     "context": "years",
-    "reference": "Services/DankCalService.qml:1164, Widgets/DankRecurrencePicker.qml:75",
+    "reference": "Services/DankCalService.qml:1163, Widgets/DankRecurrencePicker.qml:75",
     "comment": "recurrence unit plural"
   },
   {

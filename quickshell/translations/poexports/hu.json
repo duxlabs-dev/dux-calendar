@@ -243,7 +243,7 @@
     "Already in %1": "Már ebben: %1"
   },
   "Also in these calendars": {
-    "Also in these calendars": ""
+    "Also in these calendars": "Szerepel ezekben a naptárakban is"
   },
   "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
     "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: Vissza • F1/I: Fájlinformáció • F10: Súgó • Esc: Bezárás"
@@ -270,7 +270,7 @@
     "Apple iCloud calendars via app-specific password.": "Apple iCloud naptárak alkalmazásspecifikus jelszóval."
   },
   "Apply and restart": {
-    "Apply and restart": ""
+    "Apply and restart": "Alkalmazás és újraindítás"
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "Hagyd jóvá a hozzáférést a böngésződben. A ablak automatikusan visszatér ide, amint a(z) %1 visszaküldi nekünk az engedélyezési kódot."
@@ -315,7 +315,7 @@
     "Begin setup": "Beállítás indítása"
   },
   "Busy": {
-    "Busy": ""
+    "Busy": "Elfoglalt"
   },
   "Calendar": {
     "Calendar": "Naptár"
@@ -414,7 +414,7 @@
     "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": "Az ütközések a DankCalendarba jelenleg szinkronizált eseményeket használják. Továbbra is importálhatsz átfedő eseményt."
   },
   "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": "Az ütközések a jelenleg a Dux Naptárba szinkronizált eseményeket használják. Az átfedésben lévő események ettől függetlenül importálhatók."
   },
   "Connect": {
     "Connect": "Csatlakozás"
@@ -570,7 +570,7 @@
     "Decrease": "Csökkenés"
   },
   "Default": {
-    "Default": ""
+    "Default": "Alapértelmezett"
   },
   "Default calendar": {
     "Default calendar": "Alapértelmezett naptár"
@@ -660,7 +660,7 @@
     "Display ISO week numbers in month view.": "ISO hétszámok megjelenítése havi nézetben."
   },
   "Display family": {
-    "Display family": ""
+    "Display family": "Kijelző betűcsaládja"
   },
   "Display name (optional)": {
     "Display name (optional)": "Megjelenítendő név (nem kötelező)"
@@ -702,16 +702,16 @@
     "Duration": "Időtartam"
   },
   "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
+    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "A Dux Naptár egy modern Linux asztali felületre tervezett naptár <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">Material 3 által inspirált</a> dizájnnal, valamint testreszabható parancssori felülettel és socket API-val az integrációkhoz.<br /><br/>A <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a> (egy asztali felületekhez készült QT6 keretrendszer) és a <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a> (statikusan típusos, fordított programozási nyelv) segítségével készült."
   },
   "Dux Calendar will close and reopen with the new zoom.": {
-    "Dux Calendar will close and reopen with the new zoom.": ""
+    "Dux Calendar will close and reopen with the new zoom.": "A Dux Naptár bezárul, majd az új nagyítási mérettel újraindul."
   },
   "Dux Shell not detected — using the %1 preset.": {
-    "Dux Shell not detected — using the %1 preset.": ""
+    "Dux Shell not detected — using the %1 preset.": "A Dux Shell nem észlelhető — a(z) %1 előbeállítás használata."
   },
   "Dux Shell not detected, using %1.": {
-    "Dux Shell not detected, using %1.": ""
+    "Dux Shell not detected, using %1.": "A Dux Shell nem észlelhető, a(z) %1 használata."
   },
   "Edit": {
     "Edit": "Szerkesztés"
@@ -780,7 +780,7 @@
     "F1/I: Toggle • F10: Help": "F1/I: Váltás • F10: Súgó"
   },
   "Family": {
-    "Family": ""
+    "Family": "Betűcsalád"
   },
   "Feed URL": {
     "Feed URL": "Hírforrás URL-címe"
@@ -810,7 +810,7 @@
     "Follow DankMaterialShell colors, falling back to a preset.": "A DankMaterialShell színeinek követése, visszaesés előbeállításra."
   },
   "Follow Dux Shell colors, falling back to a preset.": {
-    "Follow Dux Shell colors, falling back to a preset.": ""
+    "Follow Dux Shell colors, falling back to a preset.": "A Dux Shell színeinek követése, szükség esetén visszatérés egy előbeállításra."
   },
   "Follow colors generated by Matugen.": {
     "Follow colors generated by Matugen.": "A Matugen által generált színek követése."
@@ -822,7 +822,7 @@
     "Following the system color scheme (currently %1).": "A rendszer színsémájának követése (jelenleg %1)."
   },
   "Font source": {
-    "Font source": ""
+    "Font source": "Betűtípus forrása"
   },
   "General": {
     "General": "Általános"
@@ -918,7 +918,7 @@
     "Launch Dank Calendar in the background when you log in.": "A Dank Calendar indítása a háttérben bejelentkezéskor."
   },
   "Launch Dux Calendar in the background when you log in.": {
-    "Launch Dux Calendar in the background when you log in.": ""
+    "Launch Dux Calendar in the background when you log in.": "A Dux Naptár indítása a háttérben bejelentkezéskor."
   },
   "Length used when creating events.": {
     "Length used when creating events.": "Események létrehozásakor használt hossz."
@@ -993,7 +993,7 @@
     "Menu": "Menü"
   },
   "Merge duplicate events": {
-    "Merge duplicate events": ""
+    "Merge duplicate events": "Duplikált események egyesítése"
   },
   "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
     "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "A Microsoft To Do hozzáférés nem lett megadva. Csatlakoztasd újra ezt a fiókot a feladatok szinkronizálásához."
@@ -1011,7 +1011,7 @@
     "Modified": "Módosítva"
   },
   "Monospace family": {
-    "Monospace family": ""
+    "Monospace family": "Rögzített szélességű (monospace) betűcsalád"
   },
   "Month": {
     "Month": "Hónap"
@@ -1419,13 +1419,13 @@
     "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "Eltávolítja ezt a fiókot, valamint naptárait és eseményeit a Dank Calendar alkalmazásból. Semmi sem törlődik a szolgáltatónál."
   },
   "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
+    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": "Eltávolítja ezt a fiókot, valamint naptárait és eseményeit a Dux Naptárból. A szolgáltatónál semmi sem törlődik."
   },
   "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
     "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "Eltávolítja ezt a naptárt és eseményeit a Dank Calendar alkalmazásból. Ha a szolgáltató továbbra is biztosítja azt, a következő szinkronizáláskor visszakerül."
   },
   "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
+    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": "Eltávolítja ezt a naptárat és az eseményeit a Dux Naptárból. Ha a szolgáltató továbbra is elérhetővé teszi, a következő szinkronizáláskor visszakerül."
   },
   "Remove…": {
     "Remove…": "Eltávolítás…"
@@ -1467,7 +1467,7 @@
     "Reset to global": "Visszaállítás globálisra"
   },
   "Restart required": {
-    "Restart required": ""
+    "Restart required": "Újraindítás szükséges"
   },
   "Ripple effects": {
     "Ripple effects": "Láncreakciók"
@@ -1482,7 +1482,7 @@
     "Scale": "Méretarány"
   },
   "Scales the whole app. Takes effect after a restart.": {
-    "Scales the whole app. Takes effect after a restart.": ""
+    "Scales the whole app. Takes effect after a restart.": "Méretezi a teljes alkalmazást. Újraindítás után lép érvénybe."
   },
   "Search": {
     "Search": "Keresés"
@@ -1533,7 +1533,7 @@
     "Server URL": "Szerver URL"
   },
   "Set by QT_SCALE_FACTOR.": {
-    "Set by QT_SCALE_FACTOR.": ""
+    "Set by QT_SCALE_FACTOR.": "A QT_SCALE_FACTOR által beállítva."
   },
   "Settings": {
     "Settings": "Beállítások"
@@ -1548,7 +1548,7 @@
     "Show Dank Calendar in the system tray.": "A Dank Calendar megjelenítése a tálcán."
   },
   "Show Dux Calendar in the system tray.": {
-    "Show Dux Calendar in the system tray.": ""
+    "Show Dux Calendar in the system tray.": "A Dux Naptár megjelenítése a tálcán."
   },
   "Show all events in month view": {
     "Show all events in month view": "Összes esemény megjelenítése havi nézetben"
@@ -1557,7 +1557,7 @@
     "Show all-day reminders": "Egész napos emlékeztetők megjelenítése"
   },
   "Show an event that appears in several calendars once, with dots for the other calendars.": {
-    "Show an event that appears in several calendars once, with dots for the other calendars.": ""
+    "Show an event that appears in several calendars once, with dots for the other calendars.": "A több naptárban is szereplő esemény egyszeri megjelenítése pontokkal jelezve a többi naptárat."
   },
   "Show calendar": {
     "Show calendar": "Naptár megjelenítése"
@@ -1587,13 +1587,13 @@
     "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "Jelentkezz be a Google-fiókoddal a böngésződben, és már kész is vagy – nincs szükség további beállításra. A Dank Calendar szinkronizálja naptáraidat, eseményeidet és feladataidat."
   },
   "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
+    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": "Jelentkezz be a böngésződben a Google-fiókoddal, és már kész is — nincs szükség további beállításra. A Dux Naptár szinkronizálja a naptáraidat, eseményeidet és feladataidat."
   },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
     "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "Jelentkezz be a Microsoft-fiókoddal a böngésződben, és már kész is vagy – nincs szükség további beállításra. A Dank Calendar szinkronizálja az Outlook-naptáraidat, eseményeidet és feladataidat."
   },
   "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
+    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": "Jelentkezz be a böngésződben a Microsoft-fiókoddal, és már kész is — nincs szükség további beállításra. A Dux Naptár szinkronizálja az Outlook naptáraidat, eseményeidet és feladataidat."
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Jelentkezz be Apple ID-dal és egy alkalmazásspecifikus jelszóval. A normál Apple ID-jelszavak nem fognak működni."
@@ -1668,7 +1668,7 @@
     "Support Dank Linux": "A Dank Linux támogatása"
   },
   "Support Dux Labs": {
-    "Support Dux Labs": ""
+    "Support Dux Labs": "A Dux Labs támogatása"
   },
   "Sync interval": {
     "Sync interval": "Szinkronizálási időköz"
@@ -1683,10 +1683,10 @@
     "Synced as \"%1\". The name only changes in Dank Calendar.": "Szinkronizálva „%1” néven. A név csak a Dank Calendar alkalmazásban változik meg."
   },
   "Synced as \"%1\". The name only changes in Dux Calendar.": {
-    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+    "Synced as \"%1\". The name only changes in Dux Calendar.": "Szinkronizálva mint „%1”. A név csak a Dux Naptárban módosul."
   },
   "System": {
-    "System": ""
+    "System": "Rendszer"
   },
   "System default": {
     "System default": "Rendszer alapértelmezett"
@@ -1824,7 +1824,7 @@
     "Using DankMaterialShell dynamic colors.": "DankMaterialShell dinamikus színek használata."
   },
   "Using Dux Shell dynamic colors.": {
-    "Using Dux Shell dynamic colors.": ""
+    "Using Dux Shell dynamic colors.": "A Dux Shell dinamikus színeinek használata."
   },
   "Using Matugen colors.": {
     "Using Matugen colors.": "Matugen színek használata."
@@ -1896,7 +1896,7 @@
     "Your response": "A válaszod"
   },
   "Zoom": {
-    "Zoom": ""
+    "Zoom": "Nagyítás"
   },
   "all day": {
     "all day": "egész nap"
