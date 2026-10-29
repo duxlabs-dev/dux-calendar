@@ -629,8 +629,7 @@ Singleton {
         eventsLoading = true;
         sendRequest("events.list", {
             "from": from.toISOString(),
-            "to": to.toISOString(),
-            "limit": 5000
+            "to": to.toISOString()
         }, response => {
             eventsLoading = false;
             if (response.error) {
