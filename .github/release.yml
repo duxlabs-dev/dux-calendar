@@ -1,0 +1,23 @@
+# Categories for GitHub's auto-generated release notes
+changelog:
+  exclude:
+    authors:
+      - github-actions[bot]
+      - dependabot[bot]
+    labels:
+      - internal
+  categories:
+    - title: Breaking Changes
+      labels: [breaking]
+    - title: Features
+      labels: [feature]
+    - title: Fixes
+      labels: [fix]
+    - title: Packaging
+      labels: [packaging]
+    - title: Internationalization
+      labels: [i18n]
+    - title: Documentation
+      labels: [docs]
+    - title: Other Changes
+      labels: ["*"]

@@ -1,0 +1,62 @@
+name: Feature Request
+description: Suggest a new feature or improvement for Dux Calendar. Keep features focused on a single topic with clear benefits, examples, etc. Avoid vague or broad requests, they will be closed.
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Dux Calendar Feature Request
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: Feature Description
+      description: Brief description of the feature requested
+      placeholder: What feature would you like to see?
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: Explain the purpose of this feature/why it'd be useful to you
+      placeholder: Why is this feature important?
+    validations:
+      required: false
+  - type: dropdown
+    id: compositor
+    attributes:
+      label: Compositor(s)
+      description: Is this feature specific to one or more compositors?
+      options:
+        - All compositors
+        - Niri
+        - Hyprland
+        - MangoWC (dwl)
+        - Sway
+        - Other (specify below)
+    validations:
+      required: true
+  - type: input
+    id: compositor_other
+    attributes:
+      label: If Other, please specify
+      placeholder: e.g., Wayfire, Mutter, etc.
+    validations:
+      required: false
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: If you have any ideas for how to implement this, please share!
+      placeholder: Suggest a solution or approach
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives/Existing Solutions
+      description: Include any similar/pre-existing products that solve this problem
+      placeholder: List alternatives or existing solutions
+    validations:
+      required: false
