@@ -452,6 +452,13 @@ FloatingWindow {
                 }
 
                 Grid {
+                    id: providerGrid
+                    readonly property real cardHeight: {
+                        let tallest = 0;
+                        for (let i = 0; i < children.length; i++)
+                            tallest = Math.max(tallest, children[i].naturalHeight || 0);
+                        return tallest;
+                    }
                     columns: 2
                     columnSpacing: Theme.spacingM
                     rowSpacing: Theme.spacingM
@@ -501,8 +508,9 @@ FloatingWindow {
 
                         StyledRect {
                             required property var modelData
+                            readonly property real naturalHeight: cardColumn.implicitHeight + Theme.spacingM * 2
                             width: (parent.width - Theme.spacingM) / 2
-                            height: cardColumn.implicitHeight + Theme.spacingM * 2
+                            height: providerGrid.cardHeight
                             color: Theme.surfaceContainerLow
                             radius: Theme.cornerRadiusL
                             opacity: modelData.implemented ? 1 : Theme.pendingOpacity
