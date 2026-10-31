@@ -201,8 +201,16 @@ FloatingWindow {
     minimumSize: Qt.size(460, 360)
     implicitWidth: Math.max(minimumSize.width, Theme.modalWidth(parentWindow, screen, 560))
     implicitHeight: Math.max(minimumSize.height, Theme.modalHeight(parentWindow, screen, Math.max(420, chromeHeight + contentNaturalHeight)))
-    color: Theme.surface
+    color: Theme.windowSurface
+    surfaceFormat.opaque: false
     visible: false
+
+    WindowBlur {
+        targetWindow: importModal
+        blurEnabled: Theme.translucentWindows
+        blurWidth: importModal.width
+        blurHeight: importModal.height
+    }
 
     Column {
         anchors.fill: parent
@@ -376,9 +384,7 @@ FloatingWindow {
 
                                 StyledText {
                                     width: parent.width
-                                    text: row.modelData.conflictCount > 0
-                                        ? (row.modelData.conflictCount === 1 ? I18n.tr("1 overlapping event", "import single conflict count") : I18n.tr("%1 overlapping events", "import conflict count").arg(row.modelData.conflictCount))
-                                        : I18n.tr("No overlapping busy events", "import preview with no time conflicts")
+                                    text: row.modelData.conflictCount > 0 ? (row.modelData.conflictCount === 1 ? I18n.tr("1 overlapping event", "import single conflict count") : I18n.tr("%1 overlapping events", "import conflict count").arg(row.modelData.conflictCount)) : I18n.tr("No overlapping busy events", "import preview with no time conflicts")
                                     font.pixelSize: Theme.fontSizeSmall
                                     color: row.modelData.conflictCount > 0 ? Theme.warning : Theme.surfaceVariantText
                                     visible: !importModal.loading && !row.existing
@@ -458,7 +464,6 @@ FloatingWindow {
                 anchors.rightMargin: Theme.spacingL
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: Theme.spacingS
-
 
                 DButton {
                     text: I18n.tr("Cancel", "import dialog button to close without importing")

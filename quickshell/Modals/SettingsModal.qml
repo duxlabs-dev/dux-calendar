@@ -27,8 +27,16 @@ FloatingWindow {
     minimumSize: Qt.size(520, 420)
     implicitWidth: Math.max(minimumSize.width, Theme.modalWidth(parentWindow, screen, 880))
     implicitHeight: Math.max(minimumSize.height, Theme.modalHeight(parentWindow, screen, 720))
-    color: Theme.surface
+    color: Theme.windowSurface
+    surfaceFormat.opaque: false
     visible: false
+
+    WindowBlur {
+        targetWindow: settingsModal
+        blurEnabled: Theme.translucentWindows
+        blurWidth: settingsModal.width
+        blurHeight: settingsModal.height
+    }
 
     onIsCompactModeChanged: menuVisible = false
 

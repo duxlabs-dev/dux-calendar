@@ -269,7 +269,15 @@ FloatingWindow {
     implicitHeight: Math.max(minimumSize.height, Theme.modalHeight(parentWindow, screen, contentNaturalHeight))
     visible: false
     title: taskModal.createMode ? I18n.tr("New task", "title bar for the create-task dialog") : I18n.tr("Task", "title bar for the edit-task dialog")
-    color: Theme.surface
+    color: Theme.windowSurface
+    surfaceFormat.opaque: false
+
+    WindowBlur {
+        targetWindow: taskModal
+        blurEnabled: Theme.translucentWindows
+        blurWidth: taskModal.width
+        blurHeight: taskModal.height
+    }
 
     Column {
         anchors.fill: parent

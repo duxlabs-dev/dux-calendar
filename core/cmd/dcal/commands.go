@@ -51,4 +51,5 @@ func init() {
 	rootCmd.AddCommand(syncCmd)
 	rootCmd.AddCommand(remindersCmd)
 	rootCmd.AddCommand(eventsCmd)
+	rootCmd.AddCommand(blurCmd)
 }

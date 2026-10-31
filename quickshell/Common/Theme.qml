@@ -514,19 +514,21 @@ Singleton {
         return Math.max(Font.Thin, Math.min(Font.Black, weight + fontWeight - Font.Normal));
     }
 
-    readonly property real popupTransparency: 1.0
-    readonly property bool foregroundLayers: true
-    readonly property real foregroundLayerTransparency: 1.0
-    readonly property real foregroundAlpha: Surface.foregroundAlpha(foregroundLayers, foregroundLayerTransparency)
-    readonly property bool blurLayersActive: false
+    readonly property real floatingWindowTransparency: unitClamp(SettingsData.floatingWindowTransparency)
+    readonly property bool floatingWindowForegroundLayers: SettingsData.floatingWindowForegroundLayers
+    readonly property real floatingWindowForegroundTransparency: unitClamp(SettingsData.floatingWindowForegroundTransparency)
+    readonly property real floatingWindowForegroundAlpha: Surface.foregroundAlpha(floatingWindowForegroundLayers, floatingWindowForegroundTransparency)
+    readonly property bool translucentWindows: floatingWindowTransparency < 1
+    readonly property real popupTransparency: floatingWindowTransparency
+    readonly property bool foregroundLayers: floatingWindowForegroundLayers
+    readonly property real foregroundLayerTransparency: floatingWindowForegroundTransparency
+    readonly property real foregroundAlpha: floatingWindowForegroundAlpha
+    readonly property bool blurLayersActive: BlurService.enabled
     readonly property bool connectedSurfaceBlurEnabled: true
 
+    readonly property color windowSurface: withAlpha(surface, floatingWindowTransparency)
     readonly property color floatingSurface: withAlpha(surfaceContainer, popupTransparency)
     readonly property color nestedSurface: withAlpha(surfaceContainerHigh, foregroundAlpha)
-    readonly property real floatingWindowTransparency: popupTransparency
-    readonly property bool floatingWindowForegroundLayers: foregroundLayers
-    readonly property real floatingWindowForegroundTransparency: foregroundLayerTransparency
-    readonly property real floatingWindowForegroundAlpha: Surface.foregroundAlpha(floatingWindowForegroundLayers, floatingWindowForegroundTransparency)
     readonly property color floatingWindowSurface: withAlpha(surfaceContainer, floatingWindowTransparency)
     readonly property color floatingWindowNestedSurface: withAlpha(surfaceContainerHigh, floatingWindowForegroundAlpha)
     readonly property color floatingWindowPaneSurface: withAlpha(surfaceContainer, floatingWindowForegroundAlpha)
@@ -543,6 +545,12 @@ Singleton {
 
     function accent(name) {
         return accents[name] ?? null;
+    }
+
+    function unitClamp(value) {
+        if (typeof value !== "number" || !isFinite(value))
+            return 1;
+        return Math.max(0, Math.min(1, value));
     }
 
     function foregroundColor(baseColor, floatingWindow = false) {

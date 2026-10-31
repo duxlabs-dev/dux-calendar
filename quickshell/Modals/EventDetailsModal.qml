@@ -524,8 +524,16 @@ FloatingWindow {
     minimumSize: Qt.size(460, 560)
     implicitWidth: Math.max(minimumSize.width, Theme.modalWidth(parentWindow, screen, 560))
     implicitHeight: Math.max(minimumSize.height, Theme.modalHeight(parentWindow, screen, Math.max(720, chromeHeight + contentNaturalHeight)))
-    color: Theme.surface
+    color: Theme.windowSurface
+    surfaceFormat.opaque: false
     visible: false
+
+    WindowBlur {
+        targetWindow: eventModal
+        blurEnabled: Theme.translucentWindows
+        blurWidth: eventModal.width
+        blurHeight: eventModal.height
+    }
 
     Column {
         anchors.fill: parent

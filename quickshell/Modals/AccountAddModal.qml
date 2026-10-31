@@ -221,8 +221,16 @@ FloatingWindow {
     minimumSize: Qt.size(560, 540)
     implicitWidth: Math.max(minimumSize.width, Theme.modalWidth(parentWindow, screen, 640))
     implicitHeight: Math.max(minimumSize.height, Theme.modalHeight(parentWindow, screen, Math.max(620, headerRow.height + Theme.spacingL * 2 + contentNaturalHeight)))
-    color: Theme.surface
+    color: Theme.windowSurface
+    surfaceFormat.opaque: false
     visible: false
+
+    WindowBlur {
+        targetWindow: accountModal
+        blurEnabled: Theme.translucentWindows
+        blurWidth: accountModal.width
+        blurHeight: accountModal.height
+    }
 
     Connections {
         target: DankCalService

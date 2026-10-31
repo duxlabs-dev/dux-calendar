@@ -700,9 +700,23 @@
     "comment": ""
   },
   {
+    "term": "Background blur",
+    "translation": "",
+    "context": "toggle asking the compositor to blur behind see-through windows",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Balanced",
     "translation": "",
     "context": "spring bounce option",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Blurs what shows through the window. Needs an opacity below 100%.",
+    "translation": "",
+    "context": "background blur toggle description",
     "reference": "",
     "comment": ""
   },
@@ -1771,6 +1785,13 @@
     "comment": ""
   },
   {
+    "term": "Foreground layers",
+    "translation": "",
+    "context": "toggle keeping cards and panes solid over a see-through window",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "General",
     "translation": "",
     "context": "general settings section header | keyboard shortcuts overlay section header | settings sidebar tab label",
@@ -1925,6 +1946,13 @@
     "comment": ""
   },
   {
+    "term": "Keeps cards and panes solid when the window is see-through.",
+    "translation": "",
+    "context": "foreground layers toggle description",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Keyboard shortcuts",
     "translation": "",
     "context": "keyboard shortcuts overlay title",
@@ -1967,9 +1995,23 @@
     "comment": ""
   },
   {
+    "term": "Layer opacity",
+    "translation": "",
+    "context": "foreground layer opacity slider label",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Length used when creating events.",
     "translation": "",
     "context": "default event duration setting description",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Lets the desktop show through the window. Text and controls stay solid.",
+    "translation": "",
+    "context": "window opacity slider description",
     "reference": "",
     "comment": ""
   },
@@ -2572,6 +2614,13 @@
     "term": "On the day",
     "translation": "",
     "context": "all-day reminder day dropdown option",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Opacity",
+    "translation": "",
+    "context": "window opacity slider label",
     "reference": "",
     "comment": ""
   },
@@ -4021,6 +4070,13 @@
     "term": "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.",
     "translation": "",
     "context": "security note body in oauth intro",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Your compositor does not support background blur.",
+    "translation": "",
+    "context": "hint shown instead of the background blur toggle",
     "reference": "",
     "comment": ""
   },
