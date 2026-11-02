@@ -319,6 +319,25 @@ func (p *Provider) UpdateEvent(ctx context.Context, c cal.Calendar, ev *cal.Even
 		return nil, errors.New("caldav update requires remote id")
 	}
 
+	if ev.RecurringID != "" && !ev.OriginalStart.IsZero() {
+		doc, err := p.getObject(ctx, ev.RemoteID)
+		if err != nil {
+			return nil, fmt.Errorf("get caldav object %q: %w", ev.RemoteID, err)
+		}
+		rid, err := icalconv.ApplyEventOverride(doc, ev)
+		if err != nil {
+			return nil, err
+		}
+		etag, err := p.putObject(ctx, ev.RemoteID, doc)
+		if err != nil {
+			return nil, fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
+		}
+		out := *ev
+		out.Etag = etag
+		out.UID = ev.RecurringID + "/" + rid
+		return &out, nil
+	}
+
 	etag, err := p.putObject(ctx, ev.RemoteID, icalconv.CalendarFromEvent(ev, ev.UID))
 	if err != nil {
 		return nil, fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
