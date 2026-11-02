@@ -106,3 +106,36 @@ func TestApplyEventOverrideRequiresOccurrenceStart(t *testing.T) {
 	_, err := ApplyEventOverride(doc, &cal.Event{RecurringID: "standup"})
 	assert.ErrorContains(t, err, "occurrence start")
 }
+
+func TestReplaceMasterComponentPreservesException(t *testing.T) {
+	doc := participationDoc(t, recurringInviteICS)
+	ev := overrideEvent()
+	_, err := ApplyEventOverride(doc, ev)
+	require.NoError(t, err)
+
+	replacement := BuildEvent(&cal.Event{
+		Summary:    "Series renamed",
+		Start:      ev.OriginalStart,
+		End:        ev.OriginalStart.Add(time.Hour),
+		Recurrence: &cal.Recurrence{RRule: []string{"FREQ=WEEKLY"}},
+	}, "standup").Component
+	require.True(t, ReplaceMasterComponent(doc, "standup", replacement))
+	require.Len(t, doc.Events(), 2)
+
+	tz := NewTZResolver(doc, "")
+	var master, exception cal.Event
+	for _, comp := range doc.Events() {
+		parsed, ok := EventFromComponent("cal", comp.Component, tz)
+		require.True(t, ok)
+		if parsed.RecurringID == "" {
+			master = parsed
+		} else {
+			exception = parsed
+		}
+	}
+
+	assert.Equal(t, "Series renamed", master.Summary)
+	assert.Equal(t, "Standup (moved)", exception.Summary)
+	assert.True(t, exception.OriginalStart.Equal(ev.OriginalStart))
+	assert.True(t, exception.Start.Equal(ev.Start))
+}
