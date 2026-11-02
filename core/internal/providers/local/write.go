@@ -8,6 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	ical "github.com/emersion/go-ical"
 	"github.com/google/uuid"
@@ -96,6 +97,33 @@ func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *c
 		return nil, err
 	}
 	return storedEvent(cal, ev.UID, ev), nil
+}
+
+// RebaseEventOccurrences moves every exception RECURRENCE-ID by delta while
+// keeping each exception's own start and end.
+func (p *Provider) RebaseEventOccurrences(ctx context.Context, cal calendar.Calendar, master calendar.Event, delta time.Duration) (map[string]string, error) {
+	source, err := p.calendarPath(cal)
+	if err != nil {
+		return nil, err
+	}
+
+	path := source
+	var doc *ical.Calendar
+	switch {
+	case strings.HasPrefix(cal.RemoteID, "dir:"):
+		path, doc, err = findComponentFile(source, ical.CompEvent, master.UID)
+	default:
+		doc, err = loadCalendarDoc(source)
+	}
+	if err != nil {
+		return nil, err
+	}
+
+	mapping := icalconv.RebaseEventOverrides(doc, master.UID, delta)
+	if len(mapping) == 0 {
+		return mapping, nil
+	}
+	return mapping, writeAtomic(path, doc)
 }
 
 func storedOverride(cal calendar.Calendar, ev *calendar.Event, rid string) *calendar.Event {
