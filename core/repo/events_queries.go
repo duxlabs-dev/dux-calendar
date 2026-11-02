@@ -261,6 +261,17 @@ func recurrenceStrings(rec map[string]any, key string) []string {
 	}
 }
 
+// ListEventOverrides returns every stored exception of a recurring series.
+func (r *Repo) ListEventOverrides(ctx context.Context, calendarID, recurringID string) ([]*ent.Event, error) {
+	return r.client.Event.Query().
+		Where(
+			event.HasCalendarWith(calendar.IDEQ(calendarID)),
+			event.RecurringIDEQ(recurringID),
+		).
+		Order(ent.Asc(event.FieldStart)).
+		All(ctx)
+}
+
 // GetEventByUID resolves a single event by its iCal UID, optionally scoped to a
 // calendar. Recurring occurrences share their master's UID, so callers pass the
 // occurrence start to pin the returned row to that instance.
