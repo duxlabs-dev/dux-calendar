@@ -308,11 +308,17 @@
   "Backend not connected.": {
     "Backend not connected.": "Бекендът не е свързан."
   },
+  "Background blur": {
+    "Background blur": ""
+  },
   "Balanced": {
     "Balanced": ""
   },
   "Begin setup": {
     "Begin setup": "Започване на настройка"
+  },
+  "Blurs what shows through the window. Needs an opacity below 100%.": {
+    "Blurs what shows through the window. Needs an opacity below 100%.": ""
   },
   "Busy": {
     "Busy": ""
@@ -824,6 +830,9 @@
   "Font source": {
     "Font source": ""
   },
+  "Foreground layers": {
+    "Foreground layers": ""
+  },
   "General": {
     "General": "Общи"
   },
@@ -896,6 +905,9 @@
   "Keep until dismissed": {
     "Keep until dismissed": "Запазване до отхвърляне"
   },
+  "Keeps cards and panes solid when the window is see-through.": {
+    "Keeps cards and panes solid when the window is see-through.": ""
+  },
   "Keyboard shortcuts": {
     "Keyboard shortcuts": "Клавишни комбинации"
   },
@@ -920,8 +932,14 @@
   "Launch Dux Calendar in the background when you log in.": {
     "Launch Dux Calendar in the background when you log in.": ""
   },
+  "Layer opacity": {
+    "Layer opacity": ""
+  },
   "Length used when creating events.": {
     "Length used when creating events.": "Продължителност при създаване на събития."
+  },
+  "Lets the desktop show through the window. Text and controls stay solid.": {
+    "Lets the desktop show through the window. Text and controls stay solid.": ""
   },
   "Light": {
     "Light": "Светла"
@@ -1201,6 +1219,9 @@
   },
   "On the day": {
     "On the day": "В деня на събитието"
+  },
+  "Opacity": {
+    "Opacity": ""
   },
   "Open": {
     "Open": "Отваряне"
@@ -1891,6 +1912,9 @@
   },
   "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
     "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "Вашият Client ID, тайна и токен за опресняване се съхраняват в системния ключодържател (libsecret/kwallet), когато е наличен, или в шифрован локален файл."
+  },
+  "Your compositor does not support background blur.": {
+    "Your compositor does not support background blur.": ""
   },
   "Your response": {
     "Your response": "Вашият отговор"

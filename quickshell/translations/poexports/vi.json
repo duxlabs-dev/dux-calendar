@@ -308,11 +308,17 @@
   "Backend not connected.": {
     "Backend not connected.": "Backend chưa kết nối."
   },
+  "Background blur": {
+    "Background blur": ""
+  },
   "Balanced": {
     "Balanced": "Cân bằng"
   },
   "Begin setup": {
     "Begin setup": "Bắt đầu thiết lập"
+  },
+  "Blurs what shows through the window. Needs an opacity below 100%.": {
+    "Blurs what shows through the window. Needs an opacity below 100%.": ""
   },
   "Busy": {
     "Busy": ""
@@ -824,6 +830,9 @@
   "Font source": {
     "Font source": ""
   },
+  "Foreground layers": {
+    "Foreground layers": ""
+  },
   "General": {
     "General": "Chung"
   },
@@ -896,6 +905,9 @@
   "Keep until dismissed": {
     "Keep until dismissed": "Giữ đến khi đóng"
   },
+  "Keeps cards and panes solid when the window is see-through.": {
+    "Keeps cards and panes solid when the window is see-through.": ""
+  },
   "Keyboard shortcuts": {
     "Keyboard shortcuts": "Phím tắt"
   },
@@ -920,8 +932,14 @@
   "Launch Dux Calendar in the background when you log in.": {
     "Launch Dux Calendar in the background when you log in.": ""
   },
+  "Layer opacity": {
+    "Layer opacity": ""
+  },
   "Length used when creating events.": {
     "Length used when creating events.": "Thời lượng dùng khi tạo sự kiện."
+  },
+  "Lets the desktop show through the window. Text and controls stay solid.": {
+    "Lets the desktop show through the window. Text and controls stay solid.": ""
   },
   "Light": {
     "Light": "Sáng"
@@ -1201,6 +1219,9 @@
   },
   "On the day": {
     "On the day": "Vào ngày đó"
+  },
+  "Opacity": {
+    "Opacity": ""
   },
   "Open": {
     "Open": "Mở"
@@ -1891,6 +1912,9 @@
   },
   "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
     "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "Client ID, secret và refresh token của bạn được lưu trong keyring hệ thống (libsecret/kwallet) nếu có, hoặc trong tệp cục bộ được mã hóa."
+  },
+  "Your compositor does not support background blur.": {
+    "Your compositor does not support background blur.": ""
   },
   "Your response": {
     "Your response": "Phản hồi của bạn"

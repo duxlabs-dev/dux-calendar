@@ -308,11 +308,17 @@
   "Backend not connected.": {
     "Backend not connected.": "Служба не підключена."
   },
+  "Background blur": {
+    "Background blur": ""
+  },
   "Balanced": {
     "Balanced": "Збалансовано"
   },
   "Begin setup": {
     "Begin setup": "Розпочати налаштування"
+  },
+  "Blurs what shows through the window. Needs an opacity below 100%.": {
+    "Blurs what shows through the window. Needs an opacity below 100%.": ""
   },
   "Busy": {
     "Busy": ""
@@ -824,6 +830,9 @@
   "Font source": {
     "Font source": ""
   },
+  "Foreground layers": {
+    "Foreground layers": ""
+  },
   "General": {
     "General": "Загальні"
   },
@@ -896,6 +905,9 @@
   "Keep until dismissed": {
     "Keep until dismissed": "Показувати до закриття"
   },
+  "Keeps cards and panes solid when the window is see-through.": {
+    "Keeps cards and panes solid when the window is see-through.": ""
+  },
   "Keyboard shortcuts": {
     "Keyboard shortcuts": "Комбінації клавіш"
   },
@@ -920,8 +932,14 @@
   "Launch Dux Calendar in the background when you log in.": {
     "Launch Dux Calendar in the background when you log in.": ""
   },
+  "Layer opacity": {
+    "Layer opacity": ""
+  },
   "Length used when creating events.": {
     "Length used when creating events.": "Тривалість, що використовується при створенні подій."
+  },
+  "Lets the desktop show through the window. Text and controls stay solid.": {
+    "Lets the desktop show through the window. Text and controls stay solid.": ""
   },
   "Light": {
     "Light": "Світла"
@@ -1201,6 +1219,9 @@
   },
   "On the day": {
     "On the day": "В день події"
+  },
+  "Opacity": {
+    "Opacity": ""
   },
   "Open": {
     "Open": "Відкрити"
@@ -1891,6 +1912,9 @@
   },
   "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
     "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "Ваш ID клієнта, секрет та токен оновлення зберігаються в системній в'язці ключів (libsecret/kwallet) за наявності, або в зашифрованому локальному файлі."
+  },
+  "Your compositor does not support background blur.": {
+    "Your compositor does not support background blur.": ""
   },
   "Your response": {
     "Your response": "Ваша відповідь"

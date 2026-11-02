@@ -308,11 +308,17 @@
   "Backend not connected.": {
     "Backend not connected.": "后端未连接。"
   },
+  "Background blur": {
+    "Background blur": ""
+  },
   "Balanced": {
     "Balanced": ""
   },
   "Begin setup": {
     "Begin setup": "开始设置"
+  },
+  "Blurs what shows through the window. Needs an opacity below 100%.": {
+    "Blurs what shows through the window. Needs an opacity below 100%.": ""
   },
   "Busy": {
     "Busy": ""
@@ -824,6 +830,9 @@
   "Font source": {
     "Font source": ""
   },
+  "Foreground layers": {
+    "Foreground layers": ""
+  },
   "General": {
     "General": "通用"
   },
@@ -896,6 +905,9 @@
   "Keep until dismissed": {
     "Keep until dismissed": "保留至清除为止"
   },
+  "Keeps cards and panes solid when the window is see-through.": {
+    "Keeps cards and panes solid when the window is see-through.": ""
+  },
   "Keyboard shortcuts": {
     "Keyboard shortcuts": "快捷键"
   },
@@ -920,8 +932,14 @@
   "Launch Dux Calendar in the background when you log in.": {
     "Launch Dux Calendar in the background when you log in.": ""
   },
+  "Layer opacity": {
+    "Layer opacity": ""
+  },
   "Length used when creating events.": {
     "Length used when creating events.": "创建事件时的默认时长。"
+  },
+  "Lets the desktop show through the window. Text and controls stay solid.": {
+    "Lets the desktop show through the window. Text and controls stay solid.": ""
   },
   "Light": {
     "Light": "浅色"
@@ -1201,6 +1219,9 @@
   },
   "On the day": {
     "On the day": "当天"
+  },
+  "Opacity": {
+    "Opacity": ""
   },
   "Open": {
     "Open": "打开"
@@ -1891,6 +1912,9 @@
   },
   "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
     "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "在支持的情况下，您的客户端 ID、密钥及刷新令牌（Refresh Token）都将保存在系统密钥环（libsecret/kwallet）中，否则将保存在本地加密文件中。"
+  },
+  "Your compositor does not support background blur.": {
+    "Your compositor does not support background blur.": ""
   },
   "Your response": {
     "Your response": "您的回复"

@@ -308,11 +308,17 @@
   "Backend not connected.": {
     "Backend not connected.": "ה-Backend אינו מחובר."
   },
+  "Background blur": {
+    "Background blur": ""
+  },
   "Balanced": {
     "Balanced": "מאוזן"
   },
   "Begin setup": {
     "Begin setup": "התחל/י התקנה"
+  },
+  "Blurs what shows through the window. Needs an opacity below 100%.": {
+    "Blurs what shows through the window. Needs an opacity below 100%.": ""
   },
   "Busy": {
     "Busy": ""
@@ -824,6 +830,9 @@
   "Font source": {
     "Font source": ""
   },
+  "Foreground layers": {
+    "Foreground layers": ""
+  },
   "General": {
     "General": "כללי"
   },
@@ -896,6 +905,9 @@
   "Keep until dismissed": {
     "Keep until dismissed": "שמור/שמרי עד לסגירה"
   },
+  "Keeps cards and panes solid when the window is see-through.": {
+    "Keeps cards and panes solid when the window is see-through.": ""
+  },
   "Keyboard shortcuts": {
     "Keyboard shortcuts": "קיצורי מקלדת"
   },
@@ -920,8 +932,14 @@
   "Launch Dux Calendar in the background when you log in.": {
     "Launch Dux Calendar in the background when you log in.": ""
   },
+  "Layer opacity": {
+    "Layer opacity": ""
+  },
   "Length used when creating events.": {
     "Length used when creating events.": "האורך שמוגדר בעת יצירת אירועים."
+  },
+  "Lets the desktop show through the window. Text and controls stay solid.": {
+    "Lets the desktop show through the window. Text and controls stay solid.": ""
   },
   "Light": {
     "Light": "בהיר"
@@ -1201,6 +1219,9 @@
   },
   "On the day": {
     "On the day": "ביום עצמו"
+  },
+  "Opacity": {
+    "Opacity": ""
   },
   "Open": {
     "Open": "פתח/י"
@@ -1891,6 +1912,9 @@
   },
   "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
     "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "ה-Client ID, ה-Secret וטוקן הרענון שלך נשמרים בצרור המפתחות של המערכת (libsecret/kwallet) כאשר הוא זמין, או בקובץ מקומי מוצפן."
+  },
+  "Your compositor does not support background blur.": {
+    "Your compositor does not support background blur.": ""
   },
   "Your response": {
     "Your response": "התגובה שלך"

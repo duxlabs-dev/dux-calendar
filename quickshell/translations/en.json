@@ -290,7 +290,7 @@
   {
     "term": "A folder of .ics files on this machine.",
     "context": "A folder of .ics files on this machine.",
-    "reference": "Modals/AccountAddModal.qml:503",
+    "reference": "Modals/AccountAddModal.qml:504",
     "comment": "local provider description in picker"
   },
   {
@@ -308,13 +308,13 @@
   {
     "term": "Accept",
     "context": "Accept",
-    "reference": "Modals/EventDetailsModal.qml:797",
+    "reference": "Modals/EventDetailsModal.qml:798",
     "comment": "RSVP accept button"
   },
   {
     "term": "Account connected",
     "context": "Account connected",
-    "reference": "Modals/AccountAddModal.qml:636",
+    "reference": "Modals/AccountAddModal.qml:637",
     "comment": "wizard success step heading"
   },
   {
@@ -344,31 +344,31 @@
   {
     "term": "Add",
     "context": "Add",
-    "reference": "Modals/AccountAddModal.qml:1455, Modals/AccountAddModal.qml:1542",
+    "reference": "Modals/AccountAddModal.qml:1456, Modals/AccountAddModal.qml:1543",
     "comment": "button to add evolution account | button to add local calendar account"
   },
   {
     "term": "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.",
     "context": "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.",
-    "reference": "Modals/TaskDetailsModal.qml:315",
+    "reference": "Modals/TaskDetailsModal.qml:316",
     "comment": "task dialog hint when no task list is available"
   },
   {
     "term": "Add a calendar",
     "context": "Add a calendar",
-    "reference": "Modals/EventDetailsModal.qml:1213, Modals/ImportIcsModal.qml:479",
+    "reference": "Modals/EventDetailsModal.qml:1214, Modals/ImportIcsModal.qml:477",
     "comment": "event form button to add a calendar when none exist | import dialog button to add a calendar when none can hold events"
   },
   {
     "term": "Add account",
     "context": "Add account",
-    "reference": "Modules/CalendarSidebar.qml:1025, Modals/AccountAddModal.qml:220, Modals/AccountAddModal.qml:309, Modals/SettingsContent.qml:1415, Services/DankCalService.qml:1588",
+    "reference": "Modules/CalendarSidebar.qml:1025, Modals/AccountAddModal.qml:220, Modals/AccountAddModal.qml:310, Modals/SettingsContent.qml:1415, Services/DankCalService.qml:1588",
     "comment": "account add modal header title | account add modal window title | add account button on accounts page | sidebar button to add a provider account | toast action to re-add an account that failed to reconnect"
   },
   {
     "term": "Add description",
     "context": "Add description",
-    "reference": "Modals/EventDetailsModal.qml:1383",
+    "reference": "Modals/EventDetailsModal.qml:1384",
     "comment": "event form placeholder for description text area"
   },
   {
@@ -380,7 +380,7 @@
   {
     "term": "Add reminder",
     "context": "Add reminder",
-    "reference": "Modals/EventDetailsModal.qml:1335",
+    "reference": "Modals/EventDetailsModal.qml:1336",
     "comment": "event form button to add another reminder"
   },
   {
@@ -392,19 +392,19 @@
   {
     "term": "Add title",
     "context": "Add title",
-    "reference": "Modals/EventDetailsModal.qml:1073, Modals/TaskDetailsModal.qml:327",
+    "reference": "Modals/EventDetailsModal.qml:1074, Modals/TaskDetailsModal.qml:328",
     "comment": "event form placeholder for title input | task form placeholder for title input"
   },
   {
     "term": "Add to calendar",
     "context": "Add to calendar",
-    "reference": "Modals/ImportIcsModal.qml:264",
+    "reference": "Modals/ImportIcsModal.qml:265",
     "comment": "import destination label"
   },
   {
     "term": "Adding…",
     "context": "Adding…",
-    "reference": "Modals/AccountAddModal.qml:1455, Modals/AccountAddModal.qml:1542",
+    "reference": "Modals/AccountAddModal.qml:1456, Modals/AccountAddModal.qml:1543",
     "comment": "add button while evolution account is created | add button while local account is created"
   },
   {
@@ -434,13 +434,13 @@
   {
     "term": "All credentials are stored in your system keyring when available.",
     "context": "All credentials are stored in your system keyring when available.",
-    "reference": "Modals/AccountAddModal.qml:455",
+    "reference": "Modals/AccountAddModal.qml:456",
     "comment": "subtitle under provider selection heading"
   },
   {
     "term": "All day",
     "context": "All day",
-    "reference": "Modals/EventDetailsModal.qml:1087, Modals/SearchModal.qml:111, Widgets/EventContextMenu.qml:41, Modules/views/AgendaView.qml:81, Modules/views/DayView.qml:80, Modules/views/WeekView.qml:223, Modules/views/MonthView.qml:149, Modules/views/MonthDayPopover.qml:177",
+    "reference": "Modals/EventDetailsModal.qml:1088, Modals/SearchModal.qml:111, Widgets/EventContextMenu.qml:41, Modules/views/AgendaView.qml:81, Modules/views/DayView.qml:80, Modules/views/WeekView.qml:223, Modules/views/MonthView.qml:149, Modules/views/MonthDayPopover.qml:177",
     "comment": "all-day marker in event context menu | all-day marker in event tooltip | all-day marker in the month day-detail popover | event form toggle label for all-day events | search result subtitle for all-day events | time column label for all-day events on agenda card"
   },
   {
@@ -452,7 +452,7 @@
   {
     "term": "All events",
     "context": "All events",
-    "reference": "Modals/EventDetailsModal.qml:840",
+    "reference": "Modals/EventDetailsModal.qml:841",
     "comment": "RSVP scope button replying for the whole recurring series"
   },
   {
@@ -476,13 +476,13 @@
   {
     "term": "Already in %1",
     "context": "Already in %1",
-    "reference": "Modals/ImportIcsModal.qml:430",
+    "reference": "Modals/ImportIcsModal.qml:429",
     "comment": "import row note naming the calendar that holds this event"
   },
   {
     "term": "Also in these calendars",
     "context": "Also in these calendars",
-    "reference": "Modals/EventDetailsModal.qml:717",
+    "reference": "Modals/EventDetailsModal.qml:718",
     "comment": "event details row listing other calendars a merged duplicate event appears in"
   },
   {
@@ -506,7 +506,7 @@
   {
     "term": "App-specific password",
     "context": "App-specific password",
-    "reference": "Modals/AccountAddModal.qml:1269",
+    "reference": "Modals/AccountAddModal.qml:1270",
     "comment": "icloud password field label"
   },
   {
@@ -518,13 +518,13 @@
   {
     "term": "Apple ID",
     "context": "Apple ID",
-    "reference": "Modals/AccountAddModal.qml:1255",
+    "reference": "Modals/AccountAddModal.qml:1256",
     "comment": "icloud username field label"
   },
   {
     "term": "Apple iCloud calendars via app-specific password.",
     "context": "Apple iCloud calendars via app-specific password.",
-    "reference": "Modals/AccountAddModal.qml:491",
+    "reference": "Modals/AccountAddModal.qml:492",
     "comment": "icloud provider description in picker"
   },
   {
@@ -536,7 +536,7 @@
   {
     "term": "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.",
     "context": "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.",
-    "reference": "Modals/AccountAddModal.qml:1048",
+    "reference": "Modals/AccountAddModal.qml:1049",
     "comment": "browser step body while waiting for oauth"
   },
   {
@@ -548,19 +548,19 @@
   {
     "term": "Attendees",
     "context": "Attendees",
-    "reference": "Modals/EventDetailsModal.qml:877",
+    "reference": "Modals/EventDetailsModal.qml:878",
     "comment": "event details section label for attendee list"
   },
   {
     "term": "Authorization failed",
     "context": "Authorization failed",
-    "reference": "Modals/AccountAddModal.qml:1039",
+    "reference": "Modals/AccountAddModal.qml:1040",
     "comment": "browser step heading on oauth error"
   },
   {
     "term": "Authorize in your browser",
     "context": "Authorize in your browser",
-    "reference": "Modals/AccountAddModal.qml:634",
+    "reference": "Modals/AccountAddModal.qml:635",
     "comment": "browser authorization step heading"
   },
   {
@@ -578,7 +578,7 @@
   {
     "term": "Back",
     "context": "Back",
-    "reference": "Modals/AccountAddModal.qml:288, Modals/AccountAddModal.qml:919, Modals/AccountAddModal.qml:1010",
+    "reference": "Modals/AccountAddModal.qml:289, Modals/AccountAddModal.qml:920, Modals/AccountAddModal.qml:1011",
     "comment": "back button in account setup wizard"
   },
   {
@@ -626,7 +626,7 @@
   {
     "term": "Calendar",
     "context": "Calendar",
-    "reference": "Modules/CalendarWindow.qml:434, Modules/CalendarWindow.qml:716, Modals/SettingsAboutPage.qml:26",
+    "reference": "Modules/CalendarWindow.qml:434, Modules/CalendarWindow.qml:717, Modals/SettingsAboutPage.qml:26",
     "comment": "about page hero, app name | main window title | main window title bar text"
   },
   {
@@ -674,7 +674,7 @@
   {
     "term": "Cancel",
     "context": "Cancel",
-    "reference": "Modals/ConfirmDialog.qml:33, Modals/EventDetailsModal.qml:630, Modals/EventDetailsModal.qml:850, Modals/NewCalendarDialog.qml:57, Modals/RenameCalendarDialog.qml:59, Modals/TaskDetailsModal.qml:552, Modals/AccountAddModal.qml:1101, Modals/ImportIcsModal.qml:471, Modals/CalendarRemindersDialog.qml:345",
+    "reference": "Modals/ConfirmDialog.qml:33, Modals/EventDetailsModal.qml:631, Modals/EventDetailsModal.qml:851, Modals/NewCalendarDialog.qml:57, Modals/RenameCalendarDialog.qml:59, Modals/TaskDetailsModal.qml:553, Modals/AccountAddModal.qml:1102, Modals/ImportIcsModal.qml:469, Modals/CalendarRemindersDialog.qml:345",
     "comment": "button to cancel oauth browser step | confirm dialog button to cancel | event form button to cancel editing | import dialog button to close without importing | new calendar dialog button to cancel | per-calendar reminders dialog button to cancel | rename calendar dialog button to cancel | task form button to discard changes"
   },
   {
@@ -686,7 +686,7 @@
   {
     "term": "Changes apply to the whole series",
     "context": "Changes apply to the whole series",
-    "reference": "Modals/EventDetailsModal.qml:1248, Modals/EventDetailsModal.qml:1277",
+    "reference": "Modals/EventDetailsModal.qml:1249, Modals/EventDetailsModal.qml:1278",
     "comment": "event form note when editing a recurring event"
   },
   {
@@ -698,13 +698,13 @@
   {
     "term": "Choose a provider",
     "context": "Choose a provider",
-    "reference": "Modals/AccountAddModal.qml:447",
+    "reference": "Modals/AccountAddModal.qml:448",
     "comment": "heading for provider selection list"
   },
   {
     "term": "Choose calendar directory",
     "context": "Choose calendar directory",
-    "reference": "Modals/AccountAddModal.qml:1421, Modals/AccountAddModal.qml:1424",
+    "reference": "Modals/AccountAddModal.qml:1422, Modals/AccountAddModal.qml:1425",
     "comment": "folder picker title for local calendar directory"
   },
   {
@@ -722,25 +722,25 @@
   {
     "term": "Click to zoom · Esc to close",
     "context": "Click to zoom · Esc to close",
-    "reference": "Modals/AccountAddModal.qml:404",
+    "reference": "Modals/AccountAddModal.qml:405",
     "comment": "hint while a setup screenshot is fit to the window"
   },
   {
     "term": "Client ID",
     "context": "Client ID",
-    "reference": "Modals/AccountAddModal.qml:958",
+    "reference": "Modals/AccountAddModal.qml:959",
     "comment": "oauth client id field label"
   },
   {
     "term": "Client Secret",
     "context": "Client Secret",
-    "reference": "Modals/AccountAddModal.qml:973",
+    "reference": "Modals/AccountAddModal.qml:974",
     "comment": "oauth client secret field label"
   },
   {
     "term": "Close",
     "context": "Close",
-    "reference": "Modals/AccountAddModal.qml:396",
+    "reference": "Modals/AccountAddModal.qml:397",
     "comment": "button that closes the enlarged setup screenshot"
   },
   {
@@ -776,7 +776,7 @@
   {
     "term": "Coming soon",
     "context": "Coming soon",
-    "reference": "Modals/AccountAddModal.qml:570",
+    "reference": "Modals/AccountAddModal.qml:571",
     "comment": "badge on unimplemented provider card"
   },
   {
@@ -788,7 +788,7 @@
   {
     "term": "Completed",
     "context": "Completed",
-    "reference": "Modals/TaskDetailsModal.qml:501, Modules/views/TasksView.qml:82",
+    "reference": "Modals/TaskDetailsModal.qml:502, Modules/views/TasksView.qml:82",
     "comment": "task form toggle label for marking a task done | tasks view section header for finished tasks"
   },
   {
@@ -800,49 +800,49 @@
   {
     "term": "Confirm delete",
     "context": "Confirm delete",
-    "reference": "Modals/EventDetailsModal.qml:571, Modals/TaskDetailsModal.qml:543",
+    "reference": "Modals/EventDetailsModal.qml:572, Modals/TaskDetailsModal.qml:544",
     "comment": "event details button to confirm deleting the event | task form button to confirm deletion"
   },
   {
     "term": "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.",
     "context": "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.",
-    "reference": "Modals/ImportIcsModal.qml:304",
+    "reference": "Modals/ImportIcsModal.qml:305",
     "comment": "import preview explains the data and non-blocking conflicts"
   },
   {
     "term": "Connect",
     "context": "Connect",
-    "reference": "Modals/AccountAddModal.qml:1000, Modals/AccountAddModal.qml:1340",
+    "reference": "Modals/AccountAddModal.qml:1001, Modals/AccountAddModal.qml:1341",
     "comment": "account setup button to start provider sign-in"
   },
   {
     "term": "Connect %1",
     "context": "Connect %1",
-    "reference": "Modals/AccountAddModal.qml:309",
+    "reference": "Modals/AccountAddModal.qml:310",
     "comment": "account add header when a provider is selected"
   },
   {
     "term": "Connect Google Account",
     "context": "Connect Google Account",
-    "reference": "Modals/AccountAddModal.qml:739",
+    "reference": "Modals/AccountAddModal.qml:740",
     "comment": "button to start the one-click google sign-in"
   },
   {
     "term": "Connect Microsoft Account",
     "context": "Connect Microsoft Account",
-    "reference": "Modals/AccountAddModal.qml:739",
+    "reference": "Modals/AccountAddModal.qml:740",
     "comment": "button to start the one-click microsoft sign-in"
   },
   {
     "term": "Connect any CalDAV-compatible server.",
     "context": "Connect any CalDAV-compatible server.",
-    "reference": "Modals/AccountAddModal.qml:485",
+    "reference": "Modals/AccountAddModal.qml:486",
     "comment": "caldav provider description in picker"
   },
   {
     "term": "Connected",
     "context": "Connected",
-    "reference": "Modals/AccountAddModal.qml:1142, Modals/SettingsContent.qml:1338, Modals/SettingsAboutPage.qml:107",
+    "reference": "Modals/AccountAddModal.qml:1143, Modals/SettingsContent.qml:1338, Modals/SettingsAboutPage.qml:107",
     "comment": "about page daemon status value | account status in account list | success step status heading"
   },
   {
@@ -860,13 +860,13 @@
   {
     "term": "Connecting…",
     "context": "Connecting…",
-    "reference": "Modals/AccountAddModal.qml:1340",
+    "reference": "Modals/AccountAddModal.qml:1341",
     "comment": "connect button while caldav connection verifies"
   },
   {
     "term": "Continue",
     "context": "Continue",
-    "reference": "Modals/AccountAddModal.qml:911",
+    "reference": "Modals/AccountAddModal.qml:912",
     "comment": "guide step next button"
   },
   {
@@ -884,7 +884,7 @@
   {
     "term": "Copied to clipboard",
     "context": "Copied to clipboard",
-    "reference": "Modals/AccountAddModal.qml:899, Modals/AccountAddModal.qml:1232",
+    "reference": "Modals/AccountAddModal.qml:900, Modals/AccountAddModal.qml:1233",
     "comment": "toast after copying text to the clipboard"
   },
   {
@@ -908,7 +908,7 @@
   {
     "term": "Copy link",
     "context": "Copy link",
-    "reference": "Modals/AccountAddModal.qml:892, Modals/AccountAddModal.qml:1226",
+    "reference": "Modals/AccountAddModal.qml:893, Modals/AccountAddModal.qml:1227",
     "comment": "button to copy a setup guide url to the clipboard"
   },
   {
@@ -980,7 +980,7 @@
   {
     "term": "Credentials stay on this machine",
     "context": "Credentials stay on this machine",
-    "reference": "Modals/AccountAddModal.qml:708",
+    "reference": "Modals/AccountAddModal.qml:709",
     "comment": "security note heading in oauth intro"
   },
   {
@@ -1070,7 +1070,7 @@
   {
     "term": "Decline",
     "context": "Decline",
-    "reference": "Modals/EventDetailsModal.qml:815",
+    "reference": "Modals/EventDetailsModal.qml:816",
     "comment": "RSVP decline button"
   },
   {
@@ -1112,7 +1112,7 @@
   {
     "term": "Delete",
     "context": "Delete",
-    "reference": "Modules/CalendarSidebar.qml:316, Modals/EventDetailsModal.qml:583, Modals/TaskDetailsModal.qml:543, Modals/SettingsContent.qml:1191, Modals/SettingsContent.qml:1197, Widgets/EventSelectionBar.qml:42",
+    "reference": "Modules/CalendarSidebar.qml:316, Modals/EventDetailsModal.qml:584, Modals/TaskDetailsModal.qml:544, Modals/SettingsContent.qml:1191, Modals/SettingsContent.qml:1197, Widgets/EventSelectionBar.qml:42",
     "comment": "calendar row action tooltip | confirm button for deleting a calendar | delete calendar confirmation button | event details button to delete the event | multi-event action shelf label | task form button to delete the task"
   },
   {
@@ -1160,7 +1160,7 @@
   {
     "term": "Delete occurrence",
     "context": "Delete occurrence",
-    "reference": "Modals/EventDetailsModal.qml:562",
+    "reference": "Modals/EventDetailsModal.qml:563",
     "comment": "event details button to delete only this occurrence of a recurring event"
   },
   {
@@ -1172,7 +1172,7 @@
   {
     "term": "Delete series",
     "context": "Delete series",
-    "reference": "Modals/EventDetailsModal.qml:571",
+    "reference": "Modals/EventDetailsModal.qml:572",
     "comment": "event details button to confirm deleting a whole recurring series"
   },
   {
@@ -1202,7 +1202,7 @@
   {
     "term": "Description",
     "context": "Description",
-    "reference": "Modals/EventDetailsModal.qml:1008",
+    "reference": "Modals/EventDetailsModal.qml:1009",
     "comment": "event details section label for description"
   },
   {
@@ -1220,7 +1220,7 @@
   {
     "term": "Directory",
     "context": "Directory",
-    "reference": "Modals/AccountAddModal.qml:1410",
+    "reference": "Modals/AccountAddModal.qml:1411",
     "comment": "local calendar directory field label"
   },
   {
@@ -1256,7 +1256,7 @@
   {
     "term": "Display name (optional)",
     "context": "Display name (optional)",
-    "reference": "Modals/AccountAddModal.qml:1281, Modals/AccountAddModal.qml:1433, Modals/AccountAddModal.qml:1519, Modals/AccountAddModal.qml:1620",
+    "reference": "Modals/AccountAddModal.qml:1282, Modals/AccountAddModal.qml:1434, Modals/AccountAddModal.qml:1520, Modals/AccountAddModal.qml:1621",
     "comment": "optional account display name field label"
   },
   {
@@ -1274,19 +1274,19 @@
   {
     "term": "Done",
     "context": "Done",
-    "reference": "Modals/AccountAddModal.qml:1170",
+    "reference": "Modals/AccountAddModal.qml:1171",
     "comment": "button to close modal after account added"
   },
   {
     "term": "Drag to pan · click to fit",
     "context": "Drag to pan · click to fit",
-    "reference": "Modals/AccountAddModal.qml:404",
+    "reference": "Modals/AccountAddModal.qml:405",
     "comment": "hint while a setup screenshot is zoomed"
   },
   {
     "term": "Due date",
     "context": "Due date",
-    "reference": "Modals/TaskDetailsModal.qml:356",
+    "reference": "Modals/TaskDetailsModal.qml:357",
     "comment": "task form toggle label for the due date"
   },
   {
@@ -1346,19 +1346,19 @@
   {
     "term": "Edit",
     "context": "Edit",
-    "reference": "Modals/EventDetailsModal.qml:556",
+    "reference": "Modals/EventDetailsModal.qml:557",
     "comment": "event details button to start editing"
   },
   {
     "term": "Edit event",
     "context": "Edit event",
-    "reference": "Modals/EventDetailsModal.qml:523, Modals/EventDetailsModal.qml:549",
+    "reference": "Modals/EventDetailsModal.qml:523, Modals/EventDetailsModal.qml:550",
     "comment": "event modal header when editing | event modal window title when editing"
   },
   {
     "term": "Edit task",
     "context": "Edit task",
-    "reference": "Modals/TaskDetailsModal.qml:293",
+    "reference": "Modals/TaskDetailsModal.qml:294",
     "comment": "header in the edit-task dialog"
   },
   {
@@ -1382,7 +1382,7 @@
   {
     "term": "End",
     "context": "End",
-    "reference": "Modals/EventDetailsModal.qml:1135",
+    "reference": "Modals/EventDetailsModal.qml:1136",
     "comment": "event form end date and time label"
   },
   {
@@ -1394,7 +1394,7 @@
   {
     "term": "Enlarge",
     "context": "Enlarge",
-    "reference": "Modals/AccountAddModal.qml:861",
+    "reference": "Modals/AccountAddModal.qml:862",
     "comment": "hint on setup screenshot thumbnail"
   },
   {
@@ -1406,19 +1406,19 @@
   {
     "term": "Enter client ID",
     "context": "Enter client ID",
-    "reference": "Modals/AccountAddModal.qml:911",
+    "reference": "Modals/AccountAddModal.qml:912",
     "comment": "last guide step button to microsoft credentials"
   },
   {
     "term": "Enter your CalDAV server details. The connection is verified before the account is saved.",
     "context": "Enter your CalDAV server details. The connection is verified before the account is saved.",
-    "reference": "Modals/AccountAddModal.qml:1206",
+    "reference": "Modals/AccountAddModal.qml:1207",
     "comment": "caldav sign-in form instructions"
   },
   {
     "term": "Enter your client ID",
     "context": "Enter your client ID",
-    "reference": "Modals/AccountAddModal.qml:632",
+    "reference": "Modals/AccountAddModal.qml:633",
     "comment": "microsoft credentials step heading"
   },
   {
@@ -1436,13 +1436,13 @@
   {
     "term": "Event details",
     "context": "Event details",
-    "reference": "Modals/EventDetailsModal.qml:549",
+    "reference": "Modals/EventDetailsModal.qml:550",
     "comment": "event modal header when viewing"
   },
   {
     "term": "Every",
     "context": "Every",
-    "reference": "Modals/TaskDetailsModal.qml:433, Widgets/DankRecurrencePicker.qml:270",
+    "reference": "Modals/TaskDetailsModal.qml:434, Widgets/DankRecurrencePicker.qml:270",
     "comment": "recurrence interval label, followed by a count and unit | task form label for the recurrence interval"
   },
   {
@@ -1454,7 +1454,7 @@
   {
     "term": "Evolution",
     "context": "Evolution",
-    "reference": "Modals/AccountAddModal.qml:1520",
+    "reference": "Modals/AccountAddModal.qml:1521",
     "comment": "evolution account display name field placeholder"
   },
   {
@@ -1472,7 +1472,7 @@
   {
     "term": "Feed URL",
     "context": "Feed URL",
-    "reference": "Modals/AccountAddModal.qml:1609",
+    "reference": "Modals/AccountAddModal.qml:1610",
     "comment": "ical feed url field label"
   },
   {
@@ -1544,7 +1544,7 @@
   {
     "term": "Generate app-specific password",
     "context": "Generate app-specific password",
-    "reference": "Modals/AccountAddModal.qml:1218",
+    "reference": "Modals/AccountAddModal.qml:1219",
     "comment": "button to open apple app password page"
   },
   {
@@ -1616,19 +1616,19 @@
   {
     "term": "Import client_secret.json",
     "context": "Import client_secret.json",
-    "reference": "Modals/AccountAddModal.qml:945",
+    "reference": "Modals/AccountAddModal.qml:946",
     "comment": "button to import google oauth client json"
   },
   {
     "term": "Import events",
     "context": "Import events",
-    "reference": "Modals/ImportIcsModal.qml:200, Modals/ImportIcsModal.qml:226",
+    "reference": "Modals/ImportIcsModal.qml:200, Modals/ImportIcsModal.qml:227",
     "comment": "import modal header | import modal window title"
   },
   {
     "term": "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.",
     "context": "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.",
-    "reference": "Modals/AccountAddModal.qml:936",
+    "reference": "Modals/AccountAddModal.qml:937",
     "comment": "google credentials step instructions"
   },
   {
@@ -1652,7 +1652,7 @@
   {
     "term": "Join video call",
     "context": "Join video call",
-    "reference": "Modals/EventDetailsModal.qml:738",
+    "reference": "Modals/EventDetailsModal.qml:739",
     "comment": "event details row that opens the meeting link"
   },
   {
@@ -1742,7 +1742,7 @@
   {
     "term": "List",
     "context": "List",
-    "reference": "Modals/TaskDetailsModal.qml:467",
+    "reference": "Modals/TaskDetailsModal.qml:468",
     "comment": "task form label for the task-list dropdown"
   },
   {
@@ -1754,13 +1754,13 @@
   {
     "term": "Loading setup instructions…",
     "context": "Loading setup instructions…",
-    "reference": "Modals/AccountAddModal.qml:783",
+    "reference": "Modals/AccountAddModal.qml:784",
     "comment": "placeholder while setup guide steps load"
   },
   {
     "term": "Local",
     "context": "Local",
-    "reference": "Modals/AccountAddModal.qml:126, Modals/AccountAddModal.qml:502, Modals/SettingsContent.qml:1266, Services/DankCalService.qml:1831",
+    "reference": "Modals/AccountAddModal.qml:126, Modals/AccountAddModal.qml:503, Modals/SettingsContent.qml:1266, Services/DankCalService.qml:1831",
     "comment": "local provider name in account add modal | local provider name in account list | provider label for a local account"
   },
   {
@@ -1772,7 +1772,7 @@
   {
     "term": "Local calendars",
     "context": "Local calendars",
-    "reference": "Modals/AccountAddModal.qml:1434",
+    "reference": "Modals/AccountAddModal.qml:1435",
     "comment": "local account display name field placeholder"
   },
   {
@@ -1790,7 +1790,7 @@
   {
     "term": "Location",
     "context": "Location",
-    "reference": "Modals/EventDetailsModal.qml:1166",
+    "reference": "Modals/EventDetailsModal.qml:1167",
     "comment": "event form placeholder for location input"
   },
   {
@@ -1832,7 +1832,7 @@
   {
     "term": "Maybe",
     "context": "Maybe",
-    "reference": "Modals/EventDetailsModal.qml:806",
+    "reference": "Modals/EventDetailsModal.qml:807",
     "comment": "RSVP tentative button"
   },
   {
@@ -1862,7 +1862,7 @@
   {
     "term": "Menu",
     "context": "Menu",
-    "reference": "Modals/SettingsModal.qml:94",
+    "reference": "Modals/SettingsModal.qml:95",
     "comment": "settings header button that shows the section list on narrow windows"
   },
   {
@@ -1880,7 +1880,7 @@
   {
     "term": "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.",
     "context": "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.",
-    "reference": "Modals/AccountAddModal.qml:1066",
+    "reference": "Modals/AccountAddModal.qml:1067",
     "comment": "hint about microsoft server_error during oauth"
   },
   {
@@ -2000,7 +2000,7 @@
   {
     "term": "My server",
     "context": "My server",
-    "reference": "Modals/AccountAddModal.qml:1282",
+    "reference": "Modals/AccountAddModal.qml:1283",
     "comment": "caldav display name field placeholder"
   },
   {
@@ -2036,7 +2036,7 @@
   {
     "term": "New event",
     "context": "New event",
-    "reference": "Modals/EventDetailsModal.qml:523, Modals/EventDetailsModal.qml:549, Widgets/EventContextMenu.qml:64, Modules/views/MonthView.qml:394",
+    "reference": "Modals/EventDetailsModal.qml:523, Modals/EventDetailsModal.qml:550, Widgets/EventContextMenu.qml:64, Modules/views/MonthView.qml:394",
     "comment": "calendar day context menu action | event modal header when creating | event modal window title when creating | placeholder label on the event span shown while selecting days in the month grid"
   },
   {
@@ -2048,7 +2048,7 @@
   {
     "term": "New task",
     "context": "New task",
-    "reference": "Modals/TaskDetailsModal.qml:271, Modals/TaskDetailsModal.qml:293",
+    "reference": "Modals/TaskDetailsModal.qml:271, Modals/TaskDetailsModal.qml:294",
     "comment": "header in the create-task dialog | title bar for the create-task dialog"
   },
   {
@@ -2120,7 +2120,7 @@
   {
     "term": "No calendars yet. Add one to start creating events.",
     "context": "No calendars yet. Add one to start creating events.",
-    "reference": "Modals/EventDetailsModal.qml:1206",
+    "reference": "Modals/EventDetailsModal.qml:1207",
     "comment": "event form guidance when there are no writable calendars"
   },
   {
@@ -2138,7 +2138,7 @@
   {
     "term": "No overlapping busy events",
     "context": "No overlapping busy events",
-    "reference": "Modals/ImportIcsModal.qml:388",
+    "reference": "Modals/ImportIcsModal.qml:387",
     "comment": "import preview with no time conflicts"
   },
   {
@@ -2186,7 +2186,7 @@
   {
     "term": "Notes",
     "context": "Notes",
-    "reference": "Modals/TaskDetailsModal.qml:338",
+    "reference": "Modals/TaskDetailsModal.qml:339",
     "comment": "task form placeholder for notes input"
   },
   {
@@ -2252,7 +2252,7 @@
   {
     "term": "Open",
     "context": "Open",
-    "reference": "Modals/AccountAddModal.qml:881, Modals/ImportIcsModal.qml:437",
+    "reference": "Modals/AccountAddModal.qml:882, Modals/ImportIcsModal.qml:436",
     "comment": "fallback label for guide step link button | import row button to open the event already on the calendar"
   },
   {
@@ -2264,7 +2264,7 @@
   {
     "term": "Open browser again",
     "context": "Open browser again",
-    "reference": "Modals/AccountAddModal.qml:1075",
+    "reference": "Modals/AccountAddModal.qml:1076",
     "comment": "button to reopen oauth url in browser"
   },
   {
@@ -2288,7 +2288,7 @@
   {
     "term": "Open the existing meeting to handle this reply or cancellation.",
     "context": "Open the existing meeting to handle this reply or cancellation.",
-    "reference": "Modals/ImportIcsModal.qml:296",
+    "reference": "Modals/ImportIcsModal.qml:297",
     "comment": "scheduling messages cannot be imported as new events"
   },
   {
@@ -2312,7 +2312,7 @@
   {
     "term": "Outlook, Office 365 and Exchange Online calendars.",
     "context": "Outlook, Office 365 and Exchange Online calendars.",
-    "reference": "Modals/AccountAddModal.qml:479",
+    "reference": "Modals/AccountAddModal.qml:480",
     "comment": "microsoft provider description in picker"
   },
   {
@@ -2342,13 +2342,13 @@
   {
     "term": "Password",
     "context": "Password",
-    "reference": "Modals/AccountAddModal.qml:1269",
+    "reference": "Modals/AccountAddModal.qml:1270",
     "comment": "caldav password field label"
   },
   {
     "term": "Password (optional)",
     "context": "Password (optional)",
-    "reference": "Modals/AccountAddModal.qml:1640",
+    "reference": "Modals/AccountAddModal.qml:1641",
     "comment": "ical optional basic-auth password field label"
   },
   {
@@ -2378,7 +2378,7 @@
   {
     "term": "Paste credentials",
     "context": "Paste credentials",
-    "reference": "Modals/AccountAddModal.qml:911",
+    "reference": "Modals/AccountAddModal.qml:912",
     "comment": "last guide step button to google credentials"
   },
   {
@@ -2390,19 +2390,19 @@
   {
     "term": "Paste the Application (client) ID from your app registration's Overview page.",
     "context": "Paste the Application (client) ID from your app registration's Overview page.",
-    "reference": "Modals/AccountAddModal.qml:936",
+    "reference": "Modals/AccountAddModal.qml:937",
     "comment": "microsoft credentials step instructions"
   },
   {
     "term": "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.",
     "context": "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.",
-    "reference": "Modals/AccountAddModal.qml:1599",
+    "reference": "Modals/AccountAddModal.qml:1600",
     "comment": "ical subscription form instructions"
   },
   {
     "term": "Paste your credentials",
     "context": "Paste your credentials",
-    "reference": "Modals/AccountAddModal.qml:632",
+    "reference": "Modals/AccountAddModal.qml:633",
     "comment": "google credentials step heading"
   },
   {
@@ -2450,7 +2450,7 @@
   {
     "term": "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.",
     "context": "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.",
-    "reference": "Modals/AccountAddModal.qml:1395",
+    "reference": "Modals/AccountAddModal.qml:1396",
     "comment": "local calendar directory form instructions"
   },
   {
@@ -2510,7 +2510,7 @@
   {
     "term": "Priority",
     "context": "Priority",
-    "reference": "Modals/TaskDetailsModal.qml:377",
+    "reference": "Modals/TaskDetailsModal.qml:378",
     "comment": "task form label for the priority dropdown"
   },
   {
@@ -2558,13 +2558,13 @@
   {
     "term": "Recurring event · conflicts checked through %1",
     "context": "Recurring event · conflicts checked through %1",
-    "reference": "Modals/ImportIcsModal.qml:417",
+    "reference": "Modals/ImportIcsModal.qml:416",
     "comment": "bounded recurring import preview"
   },
   {
     "term": "Recurring tasks are managed in Google Tasks.",
     "context": "Recurring tasks are managed in Google Tasks.",
-    "reference": "Modals/TaskDetailsModal.qml:453",
+    "reference": "Modals/TaskDetailsModal.qml:454",
     "comment": "task form note when recurrence cannot be edited on google"
   },
   {
@@ -2630,7 +2630,7 @@
   {
     "term": "Remove reminder",
     "context": "Remove reminder",
-    "reference": "Modals/EventDetailsModal.qml:1327",
+    "reference": "Modals/EventDetailsModal.qml:1328",
     "comment": "event form button that removes one reminder row"
   },
   {
@@ -2672,7 +2672,7 @@
   {
     "term": "Repeat",
     "context": "Repeat",
-    "reference": "Modals/TaskDetailsModal.qml:405",
+    "reference": "Modals/TaskDetailsModal.qml:406",
     "comment": "task form label for the recurrence dropdown"
   },
   {
@@ -2738,13 +2738,13 @@
   {
     "term": "Save",
     "context": "Save",
-    "reference": "Modals/EventDetailsModal.qml:643, Modals/RenameCalendarDialog.qml:65, Modals/TaskDetailsModal.qml:560, Modals/CalendarRemindersDialog.qml:351",
+    "reference": "Modals/EventDetailsModal.qml:644, Modals/RenameCalendarDialog.qml:65, Modals/TaskDetailsModal.qml:561, Modals/CalendarRemindersDialog.qml:351",
     "comment": "event details button to save changes | per-calendar reminders dialog button to save | rename calendar dialog button to save name | task form button to persist the task"
   },
   {
     "term": "Saving...",
     "context": "Saving...",
-    "reference": "Modals/EventDetailsModal.qml:643",
+    "reference": "Modals/EventDetailsModal.qml:644",
     "comment": "event details save button while saving"
   },
   {
@@ -2810,7 +2810,7 @@
   {
     "term": "Select client_secret.json",
     "context": "Select client_secret.json",
-    "reference": "Modals/AccountAddModal.qml:950",
+    "reference": "Modals/AccountAddModal.qml:951",
     "comment": "file picker title for google client json"
   },
   {
@@ -2846,7 +2846,7 @@
   {
     "term": "Server URL",
     "context": "Server URL",
-    "reference": "Modals/AccountAddModal.qml:1241",
+    "reference": "Modals/AccountAddModal.qml:1242",
     "comment": "caldav server url field label"
   },
   {
@@ -2858,7 +2858,7 @@
   {
     "term": "Settings",
     "context": "Settings",
-    "reference": "Modules/CalendarContent.qml:204, Modals/SettingsModal.qml:87, Modals/KeyboardShortcutsOverlay.qml:193",
+    "reference": "Modules/CalendarContent.qml:204, Modals/SettingsModal.qml:88, Modals/KeyboardShortcutsOverlay.qml:193",
     "comment": "keyboard shortcut description | settings window header title"
   },
   {
@@ -2930,7 +2930,7 @@
   {
     "term": "Showing the first 20 overlaps.",
     "context": "Showing the first 20 overlaps.",
-    "reference": "Modals/ImportIcsModal.qml:409",
+    "reference": "Modals/ImportIcsModal.qml:408",
     "comment": "import conflict list limit"
   },
   {
@@ -2942,31 +2942,31 @@
   {
     "term": "Sign in with %1",
     "context": "Sign in with %1",
-    "reference": "Modals/AccountAddModal.qml:630",
+    "reference": "Modals/AccountAddModal.qml:631",
     "comment": "oauth wizard intro step heading"
   },
   {
     "term": "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.",
     "context": "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.",
-    "reference": "Modals/AccountAddModal.qml:679",
+    "reference": "Modals/AccountAddModal.qml:680",
     "comment": "google one-click sign-in intro text"
   },
   {
     "term": "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.",
     "context": "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.",
-    "reference": "Modals/AccountAddModal.qml:679",
+    "reference": "Modals/AccountAddModal.qml:680",
     "comment": "microsoft one-click sign-in intro text"
   },
   {
     "term": "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.",
     "context": "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.",
-    "reference": "Modals/AccountAddModal.qml:1206",
+    "reference": "Modals/AccountAddModal.qml:1207",
     "comment": "icloud sign-in form instructions"
   },
   {
     "term": "Sign in with your Google account.",
     "context": "Sign in with your Google account.",
-    "reference": "Modals/AccountAddModal.qml:473",
+    "reference": "Modals/AccountAddModal.qml:474",
     "comment": "google provider description in picker"
   },
   {
@@ -2984,7 +2984,7 @@
   {
     "term": "Skip certificate verification",
     "context": "Skip certificate verification",
-    "reference": "Modals/AccountAddModal.qml:1306",
+    "reference": "Modals/AccountAddModal.qml:1307",
     "comment": "caldav toggle label to disable tls verification"
   },
   {
@@ -3020,7 +3020,7 @@
   {
     "term": "Start",
     "context": "Start",
-    "reference": "Modals/EventDetailsModal.qml:1103",
+    "reference": "Modals/EventDetailsModal.qml:1104",
     "comment": "event form start date and time label"
   },
   {
@@ -3038,7 +3038,7 @@
   {
     "term": "Starting…",
     "context": "Starting…",
-    "reference": "Modals/AccountAddModal.qml:1000",
+    "reference": "Modals/AccountAddModal.qml:1001",
     "comment": "connect button while oauth flow starts"
   },
   {
@@ -3050,31 +3050,31 @@
   {
     "term": "Step %1",
     "context": "Step %1",
-    "reference": "Modals/AccountAddModal.qml:640",
+    "reference": "Modals/AccountAddModal.qml:641",
     "comment": "setup guide step heading without title"
   },
   {
     "term": "Step %1: %2",
     "context": "Step %1: %2",
-    "reference": "Modals/AccountAddModal.qml:640",
+    "reference": "Modals/AccountAddModal.qml:641",
     "comment": "setup guide step heading with title"
   },
   {
     "term": "Subscribe",
     "context": "Subscribe",
-    "reference": "Modals/AccountAddModal.qml:1664",
+    "reference": "Modals/AccountAddModal.qml:1665",
     "comment": "button to subscribe to an ical feed"
   },
   {
     "term": "Subscribe to an external calendar by URL (webcal/https).",
     "context": "Subscribe to an external calendar by URL (webcal/https).",
-    "reference": "Modals/AccountAddModal.qml:497",
+    "reference": "Modals/AccountAddModal.qml:498",
     "comment": "ical provider description in picker"
   },
   {
     "term": "Subscribing…",
     "context": "Subscribing…",
-    "reference": "Modals/AccountAddModal.qml:1664",
+    "reference": "Modals/AccountAddModal.qml:1665",
     "comment": "subscribe button while ical feed is verified"
   },
   {
@@ -3218,7 +3218,7 @@
   {
     "term": "This event",
     "context": "This event",
-    "reference": "Modals/EventDetailsModal.qml:831",
+    "reference": "Modals/EventDetailsModal.qml:832",
     "comment": "RSVP scope button replying for one occurrence of a recurring event"
   },
   {
@@ -3278,7 +3278,7 @@
   {
     "term": "Trust self-signed certificates. Only enable this for servers you control.",
     "context": "Trust self-signed certificates. Only enable this for servers you control.",
-    "reference": "Modals/AccountAddModal.qml:1315",
+    "reference": "Modals/AccountAddModal.qml:1316",
     "comment": "caldav toggle hint about disabling tls verification"
   },
   {
@@ -3290,7 +3290,7 @@
   {
     "term": "Try again",
     "context": "Try again",
-    "reference": "Modals/AccountAddModal.qml:1089",
+    "reference": "Modals/AccountAddModal.qml:1090",
     "comment": "button to retry oauth after failure"
   },
   {
@@ -3314,7 +3314,7 @@
   {
     "term": "University timetable",
     "context": "University timetable",
-    "reference": "Modals/AccountAddModal.qml:1621",
+    "reference": "Modals/AccountAddModal.qml:1622",
     "comment": "ical display name field placeholder"
   },
   {
@@ -3338,25 +3338,25 @@
   {
     "term": "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.",
     "context": "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.",
-    "reference": "Modals/AccountAddModal.qml:1509",
+    "reference": "Modals/AccountAddModal.qml:1510",
     "comment": "evolution data server account form instructions"
   },
   {
     "term": "Use your own OAuth client",
     "context": "Use your own OAuth client",
-    "reference": "Modals/AccountAddModal.qml:749",
+    "reference": "Modals/AccountAddModal.qml:750",
     "comment": "button to open the advanced custom google client setup"
   },
   {
     "term": "Username",
     "context": "Username",
-    "reference": "Modals/AccountAddModal.qml:1255",
+    "reference": "Modals/AccountAddModal.qml:1256",
     "comment": "caldav username field label"
   },
   {
     "term": "Username (optional)",
     "context": "Username (optional)",
-    "reference": "Modals/AccountAddModal.qml:1630",
+    "reference": "Modals/AccountAddModal.qml:1631",
     "comment": "ical optional basic-auth username field label"
   },
   {
@@ -3410,7 +3410,7 @@
   {
     "term": "Waiting for browser…",
     "context": "Waiting for browser…",
-    "reference": "Modals/AccountAddModal.qml:1039",
+    "reference": "Modals/AccountAddModal.qml:1040",
     "comment": "browser step heading while waiting for oauth"
   },
   {
@@ -3482,13 +3482,13 @@
   {
     "term": "Your calendars will sync in the background. You can manage this account from Settings → Accounts.",
     "context": "Your calendars will sync in the background. You can manage this account from Settings → Accounts.",
-    "reference": "Modals/AccountAddModal.qml:1157",
+    "reference": "Modals/AccountAddModal.qml:1158",
     "comment": "success step body about background sync"
   },
   {
     "term": "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.",
     "context": "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.",
-    "reference": "Modals/AccountAddModal.qml:716",
+    "reference": "Modals/AccountAddModal.qml:717",
     "comment": "security note body in oauth intro"
   },
   {
@@ -3500,7 +3500,7 @@
   {
     "term": "Your response",
     "context": "Your response",
-    "reference": "Modals/EventDetailsModal.qml:782",
+    "reference": "Modals/EventDetailsModal.qml:783",
     "comment": "event details RSVP section label"
   },
   {
@@ -3542,7 +3542,7 @@
   {
     "term": "iCal subscription",
     "context": "iCal subscription",
-    "reference": "Modals/AccountAddModal.qml:124, Modals/AccountAddModal.qml:496",
+    "reference": "Modals/AccountAddModal.qml:124, Modals/AccountAddModal.qml:497",
     "comment": "ical subscription provider name in account add modal"
   },
   {
@@ -3572,13 +3572,13 @@
   {
     "term": "only if the feed requires sign-in",
     "context": "only if the feed requires sign-in",
-    "reference": "Modals/AccountAddModal.qml:1631, Modals/AccountAddModal.qml:1641",
+    "reference": "Modals/AccountAddModal.qml:1632, Modals/AccountAddModal.qml:1642",
     "comment": "ical optional password field placeholder | ical optional username field placeholder"
   },
   {
     "term": "password",
     "context": "password",
-    "reference": "Modals/AccountAddModal.qml:1270",
+    "reference": "Modals/AccountAddModal.qml:1271",
     "comment": "caldav password field placeholder"
   },
   {
@@ -3620,7 +3620,7 @@
   {
     "term": "username",
     "context": "username",
-    "reference": "Modals/AccountAddModal.qml:1256",
+    "reference": "Modals/AccountAddModal.qml:1257",
     "comment": "caldav username field placeholder"
   },
   {

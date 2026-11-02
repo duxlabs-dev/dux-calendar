@@ -308,11 +308,17 @@
   "Backend not connected.": {
     "Backend not connected.": "Backend niet verbonden."
   },
+  "Background blur": {
+    "Background blur": ""
+  },
   "Balanced": {
     "Balanced": "Gebalanceerd"
   },
   "Begin setup": {
     "Begin setup": "Installatie starten"
+  },
+  "Blurs what shows through the window. Needs an opacity below 100%.": {
+    "Blurs what shows through the window. Needs an opacity below 100%.": ""
   },
   "Busy": {
     "Busy": "Bezet"
@@ -824,6 +830,9 @@
   "Font source": {
     "Font source": "Lettertypebron"
   },
+  "Foreground layers": {
+    "Foreground layers": ""
+  },
   "General": {
     "General": "Algemeen"
   },
@@ -896,6 +905,9 @@
   "Keep until dismissed": {
     "Keep until dismissed": "Bewaren tot gesloten"
   },
+  "Keeps cards and panes solid when the window is see-through.": {
+    "Keeps cards and panes solid when the window is see-through.": ""
+  },
   "Keyboard shortcuts": {
     "Keyboard shortcuts": "Sneltoetsen"
   },
@@ -920,8 +932,14 @@
   "Launch Dux Calendar in the background when you log in.": {
     "Launch Dux Calendar in the background when you log in.": "Dux Calendar op de achtergrond starten wanneer je je aanmeldt."
   },
+  "Layer opacity": {
+    "Layer opacity": ""
+  },
   "Length used when creating events.": {
     "Length used when creating events.": "Gebruikte duur bij het aanmaken van afspraken."
+  },
+  "Lets the desktop show through the window. Text and controls stay solid.": {
+    "Lets the desktop show through the window. Text and controls stay solid.": ""
   },
   "Light": {
     "Light": "Licht"
@@ -1201,6 +1219,9 @@
   },
   "On the day": {
     "On the day": "Op de dag zelf"
+  },
+  "Opacity": {
+    "Opacity": ""
   },
   "Open": {
     "Open": "Openen"
@@ -1891,6 +1912,9 @@
   },
   "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
     "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "Je client-ID, geheim en vernieuwingstoken worden opgeslagen in de systeem-sleutelbos (libsecret/kwallet) indien beschikbaar, of in een versleuteld lokaal bestand."
+  },
+  "Your compositor does not support background blur.": {
+    "Your compositor does not support background blur.": ""
   },
   "Your response": {
     "Your response": "Je reactie"
