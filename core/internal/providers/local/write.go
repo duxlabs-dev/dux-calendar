@@ -53,7 +53,7 @@ func (p *Provider) ImportEvent(ctx context.Context, cal calendar.Calendar, ev *c
 }
 
 func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *calendar.Event) (*calendar.Event, error) {
-	if ev.UID == "" {
+	if ev.UID == "" && ev.RecurringID == "" {
 		return nil, fmt.Errorf("event missing UID")
 	}
 	source, err := p.calendarPath(cal)
@@ -61,16 +61,32 @@ func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *c
 		return nil, err
 	}
 
+	lookupUID := ev.UID
+	if ev.RecurringID != "" {
+		lookupUID = ev.RecurringID
+	}
+
 	path := source
 	var doc *ical.Calendar
 	switch {
 	case strings.HasPrefix(cal.RemoteID, "dir:"):
-		path, doc, err = findComponentFile(source, ical.CompEvent, ev.UID)
+		path, doc, err = findComponentFile(source, ical.CompEvent, lookupUID)
 	default:
 		doc, err = loadCalendarDoc(source)
 	}
 	if err != nil {
 		return nil, err
+	}
+
+	if ev.RecurringID != "" && !ev.OriginalStart.IsZero() {
+		rid, err := icalconv.ApplyEventOverride(doc, ev)
+		if err != nil {
+			return nil, err
+		}
+		if err := writeAtomic(path, doc); err != nil {
+			return nil, err
+		}
+		return storedOverride(cal, ev, rid), nil
 	}
 
 	if !replaceComponent(doc, ical.CompEvent, ev.UID, icalconv.BuildEvent(ev, ev.UID).Component) {
@@ -80,6 +96,14 @@ func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *c
 		return nil, err
 	}
 	return storedEvent(cal, ev.UID, ev), nil
+}
+
+func storedOverride(cal calendar.Calendar, ev *calendar.Event, rid string) *calendar.Event {
+	out := *ev
+	out.CalendarID = cal.ID
+	out.UID = ev.RecurringID + "/" + rid
+	out.RemoteID = ev.RecurringID
+	return &out
 }
 
 func (p *Provider) DeleteEvent(ctx context.Context, cal calendar.Calendar, ev calendar.Event) error {
