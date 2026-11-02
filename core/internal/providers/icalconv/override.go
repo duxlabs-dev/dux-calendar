@@ -60,6 +60,38 @@ func ApplyEventOverride(doc *ical.Calendar, ev *cal.Event) (string, error) {
 	return rid.Value, nil
 }
 
+// RemoveEventOverride drops the exception component for ev's occurrence. It
+// reports false when the object has no matching override.
+func RemoveEventOverride(doc *ical.Calendar, ev *cal.Event) (bool, error) {
+	if doc == nil {
+		return false, errors.New("calendar object is empty")
+	}
+	if ev.RecurringID == "" {
+		return false, errors.New("event has no recurring id")
+	}
+	if ev.OriginalStart.IsZero() {
+		return false, errors.New("event has no occurrence start")
+	}
+
+	tz := NewTZResolver(doc, ev.StartTimeZone)
+	for i, child := range doc.Children {
+		if child.Name != ical.CompEvent || ComponentUID(child) != ev.RecurringID {
+			continue
+		}
+		rid := child.Props.Get(ical.PropRecurrenceID)
+		if rid == nil {
+			continue
+		}
+		t, _, _, ok := parseDateTime(rid, tz)
+		if !ok || !t.Equal(ev.OriginalStart) {
+			continue
+		}
+		doc.Children = append(doc.Children[:i], doc.Children[i+1:]...)
+		return true, nil
+	}
+	return false, nil
+}
+
 func applyOverride(comp *ical.Component, ev *cal.Event) {
 	props := comp.Props
 	props.SetText(ical.PropSummary, ev.Summary)

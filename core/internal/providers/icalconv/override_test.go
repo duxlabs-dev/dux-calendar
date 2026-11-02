@@ -164,3 +164,21 @@ func TestRebaseEventOverridesKeepsStartMovesRecurrenceID(t *testing.T) {
 		assert.True(t, parsed.End.Equal(ev.End))
 	}
 }
+
+func TestRemoveEventOverride(t *testing.T) {
+	doc := participationDoc(t, recurringInviteICS)
+	ev := overrideEvent()
+
+	_, err := ApplyEventOverride(doc, ev)
+	require.NoError(t, err)
+	require.Len(t, doc.Events(), 2)
+
+	removed, err := RemoveEventOverride(doc, ev)
+	require.NoError(t, err)
+	assert.True(t, removed)
+	require.Len(t, doc.Events(), 1)
+
+	removed, err = RemoveEventOverride(doc, ev)
+	require.NoError(t, err)
+	assert.False(t, removed)
+}
