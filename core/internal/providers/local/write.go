@@ -99,6 +99,36 @@ func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *c
 	return storedEvent(cal, ev.UID, ev), nil
 }
 
+// RemoveEventOccurrence drops one RECURRENCE-ID override, leaving the master
+// and the rest of the series untouched.
+func (p *Provider) RemoveEventOccurrence(ctx context.Context, cal calendar.Calendar, ev calendar.Event) error {
+	if ev.RecurringID == "" {
+		return fmt.Errorf("event missing recurring id")
+	}
+	source, err := p.calendarPath(cal)
+	if err != nil {
+		return err
+	}
+
+	path := source
+	var doc *ical.Calendar
+	switch {
+	case strings.HasPrefix(cal.RemoteID, "dir:"):
+		path, doc, err = findComponentFile(source, ical.CompEvent, ev.RecurringID)
+	default:
+		doc, err = loadCalendarDoc(source)
+	}
+	if err != nil {
+		return err
+	}
+
+	removed, err := icalconv.RemoveEventOverride(doc, &ev)
+	if err != nil || !removed {
+		return err
+	}
+	return writeAtomic(path, doc)
+}
+
 // RebaseEventOccurrences moves every exception RECURRENCE-ID by delta while
 // keeping each exception's own start and end.
 func (p *Provider) RebaseEventOccurrences(ctx context.Context, cal calendar.Calendar, master calendar.Event, delta time.Duration) (map[string]string, error) {
