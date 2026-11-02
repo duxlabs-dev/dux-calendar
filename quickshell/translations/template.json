@@ -527,7 +527,7 @@
   {
     "term": "All events",
     "translation": "",
-    "context": "RSVP scope button replying for the whole recurring series",
+    "context": "RSVP scope button replying for the whole recurring series | event form scope button updating the whole recurring series",
     "reference": "",
     "comment": ""
   },
@@ -794,13 +794,6 @@
     "term": "Capabilities",
     "translation": "",
     "context": "about page daemon capabilities label",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Changes apply to the whole series",
-    "translation": "",
-    "context": "event form note when editing a recurring event",
     "reference": "",
     "comment": ""
   },
@@ -3754,7 +3747,7 @@
   {
     "term": "This event",
     "translation": "",
-    "context": "RSVP scope button replying for one occurrence of a recurring event",
+    "context": "RSVP scope button replying for one occurrence of a recurring event | event form scope button updating only one occurrence of a recurring event",
     "reference": "",
     "comment": ""
   },
@@ -4056,6 +4049,13 @@
     "term": "Yesterday",
     "translation": "",
     "context": "due-date label on a task card | search result date label for previous day",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "You'll choose which events to update when saving",
+    "translation": "",
+    "context": "event form note when editing a recurring event",
     "reference": "",
     "comment": ""
   },
