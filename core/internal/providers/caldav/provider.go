@@ -367,6 +367,27 @@ func (p *Provider) UpdateEvent(ctx context.Context, c cal.Calendar, ev *cal.Even
 	return &out, nil
 }
 
+// RemoveEventOccurrence drops one RECURRENCE-ID override from the stored
+// resource, leaving the master and the rest of the series untouched.
+func (p *Provider) RemoveEventOccurrence(ctx context.Context, c cal.Calendar, ev cal.Event) error {
+	if ev.RemoteID == "" {
+		return errors.New("caldav remove occurrence requires remote id")
+	}
+
+	doc, err := p.getObject(ctx, ev.RemoteID)
+	if err != nil {
+		return fmt.Errorf("get caldav object %q: %w", ev.RemoteID, err)
+	}
+	removed, err := icalconv.RemoveEventOverride(doc, &ev)
+	if err != nil || !removed {
+		return err
+	}
+	if _, err := p.putObject(ctx, ev.RemoteID, doc); err != nil {
+		return fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
+	}
+	return nil
+}
+
 // RebaseEventOccurrences moves every exception RECURRENCE-ID by delta while
 // keeping each exception's own start and end.
 func (p *Provider) RebaseEventOccurrences(ctx context.Context, c cal.Calendar, master cal.Event, delta time.Duration) (map[string]string, error) {

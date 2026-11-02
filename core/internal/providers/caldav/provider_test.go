@@ -654,4 +654,15 @@ END:VCALENDAR
 		start, _ := comp.Props.DateTime(ical.PropDateTimeStart, time.UTC)
 		assert.Equal(t, time.Date(2026, 6, 8, 14, 0, 0, 0, time.UTC), start)
 	}
+
+	putBody = nil
+	err = p.RemoveEventOccurrence(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, cal.Event{
+		RemoteID:      objectHref,
+		RecurringID:   "series",
+		OriginalStart: time.Date(2026, 6, 8, 9, 0, 0, 0, time.UTC),
+	})
+	require.NoError(t, err)
+
+	removed := decodeICS(t, string(putBody))
+	require.Len(t, removed.Events(), 1)
 }
