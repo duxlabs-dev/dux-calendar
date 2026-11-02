@@ -298,3 +298,47 @@ func TestDirCalendarWritesOccurrenceOverride(t *testing.T) {
 	require.Len(t, events, 2)
 	require.Equal(t, "Weekly (moved again)", findEvent(t, events, override.UID).Summary)
 }
+
+func TestDirCalendarMasterUpdatePreservesOverrides(t *testing.T) {
+	root := t.TempDir()
+	require.NoError(t, os.Mkdir(filepath.Join(root, "work"), 0o755))
+
+	provider, err := local.New(calendar.Account{ID: "t"}, root)
+	require.NoError(t, err)
+
+	ctx := context.Background()
+	cal := calendar.Calendar{ID: "cal-1", RemoteID: "dir:work"}
+
+	master := newTestEvent("Weekly")
+	master.UID = "weekly@dankcal"
+	master.Recurrence = &calendar.Recurrence{RRule: []string{"FREQ=WEEKLY"}}
+	_, err = provider.CreateEvent(ctx, cal, master)
+	require.NoError(t, err)
+
+	occurrence := master.Start.AddDate(0, 0, 7)
+	override := newTestEvent("Weekly (moved)")
+	override.UID = "weekly@dankcal/20260608T090000Z"
+	override.RecurringID = "weekly@dankcal"
+	override.OriginalStart = occurrence
+	override.Start = occurrence.Add(2 * time.Hour)
+	override.End = occurrence.Add(3 * time.Hour)
+	_, err = provider.UpdateEvent(ctx, cal, override)
+	require.NoError(t, err)
+
+	renamed := newTestEvent("Standup")
+	renamed.UID = master.UID
+	renamed.Recurrence = master.Recurrence
+	_, err = provider.UpdateEvent(ctx, cal, renamed)
+	require.NoError(t, err)
+
+	events, err := provider.ListEvents(ctx, cal, calendar.ListEventsOptions{})
+	require.NoError(t, err)
+	require.Len(t, events, 2)
+	require.Equal(t, "Standup", findEvent(t, events, master.UID).Summary)
+
+	kept := findEvent(t, events, override.UID)
+	require.Equal(t, "Weekly (moved)", kept.Summary)
+	require.Equal(t, "weekly@dankcal", kept.RecurringID)
+	require.True(t, kept.OriginalStart.Equal(occurrence))
+	require.True(t, kept.Start.Equal(override.Start))
+}

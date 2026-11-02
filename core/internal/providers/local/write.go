@@ -89,7 +89,7 @@ func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *c
 		return storedOverride(cal, ev, rid), nil
 	}
 
-	if !replaceComponent(doc, ical.CompEvent, ev.UID, icalconv.BuildEvent(ev, ev.UID).Component) {
+	if !icalconv.ReplaceMasterComponent(doc, ev.UID, icalconv.BuildEvent(ev, ev.UID).Component) {
 		return nil, fmt.Errorf("event not found")
 	}
 	if err := writeAtomic(path, doc); err != nil {
