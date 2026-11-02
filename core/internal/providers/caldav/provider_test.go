@@ -635,4 +635,23 @@ END:VCALENDAR
 	}
 	assert.Equal(t, "Series renamed", masterSummary)
 	assert.Equal(t, "Moved", exceptionSummary)
+
+	putBody = nil
+	mapping, err := p.RebaseEventOccurrences(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, *master, 6*time.Hour)
+	require.NoError(t, err)
+	assert.Equal(t, map[string]string{
+		"series/20260608T090000Z": "series/20260608T150000Z",
+	}, mapping)
+
+	rebased := decodeICS(t, string(putBody))
+	require.Len(t, rebased.Events(), 2)
+	for _, comp := range rebased.Events() {
+		rid := comp.Props.Get(ical.PropRecurrenceID)
+		if rid == nil {
+			continue
+		}
+		assert.Equal(t, "20260608T150000Z", rid.Value)
+		start, _ := comp.Props.DateTime(ical.PropDateTimeStart, time.UTC)
+		assert.Equal(t, time.Date(2026, 6, 8, 14, 0, 0, 0, time.UTC), start)
+	}
 }

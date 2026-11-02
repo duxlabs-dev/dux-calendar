@@ -367,6 +367,27 @@ func (p *Provider) UpdateEvent(ctx context.Context, c cal.Calendar, ev *cal.Even
 	return &out, nil
 }
 
+// RebaseEventOccurrences moves every exception RECURRENCE-ID by delta while
+// keeping each exception's own start and end.
+func (p *Provider) RebaseEventOccurrences(ctx context.Context, c cal.Calendar, master cal.Event, delta time.Duration) (map[string]string, error) {
+	if master.RemoteID == "" {
+		return nil, errors.New("caldav rebase occurrences requires remote id")
+	}
+
+	doc, err := p.getObject(ctx, master.RemoteID)
+	if err != nil {
+		return nil, fmt.Errorf("get caldav object %q: %w", master.RemoteID, err)
+	}
+	mapping := icalconv.RebaseEventOverrides(doc, master.UID, delta)
+	if len(mapping) == 0 {
+		return mapping, nil
+	}
+	if _, err := p.putObject(ctx, master.RemoteID, doc); err != nil {
+		return nil, fmt.Errorf("put caldav object %q: %w", master.RemoteID, err)
+	}
+	return mapping, nil
+}
+
 // RespondToEvent patches the user's PARTSTAT inside the stored resource rather
 // than rewriting it from the domain event, preserving exception components the
 // local model does not carry. Occurrence replies (ev.OriginalStart set) land on
