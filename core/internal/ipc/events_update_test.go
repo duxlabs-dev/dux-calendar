@@ -139,3 +139,64 @@ func TestEventUpdateSeriesRebasesOverrideSlots(t *testing.T) {
 	}
 	assert.Equal(t, 1, movedCount)
 }
+
+func TestEventUpdateSeriesCollapsesEditedException(t *testing.T) {
+	f := newIcsFixture(t, account.KindLocal, false)
+	ctx := context.Background()
+
+	masterStart := time.Date(2026, 6, 1, 9, 0, 0, 0, time.UTC)
+	_, err := f.repo.UpsertEvent(ctx, repo.UpsertEventInput{
+		CalendarID: "cal",
+		UID:        "weekly",
+		Summary:    "Weekly",
+		Start:      masterStart,
+		End:        masterStart.Add(time.Hour),
+		Recurrence: map[string]any{"rrule": []string{"FREQ=WEEKLY"}},
+	})
+	require.NoError(t, err)
+
+	occurrence := masterStart.AddDate(0, 0, 7)
+	moved := occurrence.Add(5 * time.Hour)
+	override, err := f.repo.UpsertEvent(ctx, repo.UpsertEventInput{
+		CalendarID:    "cal",
+		UID:           "weekly/20260608T090000Z",
+		Summary:       "Weekly (moved)",
+		Start:         moved,
+		End:           moved.Add(time.Hour),
+		RecurringID:   "weekly",
+		OriginalStart: occurrence,
+	})
+	require.NoError(t, err)
+
+	provider := mocks.NewMockProvider(t)
+	provider.EXPECT().Close().Return(nil)
+	provider.EXPECT().UpdateEvent(mock.Anything, mock.Anything, mock.Anything).
+		RunAndReturn(func(_ context.Context, _ calendar.Calendar, ev *calendar.Event) (*calendar.Event, error) {
+			return ev, nil
+		})
+	f.register(t, calendar.AccountLocal, provider)
+
+	resultOf(t, routeAndRead(t, Request{ID: 1, Method: "events.update", Params: map[string]any{
+		"id":      override.ID,
+		"scope":   "series",
+		"summary": "Weekly (new time)",
+		"start":   occurrence.Add(6 * time.Hour).Format(time.RFC3339),
+		"end":     occurrence.Add(7 * time.Hour).Format(time.RFC3339),
+		"allDay":  false,
+	}}, f.deps))
+
+	_, err = f.repo.GetEvent(ctx, override.ID)
+	require.Error(t, err)
+
+	from := masterStart.Add(-24 * time.Hour)
+	to := masterStart.AddDate(0, 0, 15)
+	events, _, err := f.repo.ListEvents(ctx, repo.ListEventsParams{
+		Filter: repo.EventFilter{From: &from, To: &to, IncludeRecurring: true},
+	})
+	require.NoError(t, err)
+	require.Len(t, events, 3)
+	for _, ev := range events {
+		require.Equal(t, "Weekly (new time)", ev.Summary)
+		assert.Equal(t, 15, ev.Start.Hour())
+	}
+}

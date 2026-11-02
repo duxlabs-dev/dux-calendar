@@ -193,15 +193,34 @@ func handleEventUpdate(ctx context.Context, w *ConnWriter, req Request, deps Dep
 		return
 	}
 
-	if scope == editScopeSeries && isSeries {
-		if err := rebaseSeriesOverrides(ctx, deps, provider, domCal, master, ev.Start.Sub(master.Start)); err != nil {
+	if scope == editScopeSeries {
+		if err := collapseSeriesOverride(ctx, deps, provider, domCal, entEv); err != nil {
 			w.RespondError(req.ID, err.Error())
 			return
+		}
+		if isSeries {
+			if err := rebaseSeriesOverrides(ctx, deps, provider, domCal, master, ev.Start.Sub(master.Start)); err != nil {
+				w.RespondError(req.ID, err.Error())
+				return
+			}
 		}
 	}
 
 	publishEventsChanged(deps, domCal.ID)
 	w.Respond(req.ID, mapEvent(stored))
+}
+
+// collapseSeriesOverride drops the exception a series-wide edit started from.
+func collapseSeriesOverride(ctx context.Context, deps Deps, provider calendar.Provider, domCal calendar.Calendar, entEv *ent.Event) error {
+	if entEv.RecurringID == "" {
+		return nil
+	}
+	if remover, ok := provider.(calendar.OccurrenceRemover); ok {
+		if err := remover.RemoveEventOccurrence(ctx, domCal, domainEventFromEnt(entEv)); err != nil {
+			return fmt.Errorf("remove occurrence override: %w", err)
+		}
+	}
+	return deps.Repo.DeleteEvent(ctx, entEv.ID)
 }
 
 // rebaseSeriesOverrides keeps existing exceptions attached after the master
