@@ -22,13 +22,18 @@ func routeAndRead(t *testing.T, req Request, deps Deps) map[string]any {
 		_ = srv.Close()
 	})
 
-	go Route(context.Background(), NewConnWriter(srv), req, deps)
+	done := make(chan struct{})
+	go func() {
+		defer close(done)
+		Route(context.Background(), NewConnWriter(srv), req, deps)
+	}()
 
 	line, err := bufio.NewReader(client).ReadBytes('\n')
 	require.NoError(t, err)
 
 	var out map[string]any
 	require.NoError(t, json.Unmarshal(line, &out))
+	<-done
 	return out
 }
 
