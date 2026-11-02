@@ -16,6 +16,12 @@ import (
 	"github.com/duxlabs-dev/dux-go/log"
 )
 
+const (
+	editScopeLegacy     = ""
+	editScopeSeries     = "series"
+	editScopeOccurrence = "occurrence"
+)
+
 func handleEventCreate(ctx context.Context, w *ConnWriter, req Request, deps Deps) {
 	calendarID := ParamString(req.Params, "calendarId")
 	if calendarID == "" {
@@ -89,19 +95,74 @@ func handleEventUpdate(ctx context.Context, w *ConnWriter, req Request, deps Dep
 	}
 	calendarID := entEv.Edges.Calendar.ID
 
-	ev, err := eventFromParams(domainEventFromEnt(entEv), req.Params)
-	if err != nil {
-		w.RespondError(req.ID, err.Error())
+	scope := ParamString(req.Params, "scope")
+	switch scope {
+	case editScopeSeries, editScopeOccurrence:
+	case editScopeLegacy:
+		// Legacy callers (drag/drop) omit scope and keep editing the row sent.
+	default:
+		w.RespondError(req.ID, "scope must be series or occurrence")
 		return
 	}
 
-	if raw := ParamString(req.Params, "occurrenceStart"); raw != "" && len(entEv.Recurrence) > 0 {
-		occStart, perr := parseOccurrenceStart(raw, entEv.AllDay)
+	// An exception row represents one instance; series-wide edits and the base
+	// fields for an occurrence edit come from its master.
+	master := entEv
+	if scope != editScopeLegacy && entEv.RecurringID != "" {
+		if fetched, ferr := deps.Repo.FindEventByUID(ctx, calendarID, entEv.RecurringID); ferr == nil {
+			master = fetched
+		}
+	}
+	isSeries := len(master.Recurrence) > 0
+
+	allDay := master.AllDay
+	var occStart time.Time
+	if raw := ParamString(req.Params, "occurrenceStart"); raw != "" {
+		parsed, perr := parseOccurrenceStart(raw, allDay)
 		if perr != nil {
 			w.RespondError(req.ID, perr.Error())
 			return
 		}
-		ev = shiftSeriesTimes(ev, entEv.Start, occStart)
+		occStart = parsed
+	}
+	if scope != editScopeLegacy && occStart.IsZero() && entEv.OriginalStart != nil {
+		occStart = *entEv.OriginalStart
+	}
+
+	var ev calendar.Event
+	if scope == editScopeOccurrence {
+		if !isSeries {
+			w.RespondError(req.ID, "event is not recurring")
+			return
+		}
+		if occStart.IsZero() {
+			w.RespondError(req.ID, "occurrenceStart is required to edit one occurrence")
+			return
+		}
+
+		base := domainEventFromEnt(master)
+		if entEv.RecurringID != "" {
+			base = domainEventFromEnt(entEv)
+		}
+		ev, err = eventFromParams(base, req.Params)
+		if err != nil {
+			w.RespondError(req.ID, err.Error())
+			return
+		}
+		ev.ID = ""
+		ev.Recurrence = nil
+		ev.RecurringID = master.UID
+		ev.OriginalStart = occStart
+		ev.UID = master.UID + "/" + exDateValue(occStart, master.AllDay)
+	} else {
+		ev, err = eventFromParams(domainEventFromEnt(master), req.Params)
+		if err != nil {
+			w.RespondError(req.ID, err.Error())
+			return
+		}
+		if !occStart.IsZero() && isSeries {
+			ev = shiftSeriesTimes(ev, master.Start, occStart)
+		}
 	}
 
 	provider, domCal, err := providerForCalendar(ctx, deps, calendarID)
@@ -110,6 +171,15 @@ func handleEventUpdate(ctx context.Context, w *ConnWriter, req Request, deps Dep
 		return
 	}
 	defer provider.Close()
+
+	if scope == editScopeOccurrence {
+		switch provider.Kind() {
+		case calendar.AccountLocal, calendar.AccountCalDAV:
+		default:
+			w.RespondError(req.ID, "editing a single occurrence is not supported for this calendar")
+			return
+		}
+	}
 
 	updated, err := provider.UpdateEvent(ctx, domCal, &ev)
 	if err != nil {
