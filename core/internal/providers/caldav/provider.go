@@ -338,6 +338,25 @@ func (p *Provider) UpdateEvent(ctx context.Context, c cal.Calendar, ev *cal.Even
 		return &out, nil
 	}
 
+	// Editing a series master must not rewrite the whole resource: exception
+	// VEVENTs that share the master UID stay diverged.
+	if ev.Recurrence != nil {
+		doc, err := p.getObject(ctx, ev.RemoteID)
+		if err != nil {
+			return nil, fmt.Errorf("get caldav object %q: %w", ev.RemoteID, err)
+		}
+		if !icalconv.ReplaceMasterComponent(doc, ev.UID, icalconv.BuildEvent(ev, ev.UID).Component) {
+			return nil, fmt.Errorf("event %q not found in calendar object", ev.UID)
+		}
+		etag, err := p.putObject(ctx, ev.RemoteID, doc)
+		if err != nil {
+			return nil, fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
+		}
+		out := *ev
+		out.Etag = etag
+		return &out, nil
+	}
+
 	etag, err := p.putObject(ctx, ev.RemoteID, icalconv.CalendarFromEvent(ev, ev.UID))
 	if err != nil {
 		return nil, fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
