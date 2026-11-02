@@ -96,6 +96,57 @@ func applyOverride(comp *ical.Component, ev *cal.Event) {
 	props.SetDateTime(ical.PropDateTimeStamp, time.Now().UTC())
 }
 
+// RebaseEventOverrides moves every exception's RECURRENCE-ID by delta, leaving
+// each exception's own DTSTART untouched. The returned map is keyed by the old
+// override UID and carries the new one.
+func RebaseEventOverrides(doc *ical.Calendar, masterUID string, delta time.Duration) map[string]string {
+	mapping := map[string]string{}
+	if doc == nil || delta == 0 {
+		return mapping
+	}
+
+	tz := NewTZResolver(doc, "")
+	for _, child := range doc.Children {
+		if child.Name != ical.CompEvent || ComponentUID(child) != masterUID {
+			continue
+		}
+		rid := child.Props.Get(ical.PropRecurrenceID)
+		if rid == nil {
+			continue
+		}
+		when, _, _, ok := parseDateTime(rid, tz)
+		if !ok {
+			continue
+		}
+
+		oldValue := rid.Value
+		rebaseRecurrenceID(child.Props, rid, when.Add(delta))
+		newValue := child.Props.Get(ical.PropRecurrenceID).Value
+		mapping[masterUID+"/"+oldValue] = masterUID + "/" + newValue
+	}
+	return mapping
+}
+
+func rebaseRecurrenceID(props ical.Props, rid *ical.Prop, moved time.Time) {
+	raw := strings.TrimSpace(rid.Value)
+	switch {
+	case rid.ValueType() == ical.ValueDate || len(raw) == 8:
+		props.SetDate(ical.PropRecurrenceID, moved)
+	case strings.HasSuffix(raw, "Z"):
+		props.SetDateTime(ical.PropRecurrenceID, moved.UTC())
+	case rid.Params.Get(ical.ParamTimezoneID) != "":
+		if loc, _ := loadZone(rid.Params.Get(ical.ParamTimezoneID)); loc != nil {
+			props.SetDateTime(ical.PropRecurrenceID, moved.In(loc))
+			return
+		}
+		props.SetDateTime(ical.PropRecurrenceID, moved.UTC())
+	default:
+		prop := ical.NewProp(ical.PropRecurrenceID)
+		prop.Value = moved.Format("20060102T150405")
+		props.Set(prop)
+	}
+}
+
 // setRecurrenceID writes the RECURRENCE-ID naming the overridden instance.
 func setRecurrenceID(props ical.Props, ev *cal.Event) {
 	if ev.AllDay {

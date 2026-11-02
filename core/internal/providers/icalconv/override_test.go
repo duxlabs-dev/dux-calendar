@@ -139,3 +139,28 @@ func TestReplaceMasterComponentPreservesException(t *testing.T) {
 	assert.True(t, exception.OriginalStart.Equal(ev.OriginalStart))
 	assert.True(t, exception.Start.Equal(ev.Start))
 }
+
+func TestRebaseEventOverridesKeepsStartMovesRecurrenceID(t *testing.T) {
+	doc := participationDoc(t, recurringInviteICS)
+	ev := overrideEvent()
+	_, err := ApplyEventOverride(doc, ev)
+	require.NoError(t, err)
+
+	mapping := RebaseEventOverrides(doc, "standup", 6*time.Hour)
+	assert.Equal(t, map[string]string{
+		"standup/20260817T090000Z": "standup/20260817T150000Z",
+	}, mapping)
+
+	tz := NewTZResolver(doc, "")
+	for _, comp := range doc.Events() {
+		parsed, ok := EventFromComponent("cal", comp.Component, tz)
+		require.True(t, ok)
+		if parsed.RecurringID == "" {
+			continue
+		}
+		assert.Equal(t, "standup/20260817T150000Z", parsed.UID)
+		assert.True(t, parsed.OriginalStart.Equal(ev.OriginalStart.Add(6*time.Hour)))
+		assert.True(t, parsed.Start.Equal(ev.Start))
+		assert.True(t, parsed.End.Equal(ev.End))
+	}
+}
