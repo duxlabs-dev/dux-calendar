@@ -193,8 +193,60 @@ func handleEventUpdate(ctx context.Context, w *ConnWriter, req Request, deps Dep
 		return
 	}
 
+	if scope == editScopeSeries && isSeries {
+		if err := rebaseSeriesOverrides(ctx, deps, provider, domCal, master, ev.Start.Sub(master.Start)); err != nil {
+			w.RespondError(req.ID, err.Error())
+			return
+		}
+	}
+
 	publishEventsChanged(deps, domCal.ID)
 	w.Respond(req.ID, mapEvent(stored))
+}
+
+// rebaseSeriesOverrides keeps existing exceptions attached after the master
+// moved: each exception keeps its own start/end but its RECURRENCE-ID follows
+// the series by delta.
+func rebaseSeriesOverrides(ctx context.Context, deps Deps, provider calendar.Provider, domCal calendar.Calendar, master *ent.Event, delta time.Duration) error {
+	if delta == 0 {
+		return nil
+	}
+	overrides, err := deps.Repo.ListEventOverrides(ctx, domCal.ID, master.UID)
+	if err != nil {
+		return err
+	}
+	if len(overrides) == 0 {
+		return nil
+	}
+
+	mapping := map[string]string{}
+	if rebaser, ok := provider.(calendar.OccurrenceRebaser); ok {
+		mapping, err = rebaser.RebaseEventOccurrences(ctx, domCal, domainEventFromEnt(master), delta)
+		if err != nil {
+			return fmt.Errorf("rebase occurrences: %w", err)
+		}
+	}
+
+	for _, override := range overrides {
+		ev := eventconv.FromEnt(override)
+		original := ev.OriginalStart
+		if original.IsZero() {
+			original = ev.Start
+		}
+		ev.OriginalStart = original.Add(delta)
+		if rebased, ok := mapping[ev.UID]; ok {
+			ev.UID = rebased
+		}
+		if _, err := deps.Repo.UpsertEvent(ctx, eventconv.UpsertInput(domCal.ID, &ev)); err != nil {
+			return err
+		}
+		if ev.UID != override.UID {
+			if err := deps.Repo.DeleteEvent(ctx, override.ID); err != nil {
+				return err
+			}
+		}
+	}
+	return nil
 }
 
 func handleEventDelete(ctx context.Context, w *ConnWriter, req Request, deps Deps) {
