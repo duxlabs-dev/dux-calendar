@@ -111,8 +111,10 @@ function moveFields(event, dayOffset, minuteOffset) {
         "start": wireTime(shiftDateTime(event.start, dayOffset, minutes), event.allDay),
         "end": wireTime(shiftDateTime(event.end, dayOffset, minutes), event.allDay)
     }
-    if ((event.recurringId || "") !== "" || (event.recurrence || []).length > 0)
-        fields.occurrenceStart = wireTime(event.start, event.allDay)
+    if ((event.recurringId || "") !== "" || (event.recurrence || []).length > 0) {
+        fields.scope = (event.recurrence || []).length > 0 ? "series" : "occurrence"
+        fields.occurrenceStart = wireTime(event.originalStart || event.start, event.allDay)
+    }
     return fields
 }
 

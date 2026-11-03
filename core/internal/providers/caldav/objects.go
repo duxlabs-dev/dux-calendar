@@ -101,6 +101,11 @@ func (p *Provider) getObject(ctx context.Context, href string) (*ical.Calendar, 
 func (p *Provider) deleteObject(ctx context.Context, href string) error {
 	resp, err := p.doObject(ctx, http.MethodDelete, href, nil, "")
 	if err != nil {
+		// A delete is idempotent: the object is already gone.
+		if strings.Contains(err.Error(), http.StatusText(http.StatusNotFound)) ||
+			strings.Contains(err.Error(), strconv.Itoa(http.StatusNotFound)) {
+			return nil
+		}
 		return err
 	}
 	resp.Body.Close()

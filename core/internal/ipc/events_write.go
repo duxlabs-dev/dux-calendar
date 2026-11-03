@@ -307,7 +307,11 @@ func handleEventDelete(ctx context.Context, w *ConnWriter, req Request, deps Dep
 		w.RespondError(req.ID, fmt.Sprintf("delete event: %v", err))
 		return
 	}
-	if err := deps.Repo.DeleteEvent(ctx, id); err != nil {
+	seriesUID := entEv.UID
+	if entEv.RecurringID != "" {
+		seriesUID = entEv.RecurringID
+	}
+	if err := deps.Repo.DeleteEventsInSeries(ctx, calendarID, seriesUID); err != nil {
 		w.RespondError(req.ID, err.Error())
 		return
 	}

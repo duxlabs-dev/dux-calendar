@@ -261,6 +261,18 @@ func recurrenceStrings(rec map[string]any, key string) []string {
 	}
 }
 
+// DeleteEventsInSeries removes a master event and every stored exception that
+// belongs to it.
+func (r *Repo) DeleteEventsInSeries(ctx context.Context, calendarID, uid string) error {
+	_, err := r.client.Event.Delete().
+		Where(
+			event.HasCalendarWith(calendar.IDEQ(calendarID)),
+			event.Or(event.UIDEQ(uid), event.RecurringIDEQ(uid)),
+		).
+		Exec(ctx)
+	return err
+}
+
 // ListEventOverrides returns every stored exception of a recurring series.
 func (r *Repo) ListEventOverrides(ctx context.Context, calendarID, recurringID string) ([]*ent.Event, error) {
 	return r.client.Event.Query().
