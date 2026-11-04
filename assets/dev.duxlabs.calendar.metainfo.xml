@@ -48,6 +48,22 @@
   </screenshots>
 
   <releases>
+    <release version="2.1.0" date="2026-11-04">
+      <description>
+        <ul>
+          <li>scripts: skip version, codename and changelog toggles in port audit</li>
+          <li>bump qml-common</li>
+          <li>ui: window opacity, foreground layers and compositor blur settings</li>
+          <li>scripts: port in history order and add all-candidates command</li>
+          <li>scripts: plain port audit output in terminals</li>
+          <li>scripts: add copyable port command to audit</li>
+          <li>bump qml-common</li>
+          <li>shared: qml-common bump</li>
+          <li>google: rsvp to a synced exception row under its own id</li>
+          <li>ui: load every event in the visible window</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.0" date="2026-10-20">
       <description>
         <ul>
