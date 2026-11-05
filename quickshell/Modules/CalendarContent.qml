@@ -88,8 +88,7 @@ Item {
                     text: I18n.tr("Today", "header button that jumps to the current date")
                     iconName: "today"
                     buttonHeight: Theme.buttonHeightS
-                    backgroundColor: Theme.secondaryContainer
-                    textColor: Theme.onSecondaryContainer
+                    variant: "tonal"
                     focusPolicy: Qt.NoFocus
                     anchors.verticalCenter: parent.verticalCenter
                     onClicked: root.todayRequested()

@@ -493,8 +493,6 @@ Item {
             text: I18n.tr("Create event", "sidebar button to create a new event")
             iconName: "add"
             buttonHeight: Theme.buttonHeightS
-            backgroundColor: Theme.primary
-            textColor: Theme.primaryText
             focusPolicy: Qt.NoFocus
             onClicked: root.createEventRequested()
         }
@@ -850,8 +848,7 @@ Item {
                     text: I18n.tr("Add task", "sidebar button to add a task")
                     iconName: "add"
                     buttonHeight: Theme.buttonHeightXS
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     focusPolicy: Qt.NoFocus
                     onClicked: root.createTaskRequested()
                 }
@@ -1025,8 +1022,7 @@ Item {
                     text: I18n.tr("Add account", "sidebar button to add a provider account")
                     iconName: "add"
                     buttonHeight: Theme.buttonHeightXS
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     focusPolicy: Qt.NoFocus
                     onClicked: root.addAccountRequested()
                 }

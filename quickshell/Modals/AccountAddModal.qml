@@ -740,16 +740,13 @@ FloatingWindow {
                     text: accountModal.isMicrosoft ? I18n.tr("Connect Microsoft Account", "button to start the one-click microsoft sign-in") : I18n.tr("Connect Google Account", "button to start the one-click google sign-in")
                     iconName: "open_in_new"
                     busy: accountModal.flowInProgress
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !accountModal.flowInProgress
                     onClicked: accountModal.startOAuthFlow()
                 }
 
                 DButton {
                     text: I18n.tr("Use your own OAuth client", "button to open the advanced custom google client setup")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     enabled: !accountModal.flowInProgress
                     onClicked: accountModal.wizardStep = 1
                 }
@@ -881,8 +878,6 @@ FloatingWindow {
                 DButton {
                     text: (guideColumn.step && guideColumn.step.urlLabel) || I18n.tr("Open", "fallback label for guide step link button")
                     iconName: "open_in_new"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: {
                         if (guideColumn.step && guideColumn.step.url)
                             Qt.openUrlExternally(guideColumn.step.url);
@@ -892,8 +887,7 @@ FloatingWindow {
                 DButton {
                     text: I18n.tr("Copy link", "button to copy a setup guide url to the clipboard")
                     iconName: "content_copy"
-                    backgroundColor: Theme.secondaryContainer
-                    textColor: Theme.onSecondaryContainer
+                    variant: "tonal"
                     onClicked: {
                         if (guideColumn.step && guideColumn.step.url) {
                             Quickshell.clipboardText = guideColumn.step.url;
@@ -911,15 +905,12 @@ FloatingWindow {
                 DButton {
                     text: accountModal.wizardStep === accountModal.guideCount ? (accountModal.isMicrosoft ? I18n.tr("Enter client ID", "last guide step button to microsoft credentials") : I18n.tr("Paste credentials", "last guide step button to google credentials")) : I18n.tr("Continue", "guide step next button")
                     iconName: "arrow_forward"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: accountModal.wizardStep += 1
                 }
 
                 DButton {
                     text: I18n.tr("Back", "back button in account setup wizard")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     onClicked: accountModal.wizardStep -= 1
                 }
             }
@@ -945,8 +936,7 @@ FloatingWindow {
                 visible: !accountModal.isMicrosoft
                 text: I18n.tr("Import client_secret.json", "button to import google oauth client json")
                 iconName: "upload_file"
-                backgroundColor: Theme.secondaryContainer
-                textColor: Theme.onSecondaryContainer
+                variant: "tonal"
                 onClicked: accountModal.openFilePicker({
                     "title": I18n.tr("Select client_secret.json", "file picker title for google client json"),
                     "extensions": ["*.json"]
@@ -1001,16 +991,13 @@ FloatingWindow {
                     text: accountModal.flowInProgress ? I18n.tr("Starting…", "connect button while oauth flow starts") : I18n.tr("Connect", "account setup button to start provider sign-in")
                     iconName: "check"
                     busy: accountModal.flowInProgress
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !accountModal.flowInProgress && accountModal.clientId.length > 0 && (accountModal.isMicrosoft || accountModal.clientSecret.length > 0)
                     onClicked: accountModal.startOAuthFlow()
                 }
 
                 DButton {
                     text: I18n.tr("Back", "back button in account setup wizard")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     enabled: !accountModal.flowInProgress
                     onClicked: accountModal.wizardStep = accountModal.guideCount
                 }
@@ -1075,8 +1062,7 @@ FloatingWindow {
                 visible: accountModal.flowError === "" && accountModal.pendingAuthUrl !== ""
                 text: I18n.tr("Open browser again", "button to reopen oauth url in browser")
                 iconName: "open_in_new"
-                backgroundColor: Theme.secondaryContainer
-                textColor: Theme.onSecondaryContainer
+                variant: "tonal"
                 onClicked: Qt.openUrlExternally(accountModal.pendingAuthUrl)
             }
 
@@ -1089,8 +1075,6 @@ FloatingWindow {
                     visible: accountModal.flowError !== ""
                     text: I18n.tr("Try again", "button to retry oauth after failure")
                     iconName: "refresh"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: {
                         accountModal.cancelPendingFlow();
                         accountModal.flowError = "";
@@ -1100,8 +1084,7 @@ FloatingWindow {
 
                 DButton {
                     text: I18n.tr("Cancel", "button to cancel oauth browser step")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     onClicked: {
                         accountModal.cancelPendingFlow();
                         accountModal.wizardStep = accountModal.flowReturnStep;
@@ -1170,8 +1153,6 @@ FloatingWindow {
                 DButton {
                     text: I18n.tr("Done", "button to close modal after account added")
                     iconName: "check"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: accountModal.hide()
                 }
             }
@@ -1218,16 +1199,14 @@ FloatingWindow {
                     DButton {
                         text: I18n.tr("Generate app-specific password", "button to open apple app password page")
                         iconName: "open_in_new"
-                        backgroundColor: Theme.secondaryContainer
-                        textColor: Theme.onSecondaryContainer
+                        variant: "tonal"
                         onClicked: Qt.openUrlExternally("https://account.apple.com/account/manage")
                     }
 
                     DButton {
                         text: I18n.tr("Copy link", "button to copy a setup guide url to the clipboard")
                         iconName: "content_copy"
-                        backgroundColor: Theme.secondaryContainer
-                        textColor: Theme.onSecondaryContainer
+                        variant: "tonal"
                         onClicked: {
                             Quickshell.clipboardText = "https://account.apple.com/account/manage";
                             ToastService.info(I18n.tr("Copied to clipboard", "toast after copying text to the clipboard"));
@@ -1341,8 +1320,6 @@ FloatingWindow {
                         text: caldavRoot.busy ? I18n.tr("Connecting…", "connect button while caldav connection verifies") : I18n.tr("Connect", "account setup button to start provider sign-in")
                         iconName: "check"
                         busy: caldavRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !caldavRoot.busy && caldavRoot.serverUrl.length > 0 && caldavRoot.username.length > 0 && caldavRoot.password.length > 0
                         onClicked: {
                             caldavRoot.busy = true;
@@ -1456,8 +1433,6 @@ FloatingWindow {
                         text: localRoot.busy ? I18n.tr("Adding…", "add button while local account is created") : I18n.tr("Add", "button to add local calendar account")
                         iconName: "check"
                         busy: localRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !localRoot.busy && localRoot.rootPath.length > 0
                         onClicked: {
                             localRoot.busy = true;
@@ -1543,8 +1518,6 @@ FloatingWindow {
                         text: evolutionRoot.busy ? I18n.tr("Adding…", "add button while evolution account is created") : I18n.tr("Add", "button to add evolution account")
                         iconName: "check"
                         busy: evolutionRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !evolutionRoot.busy
                         onClicked: {
                             evolutionRoot.busy = true;
@@ -1665,8 +1638,6 @@ FloatingWindow {
                         text: icalRoot.busy ? I18n.tr("Subscribing…", "subscribe button while ical feed is verified") : I18n.tr("Subscribe", "button to subscribe to an ical feed")
                         iconName: "check"
                         busy: icalRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !icalRoot.busy && icalRoot.feedUrl.length > 0
                         onClicked: {
                             icalRoot.busy = true;

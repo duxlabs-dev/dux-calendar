@@ -30,8 +30,6 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: I18n.tr("Support Dux Labs", "about page hero button, opens the Ko-fi donation page")
                 iconName: "favorite"
-                backgroundColor: Theme.primary
-                textColor: Theme.onPrimary
                 onClicked: Qt.openUrlExternally(root.kofiUrl)
             }
         }

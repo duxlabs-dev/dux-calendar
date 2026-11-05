@@ -55,14 +55,11 @@ DankOverlayDialog {
     actions: [
         DButton {
             text: I18n.tr("Cancel", "new calendar dialog button to cancel")
-            backgroundColor: Theme.secondaryContainer
-            textColor: Theme.onSecondaryContainer
+            variant: "tonal"
             onClicked: root.close()
         },
         DButton {
             text: I18n.tr("Create", "new calendar dialog button to create the calendar")
-            backgroundColor: Theme.primary
-            textColor: Theme.primaryText
             onClicked: root.submit()
         }
     ]
