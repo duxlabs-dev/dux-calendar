@@ -51,20 +51,16 @@ DankOverlayDialog {
         DButton {
             visible: root.hasOverride
             text: I18n.tr("Use synced name", "rename calendar dialog button to revert to provider name")
-            backgroundColor: "transparent"
-            textColor: Theme.primary
+            variant: "text"
             onClicked: root.useSyncedName()
         },
         DButton {
             text: I18n.tr("Cancel", "rename calendar dialog button to cancel")
-            backgroundColor: Theme.secondaryContainer
-            textColor: Theme.onSecondaryContainer
+            variant: "tonal"
             onClicked: root.close()
         },
         DButton {
             text: I18n.tr("Save", "rename calendar dialog button to save name")
-            backgroundColor: Theme.primary
-            textColor: Theme.primaryText
             onClicked: root.submit()
         }
     ]

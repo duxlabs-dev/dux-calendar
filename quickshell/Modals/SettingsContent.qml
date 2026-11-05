@@ -821,8 +821,7 @@ Item {
                         anchors.verticalCenter: parent.verticalCenter
                         text: I18n.tr("Apply and restart", "interface zoom restart button")
                         enabled: DankCalService.connected
-                        backgroundColor: Theme.secondaryContainer
-                        textColor: Theme.onSecondaryContainer
+                        variant: "tonal"
                         onClicked: DankCalService.restart()
                     }
                 }
@@ -1517,8 +1516,7 @@ Item {
                         anchors.verticalCenter: parent.verticalCenter
                         text: I18n.tr("Send test", "test notification button")
                         enabled: DankCalService.connected
-                        backgroundColor: Theme.secondaryContainer
-                        textColor: Theme.onSecondaryContainer
+                        variant: "tonal"
                         onClicked: DankCalService.sendTestReminder()
                     }
                 }

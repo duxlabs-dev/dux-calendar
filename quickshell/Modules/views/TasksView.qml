@@ -93,8 +93,6 @@ Item {
         text: I18n.tr("Add task", "tasks view button to create a new task")
         iconName: "add"
         buttonHeight: Theme.buttonHeightS
-        backgroundColor: Theme.primary
-        textColor: Theme.primaryText
         focusPolicy: Qt.NoFocus
         enabled: DankCalService.taskListCalendars().length > 0
         onClicked: root.createTaskRequested()

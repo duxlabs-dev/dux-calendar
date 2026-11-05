@@ -31,14 +31,13 @@ DankOverlayDialog {
     actions: [
         DButton {
             text: I18n.tr("Cancel", "confirm dialog button to cancel")
-            backgroundColor: Theme.secondaryContainer
-            textColor: Theme.onSecondaryContainer
+            variant: "tonal"
             onClicked: root.close()
         },
         DButton {
             text: root.confirmText
-            backgroundColor: root.danger ? Theme.errorContainer : Theme.primary
-            textColor: root.danger ? Theme.onErrorContainer : Theme.primaryText
+            variant: root.danger ? "tonal" : "filled"
+            danger: root.danger
             onClicked: root.confirm()
         }
     ]

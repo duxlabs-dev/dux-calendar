@@ -562,8 +562,8 @@ FloatingWindow {
                 visible: !eventModal.editMode && !eventModal.event.readOnly && !!eventModal.event.id && eventModal.confirmDelete && eventModal.isRecurring
                 text: I18n.tr("Delete occurrence", "event details button to delete only this occurrence of a recurring event")
                 buttonHeight: Theme.buttonHeightXXS
-                backgroundColor: Theme.errorContainer
-                textColor: Theme.onErrorContainer
+                variant: "tonal"
+                danger: true
                 onClicked: eventModal.removeEvent(true)
             }
 
@@ -571,8 +571,8 @@ FloatingWindow {
                 visible: !eventModal.editMode && !eventModal.event.readOnly && !!eventModal.event.id && eventModal.confirmDelete
                 text: eventModal.isRecurring ? I18n.tr("Delete series", "event details button to confirm deleting a whole recurring series") : I18n.tr("Confirm delete", "event details button to confirm deleting the event")
                 buttonHeight: Theme.buttonHeightXXS
-                backgroundColor: eventModal.isRecurring ? "transparent" : Theme.errorContainer
-                textColor: eventModal.isRecurring ? Theme.error : Theme.onErrorContainer
+                variant: eventModal.isRecurring ? "text" : "tonal"
+                danger: true
                 onClicked: eventModal.removeEvent()
             }
 
@@ -629,8 +629,7 @@ FloatingWindow {
 
                 DButton {
                     text: I18n.tr("Cancel", "event form button to cancel editing")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     onClicked: {
                         if (eventModal.createMode) {
                             eventModal.hide();
@@ -644,8 +643,6 @@ FloatingWindow {
                     text: eventModal.saving ? I18n.tr("Saving...", "event details save button while saving") : I18n.tr("Save", "event details button to save changes")
                     iconName: "check"
                     busy: eventModal.saving
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: {
                         if (!eventModal.saving)
                             eventModal.save();
@@ -831,8 +828,6 @@ FloatingWindow {
                     DButton {
                         text: I18n.tr("This event", "RSVP scope button replying for one occurrence of a recurring event")
                         buttonHeight: Theme.buttonHeightXS
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !eventModal.saving
                         onClicked: eventModal.submitResponse(eventModal.pendingResponse, true)
                     }
@@ -840,8 +835,7 @@ FloatingWindow {
                     DButton {
                         text: I18n.tr("All events", "RSVP scope button replying for the whole recurring series")
                         buttonHeight: Theme.buttonHeightXS
-                        backgroundColor: Theme.secondaryContainer
-                        textColor: Theme.onSecondaryContainer
+                        variant: "tonal"
                         enabled: !eventModal.saving
                         onClicked: eventModal.submitResponse(eventModal.pendingResponse, false)
                     }
@@ -1213,8 +1207,6 @@ FloatingWindow {
                         DButton {
                             text: I18n.tr("Add a calendar", "event form button to add a calendar when none exist")
                             iconName: "add"
-                            backgroundColor: Theme.primary
-                            textColor: Theme.primaryText
                             onClicked: {
                                 eventModal.addCalendarRequested();
                                 eventModal.hide();
@@ -1336,8 +1328,7 @@ FloatingWindow {
                             text: I18n.tr("Add reminder", "event form button to add another reminder")
                             iconName: "add"
                             buttonHeight: Theme.buttonHeightXS
-                            backgroundColor: Theme.secondaryContainer
-                            textColor: Theme.onSecondaryContainer
+                            variant: "tonal"
                             visible: eventModal.formReminders.length < eventModal.maxReminders
                             onClicked: eventModal.addReminder()
                         }

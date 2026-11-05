@@ -543,16 +543,15 @@ FloatingWindow {
                     visible: !taskModal.createMode
                     text: taskModal.confirmDelete ? I18n.tr("Confirm delete", "task form button to confirm deletion") : I18n.tr("Delete", "task form button to delete the task")
                     iconName: "delete_outline"
-                    backgroundColor: taskModal.confirmDelete ? Theme.errorContainer : "transparent"
-                    textColor: taskModal.confirmDelete ? Theme.onErrorContainer : Theme.error
+                    variant: taskModal.confirmDelete ? "tonal" : "text"
+                    danger: true
                     enabled: !taskModal.saving
                     onClicked: taskModal.removeTask()
                 }
 
                 DButton {
                     text: I18n.tr("Cancel", "task form button to discard changes")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     enabled: !taskModal.saving
                     onClicked: taskModal.hide()
                 }
@@ -560,8 +559,6 @@ FloatingWindow {
                 DButton {
                     text: I18n.tr("Save", "task form button to persist the task")
                     busy: taskModal.saving
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !taskModal.saving
                     onClicked: taskModal.save()
                 }

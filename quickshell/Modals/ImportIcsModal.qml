@@ -435,8 +435,7 @@ FloatingWindow {
                                     DButton {
                                         text: I18n.tr("Open", "import row button to open the event already on the calendar")
                                         buttonHeight: Theme.buttonHeightXS
-                                        backgroundColor: Theme.secondaryContainer
-                                        textColor: Theme.onSecondaryContainer
+                                        variant: "tonal"
                                         anchors.verticalCenter: parent.verticalCenter
                                         onClicked: importModal.openExisting(row.existing)
                                     }
@@ -467,8 +466,7 @@ FloatingWindow {
 
                 DButton {
                     text: I18n.tr("Cancel", "import dialog button to close without importing")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     onClicked: importModal.hide()
                 }
 
@@ -476,8 +474,6 @@ FloatingWindow {
                     visible: importModal.noWritableCalendars
                     text: I18n.tr("Add a calendar", "import dialog button to add a calendar when none can hold events")
                     iconName: "add"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: {
                         importModal.addCalendarRequested();
                     }
@@ -488,8 +484,6 @@ FloatingWindow {
                     text: importModal.importLabel()
                     iconName: "check"
                     busy: importModal.importing
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !importModal.importing && !importModal.loading && importModal.previewReady && !importModal.schedulingOnly && importModal.pendingItems.length > 0
                     onClicked: importModal.importPending()
                 }
