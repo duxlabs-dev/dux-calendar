@@ -309,7 +309,7 @@
     "Backend not connected.": "Backend nicht verbunden."
   },
   "Background blur": {
-    "Background blur": ""
+    "Background blur": "Hintergrundunschärfe"
   },
   "Balanced": {
     "Balanced": "Ausgewogen"
@@ -318,7 +318,7 @@
     "Begin setup": "Einrichtung beginnen"
   },
   "Blurs what shows through the window. Needs an opacity below 100%.": {
-    "Blurs what shows through the window. Needs an opacity below 100%.": ""
+    "Blurs what shows through the window. Needs an opacity below 100%.": "Verwischt, was durch das Fenster sichtbar ist. Benötigt eine Deckkraft von weniger als 100%."
   },
   "Busy": {
     "Busy": "Beschäftigt"
@@ -831,7 +831,7 @@
     "Font source": "Schriftquelle"
   },
   "Foreground layers": {
-    "Foreground layers": ""
+    "Foreground layers": "Vordergrundebenen"
   },
   "General": {
     "General": "Allgemein"
@@ -906,7 +906,7 @@
     "Keep until dismissed": "Behalten bis verworfen"
   },
   "Keeps cards and panes solid when the window is see-through.": {
-    "Keeps cards and panes solid when the window is see-through.": ""
+    "Keeps cards and panes solid when the window is see-through.": "Hält Karten und Fensterbereiche deckend, wenn das Fenster durchsichtig ist."
   },
   "Keyboard shortcuts": {
     "Keyboard shortcuts": "Tastaturkürzel"
@@ -933,13 +933,13 @@
     "Launch Dux Calendar in the background when you log in.": "Dux Calendar beim Anmelden im Hintergrund starten."
   },
   "Layer opacity": {
-    "Layer opacity": ""
+    "Layer opacity": "Ebenendeckkraft"
   },
   "Length used when creating events.": {
     "Length used when creating events.": "Dauer beim Erstellen von Ereignissen."
   },
   "Lets the desktop show through the window. Text and controls stay solid.": {
-    "Lets the desktop show through the window. Text and controls stay solid.": ""
+    "Lets the desktop show through the window. Text and controls stay solid.": "Lässt den Desktop durch das Fenster durchscheinen. Text und Bedienelemente bleiben deckend."
   },
   "Light": {
     "Light": "Hell"
@@ -1221,7 +1221,7 @@
     "On the day": "Am selben Tag"
   },
   "Opacity": {
-    "Opacity": ""
+    "Opacity": "Deckkraft"
   },
   "Open": {
     "Open": "Öffnen"
@@ -1914,7 +1914,7 @@
     "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "Ihre Client-ID, Ihr Secret und Ihr Refresh-Token werden im System-Schlüsselbund (libsecret/kwallet), falls verfügbar, oder in einer verschlüsselten lokalen Datei gespeichert."
   },
   "Your compositor does not support background blur.": {
-    "Your compositor does not support background blur.": ""
+    "Your compositor does not support background blur.": "Ihr Compositor unterstützt keine Hintergrundunschärfe."
   },
   "Your response": {
     "Your response": "Deine Antwort"
