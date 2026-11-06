@@ -48,6 +48,14 @@
   </screenshots>
 
   <releases>
+    <release version="2.1.1" date="2026-11-06">
+      <description>
+        <ul>
+          <li>bump qml-common</li>
+          <li>ui: use DButton variants</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.1.0" date="2026-11-04">
       <description>
         <ul>
