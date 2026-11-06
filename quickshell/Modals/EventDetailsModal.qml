@@ -714,6 +714,7 @@ FloatingWindow {
                     visible: eventModal.pendingEditScope
                     iconName: "close"
                     Accessible.name: I18n.tr("Cancel", "event form button to cancel editing")
+                    anchors.verticalCenter: parent.verticalCenter
                     onClicked: eventModal.pendingEditScope = false
                 }
             }
