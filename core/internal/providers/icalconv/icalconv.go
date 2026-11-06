@@ -324,6 +324,22 @@ func StripMailto(value string) string {
 	return value
 }
 
+// ReplaceMasterComponent replaces the VEVENT with uid that has no
+// RECURRENCE-ID, leaving exception components untouched.
+func ReplaceMasterComponent(doc *ical.Calendar, uid string, comp *ical.Component) bool {
+	for i, child := range doc.Children {
+		if child.Name != ical.CompEvent || ComponentUID(child) != uid {
+			continue
+		}
+		if child.Props.Get(ical.PropRecurrenceID) != nil {
+			continue
+		}
+		doc.Children[i] = comp
+		return true
+	}
+	return false
+}
+
 // BuildEvent renders a domain event as a VEVENT component.
 func BuildEvent(ev *cal.Event, uid string) *ical.Event {
 	event := ical.NewEvent()

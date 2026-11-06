@@ -14,6 +14,7 @@ FloatingWindow {
     property bool editMode: false
     property bool createMode: false
     property bool confirmDelete: false
+    property bool pendingEditScope: false
     property bool saving: false
     property string pendingResponse: ""
     property string formError: ""
@@ -37,6 +38,7 @@ FloatingWindow {
     readonly property bool recurrenceEditable: createMode || !(event.recurringId || "")
     readonly property bool isOccurrence: (event.recurringId || "") !== "" && (event.recurrence || []).length > 0
     readonly property bool isRecurring: (event.recurrence || []).length > 0
+    readonly property bool hasSeries: isRecurring || (event.recurringId || "") !== ""
     readonly property int maxReminders: 5
 
     readonly property var reminderOptions: [
@@ -91,6 +93,7 @@ FloatingWindow {
         createMode = false;
         editMode = false;
         confirmDelete = false;
+        pendingEditScope = false;
         saving = false;
         pendingResponse = "";
         formError = "";
@@ -151,6 +154,7 @@ FloatingWindow {
         };
         createMode = true;
         confirmDelete = false;
+        pendingEditScope = false;
         saving = false;
         pendingResponse = "";
         formError = "";
@@ -163,6 +167,7 @@ FloatingWindow {
         editMode = false;
         createMode = false;
         confirmDelete = false;
+        pendingEditScope = false;
         saving = false;
         pendingResponse = "";
         visible = false;
@@ -173,6 +178,7 @@ FloatingWindow {
     function beginEdit() {
         _loadForm();
         formError = "";
+        pendingEditScope = false;
         editMode = true;
     }
 
@@ -337,17 +343,38 @@ FloatingWindow {
         };
     }
 
-    function save() {
-        if (formTitle.trim() === "") {
-            formError = I18n.tr("Title is required", "event form validation error for missing title");
+    function _validationError() {
+        if (formTitle.trim() === "")
+            return I18n.tr("Title is required", "event form validation error for missing title");
+        if (DankCalService.writableCalendars().length === 0)
+            return I18n.tr("No writable calendar available", "event form error when no calendar allows creating events");
+        return "";
+    }
+
+    function requestSave() {
+        if (saving)
+            return;
+        const error = _validationError();
+        if (error !== "") {
+            formError = error;
             return;
         }
+        if (!createMode && hasSeries) {
+            pendingEditScope = true;
+            return;
+        }
+        save("series");
+    }
+
+    function save(scope) {
+        const error = _validationError();
+        if (error !== "") {
+            formError = error;
+            return;
+        }
+        pendingEditScope = false;
         const range = _formRange();
         const writable = DankCalService.writableCalendars();
-        if (writable.length === 0) {
-            formError = I18n.tr("No writable calendar available", "event form error when no calendar allows creating events");
-            return;
-        }
         const cal = writable[Math.min(formCalendarIndex, writable.length - 1)];
 
         const reminders = (event.reminders || []).filter(r => !_isPopup(r));
@@ -374,8 +401,15 @@ FloatingWindow {
         };
         if (recurrenceEditable && recurrencePickerItem)
             fields.recurrence = recurrencePickerItem.currentRules();
-        if (!createMode && isOccurrence)
+        if (!createMode && hasSeries) {
+            fields.scope = scope === "occurrence" ? "occurrence" : "series";
+            if (scope === "occurrence")
+                fields.occurrenceStart = EventUtils.wireTime(event.originalStart || event.start, event.allDay);
+            else if (isOccurrence)
+                fields.occurrenceStart = EventUtils.wireTime(event.start, event.allDay);
+        } else if (!createMode && isOccurrence) {
             fields.occurrenceStart = EventUtils.wireTime(event.start, event.allDay);
+        }
 
         saving = true;
         formError = "";
@@ -628,6 +662,7 @@ FloatingWindow {
                 spacing: Theme.spacingS
 
                 DButton {
+                    visible: !eventModal.pendingEditScope
                     text: I18n.tr("Cancel", "event form button to cancel editing")
                     variant: "text"
                     onClicked: {
@@ -640,13 +675,44 @@ FloatingWindow {
                 }
 
                 DButton {
+                    visible: !eventModal.pendingEditScope
                     text: eventModal.saving ? I18n.tr("Saving...", "event details save button while saving") : I18n.tr("Save", "event details button to save changes")
                     iconName: "check"
                     busy: eventModal.saving
                     onClicked: {
                         if (!eventModal.saving)
-                            eventModal.save();
+                            eventModal.requestSave();
                     }
+                }
+
+                DButton {
+                    visible: eventModal.pendingEditScope
+                    text: I18n.tr("This event", "event form scope button updating only one occurrence of a recurring event")
+                    backgroundColor: Theme.primary
+                    textColor: Theme.primaryText
+                    onClicked: {
+                        if (!eventModal.saving)
+                            eventModal.save("occurrence");
+                    }
+                }
+
+                DButton {
+                    visible: eventModal.pendingEditScope
+                    text: I18n.tr("All events", "event form scope button updating the whole recurring series")
+                    backgroundColor: Theme.secondaryContainer
+                    textColor: Theme.onSecondaryContainer
+                    onClicked: {
+                        if (!eventModal.saving)
+                            eventModal.save("series");
+                    }
+                }
+
+                DActionButton {
+                    visible: eventModal.pendingEditScope
+                    iconName: "close"
+                    Accessible.name: I18n.tr("Cancel", "event form button to cancel editing")
+                    anchors.verticalCenter: parent.verticalCenter
+                    onClicked: eventModal.pendingEditScope = false
                 }
             }
         }
@@ -1238,7 +1304,7 @@ FloatingWindow {
 
                         StyledText {
                             visible: !eventModal.createMode && recurrencePicker.isRecurring
-                            text: I18n.tr("Changes apply to the whole series", "event form note when editing a recurring event")
+                            text: I18n.tr("You'll choose which events to update when saving", "event form note when editing a recurring event")
                             font.pixelSize: Theme.fontSizeSmall
                             color: Theme.surfaceVariantText
                             width: parent.width
@@ -1267,7 +1333,7 @@ FloatingWindow {
                         }
 
                         StyledText {
-                            text: I18n.tr("Changes apply to the whole series", "event form note when editing a recurring event")
+                            text: I18n.tr("You'll choose which events to update when saving", "event form note when editing a recurring event")
                             font.pixelSize: Theme.fontSizeSmall
                             color: Theme.surfaceVariantText
                             width: parent.width
@@ -1475,6 +1541,10 @@ FloatingWindow {
         onActivated: {
             if (eventModal.confirmDelete) {
                 eventModal.confirmDelete = false;
+                return;
+            }
+            if (eventModal.pendingEditScope) {
+                eventModal.pendingEditScope = false;
                 return;
             }
             if (eventModal.editMode && !eventModal.createMode) {

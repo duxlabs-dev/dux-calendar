@@ -3,6 +3,7 @@ package calendar
 import (
 	"context"
 	"errors"
+	"time"
 )
 
 // ErrReauthRequired marks a sync failure as a dead credential: the stored
@@ -54,6 +55,19 @@ const (
 // persists them as the account's sync notice (clearing them when none remain).
 type NoticeReporter interface {
 	Notices() []string
+}
+
+// OccurrenceRemover is implemented by providers that can drop a single
+// RECURRENCE-ID override without touching the rest of the recurring series.
+type OccurrenceRemover interface {
+	RemoveEventOccurrence(ctx context.Context, cal Calendar, ev Event) error
+}
+
+// OccurrenceRebaser is implemented by providers that can move every exception
+// in a series by delta so the overrides keep matching the shifted master. The
+// returned map is keyed by the old override UID and carries the new one.
+type OccurrenceRebaser interface {
+	RebaseEventOccurrences(ctx context.Context, cal Calendar, master Event, delta time.Duration) (map[string]string, error)
 }
 
 // Responder is implemented by providers that can submit the current user's RSVP

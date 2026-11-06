@@ -319,6 +319,44 @@ func (p *Provider) UpdateEvent(ctx context.Context, c cal.Calendar, ev *cal.Even
 		return nil, errors.New("caldav update requires remote id")
 	}
 
+	if ev.RecurringID != "" && !ev.OriginalStart.IsZero() {
+		doc, err := p.getObject(ctx, ev.RemoteID)
+		if err != nil {
+			return nil, fmt.Errorf("get caldav object %q: %w", ev.RemoteID, err)
+		}
+		rid, err := icalconv.ApplyEventOverride(doc, ev)
+		if err != nil {
+			return nil, err
+		}
+		etag, err := p.putObject(ctx, ev.RemoteID, doc)
+		if err != nil {
+			return nil, fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
+		}
+		out := *ev
+		out.Etag = etag
+		out.UID = ev.RecurringID + "/" + rid
+		return &out, nil
+	}
+
+	// Editing a series master must not rewrite the whole resource: exception
+	// VEVENTs that share the master UID stay diverged.
+	if ev.Recurrence != nil {
+		doc, err := p.getObject(ctx, ev.RemoteID)
+		if err != nil {
+			return nil, fmt.Errorf("get caldav object %q: %w", ev.RemoteID, err)
+		}
+		if !icalconv.ReplaceMasterComponent(doc, ev.UID, icalconv.BuildEvent(ev, ev.UID).Component) {
+			return nil, fmt.Errorf("event %q not found in calendar object", ev.UID)
+		}
+		etag, err := p.putObject(ctx, ev.RemoteID, doc)
+		if err != nil {
+			return nil, fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
+		}
+		out := *ev
+		out.Etag = etag
+		return &out, nil
+	}
+
 	etag, err := p.putObject(ctx, ev.RemoteID, icalconv.CalendarFromEvent(ev, ev.UID))
 	if err != nil {
 		return nil, fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
@@ -327,6 +365,48 @@ func (p *Provider) UpdateEvent(ctx context.Context, c cal.Calendar, ev *cal.Even
 	out := *ev
 	out.Etag = etag
 	return &out, nil
+}
+
+// RemoveEventOccurrence drops one RECURRENCE-ID override from the stored
+// resource, leaving the master and the rest of the series untouched.
+func (p *Provider) RemoveEventOccurrence(ctx context.Context, c cal.Calendar, ev cal.Event) error {
+	if ev.RemoteID == "" {
+		return errors.New("caldav remove occurrence requires remote id")
+	}
+
+	doc, err := p.getObject(ctx, ev.RemoteID)
+	if err != nil {
+		return fmt.Errorf("get caldav object %q: %w", ev.RemoteID, err)
+	}
+	removed, err := icalconv.RemoveEventOverride(doc, &ev)
+	if err != nil || !removed {
+		return err
+	}
+	if _, err := p.putObject(ctx, ev.RemoteID, doc); err != nil {
+		return fmt.Errorf("put caldav object %q: %w", ev.RemoteID, err)
+	}
+	return nil
+}
+
+// RebaseEventOccurrences moves every exception RECURRENCE-ID by delta while
+// keeping each exception's own start and end.
+func (p *Provider) RebaseEventOccurrences(ctx context.Context, c cal.Calendar, master cal.Event, delta time.Duration) (map[string]string, error) {
+	if master.RemoteID == "" {
+		return nil, errors.New("caldav rebase occurrences requires remote id")
+	}
+
+	doc, err := p.getObject(ctx, master.RemoteID)
+	if err != nil {
+		return nil, fmt.Errorf("get caldav object %q: %w", master.RemoteID, err)
+	}
+	mapping := icalconv.RebaseEventOverrides(doc, master.UID, delta)
+	if len(mapping) == 0 {
+		return mapping, nil
+	}
+	if _, err := p.putObject(ctx, master.RemoteID, doc); err != nil {
+		return nil, fmt.Errorf("put caldav object %q: %w", master.RemoteID, err)
+	}
+	return mapping, nil
 }
 
 // RespondToEvent patches the user's PARTSTAT inside the stored resource rather

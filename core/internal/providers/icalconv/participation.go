@@ -84,11 +84,7 @@ func deriveException(master *ical.Component, ev *cal.Event) *ical.Component {
 	comp.Children = append(comp.Children, master.Children...)
 
 	setEventTimes(comp.Props, ev)
-	if ev.AllDay {
-		comp.Props.SetDate(ical.PropRecurrenceID, ev.OriginalStart)
-	} else {
-		comp.Props.SetDateTime(ical.PropRecurrenceID, inZone(ev.OriginalStart, ev.StartTimeZone))
-	}
+	setRecurrenceID(comp.Props, ev)
 	comp.Props.SetDateTime(ical.PropDateTimeStamp, time.Now().UTC())
 	return comp
 }
