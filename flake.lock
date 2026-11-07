@@ -16,6 +16,26 @@
         "type": "github"
       }
     },
+    "dux-qt-base": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794063812,
+        "narHash": "sha256-uNity7waBOgdGzN1njLaoHFmVwKxpHQco8fDhEq3GjA=",
+        "owner": "duxlabs-dev",
+        "repo": "dux-qt-base",
+        "rev": "67f3cc6a519a0ccf3ad659f7bd7e0a68559893e3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "duxlabs-dev",
+        "repo": "dux-qt-base",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1791456040,
@@ -35,6 +55,7 @@
     "root": {
       "inputs": {
         "dank-qml-common": "dank-qml-common",
+        "dux-qt-base": "dux-qt-base",
         "nixpkgs": "nixpkgs"
       }
     }

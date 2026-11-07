@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/duxlabs-dev/dux-calendar/core/internal/paths"
+	"github.com/duxlabs-dev/dux-calendar/core/internal/qtbaseembed"
 	"github.com/duxlabs-dev/dux-calendar/core/internal/settings"
 	"github.com/duxlabs-dev/dux-calendar/core/internal/shellembed"
 	"github.com/duxlabs-dev/dux-go/shellapp"
@@ -16,6 +17,7 @@ var shellApp = shellapp.New(shellapp.Config{
 	QSAppID:  "dev.duxlabs.calendar",
 	Version:  Version,
 	Embedded: embeddedShell{},
+	QtBase:   qtbaseembed.Extract,
 	Boot:     bootBackend,
 	ExtraEnv: func(string) []string {
 		return uiEnv(settings.Load(), os.Getenv("QT_SCALE_FACTOR") != "", consumeShowAfterRestart())
