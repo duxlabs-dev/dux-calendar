@@ -48,6 +48,14 @@
   </screenshots>
 
   <releases>
+    <release version="2.1.2" date="2026-11-08">
+      <description>
+        <ul>
+          <li>add_account: make each provider rectangle the same height (#150)</li>
+          <li>bump qml-common</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.1.1" date="2026-11-06">
       <description>
         <ul>
