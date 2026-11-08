@@ -53,8 +53,8 @@ github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dustin/go-humanize v1.1.0 h1:dbKTrvD0klcbBV/h4AWJdMuZogJACoMlvWIWZ5b2xWg=
 github.com/dustin/go-humanize v1.1.0/go.mod h1:hc1CvRkJMsgxqjmjMQF3QNRAZBwY8AXBAzKYoSX9sFI=
-github.com/duxlabs-dev/dux-go v1.6.3-0.20261107145002-3c9896096bc7 h1:1J/y6cFkHJcOqRoA6ExW8fV8CXVxvgiAQxNeBB5oWyk=
-github.com/duxlabs-dev/dux-go v1.6.3-0.20261107145002-3c9896096bc7/go.mod h1:b67p+bMQvy+LqsAXCAOERXutm4SbQuTeqKsGeEnqR8w=
+github.com/duxlabs-dev/dux-go v1.6.3-0.20261108174937-720dca1f283c h1:Bsp9jXmTzGfibfHomGKKg3SMnPuXt7Uou1oGUh7GnV0=
+github.com/duxlabs-dev/dux-go v1.6.3-0.20261108174937-720dca1f283c/go.mod h1:b67p+bMQvy+LqsAXCAOERXutm4SbQuTeqKsGeEnqR8w=
 github.com/dvsekhvalnov/jose2go v1.11.0 h1:9pnsV1/CLWFYSxMilqtiY1Fb4JZOxfDk/q0/CQiUMYw=
 github.com/dvsekhvalnov/jose2go v1.11.0/go.mod h1:QsHjhyTlD/lAVqn/NSbVZmSCGeDehTB/mPZadG+mhXU=
 github.com/ebitengine/purego v0.11.3 h1:OB+JLpdm7ioymhyA+6s5kbb/uOuYycAgL8NNTFc5MLg=

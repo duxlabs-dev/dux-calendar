@@ -88,6 +88,34 @@ Item {
         }
 
         SettingsCard {
+            title: I18n.tr("Runtime", "about page runtime section header")
+
+            SettingsRow {
+                title: RuntimeInfo.name
+                trailingBadge: RuntimeInfo.version
+            }
+
+            SettingsRow {
+                visible: RuntimeInfo.revision !== ""
+                title: I18n.tr("Revision", "about page runtime build revision")
+                subtitle: RuntimeInfo.revision
+            }
+
+            SettingsRow {
+                visible: RuntimeInfo.library !== ""
+                title: I18n.tr("Library", "about page runtime library path")
+                body: StyledText {
+                    width: parent.width
+                    text: RuntimeInfo.library
+                    textFormat: Text.PlainText
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: Theme.surfaceVariantText
+                    wrapMode: Text.WrapAnywhere
+                }
+            }
+        }
+
+        SettingsCard {
             title: I18n.tr("Backend", "about page daemon section header")
 
             SettingsRow {

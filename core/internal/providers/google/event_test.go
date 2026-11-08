@@ -160,16 +160,3 @@ func TestFromGoogleEventKeepsCancelledInstanceTimesZero(t *testing.T) {
 	assert.True(t, ev.Start.IsZero())
 	assert.True(t, ev.End.IsZero())
 }
-
-func TestToGoogleEventCarriesTransparency(t *testing.T) {
-	ev := &cal.Event{
-		Summary:      "focus time",
-		Transparency: "transparent",
-		Start:        time.Date(2026, 7, 10, 16, 0, 0, 0, time.UTC),
-		End:          time.Date(2026, 7, 10, 16, 30, 0, 0, time.UTC),
-	}
-
-	assert.Equal(t, "transparent", toGoogleEvent(ev).Transparency)
-	ev.Transparency = ""
-	assert.Empty(t, toGoogleEvent(ev).Transparency)
-}

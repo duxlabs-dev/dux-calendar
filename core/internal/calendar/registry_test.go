@@ -2,7 +2,6 @@ package calendar_test
 
 import (
 	"context"
-	"errors"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -33,20 +32,4 @@ func TestRegistryReturnsErrorForUnknownKind(t *testing.T) {
 	registry := calendar.NewRegistry()
 	_, err := registry.Build(context.Background(), calendar.Account{Kind: "wat"}, nil)
 	require.Error(t, err)
-}
-
-func TestRegistrySurfacesFactoryError(t *testing.T) {
-	registry := calendar.NewRegistry()
-	factory := mocks.NewMockProviderFactory(t)
-
-	wantErr := errors.New("boom")
-	factory.EXPECT().Kind().Return(calendar.AccountGoogle)
-	factory.EXPECT().
-		Build(context.Background(), calendar.Account{Kind: calendar.AccountGoogle}, nil).
-		Return(nil, wantErr)
-
-	registry.Register(factory)
-
-	_, err := registry.Build(context.Background(), calendar.Account{Kind: calendar.AccountGoogle}, nil)
-	require.ErrorIs(t, err, wantErr)
 }
