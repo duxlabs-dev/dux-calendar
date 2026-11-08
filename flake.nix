@@ -51,7 +51,7 @@
         pkgs:
         (
           let
-            version = "2.1.1";
+            version = "2.1.2";
           in
           (pkgs.buildGoModule.override { go = goForPkgs pkgs; }) {
             inherit version;
