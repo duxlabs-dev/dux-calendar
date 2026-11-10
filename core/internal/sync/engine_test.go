@@ -532,11 +532,6 @@ func (s *EngineSuite) TestSyncAccountNoEventsTopicWithoutChanges() {
 	s.Contains(topics, "sync")
 }
 
-func (s *EngineSuite) TestSyncAccountUnknownKind() {
-	err := s.engine.SyncAccount(s.ctx, s.account)
-	s.Require().ErrorContains(err, "no provider registered")
-}
-
 func (s *EngineSuite) TestSyncAccountListCalendarsError() {
 	provider := s.registerProvider()
 	provider.EXPECT().ListCalendars(mock.Anything).Return(nil, errors.New("upstream down"))

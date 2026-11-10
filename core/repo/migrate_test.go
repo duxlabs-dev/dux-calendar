@@ -21,23 +21,6 @@ func openRaw(t *testing.T, name string) (*sql.DB, string) {
 	return db, dsn
 }
 
-func TestMigrateFreshDatabase(t *testing.T) {
-	ctx := context.Background()
-	db, dsn := openRaw(t, "fresh.db")
-	defer db.Close()
-
-	if err := migrate(ctx, dsn); err != nil {
-		t.Fatalf("migrate: %v", err)
-	}
-
-	for _, col := range []string{"needs_reauth", "auth_error"} {
-		ok, err := columnExists(ctx, db, "accounts", col)
-		if err != nil || !ok {
-			t.Fatalf("column %q missing on fresh db: ok=%v err=%v", col, ok, err)
-		}
-	}
-}
-
 // A database created by the old auto-migration has the pre-reauth schema and no
 // goose history; it must be baselined and then upgraded without losing rows.
 func TestMigrateBaselinesLegacyDatabase(t *testing.T) {

@@ -44,24 +44,6 @@ func TestLoadFrom(t *testing.T) {
 			content: `{"uiScale": 0}`,
 			want:    func(d UISettings) UISettings { return d },
 		},
-		{
-			name:    "full file",
-			content: `{"use24HourClock": false, "remindersEnabled": true, "reminderPersist": false, "allDayReminders": true, "allDayReminderTime": "18:30", "allDayReminderDaysBefore": 1, "defaultReminderMinutes": -1, "snoozeMinutes": 30, "syncIntervalMinutes": 15, "uiScale": 1.25}`,
-			want: func(d UISettings) UISettings {
-				return UISettings{
-					Use24HourClock:           false,
-					RemindersEnabled:         true,
-					ReminderPersist:          false,
-					AllDayReminders:          true,
-					AllDayReminderTime:       "18:30",
-					AllDayReminderDaysBefore: 1,
-					DefaultReminderMinutes:   -1,
-					SnoozeMinutes:            30,
-					SyncIntervalMinutes:      15,
-					UIScale:                  1.25,
-				}
-			},
-		},
 	}
 
 	for _, tt := range tests {

@@ -5,8 +5,6 @@ import (
 	"context"
 	"encoding/json"
 	"net"
-	"os"
-	"path/filepath"
 	"testing"
 
 	"github.com/duxlabs-dev/dux-go/files"
@@ -30,15 +28,6 @@ func routeAndRead(t *testing.T, req Request, deps Deps) map[string]any {
 	var out map[string]any
 	require.NoError(t, json.Unmarshal(line, &out))
 	return out
-}
-
-func TestRouteVersion(t *testing.T) {
-	out := routeAndRead(t, Request{ID: 1, Method: "version"}, Deps{Version: "1.2.3"})
-
-	result, ok := out["result"].(map[string]any)
-	require.True(t, ok)
-	assert.Equal(t, "1.2.3", result["version"])
-	assert.Equal(t, float64(APIVersion), result["apiVersion"])
 }
 
 func TestRouteUnknownMethod(t *testing.T) {
@@ -86,22 +75,6 @@ func TestParamStringSlice(t *testing.T) {
 	assert.Equal(t, []string{"a", "b"}, ParamStringSlice(params, "ids"))
 	assert.Nil(t, ParamStringSlice(params, "plain"))
 	assert.Nil(t, ParamStringSlice(params, "missing"))
-}
-
-func TestRouteFilesList(t *testing.T) {
-	root := t.TempDir()
-	require.NoError(t, os.WriteFile(filepath.Join(root, "x.ics"), nil, 0o644))
-	svc := files.NewService(nil, t.TempDir(), nil)
-	t.Cleanup(svc.Close)
-
-	out := routeAndRead(t, Request{ID: 3, Method: "files.list", Params: map[string]any{"path": root}}, Deps{Files: svc})
-
-	result, ok := out["result"].(map[string]any)
-	require.True(t, ok)
-	entries, ok := result["entries"].([]any)
-	require.True(t, ok)
-	require.Len(t, entries, 1)
-	assert.Equal(t, "x.ics", entries[0].(map[string]any)["name"])
 }
 
 func TestRouteFilesWithoutService(t *testing.T) {

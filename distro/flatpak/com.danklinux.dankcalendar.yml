@@ -18,9 +18,9 @@ cleanup:
   - /lib/cmake
   - /lib/pkgconfig
   - /lib/libSPIRV-Tools*
+  - /lib/dcal/libdux-qt-base.so
+  - /lib/dcal/pkgconfig
   - /bin/spirv-*
-  - /share/applications/org.quickshell.desktop
-  - /share/icons/hicolor/scalable/apps/org.quickshell.svg
 
 build-options:
   env:
@@ -58,16 +58,15 @@ modules:
         commit: ad9184e76a66b1001c29db9b0a3e87f646c64de0
         dest: external/spirv-headers
 
-  - name: quickshell
+  # dcal looks for the runtime in ../lib/dcal next to /app/bin/dcal
+  - name: dux-qt-base
     buildsystem: cmake-ninja
     builddir: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_INSTALL_PREFIX=/app
+      - -DCMAKE_INSTALL_LIBDIR=lib/dcal
       - -DDISTRIBUTOR=Dux Calendar Flatpak
-      - -DUSE_JEMALLOC=OFF
-      - -DCRASH_HANDLER=OFF
-      - -DBUILD_TESTING=OFF
       - -DSOCKETS=ON
       - -DWAYLAND=ON
       - -DWAYLAND_WLR_LAYERSHELL=OFF
@@ -89,9 +88,8 @@ modules:
       - -DNETWORK=OFF
     sources:
       - type: git
-        url: https://github.com/quickshell-mirror/quickshell.git
-        tag: v0.3.1
-        commit: 1a4716cde794a59928d9d9fc15f2afc7a95de360
+        url: https://github.com/duxlabs-dev/dux-qt-base.git
+        commit: 67f3cc6a519a0ccf3ad659f7bd7e0a68559893e3
         disable-submodules: true
 
   - name: dankcalendar
