@@ -111,6 +111,7 @@ jobs:
                ## Claude review
                <one line verdict>
                - <finding, file:line> per inline comment posted this run
+               Docs pending: <items>, only when the PR adds or changes an IPC function, CLI flag or setting and links no dux-docs PR
                Checked: <one line>. Model: claude-opus-5-5.
 
                No findings: "No issues found." plus what was checked.
@@ -119,10 +120,13 @@ jobs:
             - Bugs: wrong logic, crashes, nil/undefined access, races, leaks (timers, connections, processes, handles), bad Go error handling, edge cases that will clearly be hit.
             - QML: undefined refs, missing imports, binding loops, bindings that never update, handlers on the wrong object, raw Flickable/ListView/ScrollView instead of the Dank* wrappers.
             - Security: command injection, path traversal, unsafe file permissions, secrets in code.
-            - CONTRIBUTING.md rules: user-facing strings in `I18n.tr()` with translator context, reuse existing terms from quickshell/translations/en.json; CGO stays disabled (pure-Go sqlite); tests use testify and run sandboxed (no network, t.TempDir, repo.OpenMemory); mocks under core/internal/mocks/ are regenerated not hand-edited; guard clauses over nesting, switch over if/else chains, sparse comments; new dux-qml-common contract properties need the matching library change.
+            - Reuse: a new component or delegate that near-duplicates an existing one. Before accepting a new .qml file, grep quickshell/Widgets and dux-qml-common/DCommon/Widgets for a similar name or role, and suggest extending the existing one.
+            - Tokens: a literal number for spacing, size, radius, column count or duration in QML where Theme or SettingsMetrics already names one.
+            - Contract drift: the same rule implemented in Go and QML (path matching, ownership, ordering) that can disagree, and IPC/CLI functions that report success before an async step decides the outcome.
+            - CONTRIBUTING.md rules: user-facing strings in `I18n.tr()` with translator context, reuse existing terms from quickshell/translations/en.json; CGO stays disabled (pure-Go sqlite); tests use testify and run sandboxed (no network, t.TempDir, repo.OpenMemory); mocks under core/internal/mocks/ are regenerated not hand-edited; guard clauses over nesting, switch over if/else chains, sparse comments; new dux-qml-common contract properties need the matching library change. The second `I18n.tr()` argument is a translator comment, not a separate catalog entry.
             - Go: unformatted code, go.mod/go.sum out of sync with imports, tests that no longer compile.
 
-            Don't flag style or naming, pre-existing issues, anything a linter or compiler catches, speculative input-dependent problems, missing tests or docs, or refactor ideas. Not sure it's real: don't post it.
+            Don't flag naming, pre-existing issues, anything a linter or compiler catches, problems that need unusual input to trigger, or missing tests. Deterministic mismatches are not speculative. Not sure it's real: don't post it.
 
             Review only. Never edit files, commit, push, approve or request changes. Post each finding once. Keep comments short.
           claude_args: |
