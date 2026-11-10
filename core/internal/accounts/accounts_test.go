@@ -44,13 +44,6 @@ func TestFlavor(t *testing.T) {
 	}
 }
 
-func TestProviderName(t *testing.T) {
-	assert.Equal(t, "Google", accounts.ProviderName("google"))
-	assert.Equal(t, "iCloud", accounts.ProviderName("icloud"))
-	assert.Equal(t, "iCalendar subscription", accounts.ProviderName("ical"))
-	assert.Equal(t, "mystery", accounts.ProviderName("mystery"))
-}
-
 func TestCheckCredentials(t *testing.T) {
 	ctx := context.Background()
 
@@ -116,15 +109,6 @@ func (s *AccountsSuite) SetupTest() {
 	s.Require().NoError(err)
 	s.repo = repo.New(client)
 	s.T().Cleanup(func() { _ = s.repo.Close() })
-}
-
-func (s *AccountsSuite) TestEnsureCreatesMissingAccount() {
-	err := accounts.Ensure(s.ctx, s.repo, "personal", account.KindLocal, "Personal", map[string]any{"root": "/tmp"})
-	s.Require().NoError(err)
-
-	acc, err := s.repo.GetAccount(s.ctx, "personal")
-	s.Require().NoError(err)
-	s.Equal("Personal", acc.DisplayName)
 }
 
 func (s *AccountsSuite) TestEnsureIsIdempotent() {

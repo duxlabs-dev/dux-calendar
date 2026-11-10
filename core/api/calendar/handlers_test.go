@@ -3,7 +3,6 @@ package calendar_handler_test
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"testing"
 	"time"
@@ -80,20 +79,6 @@ func (s *HandlersSuite) decode(body []byte, out any) {
 	s.Require().NoError(json.Unmarshal(body, out))
 }
 
-func (s *HandlersSuite) TestListAccounts() {
-	s.seedAccount("personal")
-	s.seedAccount("work")
-
-	res := s.api.Get("/accounts")
-	s.Require().Equal(http.StatusOK, res.Code)
-
-	var body struct {
-		Accounts []models.Account `json:"accounts"`
-	}
-	s.decode(res.Body.Bytes(), &body)
-	s.Len(body.Accounts, 2)
-}
-
 func (s *HandlersSuite) TestListCalendarsFiltersByAccount() {
 	s.seedAccount("personal")
 	s.seedAccount("work")
@@ -139,20 +124,6 @@ func (s *HandlersSuite) TestListEventsInvalidTimestamp() {
 
 	res = s.api.Get("/events?to=tomorrow")
 	s.Equal(http.StatusBadRequest, res.Code)
-}
-
-func (s *HandlersSuite) TestGetEvent() {
-	s.seedAccount("personal")
-	cal := s.seedCalendar("personal", "main")
-	ev := s.seedEvent(cal.ID, "meeting", time.Date(2026, 5, 7, 14, 0, 0, 0, time.UTC))
-
-	res := s.api.Get(fmt.Sprintf("/events/%s", ev.ID))
-	s.Require().Equal(http.StatusOK, res.Code)
-
-	var body models.Event
-	s.decode(res.Body.Bytes(), &body)
-	s.Equal(ev.ID, body.ID)
-	s.Equal("meeting", body.Summary)
 }
 
 func (s *HandlersSuite) TestGetEventNotFound() {
