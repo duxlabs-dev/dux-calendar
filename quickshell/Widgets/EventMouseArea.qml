@@ -20,6 +20,7 @@ MouseArea {
     signal dragReleased
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton
+    preventStealing: dragEnabled
     hoverEnabled: true
     cursorShape: eventDragging ? Qt.DragMoveCursor : Qt.PointingHandCursor
 

@@ -37,6 +37,7 @@ Item {
     signal eventRescheduleRequested(var event, int dayOffset, int minuteOffset)
     signal shiftDaysRequested(int days)
     signal createTimedRequested(date start, date end)
+    signal createRangeRequested(date startDay, date endDay)
 
     function isEventSelected(event) {
         const key = DankCalService.eventKey(event);
@@ -454,6 +455,69 @@ Item {
                 height: parent.height
                 clip: true
 
+                MouseArea {
+                    id: allDayRangeArea
+
+                    readonly property bool selecting: anchorTime > 0
+                    readonly property int dragThreshold: Application.styleHints.startDragDistance
+                    property real anchorTime: 0
+                    property real rangeStart: 0
+                    property real rangeEnd: 0
+                    property real pressX: 0
+
+                    function dayTimeAtX(x) {
+                        const clamped = Math.max(0, Math.min(width - 1, x));
+                        return root.dayTimeAt(mapToItem(root, clamped, 0).x);
+                    }
+
+                    function reset() {
+                        anchorTime = 0;
+                        rangeStart = 0;
+                        rangeEnd = 0;
+                    }
+
+                    anchors.fill: parent
+                    acceptedButtons: Qt.LeftButton
+                    preventStealing: true
+
+                    onPressed: mouse => pressX = mouse.x
+
+                    onPositionChanged: mouse => {
+                        if (!selecting) {
+                            if (Math.abs(mouse.x - pressX) < dragThreshold)
+                                return;
+                            const anchor = dayTimeAtX(pressX);
+                            if (anchor === 0)
+                                return;
+                            anchorTime = anchor;
+                            rangeStart = anchor;
+                            rangeEnd = anchor;
+                        }
+                        const hover = dayTimeAtX(mouse.x);
+                        if (hover === 0)
+                            return;
+                        rangeStart = Math.min(anchorTime, hover);
+                        rangeEnd = Math.max(anchorTime, hover);
+                    }
+
+                    onReleased: {
+                        if (!selecting)
+                            return;
+                        const startDay = new Date(rangeStart);
+                        const endDay = new Date(rangeEnd);
+                        reset();
+                        root.createRangeRequested(startDay, endDay);
+                    }
+
+                    onCanceled: reset()
+
+                    Shortcut {
+                        sequence: "Escape"
+                        enabled: allDayRangeArea.selecting
+                        onActivated: allDayRangeArea.reset()
+                    }
+                }
+
                 Row {
                     x: root.slidePx - root.dayWidth
                     height: parent.height
@@ -466,6 +530,7 @@ Item {
                             required property int index
                             readonly property date day: root.dayAt(index - 1)
                             readonly property bool isDropTarget: root.eventDragging && day.getTime() === root.dragTargetTime
+                            readonly property bool inCreateRange: allDayRangeArea.selecting && day.getTime() >= allDayRangeArea.rangeStart && day.getTime() <= allDayRangeArea.rangeEnd
                             readonly property var dayEvents: {
                                 root.eventsVersion;
                                 return root.allDayEventsFor(root.dayAt(index - 1));
@@ -482,6 +547,14 @@ Item {
                                 border.color: Theme.primary
                                 border.width: 2
                                 radius: Theme.cornerRadiusXXS
+                            }
+
+                            Rectangle {
+                                visible: allDayCell.inCreateRange
+                                anchors.fill: parent
+                                anchors.topMargin: 2
+                                anchors.bottomMargin: 2
+                                color: Theme.withAlpha(Theme.primary, 0.18)
                             }
 
                             Column {
