@@ -1,6 +1,6 @@
 module github.com/duxlabs-dev/dux-calendar/core
 
-go 1.27
+go 1.27.3
 
 require (
 	entgo.io/ent v0.14.6
@@ -8,7 +8,7 @@ require (
 	github.com/adrg/xdg v0.5.3
 	github.com/caarlos0/env/v11 v11.4.1
 	github.com/danielgtaylor/huma/v2 v2.39.1
-	github.com/duxlabs-dev/dux-go v1.6.3-0.20261108174937-720dca1f283c
+	github.com/duxlabs-dev/dux-go v1.6.3-0.20261110155217-26b745ee0afd
 	github.com/dvsekhvalnov/jose2go v1.11.0
 	github.com/emersion/go-ical v0.0.0-20250609112844-439c63cef608
 	github.com/emersion/go-webdav v0.7.1-0.20260628102823-c16f8a9a132c

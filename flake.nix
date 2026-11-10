@@ -48,8 +48,7 @@
           system: fn system nixpkgs.legacyPackages.${system}
         );
 
-      duxQtBaseFor =
-        pkgs: pkgs.dux-qt-base or dux-qt-base.packages.${pkgs.stdenv.hostPlatform.system}.dux-qt-base;
+      duxQtBaseFor = pkgs: (dux-qt-base.overlays.default pkgs pkgs).dux-qt-base;
 
       mkQmlImportPath =
         pkgs: qmlPkgs:
@@ -86,7 +85,7 @@
             pname = "dankcalendar";
             src = ./.;
             modRoot = "core";
-            vendorHash = "sha256-rRrj7ODcXhFN9YkXHjD1rKgPlpWU8ASipZFasRGjshE=";
+            vendorHash = "sha256-0dhVy8BNTRrNo1cFAVlR80yaUMqa2PCNbx4cYl04g9g=";
 
             subPackages = [ "cmd/dcal" ];
 
