@@ -3540,8 +3540,8 @@
     "comment": "go to date input placeholder example"
   },
   {
-    "term": "iCal subscription",
-    "context": "iCal subscription",
+    "term": "iCalendar subscription",
+    "context": "iCalendar subscription",
     "reference": "Modals/AccountAddModal.qml:124, Modals/AccountAddModal.qml:497",
     "comment": "ical subscription provider name in account add modal"
   },
