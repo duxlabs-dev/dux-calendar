@@ -47,6 +47,7 @@ func TestFlavor(t *testing.T) {
 func TestProviderName(t *testing.T) {
 	assert.Equal(t, "Google", accounts.ProviderName("google"))
 	assert.Equal(t, "iCloud", accounts.ProviderName("icloud"))
+	assert.Equal(t, "iCalendar subscription", accounts.ProviderName("ical"))
 	assert.Equal(t, "mystery", accounts.ProviderName("mystery"))
 }
 

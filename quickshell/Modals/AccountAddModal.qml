@@ -121,7 +121,7 @@ FloatingWindow {
         case "icloud":
             return "iCloud";
         case "ical":
-            return I18n.tr("iCal subscription", "ical subscription provider name in account add modal");
+            return I18n.tr("iCalendar subscription", "ical subscription provider name in account add modal");
         case "local":
             return I18n.tr("Local", "local provider name in account add modal");
         case "evolution":
@@ -501,7 +501,7 @@ FloatingWindow {
                                 },
                                 {
                                     "id": "ical",
-                                    "name": I18n.tr("iCal subscription", "ical subscription provider name in account add modal"),
+                                    "name": I18n.tr("iCalendar subscription", "ical subscription provider name in account add modal"),
                                     "description": I18n.tr("Subscribe to an external calendar by URL (webcal/https).", "ical provider description in picker"),
                                     "implemented": true
                                 },
