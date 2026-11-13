@@ -41,7 +41,8 @@ LANGUAGES = {
     "ja": "ja.json",
     "fr": "fr.json",
     "bg": "bg.json",
-    "hu": "hu.json"
+    "hu": "hu.json",
+    "pt-br": "pt_BR.json"
 }
 
 
