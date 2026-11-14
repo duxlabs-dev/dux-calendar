@@ -34,7 +34,7 @@ DankOverlayDialog {
     }
 
     title: I18n.tr("Rename calendar", "rename calendar dialog header")
-    supportingText: hasOverride ? I18n.tr("Synced as \"%1\". The name only changes in Dux Calendar.", "rename calendar dialog note showing provider name").arg(calendar.providerName) : ""
+    supportingText: hasOverride ? I18n.tr("Synced as \"%2\". The name only changes in %1.", "rename calendar dialog note, %1 is the app name, %2 is the provider name").arg("Dux Calendar").arg(calendar.providerName) : ""
     onAccepted: submit()
 
     DTextField {

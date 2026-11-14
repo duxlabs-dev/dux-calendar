@@ -313,7 +313,7 @@ FloatingWindow {
 
                     StyledText {
                         visible: taskModal.createMode && taskModal.noTaskLists
-                        text: I18n.tr("Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.", "task dialog hint when no task list is available")
+                        text: I18n.tr("Add a %1, local, %2, or %3 account with a task list to create tasks.", "task dialog hint when no task list is available, %1 is CalDAV, %2 is Google, %3 is Microsoft").arg("CalDAV").arg("Google").arg("Microsoft")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceVariantText
                         width: parent.width
@@ -451,7 +451,7 @@ FloatingWindow {
 
                     StyledText {
                         visible: !taskModal.recurrenceSupported
-                        text: I18n.tr("Recurring tasks are managed in Google Tasks.", "task form note when recurrence cannot be edited on google")
+                        text: I18n.tr("Recurring tasks are managed in %1.", "task form note when recurrence cannot be edited on google, %1 is Google Tasks").arg("Google Tasks")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceVariantText
                         width: parent.width

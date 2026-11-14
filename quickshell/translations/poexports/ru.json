@@ -5,11 +5,26 @@
   "%1 PM": {
     "%1 PM": "%1 ПП"
   },
+  "%1 access wasn't granted. Reconnect this account to sync tasks.": {
+    "%1 access wasn't granted. Reconnect this account to sync tasks.": ""
+  },
   "%1 appointments fall outside core hours": {
     "%1 appointments fall outside core hours": "Встреч вне рабочего времени: %1"
   },
+  "%1 calendars via app-specific password.": {
+    "%1 calendars via app-specific password.": ""
+  },
   "%1 events selected": {
     "%1 events selected": "Выбрано событий: %1"
+  },
+  "%1 not detected — using the %2 preset.": {
+    "%1 not detected — using the %2 preset.": ""
+  },
+  "%1 not detected, using %2.": {
+    "%1 not detected, using %2.": ""
+  },
+  "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
+    "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": ""
   },
   "%1 overlapping events": {
     "%1 overlapping events": "Пересекающихся событий: %1"
@@ -17,11 +32,20 @@
   "%1 selected": {
     "%1 selected": "Выбрано: %1"
   },
+  "%1 theme missing or invalid — using the %2 preset.": {
+    "%1 theme missing or invalid — using the %2 preset.": ""
+  },
   "%1 times": {
     "%1 times": "Раз: %1"
   },
+  "%1 will close and reopen with the new zoom.": {
+    "%1 will close and reopen with the new zoom.": ""
+  },
   "%1 · All day": {
     "%1 · All day": "%1 · Все дни"
+  },
+  "%1, %2 and %3 calendars.": {
+    "%1, %2 and %3 calendars.": ""
   },
   "%1d before": {
     "%1d before": "за %1 дн."
@@ -43,6 +67,12 @@
   },
   "%1w before": {
     "%1w before": "за %1 нед."
+  },
+  "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": {
+    "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": ""
+  },
+  "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
+    "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": ""
   },
   "(untitled)": {
     "(untitled)": "(без названия)"
@@ -137,17 +167,14 @@
   "5 minutes before": {
     "5 minutes before": "За 5 минут"
   },
-  "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": {
-    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": "Значение 50 использует формы Material. Меньшие значения уменьшают скругление; большие — увеличивают."
+  "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": {
+    "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": ""
   },
   "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": {
     "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">Лицензия MIT</a>"
   },
-  "A file with this name already exists. Do you want to overwrite it?": {
-    "A file with this name already exists. Do you want to overwrite it?": "Файл с таким именем уже существует. Перезаписать?"
-  },
-  "A folder of .ics files on this machine.": {
-    "A folder of .ics files on this machine.": "Папка с файлами .ics на этом компьютере."
+  "A folder of %1 files on this machine.": {
+    "A folder of %1 files on this machine.": ""
   },
   "API": {
     "API": "API"
@@ -176,8 +203,8 @@
   "Add": {
     "Add": "Добавить"
   },
-  "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": {
-    "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": "Добавьте аккаунт CalDAV, локальный, Google или Microsoft со списком задач, чтобы создавать задачи."
+  "Add a %1, local, %2, or %3 account with a task list to create tasks.": {
+    "Add a %1, local, %2, or %3 account with a task list to create tasks.": ""
   },
   "Add a calendar": {
     "Add a calendar": "Добавить календарь"
@@ -245,9 +272,6 @@
   "Also in these calendars": {
     "Also in these calendars": ""
   },
-  "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
-    "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: Назад • F1/I: Сведения • F10: Справка • Esc: Закрыть"
-  },
   "Always use the dark theme.": {
     "Always use the dark theme.": "Всегда использовать тёмную тему."
   },
@@ -266,17 +290,11 @@
   "Apple ID": {
     "Apple ID": "Apple ID"
   },
-  "Apple iCloud calendars via app-specific password.": {
-    "Apple iCloud calendars via app-specific password.": "Календари Apple iCloud через пароль приложения."
-  },
   "Apply and restart": {
     "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "Подтвердите доступ в браузере. Окно вернётся сюда автоматически, когда %1 отправит код авторизации."
-  },
-  "Ascending": {
-    "Ascending": "По возрастанию"
   },
   "At start": {
     "At start": "В начале"
@@ -313,9 +331,6 @@
   },
   "Balanced": {
     "Balanced": "Сбалансированная"
-  },
-  "Begin setup": {
-    "Begin setup": "Начать настройку"
   },
   "Blurs what shows through the window. Needs an opacity below 100%.": {
     "Blurs what shows through the window. Needs an opacity below 100%.": ""
@@ -398,9 +413,6 @@
   "Color source": {
     "Color source": "Источник цвета"
   },
-  "Colors are shared with DankMaterialShell when available.": {
-    "Colors are shared with DankMaterialShell when available.": "Цвета используются совместно с DankMaterialShell, если доступно."
-  },
   "Coming soon": {
     "Coming soon": "Скоро"
   },
@@ -416,11 +428,8 @@
   "Confirm delete": {
     "Confirm delete": "Подтвердить удаление"
   },
-  "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": "Конфликты определяются по событиям, синхронизированным с DankCalendar на данный момент. Вы все равно можете импортировать пересекающееся событие."
-  },
-  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
+  "Conflicts use events currently synced to %1. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to %1. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "Подключить"
@@ -428,14 +437,11 @@
   "Connect %1": {
     "Connect %1": "Подключить %1"
   },
-  "Connect Google Account": {
-    "Connect Google Account": "Подключить аккаунт Google"
+  "Connect %1 Account": {
+    "Connect %1 Account": ""
   },
-  "Connect Microsoft Account": {
-    "Connect Microsoft Account": "Подключить аккаунт Microsoft"
-  },
-  "Connect any CalDAV-compatible server.": {
-    "Connect any CalDAV-compatible server.": "Подключите любой CalDAV-совместимый сервер."
+  "Connect any %1-compatible server.": {
+    "Connect any %1-compatible server.": ""
   },
   "Connected": {
     "Connected": "Подключено"
@@ -472,9 +478,6 @@
   },
   "Copy link": {
     "Copy link": "Копировать ссылку"
-  },
-  "Copy path": {
-    "Copy path": "Копировать путь"
   },
   "Copy selected events": {
     "Copy selected events": "Копировать выбранные события"
@@ -530,26 +533,11 @@
   "Cut selected events": {
     "Cut selected events": "Вырезать выбранные события"
   },
-  "DMS dynamic": {
-    "DMS dynamic": "Динамические DMS"
-  },
-  "DMS dynamic colors detected when available.": {
-    "DMS dynamic colors detected when available.": "Динамические цвета DMS используются, если обнаружены."
-  },
   "Daemon offline": {
     "Daemon offline": "Демон не запущен"
   },
   "Daily": {
     "Daily": "Ежедневно"
-  },
-  "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "Dank Calendar — это календарь для современного Linux-десктопа с дизайном в стиле <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">Material 3</a>, а также расширяемым CLI и сокет-API для интеграций.<br /><br/>Создан с использованием <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, фреймворка QT6 для оболочек рабочего стола, и <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, статически типизированного компилируемого языка программирования."
-  },
-  "Dank Linux Discord": {
-    "Dank Linux Discord": "Dank Linux Discord"
-  },
-  "DankMaterialShell not detected — using the %1 preset.": {
-    "DankMaterialShell not detected — using the %1 preset.": "DankMaterialShell не обнаружена — используется пресет %1."
   },
   "Dark": {
     "Dark": "Тёмная"
@@ -635,14 +623,8 @@
   "Delete…": {
     "Delete…": "Удалить…"
   },
-  "Descending": {
-    "Descending": "По убыванию"
-  },
   "Description": {
     "Description": "Описание"
-  },
-  "Desktop": {
-    "Desktop": "Рабочий стол"
   },
   "Desktop notifications for upcoming events.": {
     "Desktop notifications for upcoming events.": "Уведомления на рабочем столе о предстоящих событиях."
@@ -674,17 +656,11 @@
   "Docs": {
     "Docs": "Документация"
   },
-  "Documents": {
-    "Documents": "Документы"
-  },
   "Does not repeat": {
     "Does not repeat": "Не повторять"
   },
   "Done": {
     "Done": "Готово"
-  },
-  "Downloads": {
-    "Downloads": "Загрузки"
   },
   "Drag to pan · click to fit": {
     "Drag to pan · click to fit": "Перетащите для прокрутки · нажмите для подгонки"
@@ -706,18 +682,6 @@
   },
   "Duration": {
     "Duration": "Продолжительность"
-  },
-  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
-  },
-  "Dux Calendar will close and reopen with the new zoom.": {
-    "Dux Calendar will close and reopen with the new zoom.": ""
-  },
-  "Dux Shell not detected — using the %1 preset.": {
-    "Dux Shell not detected — using the %1 preset.": ""
-  },
-  "Dux Shell not detected, using %1.": {
-    "Dux Shell not detected, using %1.": ""
   },
   "Edit": {
     "Edit": "Редактировать"
@@ -752,11 +716,8 @@
   "Enter client ID": {
     "Enter client ID": "Введите ID клиента"
   },
-  "Enter filename...": {
-    "Enter filename...": "Введите имя файла..."
-  },
-  "Enter your CalDAV server details. The connection is verified before the account is saved.": {
-    "Enter your CalDAV server details. The connection is verified before the account is saved.": "Введите данные CalDAV-сервера. Соединение проверяется перед сохранением аккаунта."
+  "Enter your %1 server details. The connection is verified before the account is saved.": {
+    "Enter your %1 server details. The connection is verified before the account is saved.": ""
   },
   "Enter your client ID": {
     "Enter your client ID": "Введите ID клиента"
@@ -776,29 +737,14 @@
   "Everything in this file is already on your calendar.": {
     "Everything in this file is already on your calendar.": "Все события из этого файла уже есть в вашем календаре."
   },
-  "Evolution": {
-    "Evolution": "Evolution"
-  },
   "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": {
     "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": "Растягивать ячейки дней под все события вместо сворачивания лишних в «+Ещё N»."
-  },
-  "F1/I: Toggle • F10: Help": {
-    "F1/I: Toggle • F10: Help": "F1/I: Переключить • F10: Справка"
   },
   "Family": {
     "Family": ""
   },
   "Feed URL": {
     "Feed URL": "Ссылка на фид"
-  },
-  "File Already Exists": {
-    "File Already Exists": "Файл уже существует"
-  },
-  "File Information": {
-    "File Information": "Сведения о файле"
-  },
-  "Files - %1": {
-    "Files - %1": "Файлы — %1"
   },
   "First calendar": {
     "First calendar": "Первый календарь"
@@ -812,14 +758,11 @@
   "Focus ring": {
     "Focus ring": "Индикатор фокуса"
   },
-  "Follow DankMaterialShell colors, falling back to a preset.": {
-    "Follow DankMaterialShell colors, falling back to a preset.": "Использовать цвета DankMaterialShell с переходом на пресет при отсутствии."
+  "Follow %1 colors, falling back to a preset.": {
+    "Follow %1 colors, falling back to a preset.": ""
   },
-  "Follow Dux Shell colors, falling back to a preset.": {
-    "Follow Dux Shell colors, falling back to a preset.": ""
-  },
-  "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": "Использовать цвета, сгенерированные Matugen."
+  "Follow colors generated by %1.": {
+    "Follow colors generated by %1.": ""
   },
   "Follow language": {
     "Follow language": "Как в языке интерфейса"
@@ -839,29 +782,17 @@
   "Generate app-specific password": {
     "Generate app-specific password": "Создать пароль приложения"
   },
-  "GitHub": {
-    "GitHub": "GitHub"
-  },
   "Go to date": {
     "Go to date": "Перейти к дате"
   },
   "Go to today": {
     "Go to today": "Перейти к сегодняшнему дню"
   },
-  "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
-    "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": "Google Задачи недоступны. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Включите API</a> или переподключите этот аккаунт, затем обновите страницу для синхронизации задач."
-  },
-  "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": {
-    "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": "Google требует создания собственного клиента OAuth для чтения данных календаря от вашего имени. Это одноразовая настройка, занимающая около трёх минут."
-  },
   "Hide": {
     "Hide": "Скрыть"
   },
   "High": {
     "High": "Высокий"
-  },
-  "Home": {
-    "Home": "Домашняя папка"
   },
   "Hour range shown in day and week views.": {
     "Hour range shown in day and week views.": "Диапазон часов для режима дня и недели."
@@ -875,17 +806,17 @@
   "Import": {
     "Import": "Импорт"
   },
+  "Import %1": {
+    "Import %1": ""
+  },
   "Import %1 events": {
     "Import %1 events": "Импортировать события (%1)"
-  },
-  "Import client_secret.json": {
-    "Import client_secret.json": "Импортировать client_secret.json"
   },
   "Import events": {
     "Import events": "Импорт событий"
   },
-  "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": {
-    "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": "Импортируйте скачанный при создании клиента файл client_secret_….json или вставьте ID клиента и секрет вручную."
+  "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": {
+    "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": ""
   },
   "Importing...": {
     "Importing...": "Импортирование..."
@@ -914,9 +845,6 @@
   "Keyring locked — unlock it to sync": {
     "Keyring locked — unlock it to sync": "Связка ключей заблокирована — разблокируйте её для синхронизации"
   },
-  "Ko-fi": {
-    "Ko-fi": "Ko-fi"
-  },
   "Language": {
     "Language": "Язык"
   },
@@ -926,11 +854,8 @@
   "Language of the interface.": {
     "Language of the interface.": "Язык интерфейса."
   },
-  "Launch Dank Calendar in the background when you log in.": {
-    "Launch Dank Calendar in the background when you log in.": "Запускать Dank Calendar в фоне при входе в систему."
-  },
-  "Launch Dux Calendar in the background when you log in.": {
-    "Launch Dux Calendar in the background when you log in.": ""
+  "Launch %1 in the background when you log in.": {
+    "Launch %1 in the background when you log in.": ""
   },
   "Layer opacity": {
     "Layer opacity": ""
@@ -940,6 +865,9 @@
   },
   "Lets the desktop show through the window. Text and controls stay solid.": {
     "Lets the desktop show through the window. Text and controls stay solid.": ""
+  },
+  "Library": {
+    "Library": ""
   },
   "Light": {
     "Light": "Светлая"
@@ -980,12 +908,6 @@
   "Marked as not done": {
     "Marked as not done": "Отмечено как невыполненное"
   },
-  "Matugen": {
-    "Matugen": "Matugen"
-  },
-  "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": "Тема Matugen отсутствует или недействительна — используется пресет %1."
-  },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "Максимальное количество строк в названии события в режиме месяца."
   },
@@ -1013,20 +935,8 @@
   "Merge duplicate events": {
     "Merge duplicate events": ""
   },
-  "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
-    "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "Доступ к Microsoft To Do не предоставлен. Переподключите этот аккаунт для синхронизации задач."
-  },
-  "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
-    "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": "Microsoft часто возвращает server_error в первые минуты после создания или изменения регистрации приложения. Подождите пару минут и попробуйте снова."
-  },
-  "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": {
-    "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": "Microsoft требует зарегистрировать собственное приложение для чтения данных календаря от вашего имени. Это одноразовая настройка, занимающая около двух минут — секрет клиента не нужен."
-  },
   "Minimize": {
     "Minimize": "Свернуть"
-  },
-  "Modified": {
-    "Modified": "Изменён"
   },
   "Monospace family": {
     "Monospace family": ""
@@ -1064,9 +974,6 @@
   "Move through sidebar items": {
     "Move through sidebar items": "Перемещение по элементам боковой панели"
   },
-  "Move to Trash": {
-    "Move to Trash": "Переместить в корзину"
-  },
   "Move to selected day": {
     "Move to selected day": "Переместить на выбранный день"
   },
@@ -1082,17 +989,11 @@
   "Moving a recurring event moves its entire series.": {
     "Moving a recurring event moves its entire series.": "Перемещение повторяющегося события переместит всю серию."
   },
-  "Music": {
-    "Music": "Музыка"
-  },
   "My calendars": {
     "My calendars": "Мои календари"
   },
   "My server": {
     "My server": "Мой сервер"
-  },
-  "Name": {
-    "Name": "Имя"
   },
   "Names, visibility, removal": {
     "Names, visibility, removal": "Имена, видимость, удаление"
@@ -1130,23 +1031,17 @@
   "Next day, week or month": {
     "Next day, week or month": "Следующий день, неделя или месяц"
   },
-  "Next event": {
-    "Next event": "Следующее событие"
-  },
   "Next event (next week in month view)": {
     "Next event (next week in month view)": "Следующее событие (следующая неделя в режиме месяца)"
   },
   "Next month": {
     "Next month": "Следующий месяц"
   },
-  "Next week": {
-    "Next week": "Следующая неделя"
-  },
   "Next year": {
     "Next year": "Следующий год"
   },
-  "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": {
-    "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": "В этом файле не найден клиент OAuth — ожидался файл client_secret_….json, скачанный из Google."
+  "No OAuth client found in that file — expected the %1 downloaded from %2.": {
+    "No OAuth client found in that file — expected the %1 downloaded from %2.": ""
   },
   "No accounts yet. Click \"Add account\" to connect one.": {
     "No accounts yet. Click \"Add account\" to connect one.": "Аккаунтов пока нет. Нажмите «Добавить аккаунт», чтобы подключить."
@@ -1244,9 +1139,6 @@
   "Open the existing meeting to handle this reply or cancellation.": {
     "Open the existing meeting to handle this reply or cancellation.": "Откройте существующую встречу, чтобы обработать этот ответ или отмену."
   },
-  "Order": {
-    "Order": "Порядок"
-  },
   "Organized by %1": {
     "Organized by %1": "Организатор: %1"
   },
@@ -1255,9 +1147,6 @@
   },
   "Outline the control that has keyboard focus.": {
     "Outline the control that has keyboard focus.": "Выделять контуром элемент управления, находящийся в фокусе клавиатуры."
-  },
-  "Outlook, Office 365 and Exchange Online calendars.": {
-    "Outlook, Office 365 and Exchange Online calendars.": "Календари Outlook, Office 365 и Exchange Online."
   },
   "Overdue": {
     "Overdue": "Просроченные"
@@ -1268,14 +1157,8 @@
   "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": {
     "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": "Переопределить глобальные настройки напоминаний для этого календаря. Неизменённые параметры следуют глобальным значениям."
   },
-  "Overwrite": {
-    "Overwrite": "Перезаписать"
-  },
   "Palette: %1": {
     "Palette: %1": "Палитра: %1"
-  },
-  "Part of the Dank Linux suite.": {
-    "Part of the Dank Linux suite.": "Часть пакета Dank Linux."
   },
   "Password": {
     "Password": "Пароль"
@@ -1304,8 +1187,8 @@
   "Paste the Application (client) ID from your app registration's Overview page.": {
     "Paste the Application (client) ID from your app registration's Overview page.": "Вставьте ID приложения (клиента) со страницы обзора регистрации приложения."
   },
-  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": {
-    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": "Вставьте URL-адрес внешнего календаря, чтобы подписаться на него. Этот календарь доступен только для чтения и обновляется в фоновом режиме. Поддерживаются ссылки webcal://."
+  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": {
+    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": ""
   },
   "Paste your credentials": {
     "Paste your credentials": "Вставьте учётные данные"
@@ -1325,17 +1208,14 @@
   "Pick time": {
     "Pick time": "Выбрать время"
   },
-  "Pictures": {
-    "Pictures": "Изображения"
-  },
   "Play a sound when a reminder fires.": {
     "Play a sound when a reminder fires.": "Воспроизводить звук при срабатывании напоминания."
   },
   "Playful": {
     "Playful": "Игривая"
   },
-  "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": {
-    "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": "Укажите папку с файлами .ics. Каждый подкаталог или файл .ics становится календарём — совместимо с vdirsyncer/khal. Папка создаётся, если не существует."
+  "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": {
+    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": ""
   },
   "Preset": {
     "Preset": "Пресет"
@@ -1352,17 +1232,11 @@
   "Previous day, week or month": {
     "Previous day, week or month": "Предыдущий день, неделя или месяц"
   },
-  "Previous event": {
-    "Previous event": "Предыдущее событие"
-  },
   "Previous event (previous week in month view)": {
     "Previous event (previous week in month view)": "Предыдущее событие (предыдущая неделя в режиме месяца)"
   },
   "Previous month": {
     "Previous month": "Предыдущий месяц"
-  },
-  "Previous week": {
-    "Previous week": "Предыдущая неделя"
   },
   "Previous year": {
     "Previous year": "Предыдущий год"
@@ -1372,9 +1246,6 @@
   },
   "Priority": {
     "Priority": "Приоритет"
-  },
-  "Quick Access": {
-    "Quick Access": "Быстрый доступ"
   },
   "Quit": {
     "Quit": "Выход"
@@ -1400,8 +1271,8 @@
   "Recurring event · conflicts checked through %1": {
     "Recurring event · conflicts checked through %1": "Повторяющееся событие · проверка конфликтов до %1"
   },
-  "Recurring tasks are managed in Google Tasks.": {
-    "Recurring tasks are managed in Google Tasks.": "Повторяющиеся задачи управляются в Google Задачах."
+  "Recurring tasks are managed in %1.": {
+    "Recurring tasks are managed in %1.": ""
   },
   "Reduce motion": {
     "Reduce motion": "Уменьшить движение"
@@ -1436,17 +1307,11 @@
   "Remove reminder": {
     "Remove reminder": "Удалить напоминание"
   },
-  "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "Удаляет этот аккаунт, его календари и события из Dank Calendar. У провайдера ничего не удаляется."
+  "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": ""
   },
-  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
-  },
-  "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "Удаляет этот календарь и его события из Dank Calendar. Если провайдер его ещё предоставляет, он вернётся при следующей синхронизации."
-  },
-  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
+  "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "Удалить…"
@@ -1490,8 +1355,14 @@
   "Restart required": {
     "Restart required": ""
   },
+  "Revision": {
+    "Revision": ""
+  },
   "Ripple effects": {
     "Ripple effects": "Эффект ряби"
+  },
+  "Runtime": {
+    "Runtime": ""
   },
   "Save": {
     "Save": "Сохранить"
@@ -1520,8 +1391,8 @@
   "Secondary": {
     "Secondary": "Вторичный"
   },
-  "Select File": {
-    "Select File": "Выбрать файл"
+  "Select %1": {
+    "Select %1": ""
   },
   "Select a range of events": {
     "Select a range of events": "Выбрать диапазон событий"
@@ -1531,9 +1402,6 @@
   },
   "Select all events on the selected day": {
     "Select all events on the selected day": "Выбрать все события за выбранный день"
-  },
-  "Select client_secret.json": {
-    "Select client_secret.json": "Выберите client_secret.json"
   },
   "Select days for a new event (month view)": {
     "Select days for a new event (month view)": "Выберите дни для нового события (режим месяца)"
@@ -1553,8 +1421,8 @@
   "Server URL": {
     "Server URL": "URL сервера"
   },
-  "Set by QT_SCALE_FACTOR.": {
-    "Set by QT_SCALE_FACTOR.": ""
+  "Set by %1.": {
+    "Set by %1.": ""
   },
   "Settings": {
     "Settings": "Настройки"
@@ -1565,11 +1433,8 @@
   "Show": {
     "Show": "Показать"
   },
-  "Show Dank Calendar in the system tray.": {
-    "Show Dank Calendar in the system tray.": "Показывать Dank Calendar в системном трее."
-  },
-  "Show Dux Calendar in the system tray.": {
-    "Show Dux Calendar in the system tray.": ""
+  "Show %1 in the system tray.": {
+    "Show %1 in the system tray.": ""
   },
   "Show all events in month view": {
     "Show all events in month view": "Показывать все события в режиме месяца"
@@ -1604,32 +1469,23 @@
   "Sign in with %1": {
     "Sign in with %1": "Войти через %1"
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "Войдите через Google в браузере, и всё готово — настройка не требуется. Dank Calendar синхронизирует ваши календари, события и задачи."
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": ""
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": ""
   },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "Войдите через Microsoft в браузере, и всё готово — настройка не требуется. Dank Calendar синхронизирует ваши календари Outlook, события и задачи."
-  },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
+  "Sign in with your %1 account.": {
+    "Sign in with your %1 account.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Войдите с Apple ID и паролем приложения. Обычные пароли Apple ID не подойдут."
-  },
-  "Sign in with your Google account.": {
-    "Sign in with your Google account.": "Войдите с аккаунтом Google."
   },
   "Sign-in expired — click to reconnect": {
     "Sign-in expired — click to reconnect": "Срок сессии истёк — нажмите для повторного подключения"
   },
   "Sign-in expired — reconnect to keep syncing": {
     "Sign-in expired — reconnect to keep syncing": "Сессия истекла — переподключитесь для синхронизации"
-  },
-  "Size": {
-    "Size": "Размер"
   },
   "Skip certificate verification": {
     "Skip certificate verification": "Пропустить проверку сертификата"
@@ -1642,9 +1498,6 @@
   },
   "Some calendars couldn't be synced; their events may be missing or out of date.": {
     "Some calendars couldn't be synced; their events may be missing or out of date.": "Не удалось синхронизировать некоторые календари; их события могут отсутствовать или быть устаревшими."
-  },
-  "Sort By": {
-    "Sort By": "Сортировка"
   },
   "Spring": {
     "Spring": "Упругая"
@@ -1673,23 +1526,17 @@
   "Step %1: %2": {
     "Step %1: %2": "Шаг %1: %2"
   },
-  "Stock palette": {
-    "Stock palette": "Стандартная палитра"
-  },
   "Subscribe": {
     "Subscribe": "Подписаться"
   },
-  "Subscribe to an external calendar by URL (webcal/https).": {
-    "Subscribe to an external calendar by URL (webcal/https).": "Подписаться на внешний календарь по URL-адресу (webcal/https)."
+  "Subscribe to an external calendar by URL (%1).": {
+    "Subscribe to an external calendar by URL (%1).": ""
   },
   "Subscribing…": {
     "Subscribing…": "Подписка…"
   },
-  "Support Dank Linux": {
-    "Support Dank Linux": "Поддержать Dank Linux"
-  },
-  "Support Dux Labs": {
-    "Support Dux Labs": ""
+  "Support %1": {
+    "Support %1": ""
   },
   "Sync interval": {
     "Sync interval": "Интервал синхронизации"
@@ -1700,11 +1547,8 @@
   "Sync now": {
     "Sync now": "Синхронизировать"
   },
-  "Synced as \"%1\". The name only changes in Dank Calendar.": {
-    "Synced as \"%1\". The name only changes in Dank Calendar.": "Синхронизировано как «%1». Имя изменяется только в Dank Calendar."
-  },
-  "Synced as \"%1\". The name only changes in Dux Calendar.": {
-    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  "Synced as \"%2\". The name only changes in %1.": {
+    "Synced as \"%2\". The name only changes in %1.": ""
   },
   "System": {
     "System": ""
@@ -1717,9 +1561,6 @@
   },
   "System preference unavailable — using dark.": {
     "System preference unavailable — using dark.": "Системные настройки недоступны — используется тёмная тема."
-  },
-  "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": {
-    "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": "Tab/Shift+Tab: Навигация • ←→↑↓: По сетке • Enter/Space: Выбор"
   },
   "Task": {
     "Task": "Задача"
@@ -1802,9 +1643,6 @@
   "Try again": {
     "Try again": "Попробовать снова"
   },
-  "Type": {
-    "Type": "Тип"
-  },
   "Type at least 2 characters to search events.": {
     "Type at least 2 characters to search events.": "Введите не менее 2 символов для поиска событий."
   },
@@ -1826,11 +1664,8 @@
   "Use synced name": {
     "Use synced name": "Использовать имя из синхронизации"
   },
-  "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": {
-    "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": "Использовать календари, которыми уже управляет Evolution Data Server на этом ПК (Evolution, сетевые учётные записи GNOME и др.). Вход не требуется — Evolution сам управляет данными и синхронизацией."
-  },
-  "Use this folder": {
-    "Use this folder": "Выбрать эту папку"
+  "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": {
+    "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": ""
   },
   "Use your own OAuth client": {
     "Use your own OAuth client": "Использовать собственный клиент OAuth"
@@ -1841,14 +1676,11 @@
   "Username (optional)": {
     "Username (optional)": "Имя пользователя (необязательно)"
   },
-  "Using DankMaterialShell dynamic colors.": {
-    "Using DankMaterialShell dynamic colors.": "Используются динамические цвета DankMaterialShell."
+  "Using %1 colors.": {
+    "Using %1 colors.": ""
   },
-  "Using Dux Shell dynamic colors.": {
-    "Using Dux Shell dynamic colors.": ""
-  },
-  "Using Matugen colors.": {
-    "Using Matugen colors.": "Используются цвета Matugen."
+  "Using %1 dynamic colors.": {
+    "Using %1 dynamic colors.": ""
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "Проверьте, работают ли уведомления."
@@ -1858,9 +1690,6 @@
   },
   "Version and links": {
     "Version and links": "Версия и ссылки"
-  },
-  "Videos": {
-    "Videos": "Видео"
   },
   "View": {
     "View": "Вид"
@@ -1874,8 +1703,8 @@
   "Waiting for browser…": {
     "Waiting for browser…": "Ожидание браузера…"
   },
-  "Waiting for the dankcalendar daemon...": {
-    "Waiting for the dankcalendar daemon...": "Ожидание демона dankcalendar..."
+  "Waiting for the %1 daemon...": {
+    "Waiting for the %1 daemon...": ""
   },
   "Week": {
     "Week": "Неделя"
@@ -1910,8 +1739,8 @@
   "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": {
     "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": "Календари будут синхронизироваться в фоне. Управлять аккаунтом можно в разделе Настройки → Аккаунты."
   },
-  "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
-    "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "ID клиента, секрет и токен обновления хранятся в системной связке ключей (libsecret/kwallet), если доступна, или в зашифрованном локальном файле."
+  "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": {
+    "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": ""
   },
   "Your compositor does not support background blur.": {
     "Your compositor does not support background blur.": ""
@@ -1937,8 +1766,8 @@
   "e.g. 2022-01-01": {
     "e.g. 2022-01-01": "например, 2022-01-01"
   },
-  "iCal subscription": {
-    "iCal subscription": "Подписка iCal"
+  "iCalendar subscription": {
+    "iCalendar subscription": ""
   },
   "light": {
     "light": "светлая"

@@ -5,11 +5,26 @@
   "%1 PM": {
     "%1 PM": "%1 popołudniu"
   },
+  "%1 access wasn't granted. Reconnect this account to sync tasks.": {
+    "%1 access wasn't granted. Reconnect this account to sync tasks.": ""
+  },
   "%1 appointments fall outside core hours": {
     "%1 appointments fall outside core hours": "%1 spotkań wypada poza godzinami pracy"
   },
+  "%1 calendars via app-specific password.": {
+    "%1 calendars via app-specific password.": ""
+  },
   "%1 events selected": {
     "%1 events selected": ""
+  },
+  "%1 not detected — using the %2 preset.": {
+    "%1 not detected — using the %2 preset.": ""
+  },
+  "%1 not detected, using %2.": {
+    "%1 not detected, using %2.": ""
+  },
+  "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
+    "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": ""
   },
   "%1 overlapping events": {
     "%1 overlapping events": ""
@@ -17,11 +32,20 @@
   "%1 selected": {
     "%1 selected": ""
   },
+  "%1 theme missing or invalid — using the %2 preset.": {
+    "%1 theme missing or invalid — using the %2 preset.": ""
+  },
   "%1 times": {
     "%1 times": "%1 razy"
   },
+  "%1 will close and reopen with the new zoom.": {
+    "%1 will close and reopen with the new zoom.": ""
+  },
   "%1 · All day": {
     "%1 · All day": "%1 · Cały dzień"
+  },
+  "%1, %2 and %3 calendars.": {
+    "%1, %2 and %3 calendars.": ""
   },
   "%1d before": {
     "%1d before": "%1dzień przed"
@@ -43,6 +67,12 @@
   },
   "%1w before": {
     "%1w before": "%1tydz. przed"
+  },
+  "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": {
+    "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": ""
+  },
+  "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
+    "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": ""
   },
   "(untitled)": {
     "(untitled)": "(bez nazwy)"
@@ -137,17 +167,14 @@
   "5 minutes before": {
     "5 minutes before": "5 minut przed"
   },
-  "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": {
-    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": ""
+  "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": {
+    "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": ""
   },
   "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": {
     "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">Licencja MIT</a>"
   },
-  "A file with this name already exists. Do you want to overwrite it?": {
-    "A file with this name already exists. Do you want to overwrite it?": "Plik o podanej nazwie już istnieje. Czy chcesz go nadpisać?"
-  },
-  "A folder of .ics files on this machine.": {
-    "A folder of .ics files on this machine.": "Folder z plikami .ics na tym urządzeniu."
+  "A folder of %1 files on this machine.": {
+    "A folder of %1 files on this machine.": ""
   },
   "API": {
     "API": "API"
@@ -176,8 +203,8 @@
   "Add": {
     "Add": "Dodaj"
   },
-  "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": {
-    "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": "Dodaj konto CalDAV, lokalne, Google lub Microsoft z listą zadań, aby tworzyć zadania."
+  "Add a %1, local, %2, or %3 account with a task list to create tasks.": {
+    "Add a %1, local, %2, or %3 account with a task list to create tasks.": ""
   },
   "Add a calendar": {
     "Add a calendar": "Dodaj kalendarz"
@@ -245,9 +272,6 @@
   "Also in these calendars": {
     "Also in these calendars": ""
   },
-  "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
-    "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: Wstecz • F1/I: Informacje o pliku • F10: Pomoc • Esc: Zamknij"
-  },
   "Always use the dark theme.": {
     "Always use the dark theme.": "Zawsze używaj trybu ciemnego."
   },
@@ -266,17 +290,11 @@
   "Apple ID": {
     "Apple ID": "Apple ID"
   },
-  "Apple iCloud calendars via app-specific password.": {
-    "Apple iCloud calendars via app-specific password.": "Kalendarze Apple iCloud za pomocą hasła aplikacji."
-  },
   "Apply and restart": {
     "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "Zatwierdź dostęp w przeglądarce. Okno powróci automatycznie, gdy %1 odeśle nam kod autoryzacji."
-  },
-  "Ascending": {
-    "Ascending": "rosnąco"
   },
   "At start": {
     "At start": "Przy starcie"
@@ -313,9 +331,6 @@
   },
   "Balanced": {
     "Balanced": ""
-  },
-  "Begin setup": {
-    "Begin setup": "Rozpocznij konfigurację"
   },
   "Blurs what shows through the window. Needs an opacity below 100%.": {
     "Blurs what shows through the window. Needs an opacity below 100%.": ""
@@ -398,9 +413,6 @@
   "Color source": {
     "Color source": "Źródło kolorów"
   },
-  "Colors are shared with DankMaterialShell when available.": {
-    "Colors are shared with DankMaterialShell when available.": "Kolory są dzielone z DankMaterialShell, gdy jest dostępny."
-  },
   "Coming soon": {
     "Coming soon": "Wkrótce"
   },
@@ -416,11 +428,8 @@
   "Confirm delete": {
     "Confirm delete": "Potwierdź usunięcie"
   },
-  "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
-  },
-  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
+  "Conflicts use events currently synced to %1. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to %1. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "Połącz"
@@ -428,14 +437,11 @@
   "Connect %1": {
     "Connect %1": "Połącz %1"
   },
-  "Connect Google Account": {
-    "Connect Google Account": ""
+  "Connect %1 Account": {
+    "Connect %1 Account": ""
   },
-  "Connect Microsoft Account": {
-    "Connect Microsoft Account": ""
-  },
-  "Connect any CalDAV-compatible server.": {
-    "Connect any CalDAV-compatible server.": "Połącz się z dowolnym serwerem zgodnym z CalDAV."
+  "Connect any %1-compatible server.": {
+    "Connect any %1-compatible server.": ""
   },
   "Connected": {
     "Connected": "Połączono"
@@ -472,9 +478,6 @@
   },
   "Copy link": {
     "Copy link": "Kopiuj link"
-  },
-  "Copy path": {
-    "Copy path": "Kopiuj ścieżkę"
   },
   "Copy selected events": {
     "Copy selected events": ""
@@ -530,26 +533,11 @@
   "Cut selected events": {
     "Cut selected events": ""
   },
-  "DMS dynamic": {
-    "DMS dynamic": "Dynamiczne kolory DMS"
-  },
-  "DMS dynamic colors detected when available.": {
-    "DMS dynamic colors detected when available.": "Dynamiczne kolory DMS są wykrywane, jeśli są dostępne."
-  },
   "Daemon offline": {
     "Daemon offline": "Usługa w tle offline"
   },
   "Daily": {
     "Daily": "Codziennie"
-  },
-  "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "Dank Calendar to kalendarz dla nowoczesnych pulpitów linuksowych <a href=\"https://m3.material.io/\" o wyglądzie inspirowanym Material 3</a>, wyposażony w podatne na modyfikacje CLI oraz socket API do tworzenia integracji.<br /><br />Został zbudowany przy użyciu <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a> – frameworka Qt6 do tworzenia powłok graficznych – oraz <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, statycznie typowanego i kompilowanego języka programowania."
-  },
-  "Dank Linux Discord": {
-    "Dank Linux Discord": "Discord Dank Linux"
-  },
-  "DankMaterialShell not detected — using the %1 preset.": {
-    "DankMaterialShell not detected — using the %1 preset.": "Nie wykryto DankMaterialShell — używam ustawienia wstępnego %1."
   },
   "Dark": {
     "Dark": "Ciemny"
@@ -635,14 +623,8 @@
   "Delete…": {
     "Delete…": "Usuń..."
   },
-  "Descending": {
-    "Descending": "Malejąco"
-  },
   "Description": {
     "Description": "Opis"
-  },
-  "Desktop": {
-    "Desktop": "Pulpit"
   },
   "Desktop notifications for upcoming events.": {
     "Desktop notifications for upcoming events.": "Powiadomienia na pulpicie o nadchodzących wydarzeniach."
@@ -674,17 +656,11 @@
   "Docs": {
     "Docs": "Dokumenty"
   },
-  "Documents": {
-    "Documents": "Dokumenty"
-  },
   "Does not repeat": {
     "Does not repeat": "NIe powtarza się"
   },
   "Done": {
     "Done": "Gotowe"
-  },
-  "Downloads": {
-    "Downloads": "Pobrane"
   },
   "Drag to pan · click to fit": {
     "Drag to pan · click to fit": "Przeciągnij, aby przesunąć · kliknij, aby dopasować"
@@ -706,18 +682,6 @@
   },
   "Duration": {
     "Duration": ""
-  },
-  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
-  },
-  "Dux Calendar will close and reopen with the new zoom.": {
-    "Dux Calendar will close and reopen with the new zoom.": ""
-  },
-  "Dux Shell not detected — using the %1 preset.": {
-    "Dux Shell not detected — using the %1 preset.": ""
-  },
-  "Dux Shell not detected, using %1.": {
-    "Dux Shell not detected, using %1.": ""
   },
   "Edit": {
     "Edit": ""
@@ -752,11 +716,8 @@
   "Enter client ID": {
     "Enter client ID": "Wprowadź identyfikator klienta"
   },
-  "Enter filename...": {
-    "Enter filename...": "Wprowadź nazwę pliku..."
-  },
-  "Enter your CalDAV server details. The connection is verified before the account is saved.": {
-    "Enter your CalDAV server details. The connection is verified before the account is saved.": "Wprowadź dane swojego serwera CalDAV. Połączenie zostanie zweryfikowane przed zapisaniem konta."
+  "Enter your %1 server details. The connection is verified before the account is saved.": {
+    "Enter your %1 server details. The connection is verified before the account is saved.": ""
   },
   "Enter your client ID": {
     "Enter your client ID": "Wprowadź swój identyfikator klienta"
@@ -776,29 +737,14 @@
   "Everything in this file is already on your calendar.": {
     "Everything in this file is already on your calendar.": ""
   },
-  "Evolution": {
-    "Evolution": "Evolution"
-  },
   "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": {
     "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": "Dopasuj wysokość komórek dnia do wszystkich zdarzeń zamiast pokazywania \"+N więcej\"."
-  },
-  "F1/I: Toggle • F10: Help": {
-    "F1/I: Toggle • F10: Help": "F1/I: Przełączanie • F10: Pomoc"
   },
   "Family": {
     "Family": ""
   },
   "Feed URL": {
     "Feed URL": "Adres URL kanału"
-  },
-  "File Already Exists": {
-    "File Already Exists": "Plik istnieje"
-  },
-  "File Information": {
-    "File Information": "Informacje o pliku"
-  },
-  "Files - %1": {
-    "Files - %1": "Pliki - %1"
   },
   "First calendar": {
     "First calendar": ""
@@ -812,14 +758,11 @@
   "Focus ring": {
     "Focus ring": ""
   },
-  "Follow DankMaterialShell colors, falling back to a preset.": {
-    "Follow DankMaterialShell colors, falling back to a preset.": "Dziedzicz kolory DankMaterialShell, używając ustawienia wstępnego jako wartości domyślnej."
+  "Follow %1 colors, falling back to a preset.": {
+    "Follow %1 colors, falling back to a preset.": ""
   },
-  "Follow Dux Shell colors, falling back to a preset.": {
-    "Follow Dux Shell colors, falling back to a preset.": ""
-  },
-  "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+  "Follow colors generated by %1.": {
+    "Follow colors generated by %1.": ""
   },
   "Follow language": {
     "Follow language": ""
@@ -839,29 +782,17 @@
   "Generate app-specific password": {
     "Generate app-specific password": "Wygeneruj hasło aplikacji"
   },
-  "GitHub": {
-    "GitHub": "GitHub"
-  },
   "Go to date": {
     "Go to date": "Idź do dnia"
   },
   "Go to today": {
     "Go to today": "Idź do dnia"
   },
-  "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
-    "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": "Usługa Google Tasks jest niedostępna. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Włącz jej API</a> lub połącz ponownie to konto, a następnie odśwież, aby zsynchronizować zadania."
-  },
-  "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": {
-    "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": "Google wymaga utworzenia własnego klienta OAuth, aby móc odczytywać dane kalendarza w Twoim imieniu. Jest to jednorazowa konfiguracja, która zajmuje około trzech minut. "
-  },
   "Hide": {
     "Hide": "Ukryj"
   },
   "High": {
     "High": "Wysoki"
-  },
-  "Home": {
-    "Home": "Strona główna"
   },
   "Hour range shown in day and week views.": {
     "Hour range shown in day and week views.": "Zakres godzin w widoku dnia i tygodnia."
@@ -875,17 +806,17 @@
   "Import": {
     "Import": ""
   },
+  "Import %1": {
+    "Import %1": ""
+  },
   "Import %1 events": {
     "Import %1 events": ""
-  },
-  "Import client_secret.json": {
-    "Import client_secret.json": "Importuj plik client_secret.json"
   },
   "Import events": {
     "Import events": ""
   },
-  "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": {
-    "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": "Importuj plik client_secret_….json pobrany podczas tworzenia klienta lub wklej ręcznie identyfikator klienta (Client ID) i tajny klucz (Secret)."
+  "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": {
+    "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": ""
   },
   "Importing...": {
     "Importing...": ""
@@ -914,9 +845,6 @@
   "Keyring locked — unlock it to sync": {
     "Keyring locked — unlock it to sync": ""
   },
-  "Ko-fi": {
-    "Ko-fi": "Ko-fi"
-  },
   "Language": {
     "Language": ""
   },
@@ -926,11 +854,8 @@
   "Language of the interface.": {
     "Language of the interface.": ""
   },
-  "Launch Dank Calendar in the background when you log in.": {
-    "Launch Dank Calendar in the background when you log in.": "Uruchamiaj Dank Calendar w tle po zalogowaniu"
-  },
-  "Launch Dux Calendar in the background when you log in.": {
-    "Launch Dux Calendar in the background when you log in.": ""
+  "Launch %1 in the background when you log in.": {
+    "Launch %1 in the background when you log in.": ""
   },
   "Layer opacity": {
     "Layer opacity": ""
@@ -940,6 +865,9 @@
   },
   "Lets the desktop show through the window. Text and controls stay solid.": {
     "Lets the desktop show through the window. Text and controls stay solid.": ""
+  },
+  "Library": {
+    "Library": ""
   },
   "Light": {
     "Light": "Jasny"
@@ -980,12 +908,6 @@
   "Marked as not done": {
     "Marked as not done": "Oznaczono jako nieukończone"
   },
-  "Matugen": {
-    "Matugen": ""
-  },
-  "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
-  },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "Maksymalna liczba wierszy tytułu zdarzenia w widoku miesiąca."
   },
@@ -1013,20 +935,8 @@
   "Merge duplicate events": {
     "Merge duplicate events": ""
   },
-  "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
-    "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "Nie udzielono dostępu do Microsoft To Do. Połącz ponownie to konto, aby zsynchronizować zadania."
-  },
-  "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
-    "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": "Microsoft często zwraca błąd „server_error” przez kilka pierwszych minut po utworzeniu lub zmianie rejestracji aplikacji. Odczekaj minutę lub dwie i spróbuj ponownie."
-  },
-  "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": {
-    "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": "Microsoft wymaga zarejestrowania własnej aplikacji do odczytu danych kalendarza w Twoim imieniu. To jednorazowa konfiguracja, która zajmuje około dwóch minut — nie wymaga podawania Client Secret."
-  },
   "Minimize": {
     "Minimize": "Minimalizuj"
-  },
-  "Modified": {
-    "Modified": "Zmieniony"
   },
   "Monospace family": {
     "Monospace family": ""
@@ -1064,9 +974,6 @@
   "Move through sidebar items": {
     "Move through sidebar items": "Przełączaj się między elementami paska bocznego"
   },
-  "Move to Trash": {
-    "Move to Trash": "Przenieś do kosza"
-  },
   "Move to selected day": {
     "Move to selected day": ""
   },
@@ -1082,17 +989,11 @@
   "Moving a recurring event moves its entire series.": {
     "Moving a recurring event moves its entire series.": ""
   },
-  "Music": {
-    "Music": "Muzyka"
-  },
   "My calendars": {
     "My calendars": "Moje kalendarze"
   },
   "My server": {
     "My server": "Mój server"
-  },
-  "Name": {
-    "Name": "Nazwa"
   },
   "Names, visibility, removal": {
     "Names, visibility, removal": ""
@@ -1130,23 +1031,17 @@
   "Next day, week or month": {
     "Next day, week or month": "Następny dzień, tydzień lub miesiąc"
   },
-  "Next event": {
-    "Next event": "Następne wydarzenie"
-  },
   "Next event (next week in month view)": {
     "Next event (next week in month view)": "Następne zdarzenie (następny tydzień w widoku miesiąca)"
   },
   "Next month": {
     "Next month": ""
   },
-  "Next week": {
-    "Next week": "Następny tydzień"
-  },
   "Next year": {
     "Next year": "Następny rok"
   },
-  "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": {
-    "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": "W tym pliku nie znaleziono klienta OAuth — oczekiwano pliku client_secret_….json pobranego z Google."
+  "No OAuth client found in that file — expected the %1 downloaded from %2.": {
+    "No OAuth client found in that file — expected the %1 downloaded from %2.": ""
   },
   "No accounts yet. Click \"Add account\" to connect one.": {
     "No accounts yet. Click \"Add account\" to connect one.": "Nie masz jeszcze żadnych kont. Kliknij „Dodaj konto”, aby połączyć pierwsze z nich."
@@ -1244,9 +1139,6 @@
   "Open the existing meeting to handle this reply or cancellation.": {
     "Open the existing meeting to handle this reply or cancellation.": ""
   },
-  "Order": {
-    "Order": "Porządek"
-  },
   "Organized by %1": {
     "Organized by %1": ""
   },
@@ -1255,9 +1147,6 @@
   },
   "Outline the control that has keyboard focus.": {
     "Outline the control that has keyboard focus.": ""
-  },
-  "Outlook, Office 365 and Exchange Online calendars.": {
-    "Outlook, Office 365 and Exchange Online calendars.": "Kalendarze Outlook, Office 365 i Exchange Online."
   },
   "Overdue": {
     "Overdue": "Zaległe"
@@ -1268,14 +1157,8 @@
   "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": {
     "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": "Zastąp globalne ustawienia przypomnień dla tego kalendarza. Niezmienione opcje będą korzystać z globalnych ustawień domyślnych."
   },
-  "Overwrite": {
-    "Overwrite": "Nadpisz"
-  },
   "Palette: %1": {
     "Palette: %1": "Paleta: %1"
-  },
-  "Part of the Dank Linux suite.": {
-    "Part of the Dank Linux suite.": "Część pakietu Dank Linux."
   },
   "Password": {
     "Password": "Hasło"
@@ -1304,8 +1187,8 @@
   "Paste the Application (client) ID from your app registration's Overview page.": {
     "Paste the Application (client) ID from your app registration's Overview page.": "Wklej identyfikator aplikacji (klienta) ze strony Przegląd Twojej rejestracji aplikacji."
   },
-  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": {
-    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": "Wklej adres URL zewnętrznego kanału kalendarza, aby go zasubskrybować. Kalendarz będzie dostępny tylko do odczytu i odświeżany w tle. Obsługiwane są linki typu webcal://."
+  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": {
+    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": ""
   },
   "Paste your credentials": {
     "Paste your credentials": "Wklej swoje dane uwierzytelniające"
@@ -1325,17 +1208,14 @@
   "Pick time": {
     "Pick time": ""
   },
-  "Pictures": {
-    "Pictures": "Obrazy"
-  },
   "Play a sound when a reminder fires.": {
     "Play a sound when a reminder fires.": "Odtwórz dźwięk gdy pojawi się przypomnienie."
   },
   "Playful": {
     "Playful": ""
   },
-  "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": {
-    "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": "Wskaż katalog z plikami .ics. Każdy podkatalog lub plik .ics stanie się kalendarzem — układ zgodny z narzędziami vdirsyncer/khal. Katalog zostanie utworzony, jeśli nie istnieje."
+  "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": {
+    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": ""
   },
   "Preset": {
     "Preset": "Profil"
@@ -1352,17 +1232,11 @@
   "Previous day, week or month": {
     "Previous day, week or month": "Poprzedni dzień, tydzień lub miesiąc"
   },
-  "Previous event": {
-    "Previous event": "Poprzednie wydarzenia"
-  },
   "Previous event (previous week in month view)": {
     "Previous event (previous week in month view)": "Poprzednie zdarzenie (poprzedni tydzień w widoku miesiąca)"
   },
   "Previous month": {
     "Previous month": ""
-  },
-  "Previous week": {
-    "Previous week": "Poprzedni weekend"
   },
   "Previous year": {
     "Previous year": "Poprzedni rok"
@@ -1372,9 +1246,6 @@
   },
   "Priority": {
     "Priority": "Priorytet"
-  },
-  "Quick Access": {
-    "Quick Access": "Szybki dostęp"
   },
   "Quit": {
     "Quit": "Zamknij"
@@ -1400,8 +1271,8 @@
   "Recurring event · conflicts checked through %1": {
     "Recurring event · conflicts checked through %1": ""
   },
-  "Recurring tasks are managed in Google Tasks.": {
-    "Recurring tasks are managed in Google Tasks.": "Zadaniami cyklicznymi zarządza się w Google Tasks."
+  "Recurring tasks are managed in %1.": {
+    "Recurring tasks are managed in %1.": ""
   },
   "Reduce motion": {
     "Reduce motion": ""
@@ -1436,17 +1307,11 @@
   "Remove reminder": {
     "Remove reminder": ""
   },
-  "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "Usuwa to konto oraz jego kalendarze i wydarzenia z aplikacji Dank Calendar. Żadne dane nie zostaną usunięte po stronie dostawcy."
+  "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": ""
   },
-  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
-  },
-  "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "Usuwa ten kalendarz i jego wydarzenia z aplikacji Dank Calendar. Jeśli dostawca nadal go udostępnia, kalendarz powróci przy następnej synchronizacji."
-  },
-  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
+  "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "Usuń..."
@@ -1490,8 +1355,14 @@
   "Restart required": {
     "Restart required": ""
   },
+  "Revision": {
+    "Revision": ""
+  },
   "Ripple effects": {
     "Ripple effects": ""
+  },
+  "Runtime": {
+    "Runtime": ""
   },
   "Save": {
     "Save": "Zapisz"
@@ -1520,8 +1391,8 @@
   "Secondary": {
     "Secondary": ""
   },
-  "Select File": {
-    "Select File": "Wybierz plik"
+  "Select %1": {
+    "Select %1": ""
   },
   "Select a range of events": {
     "Select a range of events": ""
@@ -1531,9 +1402,6 @@
   },
   "Select all events on the selected day": {
     "Select all events on the selected day": ""
-  },
-  "Select client_secret.json": {
-    "Select client_secret.json": "Wybierz plik client_secret.json"
   },
   "Select days for a new event (month view)": {
     "Select days for a new event (month view)": "Wybierz dni dla nowego zdarzenia (widok miesiąca)"
@@ -1553,8 +1421,8 @@
   "Server URL": {
     "Server URL": "URL serwera"
   },
-  "Set by QT_SCALE_FACTOR.": {
-    "Set by QT_SCALE_FACTOR.": ""
+  "Set by %1.": {
+    "Set by %1.": ""
   },
   "Settings": {
     "Settings": "Ustawienia"
@@ -1565,11 +1433,8 @@
   "Show": {
     "Show": "Pokaż"
   },
-  "Show Dank Calendar in the system tray.": {
-    "Show Dank Calendar in the system tray.": "Pokaż Dank Calendar w zasobniku systemowym."
-  },
-  "Show Dux Calendar in the system tray.": {
-    "Show Dux Calendar in the system tray.": ""
+  "Show %1 in the system tray.": {
+    "Show %1 in the system tray.": ""
   },
   "Show all events in month view": {
     "Show all events in month view": "Pokaż wszystkie zdarzenia w widoku miesiąca"
@@ -1604,32 +1469,23 @@
   "Sign in with %1": {
     "Sign in with %1": "Zaloguj się przez %1"
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": ""
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": ""
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": ""
   },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": ""
-  },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
+  "Sign in with your %1 account.": {
+    "Sign in with your %1 account.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Zaloguj się za pomocą swojego Apple ID oraz hasła aplikacji. Standardowe hasło do konta Apple ID nie zadziała."
-  },
-  "Sign in with your Google account.": {
-    "Sign in with your Google account.": "Zaloguj się za pomocą swojego konta Google."
   },
   "Sign-in expired — click to reconnect": {
     "Sign-in expired — click to reconnect": "Sesja wygasła — kliknij, aby połączyć ponownie"
   },
   "Sign-in expired — reconnect to keep syncing": {
     "Sign-in expired — reconnect to keep syncing": "Sesja wygasła — połącz ponownie, aby kontynuować synchronizację."
-  },
-  "Size": {
-    "Size": "Rozmiar"
   },
   "Skip certificate verification": {
     "Skip certificate verification": "Pomiń weryfikację certyfikatu"
@@ -1642,9 +1498,6 @@
   },
   "Some calendars couldn't be synced; their events may be missing or out of date.": {
     "Some calendars couldn't be synced; their events may be missing or out of date.": ""
-  },
-  "Sort By": {
-    "Sort By": "Sortuj według"
   },
   "Spring": {
     "Spring": ""
@@ -1673,23 +1526,17 @@
   "Step %1: %2": {
     "Step %1: %2": "Krok %1: %2"
   },
-  "Stock palette": {
-    "Stock palette": "Domyślna paleta"
-  },
   "Subscribe": {
     "Subscribe": "Subskrybuj"
   },
-  "Subscribe to an external calendar by URL (webcal/https).": {
-    "Subscribe to an external calendar by URL (webcal/https).": "Zasubskrybuj zewnętrzny kalendarz za pomocą adresu URL (webcal/https)."
+  "Subscribe to an external calendar by URL (%1).": {
+    "Subscribe to an external calendar by URL (%1).": ""
   },
   "Subscribing…": {
     "Subscribing…": "Subskrybowanie…"
   },
-  "Support Dank Linux": {
-    "Support Dank Linux": ""
-  },
-  "Support Dux Labs": {
-    "Support Dux Labs": ""
+  "Support %1": {
+    "Support %1": ""
   },
   "Sync interval": {
     "Sync interval": "Częstotliwość synchronizacji"
@@ -1700,11 +1547,8 @@
   "Sync now": {
     "Sync now": "Synchronizuj teraz"
   },
-  "Synced as \"%1\". The name only changes in Dank Calendar.": {
-    "Synced as \"%1\". The name only changes in Dank Calendar.": "Zsynchronizowano jako „%1”. Zmiana nazwy dotyczy tylko aplikacji Dank Calendar."
-  },
-  "Synced as \"%1\". The name only changes in Dux Calendar.": {
-    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  "Synced as \"%2\". The name only changes in %1.": {
+    "Synced as \"%2\". The name only changes in %1.": ""
   },
   "System": {
     "System": ""
@@ -1717,9 +1561,6 @@
   },
   "System preference unavailable — using dark.": {
     "System preference unavailable — using dark.": "Preferencje systemowe niedostępne — zastosowano ciemny motyw."
-  },
-  "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": {
-    "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": "Tab/Shift+Tab: Nawigacja • ←→↑↓: Nawigacja po siatce • Enter/Spacja: Wybierz"
   },
   "Task": {
     "Task": "Zadanie"
@@ -1802,9 +1643,6 @@
   "Try again": {
     "Try again": "Spróbuj ponownie"
   },
-  "Type": {
-    "Type": "Typ"
-  },
   "Type at least 2 characters to search events.": {
     "Type at least 2 characters to search events.": "Wpisz co najmniej 2 znaki, aby wyszukać wydarzenia. "
   },
@@ -1826,11 +1664,8 @@
   "Use synced name": {
     "Use synced name": "Użyj zsynchronizowanej nazwy"
   },
-  "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": {
-    "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": "Używaj kalendarzy już zarządzanych na tym komputerze przez Evolution Data Server (Evolution, GNOME Online Accounts i inne). Logowanie nie jest wymagane — Evolution zajmuje się uwierzytelnianiem i synchronizacją."
-  },
-  "Use this folder": {
-    "Use this folder": "Użyj tego folderu"
+  "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": {
+    "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": ""
   },
   "Use your own OAuth client": {
     "Use your own OAuth client": ""
@@ -1841,14 +1676,11 @@
   "Username (optional)": {
     "Username (optional)": "Nazwa użytkownika (opcjonalne)"
   },
-  "Using DankMaterialShell dynamic colors.": {
-    "Using DankMaterialShell dynamic colors.": "Używam dynamicznych kolorów DankMaterialShell."
+  "Using %1 colors.": {
+    "Using %1 colors.": ""
   },
-  "Using Dux Shell dynamic colors.": {
-    "Using Dux Shell dynamic colors.": ""
-  },
-  "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+  "Using %1 dynamic colors.": {
+    "Using %1 dynamic colors.": ""
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "Sprawdź, czy powiadomienia na pulpicie działają."
@@ -1858,9 +1690,6 @@
   },
   "Version and links": {
     "Version and links": ""
-  },
-  "Videos": {
-    "Videos": "Filmy"
   },
   "View": {
     "View": "Widok"
@@ -1874,8 +1703,8 @@
   "Waiting for browser…": {
     "Waiting for browser…": "Oczekiwanie na przeglądarkę…"
   },
-  "Waiting for the dankcalendar daemon...": {
-    "Waiting for the dankcalendar daemon...": "Oczekiwanie na usługę dankcalendar…"
+  "Waiting for the %1 daemon...": {
+    "Waiting for the %1 daemon...": ""
   },
   "Week": {
     "Week": "Tydzień"
@@ -1910,8 +1739,8 @@
   "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": {
     "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": "Kalendarze będą synchronizowane w tle. Możesz zarządzać tym kontem, wybierając Ustawienia → Konta."
   },
-  "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
-    "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "Identyfikator klienta, klucz tajny i token odświeżania są przechowywane w systemowym pęku kluczy (libsecret/kwallet), jeśli jest on dostępny, lub w zaszyfrowanym pliku lokalnym."
+  "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": {
+    "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": ""
   },
   "Your compositor does not support background blur.": {
     "Your compositor does not support background blur.": ""
@@ -1937,8 +1766,8 @@
   "e.g. 2022-01-01": {
     "e.g. 2022-01-01": "np. 2022-01-01"
   },
-  "iCal subscription": {
-    "iCal subscription": "Subskrypcja kalendarza iCal"
+  "iCalendar subscription": {
+    "iCalendar subscription": ""
   },
   "light": {
     "light": "jasny"

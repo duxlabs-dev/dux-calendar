@@ -19,7 +19,7 @@ Item {
             value: "auto"
         },
         {
-            label: I18n.tr("Matugen", "color source button group option for Matugen"),
+            label: "Matugen",
             value: "matugen"
         },
         {
@@ -66,16 +66,16 @@ Item {
         switch (code) {
         case "tasks_unavailable":
             if (kind === "google")
-                return I18n.tr('Google Tasks is unavailable. <a href="https://console.cloud.google.com/apis/library/tasks.googleapis.com" style="text-decoration:none; color:%1;">Enable its API</a> or reconnect this account, then refresh, to sync tasks.', 'account notice when google tasks is disabled or its permission is missing').arg(Theme.primary);
+                return I18n.tr('%3 is unavailable. <a href="%2" style="text-decoration:none; color:%1;">Enable its API</a> or reconnect this account, then refresh, to sync tasks.', 'account notice when a task service is disabled or its permission is missing, %2 is the api console url, %3 is Google Tasks').arg(Theme.primary).arg("https://console.cloud.google.com/apis/library/tasks.googleapis.com").arg("Google Tasks");
             if (kind === "microsoft")
-                return I18n.tr("Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.", "account notice when microsoft to do permission is missing");
+                return I18n.tr("%1 access wasn't granted. Reconnect this account to sync tasks.", "account notice when a task service permission is missing, %1 is Microsoft To Do").arg("Microsoft To Do");
             return I18n.tr("Task lists couldn't be loaded; calendars are still syncing.", "account notice when task lists are unavailable but calendars sync");
         case "calendars_unavailable":
             if (kind === "google")
-                return I18n.tr('Google Calendar API is disabled. <a href="https://console.cloud.google.com/apis/library/calendar-json.googleapis.com" style="text-decoration:none; color:%1;">Enable it</a>, then refresh, to sync events.', "account notice when the google calendar api is not enabled").arg(Theme.primary);
+                return I18n.tr('%3 is disabled. <a href="%2" style="text-decoration:none; color:%1;">Enable it</a>, then refresh, to sync events.', "account notice when a calendar api is not enabled, %2 is the api console url, %3 is Google Calendar API").arg(Theme.primary).arg("https://console.cloud.google.com/apis/library/calendar-json.googleapis.com").arg("Google Calendar API");
             return I18n.tr("Calendars couldn't be loaded; tasks are still syncing.", "account notice when calendars are unavailable but tasks sync");
         case "icloud_reminders_upgraded":
-            return I18n.tr('Apple no longer provides upgraded iCloud reminders to third-party apps, so these lists only contain placeholder items. <a href="https://support.apple.com/HT210220" style="text-decoration:none; color:%1;">Learn more</a>', "account notice when apple serves placeholder items instead of upgraded icloud reminders").arg(Theme.primary);
+            return I18n.tr('%3 no longer provides upgraded %4 reminders to third-party apps, so these lists only contain placeholder items. <a href="%2" style="text-decoration:none; color:%1;">Learn more</a>', "account notice when placeholder items are served instead of upgraded reminders, %2 is the support article url, %3 is Apple, %4 is iCloud").arg(Theme.primary).arg("https://support.apple.com/HT210220").arg("Apple").arg("iCloud");
         case "items_skipped":
             return I18n.tr("The server refused to return some events or tasks, so they were skipped; the rest of the calendar is syncing.", "account notice when a caldav server refuses individual calendar objects");
         case "calendar_sync_failed":
@@ -395,7 +395,7 @@ Item {
                 title: I18n.tr("App", "general settings section label")
                 SettingsToggleRow {
                     text: I18n.tr("Start at login", "autostart setting label")
-                    description: I18n.tr("Launch Dux Calendar in the background when you log in.", "autostart setting description")
+                    description: I18n.tr("Launch %1 in the background when you log in.", "autostart setting description, %1 is the app name").arg("Dux Calendar")
                     checked: DankCalService.autostartEnabled
                     enabled: DankCalService.connected
                     onToggled: checked => DankCalService.setAutostart(checked)
@@ -415,7 +415,7 @@ Item {
 
                 SettingsToggleRow {
                     text: I18n.tr("Show tray icon", "tray icon toggle label")
-                    description: !SettingsData.showTrayIcon && SettingsData.closeBehavior === "minimize" ? I18n.tr("Closing hides the window; reopen it from your app launcher.", "tray icon toggle warning when closing only minimizes") : I18n.tr("Show Dux Calendar in the system tray.", "tray icon toggle description")
+                    description: !SettingsData.showTrayIcon && SettingsData.closeBehavior === "minimize" ? I18n.tr("Closing hides the window; reopen it from your app launcher.", "tray icon toggle warning when closing only minimizes") : I18n.tr("Show %1 in the system tray.", "tray icon toggle description, %1 is the app name").arg("Dux Calendar")
                     checked: SettingsData.showTrayIcon
                     onToggled: checked => SettingsData.showTrayIcon = checked
                 }
@@ -684,9 +684,9 @@ Item {
                         case "custom":
                             return I18n.tr("Load colors from your own theme file.", "color source description for custom");
                         case "matugen":
-                            return I18n.tr("Follow colors generated by Matugen.", "color source description for Matugen");
+                            return I18n.tr("Follow colors generated by %1.", "color source description, %1 is Matugen").arg("Matugen");
                         default:
-                            return I18n.tr("Follow Dux Shell colors, falling back to a preset.", "color source description for auto");
+                            return I18n.tr("Follow %1 colors, falling back to a preset.", "color source description for auto, %1 is Dux Shell").arg("Dux Shell");
                         }
                     }
                     model: root.optionLabels(root.colorSourceOptions)
@@ -708,14 +708,14 @@ Item {
                     visible: SettingsData.colorSource === "auto"
                     iconName: Theme.dmsColorsAvailable ? "check_circle" : "info"
                     iconColor: Theme.dmsColorsAvailable ? Theme.success : Theme.surfaceVariantText
-                    title: Theme.dmsColorsAvailable ? I18n.tr("Using Dux Shell dynamic colors.", "auto color source status when DMS is active") : I18n.tr("Dux Shell not detected — using the %1 preset.", "auto color source status when DMS is missing").arg(Theme.presetLabel(SettingsData.presetTheme))
+                    title: Theme.dmsColorsAvailable ? I18n.tr("Using %1 dynamic colors.", "auto color source status when the shell is active, %1 is Dux Shell").arg("Dux Shell") : I18n.tr("%1 not detected — using the %2 preset.", "auto color source status when the shell is missing, %1 is Dux Shell, %2 is a preset name").arg("Dux Shell").arg(Theme.presetLabel(SettingsData.presetTheme))
                 }
 
                 SettingsRow {
                     visible: SettingsData.colorSource === "matugen"
                     iconName: Theme.customThemeLoaded ? "check_circle" : "info"
                     iconColor: Theme.customThemeLoaded ? Theme.success : Theme.surfaceVariantText
-                    title: Theme.customThemeLoaded ? I18n.tr("Using Matugen colors.", "Matugen color source status when loaded") : I18n.tr("Matugen theme missing or invalid — using the %1 preset.", "Matugen color source fallback status").arg(Theme.presetLabel(SettingsData.presetTheme))
+                    title: Theme.customThemeLoaded ? I18n.tr("Using %1 colors.", "color source status when loaded, %1 is Matugen").arg("Matugen") : I18n.tr("%1 theme missing or invalid — using the %2 preset.", "color source fallback status, %1 is Matugen, %2 is a preset name").arg("Matugen").arg(Theme.presetLabel(SettingsData.presetTheme))
                     subtitle: Theme.matugenThemePath
                 }
 
@@ -787,7 +787,7 @@ Item {
                 title: I18n.tr("Shape", "appearance settings section label")
                 SettingsSliderRow {
                     text: I18n.tr("Radius strength", "global component corner rounding")
-                    description: I18n.tr("50 uses Material shapes. Lower values reduce rounding; higher values increase it.", "radius strength slider description")
+                    description: I18n.tr("50 uses %1 shapes. Lower values reduce rounding; higher values increase it.", "radius strength slider description, %1 is Material").arg("Material")
                     minimumLabel: I18n.tr("Square", "radius strength slider label at zero")
                     value: SettingsData.radiusStrength
                     minimum: 0
@@ -802,7 +802,7 @@ Item {
                 title: I18n.tr("Zoom", "appearance settings section label")
                 SettingsSliderRow {
                     text: I18n.tr("Scale", "interface zoom slider label")
-                    description: SettingsData.uiScaleFromEnv ? I18n.tr("Set by QT_SCALE_FACTOR.", "interface zoom slider description when the environment overrides it") : I18n.tr("Scales the whole app. Takes effect after a restart.", "interface zoom slider description")
+                    description: SettingsData.uiScaleFromEnv ? I18n.tr("Set by %1.", "interface zoom slider description when the environment overrides it, %1 is an environment variable").arg("QT_SCALE_FACTOR") : I18n.tr("Scales the whole app. Takes effect after a restart.", "interface zoom slider description")
                     enabled: !SettingsData.uiScaleFromEnv
                     minimum: 75
                     maximum: 200
@@ -815,7 +815,7 @@ Item {
                 SettingsRow {
                     visible: !SettingsData.uiScaleFromEnv && Math.round(SettingsData.uiScale * 100) !== Math.round(SettingsData.effectiveUiScale * 100)
                     title: I18n.tr("Restart required", "interface zoom pending restart label")
-                    subtitle: DankCalService.connected ? I18n.tr("Dux Calendar will close and reopen with the new zoom.", "interface zoom pending restart description") : I18n.tr("Backend not connected.", "interface zoom pending restart description when backend is unavailable")
+                    subtitle: DankCalService.connected ? I18n.tr("%1 will close and reopen with the new zoom.", "interface zoom pending restart description, %1 is the app name").arg("Dux Calendar") : I18n.tr("Backend not connected.", "interface zoom pending restart description when backend is unavailable")
 
                     DButton {
                         anchors.verticalCenter: parent.verticalCenter
@@ -845,7 +845,7 @@ Item {
                     visible: SettingsData.fontSource === "auto" && !Theme.typography.followingDms
                     iconName: "info"
                     iconColor: Theme.surfaceVariantText
-                    title: I18n.tr("Dux Shell not detected, using %1.", "auto font source status when DMS is missing").arg(Theme.fontFamily)
+                    title: I18n.tr("%1 not detected, using %2.", "auto font source status when the shell is missing, %1 is Dux Shell, %2 is a font family").arg("Dux Shell").arg(Theme.fontFamily)
                 }
 
                 FontFamilyRow {
@@ -1192,7 +1192,7 @@ Item {
                                 calendarsFlickable.actionCalendar = calendarRow.modelData;
                                 calendarDeleteConfirm.show({
                                     title: I18n.tr("Delete \"%1\"?", "delete calendar confirmation title").arg(calendarRow.modelData.name),
-                                    message: I18n.tr("Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.", "delete calendar confirmation message"),
+                                    message: I18n.tr("Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.", "delete calendar confirmation message, %1 is the app name").arg("Dux Calendar"),
                                     confirmText: I18n.tr("Delete", "delete calendar confirmation button"),
                                     danger: true
                                 });
@@ -1400,7 +1400,7 @@ Item {
                                 accountsFlickable.actionAccount = accountRow.modelData;
                                 accountRemoveConfirm.show({
                                     title: I18n.tr("Remove \"%1\"?", "remove account confirmation title").arg(DankCalService.accountLabel(accountRow.modelData)),
-                                    message: I18n.tr("Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.", "remove account confirmation message"),
+                                    message: I18n.tr("Removes this account and its calendars and events from %1. Nothing is deleted from the provider.", "remove account confirmation message, %1 is the app name").arg("Dux Calendar"),
                                     confirmText: I18n.tr("Remove", "remove account confirmation button"),
                                     danger: true
                                 });

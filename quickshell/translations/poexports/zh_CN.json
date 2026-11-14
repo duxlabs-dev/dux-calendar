@@ -5,11 +5,26 @@
   "%1 PM": {
     "%1 PM": "下午 %1 点"
   },
+  "%1 access wasn't granted. Reconnect this account to sync tasks.": {
+    "%1 access wasn't granted. Reconnect this account to sync tasks.": ""
+  },
   "%1 appointments fall outside core hours": {
     "%1 appointments fall outside core hours": "%1 的预约在核心时间段外"
   },
+  "%1 calendars via app-specific password.": {
+    "%1 calendars via app-specific password.": ""
+  },
   "%1 events selected": {
     "%1 events selected": "%1 个日程被选中"
+  },
+  "%1 not detected — using the %2 preset.": {
+    "%1 not detected — using the %2 preset.": ""
+  },
+  "%1 not detected, using %2.": {
+    "%1 not detected, using %2.": ""
+  },
+  "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
+    "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": ""
   },
   "%1 overlapping events": {
     "%1 overlapping events": ""
@@ -17,11 +32,20 @@
   "%1 selected": {
     "%1 selected": "已选 %1 项"
   },
+  "%1 theme missing or invalid — using the %2 preset.": {
+    "%1 theme missing or invalid — using the %2 preset.": ""
+  },
   "%1 times": {
     "%1 times": "%1 次"
   },
+  "%1 will close and reopen with the new zoom.": {
+    "%1 will close and reopen with the new zoom.": ""
+  },
   "%1 · All day": {
     "%1 · All day": "%1 · 全天"
+  },
+  "%1, %2 and %3 calendars.": {
+    "%1, %2 and %3 calendars.": ""
   },
   "%1d before": {
     "%1d before": "%1 天前"
@@ -43,6 +67,12 @@
   },
   "%1w before": {
     "%1w before": "%1 周前"
+  },
+  "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": {
+    "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": ""
+  },
+  "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
+    "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": ""
   },
   "(untitled)": {
     "(untitled)": "（无标题）"
@@ -137,17 +167,14 @@
   "5 minutes before": {
     "5 minutes before": "5分钟前"
   },
-  "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": {
-    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": ""
+  "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": {
+    "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": ""
   },
   "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": {
     "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT 许可证</a>"
   },
-  "A file with this name already exists. Do you want to overwrite it?": {
-    "A file with this name already exists. Do you want to overwrite it?": "已存在同名文件。是否覆盖？"
-  },
-  "A folder of .ics files on this machine.": {
-    "A folder of .ics files on this machine.": "本机的 .ics 文件夹。"
+  "A folder of %1 files on this machine.": {
+    "A folder of %1 files on this machine.": ""
   },
   "API": {
     "API": "API"
@@ -176,8 +203,8 @@
   "Add": {
     "Add": "添加"
   },
-  "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": {
-    "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": "添加 CalDAV，本地，谷歌或微软账户的任务列表以创建任务。"
+  "Add a %1, local, %2, or %3 account with a task list to create tasks.": {
+    "Add a %1, local, %2, or %3 account with a task list to create tasks.": ""
   },
   "Add a calendar": {
     "Add a calendar": "添加日历"
@@ -245,9 +272,6 @@
   "Also in these calendars": {
     "Also in these calendars": ""
   },
-  "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
-    "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/空格：返回 • F1/I：文件信息 • F10:帮助 • Esc：关闭"
-  },
   "Always use the dark theme.": {
     "Always use the dark theme.": "始终使用深色主题。"
   },
@@ -266,17 +290,11 @@
   "Apple ID": {
     "Apple ID": "苹果ID"
   },
-  "Apple iCloud calendars via app-specific password.": {
-    "Apple iCloud calendars via app-specific password.": "通过 App 专用密码访问苹果 iCloud 日历。"
-  },
   "Apply and restart": {
     "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "请在浏览器中允许访问。当 %1 返回授权码时，此窗口将自动跳转回应用。"
-  },
-  "Ascending": {
-    "Ascending": "升序"
   },
   "At start": {
     "At start": "日程开始时"
@@ -313,9 +331,6 @@
   },
   "Balanced": {
     "Balanced": ""
-  },
-  "Begin setup": {
-    "Begin setup": "开始设置"
   },
   "Blurs what shows through the window. Needs an opacity below 100%.": {
     "Blurs what shows through the window. Needs an opacity below 100%.": ""
@@ -398,9 +413,6 @@
   "Color source": {
     "Color source": "色彩来源"
   },
-  "Colors are shared with DankMaterialShell when available.": {
-    "Colors are shared with DankMaterialShell when available.": "可用时色彩与 DankMaterialShell 保持一致。"
-  },
   "Coming soon": {
     "Coming soon": "即将推出"
   },
@@ -416,11 +428,8 @@
   "Confirm delete": {
     "Confirm delete": "确认删除"
   },
-  "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
-  },
-  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
+  "Conflicts use events currently synced to %1. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to %1. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "连接"
@@ -428,14 +437,11 @@
   "Connect %1": {
     "Connect %1": "连接 %1"
   },
-  "Connect Google Account": {
-    "Connect Google Account": "连接 Google 帐户"
+  "Connect %1 Account": {
+    "Connect %1 Account": ""
   },
-  "Connect Microsoft Account": {
-    "Connect Microsoft Account": "连接 Microsoft 帐户"
-  },
-  "Connect any CalDAV-compatible server.": {
-    "Connect any CalDAV-compatible server.": "连接任何兼容 CalDAV 的服务器。"
+  "Connect any %1-compatible server.": {
+    "Connect any %1-compatible server.": ""
   },
   "Connected": {
     "Connected": "已连接"
@@ -472,9 +478,6 @@
   },
   "Copy link": {
     "Copy link": "复制链接"
-  },
-  "Copy path": {
-    "Copy path": "复制地址"
   },
   "Copy selected events": {
     "Copy selected events": "复制已选日程"
@@ -530,26 +533,11 @@
   "Cut selected events": {
     "Cut selected events": "剪切已选日程"
   },
-  "DMS dynamic": {
-    "DMS dynamic": "DMS 动态色彩"
-  },
-  "DMS dynamic colors detected when available.": {
-    "DMS dynamic colors detected when available.": "在支持时已检测到 DMS 动态色彩。"
-  },
   "Daemon offline": {
     "Daemon offline": "守护进程已离线"
   },
   "Daily": {
     "Daily": "每日"
-  },
-  "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "Dank Calendar 是一款专为现代 Linux 桌面打造的日历软件，采用了<a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">源自 Material 3 的设计灵感</a>，同时还提供强大的 CLI（命令行界面）和 Socket API 以便进行系统集成。<br /><br/>它基于 <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>（一个用于构建桌面 Shell 的 Qt6 框架）以及 <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a> 语言（一种静态类型、编译型的编程语言）开发而成。"
-  },
-  "Dank Linux Discord": {
-    "Dank Linux Discord": "Dank Linux Discord"
-  },
-  "DankMaterialShell not detected — using the %1 preset.": {
-    "DankMaterialShell not detected — using the %1 preset.": "未检测到 DankMaterialShell — 使用 %1 预设。"
   },
   "Dark": {
     "Dark": "深色"
@@ -635,14 +623,8 @@
   "Delete…": {
     "Delete…": "删除中..."
   },
-  "Descending": {
-    "Descending": "降序"
-  },
   "Description": {
     "Description": "描述"
-  },
-  "Desktop": {
-    "Desktop": "桌面"
   },
   "Desktop notifications for upcoming events.": {
     "Desktop notifications for upcoming events.": "近期的事件启用桌面通知。"
@@ -674,17 +656,11 @@
   "Docs": {
     "Docs": "文档"
   },
-  "Documents": {
-    "Documents": "文档"
-  },
   "Does not repeat": {
     "Does not repeat": "不重复"
   },
   "Done": {
     "Done": "完成"
-  },
-  "Downloads": {
-    "Downloads": "下载"
   },
   "Drag to pan · click to fit": {
     "Drag to pan · click to fit": "拖动以平移 · 点击以适应大小"
@@ -706,18 +682,6 @@
   },
   "Duration": {
     "Duration": ""
-  },
-  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
-  },
-  "Dux Calendar will close and reopen with the new zoom.": {
-    "Dux Calendar will close and reopen with the new zoom.": ""
-  },
-  "Dux Shell not detected — using the %1 preset.": {
-    "Dux Shell not detected — using the %1 preset.": ""
-  },
-  "Dux Shell not detected, using %1.": {
-    "Dux Shell not detected, using %1.": ""
   },
   "Edit": {
     "Edit": ""
@@ -752,11 +716,8 @@
   "Enter client ID": {
     "Enter client ID": "输入客户端 ID"
   },
-  "Enter filename...": {
-    "Enter filename...": "输入文件名..."
-  },
-  "Enter your CalDAV server details. The connection is verified before the account is saved.": {
-    "Enter your CalDAV server details. The connection is verified before the account is saved.": "请输入您的 CalDAV 服务器信息。系统将在保存账户前验证连接。"
+  "Enter your %1 server details. The connection is verified before the account is saved.": {
+    "Enter your %1 server details. The connection is verified before the account is saved.": ""
   },
   "Enter your client ID": {
     "Enter your client ID": "请输入您的客户端ID"
@@ -776,29 +737,14 @@
   "Everything in this file is already on your calendar.": {
     "Everything in this file is already on your calendar.": ""
   },
-  "Evolution": {
-    "Evolution": "Evolution"
-  },
   "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": {
     "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": "展开日期单元格以完整显示所有日程，不折叠超出项。"
-  },
-  "F1/I: Toggle • F10: Help": {
-    "F1/I: Toggle • F10: Help": "F1/I：切换 • F10：帮助"
   },
   "Family": {
     "Family": ""
   },
   "Feed URL": {
     "Feed URL": "订阅源 URL"
-  },
-  "File Already Exists": {
-    "File Already Exists": "文件已存在"
-  },
-  "File Information": {
-    "File Information": "文件信息"
-  },
-  "Files - %1": {
-    "Files - %1": "文件 - %1"
   },
   "First calendar": {
     "First calendar": "首个日历"
@@ -812,14 +758,11 @@
   "Focus ring": {
     "Focus ring": ""
   },
-  "Follow DankMaterialShell colors, falling back to a preset.": {
-    "Follow DankMaterialShell colors, falling back to a preset.": "跟随 DankMaterialShell 色彩方案，若不可用则回退至预设。"
+  "Follow %1 colors, falling back to a preset.": {
+    "Follow %1 colors, falling back to a preset.": ""
   },
-  "Follow Dux Shell colors, falling back to a preset.": {
-    "Follow Dux Shell colors, falling back to a preset.": ""
-  },
-  "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+  "Follow colors generated by %1.": {
+    "Follow colors generated by %1.": ""
   },
   "Follow language": {
     "Follow language": "跟随语言"
@@ -839,29 +782,17 @@
   "Generate app-specific password": {
     "Generate app-specific password": "生成 App专用密码"
   },
-  "GitHub": {
-    "GitHub": "GitHub"
-  },
   "Go to date": {
     "Go to date": "前往日期"
   },
   "Go to today": {
     "Go to today": "转到今天"
   },
-  "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
-    "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": "Google Tasks 不可用。<a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">启用其 API</a> 或重新连接此帐户后，刷新以同步任务。"
-  },
-  "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": {
-    "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": "Google 要求您创建自己的 OAuth 客户端，以便代表您读取日历数据。这是一次性设置，大约需要三分钟。"
-  },
   "Hide": {
     "Hide": "隐藏"
   },
   "High": {
     "High": "高"
-  },
-  "Home": {
-    "Home": "家目录"
   },
   "Hour range shown in day and week views.": {
     "Hour range shown in day and week views.": "在日视图和周视图中显示的时间范围。"
@@ -875,17 +806,17 @@
   "Import": {
     "Import": ""
   },
+  "Import %1": {
+    "Import %1": ""
+  },
   "Import %1 events": {
     "Import %1 events": ""
-  },
-  "Import client_secret.json": {
-    "Import client_secret.json": "导入 client_secret.json"
   },
   "Import events": {
     "Import events": ""
   },
-  "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": {
-    "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": "导入您在创建客户端时下载的 client_secret_….json 文件，或者手动粘贴客户端 ID 和密钥。"
+  "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": {
+    "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": ""
   },
   "Importing...": {
     "Importing...": ""
@@ -914,9 +845,6 @@
   "Keyring locked — unlock it to sync": {
     "Keyring locked — unlock it to sync": ""
   },
-  "Ko-fi": {
-    "Ko-fi": "Ko-fi"
-  },
   "Language": {
     "Language": "语言"
   },
@@ -926,11 +854,8 @@
   "Language of the interface.": {
     "Language of the interface.": "界面语言"
   },
-  "Launch Dank Calendar in the background when you log in.": {
-    "Launch Dank Calendar in the background when you log in.": "登录系统时在后台启动 Dank Calendar日历。"
-  },
-  "Launch Dux Calendar in the background when you log in.": {
-    "Launch Dux Calendar in the background when you log in.": ""
+  "Launch %1 in the background when you log in.": {
+    "Launch %1 in the background when you log in.": ""
   },
   "Layer opacity": {
     "Layer opacity": ""
@@ -940,6 +865,9 @@
   },
   "Lets the desktop show through the window. Text and controls stay solid.": {
     "Lets the desktop show through the window. Text and controls stay solid.": ""
+  },
+  "Library": {
+    "Library": ""
   },
   "Light": {
     "Light": "浅色"
@@ -980,12 +908,6 @@
   "Marked as not done": {
     "Marked as not done": "标记为未完成"
   },
-  "Matugen": {
-    "Matugen": ""
-  },
-  "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
-  },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "月视图中日程标题显示的最大行数。"
   },
@@ -1013,20 +935,8 @@
   "Merge duplicate events": {
     "Merge duplicate events": ""
   },
-  "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
-    "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "您未获得 Microsoft To Do 访问权限。请重新连接此帐户以同步任务。"
-  },
-  "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
-    "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": "在创建或更改应用注册后的最初几分钟内，Microsoft 经常会返回 server_error（服务器错误）。请等待一两分钟后再试。"
-  },
-  "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": {
-    "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": "Microsoft 要求您注册自己的应用，以便代表您读取日历数据。这是一次性设置，大约需要两分钟——不需要客户端密钥（Client Secret）。"
-  },
   "Minimize": {
     "Minimize": "最小化"
-  },
-  "Modified": {
-    "Modified": "已修改"
   },
   "Monospace family": {
     "Monospace family": ""
@@ -1064,9 +974,6 @@
   "Move through sidebar items": {
     "Move through sidebar items": "浏览侧边栏项目"
   },
-  "Move to Trash": {
-    "Move to Trash": "移至垃圾桶"
-  },
   "Move to selected day": {
     "Move to selected day": "移动到选中日期"
   },
@@ -1082,17 +989,11 @@
   "Moving a recurring event moves its entire series.": {
     "Moving a recurring event moves its entire series.": "移动一个循环事件会移动其整个系列。"
   },
-  "Music": {
-    "Music": "音乐"
-  },
   "My calendars": {
     "My calendars": "我的日历"
   },
   "My server": {
     "My server": "我的服务商"
-  },
-  "Name": {
-    "Name": "名称"
   },
   "Names, visibility, removal": {
     "Names, visibility, removal": ""
@@ -1130,23 +1031,17 @@
   "Next day, week or month": {
     "Next day, week or month": "后一天/周/月"
   },
-  "Next event": {
-    "Next event": "下一日程"
-  },
   "Next event (next week in month view)": {
     "Next event (next week in month view)": "下一日程（月视图中的下一周）"
   },
   "Next month": {
     "Next month": ""
   },
-  "Next week": {
-    "Next week": "下一周"
-  },
   "Next year": {
     "Next year": "下一年"
   },
-  "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": {
-    "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": "该文件中未找到 OAuth 客户端——应为从 Google 下载的 client_secret_….json 文件。"
+  "No OAuth client found in that file — expected the %1 downloaded from %2.": {
+    "No OAuth client found in that file — expected the %1 downloaded from %2.": ""
   },
   "No accounts yet. Click \"Add account\" to connect one.": {
     "No accounts yet. Click \"Add account\" to connect one.": "暂无账户。点击“添加账户”进行连接。"
@@ -1244,9 +1139,6 @@
   "Open the existing meeting to handle this reply or cancellation.": {
     "Open the existing meeting to handle this reply or cancellation.": ""
   },
-  "Order": {
-    "Order": "排序顺序"
-  },
   "Organized by %1": {
     "Organized by %1": ""
   },
@@ -1255,9 +1147,6 @@
   },
   "Outline the control that has keyboard focus.": {
     "Outline the control that has keyboard focus.": ""
-  },
-  "Outlook, Office 365 and Exchange Online calendars.": {
-    "Outlook, Office 365 and Exchange Online calendars.": "Outlook, Office 365和Exchange Online 日历。"
   },
   "Overdue": {
     "Overdue": "逾期"
@@ -1268,14 +1157,8 @@
   "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": {
     "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": "覆盖此日历的全局提醒设置。未更改的选项将沿用全局默认值。"
   },
-  "Overwrite": {
-    "Overwrite": "覆盖"
-  },
   "Palette: %1": {
     "Palette: %1": "配色方案：%1"
-  },
-  "Part of the Dank Linux suite.": {
-    "Part of the Dank Linux suite.": "Dank Linux 组件的一部分。"
   },
   "Password": {
     "Password": "密码"
@@ -1304,8 +1187,8 @@
   "Paste the Application (client) ID from your app registration's Overview page.": {
     "Paste the Application (client) ID from your app registration's Overview page.": "请粘贴您应用注册“概述”页面中的应用程序（客户端）ID。"
   },
-  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": {
-    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": "粘贴外部日历订阅源的 URL 以进行订阅。此日历为只读属性，并在后台自动刷新。支持 webcal:// 格式的链接。"
+  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": {
+    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": ""
   },
   "Paste your credentials": {
     "Paste your credentials": "粘贴您的凭据"
@@ -1325,17 +1208,14 @@
   "Pick time": {
     "Pick time": ""
   },
-  "Pictures": {
-    "Pictures": "图片"
-  },
   "Play a sound when a reminder fires.": {
     "Play a sound when a reminder fires.": "提醒触发时播放声音。"
   },
   "Playful": {
     "Playful": ""
   },
-  "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": {
-    "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": "指向一个包含 .ics 文件的目录。每个子目录或 .ics 文件都将作为一个日历——该结构兼容 vdirsyncer/khal 布局。如果目录不存在，系统将自动创建。"
+  "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": {
+    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": ""
   },
   "Preset": {
     "Preset": "预设"
@@ -1352,17 +1232,11 @@
   "Previous day, week or month": {
     "Previous day, week or month": "前一天/周/月"
   },
-  "Previous event": {
-    "Previous event": "前一日程"
-  },
   "Previous event (previous week in month view)": {
     "Previous event (previous week in month view)": "前一日程（月视图中的前一周）"
   },
   "Previous month": {
     "Previous month": ""
-  },
-  "Previous week": {
-    "Previous week": "前一周"
   },
   "Previous year": {
     "Previous year": "前一年"
@@ -1372,9 +1246,6 @@
   },
   "Priority": {
     "Priority": "优先级"
-  },
-  "Quick Access": {
-    "Quick Access": "快速访问"
   },
   "Quit": {
     "Quit": "退出"
@@ -1400,8 +1271,8 @@
   "Recurring event · conflicts checked through %1": {
     "Recurring event · conflicts checked through %1": ""
   },
-  "Recurring tasks are managed in Google Tasks.": {
-    "Recurring tasks are managed in Google Tasks.": "周期性任务通过 Google Tasks 进行管理。"
+  "Recurring tasks are managed in %1.": {
+    "Recurring tasks are managed in %1.": ""
   },
   "Reduce motion": {
     "Reduce motion": ""
@@ -1436,17 +1307,11 @@
   "Remove reminder": {
     "Remove reminder": ""
   },
-  "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "从 Dank Calendar 中移除此帐户及其日历和日程。不会从服务商处删除任何内容。"
+  "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": ""
   },
-  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
-  },
-  "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "从 Dank Calendar 中移除的日历及其日程。如果服务商仍然提供此日历，它将在下次同步时重新出现。"
-  },
-  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
+  "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "删除中..."
@@ -1490,8 +1355,14 @@
   "Restart required": {
     "Restart required": ""
   },
+  "Revision": {
+    "Revision": ""
+  },
   "Ripple effects": {
     "Ripple effects": ""
+  },
+  "Runtime": {
+    "Runtime": ""
   },
   "Save": {
     "Save": "保存"
@@ -1520,8 +1391,8 @@
   "Secondary": {
     "Secondary": ""
   },
-  "Select File": {
-    "Select File": "选择文件"
+  "Select %1": {
+    "Select %1": ""
   },
   "Select a range of events": {
     "Select a range of events": "选择日程范围"
@@ -1531,9 +1402,6 @@
   },
   "Select all events on the selected day": {
     "Select all events on the selected day": "选中所选日期的所有日程"
-  },
-  "Select client_secret.json": {
-    "Select client_secret.json": "选择 client_secret.json"
   },
   "Select days for a new event (month view)": {
     "Select days for a new event (month view)": "选择日期以创建新活动（月视图）"
@@ -1553,8 +1421,8 @@
   "Server URL": {
     "Server URL": "服务器地址URL"
   },
-  "Set by QT_SCALE_FACTOR.": {
-    "Set by QT_SCALE_FACTOR.": ""
+  "Set by %1.": {
+    "Set by %1.": ""
   },
   "Settings": {
     "Settings": "设置"
@@ -1565,11 +1433,8 @@
   "Show": {
     "Show": "显示"
   },
-  "Show Dank Calendar in the system tray.": {
-    "Show Dank Calendar in the system tray.": "在系统托盘中显示Dank Calendar 日历。"
-  },
-  "Show Dux Calendar in the system tray.": {
-    "Show Dux Calendar in the system tray.": ""
+  "Show %1 in the system tray.": {
+    "Show %1 in the system tray.": ""
   },
   "Show all events in month view": {
     "Show all events in month view": "在月视图中显示所有项目"
@@ -1604,32 +1469,23 @@
   "Sign in with %1": {
     "Sign in with %1": "使用 %1 登录"
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "在浏览器中使用 Google 帐户登录即可，无需任何设置。Dank Calendar 会自动同步您的日历、事件和任务。"
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": ""
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": ""
   },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "在浏览器中使用 Microsoft 帐户登录即可，无需任何设置。Dank Calendar 可同步您的 Outlook 日历、事件和任务。"
-  },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
+  "Sign in with your %1 account.": {
+    "Sign in with your %1 account.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "请使用您的 Apple ID 和 App 专用密码登录。普通的 Apple ID 密码将无法正常工作。"
-  },
-  "Sign in with your Google account.": {
-    "Sign in with your Google account.": "使用 Google 账户进行登录。"
   },
   "Sign-in expired — click to reconnect": {
     "Sign-in expired — click to reconnect": "登录已过期—点击重新连接"
   },
   "Sign-in expired — reconnect to keep syncing": {
     "Sign-in expired — reconnect to keep syncing": "登录已过期 — 请重新连接以保持同步"
-  },
-  "Size": {
-    "Size": "大小"
   },
   "Skip certificate verification": {
     "Skip certificate verification": "跳过证书验证"
@@ -1642,9 +1498,6 @@
   },
   "Some calendars couldn't be synced; their events may be missing or out of date.": {
     "Some calendars couldn't be synced; their events may be missing or out of date.": ""
-  },
-  "Sort By": {
-    "Sort By": "排序方式"
   },
   "Spring": {
     "Spring": ""
@@ -1673,23 +1526,17 @@
   "Step %1: %2": {
     "Step %1: %2": "第 %1 步：%2"
   },
-  "Stock palette": {
-    "Stock palette": "预设调色板"
-  },
   "Subscribe": {
     "Subscribe": "订阅"
   },
-  "Subscribe to an external calendar by URL (webcal/https).": {
-    "Subscribe to an external calendar by URL (webcal/https).": "通过 URL (webcal/https) 订阅外部日历。"
+  "Subscribe to an external calendar by URL (%1).": {
+    "Subscribe to an external calendar by URL (%1).": ""
   },
   "Subscribing…": {
     "Subscribing…": "订阅中..."
   },
-  "Support Dank Linux": {
-    "Support Dank Linux": ""
-  },
-  "Support Dux Labs": {
-    "Support Dux Labs": ""
+  "Support %1": {
+    "Support %1": ""
   },
   "Sync interval": {
     "Sync interval": "同步间隔"
@@ -1700,11 +1547,8 @@
   "Sync now": {
     "Sync now": "立即同步"
   },
-  "Synced as \"%1\". The name only changes in Dank Calendar.": {
-    "Synced as \"%1\". The name only changes in Dank Calendar.": "已同步为“%1”。该名称仅在 Dank Calendar 中生效。"
-  },
-  "Synced as \"%1\". The name only changes in Dux Calendar.": {
-    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  "Synced as \"%2\". The name only changes in %1.": {
+    "Synced as \"%2\". The name only changes in %1.": ""
   },
   "System": {
     "System": ""
@@ -1717,9 +1561,6 @@
   },
   "System preference unavailable — using dark.": {
     "System preference unavailable — using dark.": "系统首选项不可用——已自动切换至深色模式。"
-  },
-  "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": {
-    "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": "Tab/Shift+Tab: 导航 • ←→↑↓: 网格导航 • Enter/空格: 选择"
   },
   "Task": {
     "Task": "任务"
@@ -1802,9 +1643,6 @@
   "Try again": {
     "Try again": "请再试一次"
   },
-  "Type": {
-    "Type": "输入"
-  },
   "Type at least 2 characters to search events.": {
     "Type at least 2 characters to search events.": "请输入至少 2 个字符以搜索日程。"
   },
@@ -1826,11 +1664,8 @@
   "Use synced name": {
     "Use synced name": "使用已同步的名称"
   },
-  "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": {
-    "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": "使用 Evolution Data Server 已在此计算机上管理的日历（包括 Evolution、GNOME 线上账户等）。无需登录 — 凭据和同步将由 Evolution 自行处理。"
-  },
-  "Use this folder": {
-    "Use this folder": "使用此文件夹"
+  "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": {
+    "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": ""
   },
   "Use your own OAuth client": {
     "Use your own OAuth client": "使用您自己的 OAuth 客户端"
@@ -1841,14 +1676,11 @@
   "Username (optional)": {
     "Username (optional)": "用户名（可选）"
   },
-  "Using DankMaterialShell dynamic colors.": {
-    "Using DankMaterialShell dynamic colors.": "正在使用DankMaterialShell动态色彩。"
+  "Using %1 colors.": {
+    "Using %1 colors.": ""
   },
-  "Using Dux Shell dynamic colors.": {
-    "Using Dux Shell dynamic colors.": ""
-  },
-  "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+  "Using %1 dynamic colors.": {
+    "Using %1 dynamic colors.": ""
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "验证桌面通知是否有效。"
@@ -1858,9 +1690,6 @@
   },
   "Version and links": {
     "Version and links": ""
-  },
-  "Videos": {
-    "Videos": "视频"
   },
   "View": {
     "View": "视图"
@@ -1874,8 +1703,8 @@
   "Waiting for browser…": {
     "Waiting for browser…": "正在等待浏览器…"
   },
-  "Waiting for the dankcalendar daemon...": {
-    "Waiting for the dankcalendar daemon...": "正在等待 dankcalendar 守护进程…"
+  "Waiting for the %1 daemon...": {
+    "Waiting for the %1 daemon...": ""
   },
   "Week": {
     "Week": "周"
@@ -1910,8 +1739,8 @@
   "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": {
     "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": "您的日历将在后台自动同步。您可以前往“设置 → 账户”来管理此账户。"
   },
-  "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
-    "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "在支持的情况下，您的客户端 ID、密钥及刷新令牌（Refresh Token）都将保存在系统密钥环（libsecret/kwallet）中，否则将保存在本地加密文件中。"
+  "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": {
+    "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": ""
   },
   "Your compositor does not support background blur.": {
     "Your compositor does not support background blur.": ""
@@ -1937,8 +1766,8 @@
   "e.g. 2022-01-01": {
     "e.g. 2022-01-01": "例如：2022-01-01"
   },
-  "iCal subscription": {
-    "iCal subscription": "iCal订阅"
+  "iCalendar subscription": {
+    "iCalendar subscription": ""
   },
   "light": {
     "light": "浅色"

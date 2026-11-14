@@ -115,7 +115,7 @@ Item {
 
             StyledText {
                 visible: root.sections.length === 0
-                text: DankCalService.connected ? I18n.tr("No tasks yet", "tasks view empty state") : I18n.tr("Waiting for the dankcalendar daemon...", "tasks view placeholder while the daemon is not connected")
+                text: DankCalService.connected ? I18n.tr("No tasks yet", "tasks view empty state") : I18n.tr("Waiting for the %1 daemon...", "tasks view placeholder while the daemon is not connected, %1 is the daemon name").arg("dankcalendar")
                 font.pixelSize: Theme.fontSizeMedium
                 color: Theme.surfaceVariantText
                 width: parent.width

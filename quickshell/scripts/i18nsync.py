@@ -104,29 +104,30 @@ def json_changed(file_path, new_data):
     return json.dumps(old_data, sort_keys=True) != json.dumps(new_data, sort_keys=True)
 
 
-def upload_source_strings(api_token, project_id):
+def upload_source_strings(api_token, project_id, prune=False):
     if not EN_JSON.exists():
         warn("No en.json to upload")
         return False
 
-    info("Uploading source strings to POEditor...")
+    info("Uploading source strings to POEditor..." + (" (pruning terms not present locally)" if prune else ""))
 
-    with open(EN_JSON, 'rb') as f:
-        boundary = '----WebKitFormBoundary7MA4YWxkTrZu0gW'
-        body = (
-            f'--{boundary}\r\n'
-            f'Content-Disposition: form-data; name="api_token"\r\n\r\n'
-            f'{api_token}\r\n'
-            f'--{boundary}\r\n'
-            f'Content-Disposition: form-data; name="id"\r\n\r\n'
-            f'{project_id}\r\n'
-            f'--{boundary}\r\n'
-            f'Content-Disposition: form-data; name="updating"\r\n\r\n'
-            f'terms\r\n'
-            f'--{boundary}\r\n'
-            f'Content-Disposition: form-data; name="file"; filename="en.json"\r\n'
-            f'Content-Type: application/json\r\n\r\n'
-        ).encode() + f.read() + f'\r\n--{boundary}--\r\n'.encode()
+    fields = {'api_token': api_token, 'id': project_id, 'updating': 'terms'}
+    if prune:
+        fields['sync_terms'] = '1'
+
+    boundary = '----WebKitFormBoundary7MA4YWxkTrZu0gW'
+    field_parts = ''.join(
+        f'--{boundary}\r\n'
+        f'Content-Disposition: form-data; name="{name}"\r\n\r\n'
+        f'{value}\r\n'
+        for name, value in fields.items()
+    )
+    file_header = (
+        f'--{boundary}\r\n'
+        f'Content-Disposition: form-data; name="file"; filename="en.json"\r\n'
+        f'Content-Type: application/json\r\n\r\n'
+    )
+    body = (field_parts + file_header).encode() + EN_JSON.read_bytes() + f'\r\n--{boundary}--\r\n'.encode()
 
     req = request.Request(
         'https://api.poeditor.com/v2/projects/upload',
@@ -309,9 +310,12 @@ def run_push():
     success("Push complete")
 
 
-def run_sync():
+def run_sync(prune):
     api_token = get_env_or_error(API_TOKEN_ENV)
     project_id = get_env_or_error(PROJECT_ID_ENV)
+
+    if prune:
+        warn("--prune deletes every POEditor term missing from the local en.json, including its translations.")
 
     extract_strings()
 
@@ -329,8 +333,8 @@ def run_sync():
 
     strings_changed = json.dumps(current_en, sort_keys=True) != json.dumps(staged_en, sort_keys=True)
 
-    if strings_changed:
-        upload_source_strings(api_token, project_id)
+    if strings_changed or prune:
+        upload_source_strings(api_token, project_id, prune)
     else:
         info("No changes in source strings")
 
@@ -379,16 +383,23 @@ def run_local():
 
 
 def main():
+    usage = "Usage: i18nsync.py [check|sync [--prune]|push|test|local]"
     if len(sys.argv) < 2:
-        error("Usage: i18nsync.py [check|sync|push|test|local]")
+        error(usage)
 
     command = sys.argv[1]
+    flags = sys.argv[2:]
+    allowed_flags = ["--prune"] if command == "sync" else []
+    unknown_flags = [flag for flag in flags if flag not in allowed_flags]
+    if unknown_flags:
+        error(f"Unknown argument for {command}: {' '.join(unknown_flags)}\n{usage}")
+
     if command == "test":
         run_test()
     elif command == "check":
         run_check()
     elif command == "sync":
-        run_sync()
+        run_sync("--prune" in flags)
     elif command == "push":
         run_push()
     elif command == "local":
