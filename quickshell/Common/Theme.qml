@@ -277,7 +277,7 @@ Singleton {
         Binding {
             target: root
             property: "onErrorContainer"
-            value: root.currentThemeData.errorContainerText || root.onSurface
+            value: root.currentThemeData.errorContainerText || root.blend(root.surfaceText, root.error, 0.5)
         },
         Binding {
             target: root
@@ -289,7 +289,7 @@ Singleton {
     readonly property real tonalTintAlpha: 0.16
 
     property color error: currentThemeData.error
-    property color errorContainer: currentThemeData.errorContainer || surfaceContainerHigh
+    property color errorContainer: currentThemeData.errorContainer || blend(surfaceContainerHigh, error, 0.35)
     property color warning: currentThemeData.warning
     property color info: currentThemeData.info
     property color success: currentThemeData.success
@@ -315,9 +315,11 @@ Singleton {
     property color surfaceTextMedium: Qt.rgba(surfaceText.r, surfaceText.g, surfaceText.b, 0.7)
 
     property color outlineButton: Qt.rgba(outline.r, outline.g, outline.b, 0.5)
-    property color outlineLight: Qt.rgba(outline.r, outline.g, outline.b, 0.05)
-    property color outlineMedium: Qt.rgba(outline.r, outline.g, outline.b, 0.12)
-    property color outlineStrong: Qt.rgba(outline.r, outline.g, outline.b, 0.18)
+    readonly property real layerOutlineOpacity: Math.max(0, Math.min(1, SettingsData.blurLayerOutlineOpacity))
+    readonly property int layerOutlineWidth: layerOutlineOpacity > 0 ? 1 : 0
+    property color outlineLight: withAlpha(outline, Math.min(1, layerOutlineOpacity * 0.625))
+    property color outlineMedium: withAlpha(outline, layerOutlineOpacity)
+    property color outlineStrong: withAlpha(outline, Math.min(1, layerOutlineOpacity * 1.5))
     property color outlineHeavy: Qt.rgba(outline.r, outline.g, outline.b, 0.2)
     property color gridLine: Qt.rgba(outline.r, outline.g, outline.b, 0.25)
 
@@ -353,6 +355,7 @@ Singleton {
         scale: SettingsData.fontScale
     }
     readonly property real fontScale: typography.fontScale
+    property real fontSizeXSmall: Math.round(fontScale * 10)
     property real fontSizeSmall: Math.round(fontScale * 12)
     property real fontSizeMedium: Math.round(fontScale * 14)
     property real fontSizeLarge: Math.round(fontScale * 16)
@@ -414,9 +417,9 @@ Singleton {
     readonly property real sliderHandleHeight: 44
     readonly property real sliderHandleGap: 6
     readonly property real sliderTrackHeightS: 24
-    readonly property real sliderHandleHeightS: 44
+    readonly property real sliderHandleHeightS: 36
     readonly property real sliderTrackHeightM: 40
-    readonly property real sliderHandleHeightM: 44
+    readonly property real sliderHandleHeightM: 52
     readonly property real sliderTrackHeightL: 56
     readonly property real sliderHandleHeightL: 68
     readonly property real sliderTrackHeightXL: 96
@@ -449,6 +452,7 @@ Singleton {
     }
     readonly property real scrimAlpha: 0.55
     readonly property color scrimColor: currentThemeData.scrim || "#000000"
+    readonly property color backdropColor: surface.hslLightness >= 0.5 ? surfaceDim : scrimColor
     readonly property real buttonHeightXXS: 28
     readonly property real buttonHeightXS: 32
     readonly property real buttonHeightS: 40
@@ -485,19 +489,15 @@ Singleton {
     readonly property real lockScreenBlur: 0.8
     readonly property int lockScreenBlurMax: 32
     readonly property color screenOffColor: "#000000"
-    readonly property real textFieldSpatialStiffness: 800
-    readonly property real textFieldSpatialDampingRatio: 1
-    readonly property real textFieldFastEffectsStiffness: 3800
-    readonly property real textFieldSlowEffectsStiffness: 800
     readonly property real textEditHeight: Math.round(fontSizeMedium * 8)
-    readonly property real tooltipMaxWidth: 500
+    readonly property real tooltipMaxWidth: 300
     readonly property int tooltipDelay: 400
     readonly property real menuMaxHeight: 400
-    readonly property real clockFaceSize: 250
-    readonly property real clockOuterRingRatio: 0.34
-    readonly property real clockInnerRingRatio: 0.2
+    readonly property real clockFaceSize: 256
+    readonly property real clockOuterRingRatio: 101 / clockFaceSize
+    readonly property real clockInnerRingRatio: 69 / clockFaceSize
     readonly property real clockHandWidth: 2
-    readonly property real clockHandleSize: 40
+    readonly property real clockHandleSize: 48
     readonly property real clockCenterSize: 8
     readonly property int clockSwitchDelay: 100
     readonly property real chipIconSize: 18
@@ -527,15 +527,15 @@ Singleton {
     readonly property bool connectedSurfaceBlurEnabled: true
 
     readonly property color windowSurface: withAlpha(surface, floatingWindowTransparency)
-    readonly property color floatingSurface: withAlpha(surfaceContainer, popupTransparency)
-    readonly property color nestedSurface: withAlpha(surfaceContainerHigh, foregroundAlpha)
-    readonly property color floatingWindowSurface: withAlpha(surfaceContainer, floatingWindowTransparency)
-    readonly property color floatingWindowNestedSurface: withAlpha(surfaceContainerHigh, floatingWindowForegroundAlpha)
+    readonly property color floatingSurface: withAlpha(hostSurface, popupTransparency)
+    readonly property color nestedSurface: foregroundColor(cardSurface)
+    readonly property color floatingWindowSurface: withAlpha(hostSurface, floatingWindowTransparency)
+    readonly property color floatingWindowNestedSurface: foregroundColor(cardSurface, true)
     readonly property color floatingWindowPaneSurface: withAlpha(surfaceContainer, floatingWindowForegroundAlpha)
-    readonly property color floatingWindowFieldColor: floatingWindowNestedSurface
+    readonly property color floatingWindowFieldColor: foregroundColor(chipSurface, true)
     readonly property color floatingWindowFieldBorderColor: withAlpha(outline, 0.16)
     readonly property color floatingWindowFieldFocusedBorderColor: primary
-    readonly property color popupFieldColor: nestedSurface
+    readonly property color popupFieldColor: foregroundColor(chipSurface)
     readonly property color popupFieldBorderColor: withAlpha(outline, 0.16)
     readonly property color popupFieldFocusedBorderColor: primary
 
@@ -574,14 +574,20 @@ Singleton {
     readonly property string elevationLightDirection: "top"
 
     readonly property real stateLayerHover: 0.08
-    readonly property real stateLayerFocus: 0.12
-    readonly property real stateLayerPressed: 0.12
+    readonly property real stateLayerFocus: 0.1
+    readonly property real stateLayerPressed: 0.1
     readonly property real stateLayerDrag: 0.16
 
     readonly property var springSpecs: ({
             "expressive": [560, 37],
             "fast": [220, 23],
-            "default": [300, 24]
+            "default": [300, 24],
+            "fastSpatial": [800, 2 * 0.6 * Math.sqrt(800)],
+            "defaultSpatial": [380, 2 * 0.8 * Math.sqrt(380)],
+            "slowSpatial": [200, 2 * 0.8 * Math.sqrt(200)],
+            "fastEffects": [3800, 2 * Math.sqrt(3800)],
+            "defaultEffects": [1600, 2 * Math.sqrt(1600)],
+            "slowEffects": [800, 2 * Math.sqrt(800)]
         })
     readonly property var springDampingScales: [1.22, 1.0, 0.82]
     readonly property bool springMotionDisabled: currentAnimationBaseDuration <= 0
@@ -632,7 +638,10 @@ Singleton {
             "standardDecel": [0, 0, 0, 1, 1, 1],
             "expressiveFastSpatial": [0.42, 1.67, 0.21, 0.9, 1, 1],
             "expressiveDefaultSpatial": [0.38, 1.21, 0.22, 1, 1, 1],
-            "expressiveEffects": [0.34, 0.8, 0.34, 1, 1, 1]
+            "expressiveSlowSpatial": [0.39, 1.29, 0.35, 0.98, 1, 1],
+            "expressiveFastEffects": [0.31, 0.94, 0.34, 1, 1, 1],
+            "expressiveEffects": [0.34, 0.8, 0.34, 1, 1, 1],
+            "expressiveSlowEffects": [0.34, 0.88, 0.34, 1, 1, 1]
         })
 
     readonly property var expressiveDurations: ({
@@ -642,7 +651,10 @@ Singleton {
             "extraLarge": currentAnimationBaseDuration * 2.0,
             "expressiveFastSpatial": currentAnimationBaseDuration * 0.7,
             "expressiveDefaultSpatial": currentAnimationBaseDuration,
-            "expressiveEffects": currentAnimationBaseDuration * 0.4
+            "expressiveSlowSpatial": currentAnimationBaseDuration * 1.3,
+            "expressiveFastEffects": currentAnimationBaseDuration * 0.3,
+            "expressiveEffects": currentAnimationBaseDuration * 0.4,
+            "expressiveSlowEffects": currentAnimationBaseDuration * 0.6
         })
 
     function elevationOffsetXFor(level, direction, fallback) {

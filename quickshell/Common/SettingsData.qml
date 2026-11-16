@@ -37,6 +37,7 @@ Singleton {
     property int animationSpeed: SettingsData.AnimationSpeed.Short
     property bool blurBorderEnabled: true
     property real blurBorderOpacity: 0.35
+    property real blurLayerOutlineOpacity: 0
     property string blurBorderColor: "outline"
     property string blurBorderCustomColor: "#ffffff"
     property bool powerActionConfirm: true
