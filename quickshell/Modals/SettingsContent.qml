@@ -12,6 +12,8 @@ Item {
 
     property int currentIndex: 0
     property var hostWindow: null
+    property real windowButtonsReserve: 0
+    property FloatingWindowControls windowDragControls: null
 
     readonly property var colorSourceOptions: [
         {
@@ -297,6 +299,15 @@ Item {
 
     readonly property var pageTitles: [I18n.tr("General", "general settings section header"), I18n.tr("Appearance", "appearance settings section header"), I18n.tr("Calendars", "calendars settings section header"), I18n.tr("Accounts", "accounts settings section header"), I18n.tr("Notifications", "notifications settings section header"), I18n.tr("About", "settings sidebar tab label")]
 
+    MouseArea {
+        x: -SettingsMetrics.panePadding
+        width: parent.width + SettingsMetrics.panePadding * 2
+        height: pageHeader.height
+        enabled: root.windowDragControls !== null
+        onPressed: root.windowDragControls.tryStartMove()
+        onDoubleClicked: root.windowDragControls.tryToggleMaximize()
+    }
+
     Item {
         id: pageHeader
         anchors.left: parent.left
@@ -308,6 +319,7 @@ Item {
             id: pageHeading
             anchors.left: parent.left
             anchors.right: parent.right
+            anchors.rightMargin: Math.max(0, root.windowButtonsReserve - SettingsMetrics.panePadding)
             anchors.verticalCenter: parent.verticalCenter
             text: root.pageTitles[root.currentIndex] ?? ""
             font.pixelSize: Theme.fontSizeXXLarge

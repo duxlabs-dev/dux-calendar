@@ -186,8 +186,11 @@ Singleton {
     property color tertiaryContainer: currentThemeData.tertiaryContainer || blend(surfaceContainerHigh, tertiary, 0.35)
     readonly property real selectedContainerTint: currentThemeData.selectedContainerTint ?? 0.2
     // DMS exports surfaceContainerHigh as secondary_container when the theme sets none
-    readonly property bool themedSelectedContainer: !!currentThemeData.secondaryContainer && !Qt.colorEqual(secondaryContainer, surfaceContainerHigh) && Contrast.isTonal(secondaryContainer, onSecondaryContainer) && Contrast.isTonal(secondaryContainer, surfaceText)
-    readonly property color selectedContainer: currentThemeData.selectedContainer || (themedSelectedContainer ? secondaryContainer : Contrast.subtleTint(surfaceContainerHigh, primary, surfaceText, selectedContainerTint))
+    // A selected row has to read against the rows beside it and the surface behind them
+    readonly property var selectionNeighbors: [hostSurface, cardSurface, chipSurface]
+    readonly property real selectedContainerDistinction: 1.15
+    readonly property bool themedSelectedContainer: !!currentThemeData.secondaryContainer && !Qt.colorEqual(secondaryContainer, surfaceContainerHigh) && Contrast.isTonal(secondaryContainer, onSecondaryContainer) && Contrast.isTonal(secondaryContainer, surfaceText) && Contrast.worstRatio(secondaryContainer, selectionNeighbors) >= selectedContainerDistinction
+    readonly property color selectedContainer: currentThemeData.selectedContainer || (themedSelectedContainer ? secondaryContainer : Contrast.distinctTint(chipSurface, primary, surfaceText, selectedContainerTint, selectionNeighbors, selectedContainerDistinction))
     readonly property color accentOnSelectedContainer: currentThemeData.accentOnSelectedContainer || (Contrast.ratio(primary, selectedContainer) >= 3 ? primary : onSelectedContainer)
     readonly property color accentOnPrimaryContainer: currentThemeData.accentOnPrimaryContainer || (Contrast.ratio(primary, primaryContainer) >= 3 ? primary : onPrimaryContainer)
     readonly property var accents: Accents.derive(primary, isLightMode, currentThemeData.accents ?? null)
@@ -207,9 +210,10 @@ Singleton {
     property color surfaceContainer: currentThemeData.surfaceContainer
     property color surfaceContainerHigh: currentThemeData.surfaceContainerHigh
     property color surfaceContainerHighest: currentThemeData.surfaceContainerHighest || surfaceContainerHigh
-    readonly property color hostSurface: surface
+    // Light mode runs the ladder the other way so the host stays the darkest tone and chips the lightest, as in dark mode
+    readonly property color hostSurface: isLightMode ? surfaceContainerHighest : surface
     readonly property color cardSurface: surfaceContainer
-    readonly property color chipSurface: surfaceContainerHigh
+    readonly property color chipSurface: isLightMode ? surface : surfaceContainerHigh
     readonly property color chipSurfaceNested: surfaceContainerHighest
     readonly property color tooltipSurface: inverseSurface
     readonly property color tooltipText: Contrast.readableOn(tooltipSurface, [inverseOnSurface].concat(onContainerCandidates))
@@ -526,7 +530,7 @@ Singleton {
     readonly property bool blurLayersActive: BlurService.enabled
     readonly property bool connectedSurfaceBlurEnabled: true
 
-    readonly property color windowSurface: withAlpha(surface, floatingWindowTransparency)
+    readonly property color windowSurface: withAlpha(hostSurface, floatingWindowTransparency)
     readonly property color floatingSurface: withAlpha(hostSurface, popupTransparency)
     readonly property color nestedSurface: foregroundColor(cardSurface)
     readonly property color floatingWindowSurface: withAlpha(hostSurface, floatingWindowTransparency)

@@ -78,28 +78,12 @@ FloatingWindow {
 
         Column {
             anchors.fill: parent
+            topPadding: header.integrated ? 0 : header.height
             spacing: 0
-
-            DWindowHeader {
-                id: header
-                width: parent.width
-                z: 10
-                controls: windowControls
-                title: I18n.tr("Settings", "settings window header title")
-                onCloseRequested: settingsModal.hide()
-
-                DActionButton {
-                    visible: settingsModal.isCompactMode
-                    iconName: "menu"
-                    buttonSize: Theme.buttonHeightXXS
-                    Accessible.name: I18n.tr("Menu", "settings header button that shows the section list on narrow windows")
-                    onClicked: settingsModal.menuVisible = !settingsModal.menuVisible
-                }
-            }
 
             Item {
                 width: parent.width
-                height: parent.height - header.height
+                height: parent.height - parent.topPadding
                 clip: true
 
                 SettingsSidebar {
@@ -120,20 +104,22 @@ FloatingWindow {
                 FocusScope {
                     id: contentScope
 
-                    readonly property real paneInset: SettingsMetrics.paneMargin
-
                     anchors.left: settingsModal.isCompactMode ? (settingsModal.menuVisible ? sidebar.right : parent.left) : sidebar.right
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
-                    anchors.leftMargin: settingsModal.isCompactMode ? paneInset : 0
-                    anchors.rightMargin: paneInset
-                    anchors.bottomMargin: paneInset
 
                     Rectangle {
                         anchors.fill: parent
-                        radius: SettingsMetrics.paneRadius
                         color: SettingsMetrics.paneColor
+
+                        Rectangle {
+                            anchors.left: parent.left
+                            width: Theme.layerOutlineWidth
+                            height: parent.height
+                            color: Theme.outlineMedium
+                            visible: width > 0 && !settingsModal.isCompactMode
+                        }
                     }
 
                     SettingsContent {
@@ -142,9 +128,33 @@ FloatingWindow {
                         anchors.rightMargin: SettingsMetrics.panePadding
                         currentIndex: settingsModal.currentTabIndex
                         hostWindow: settingsModal
+                        windowButtonsReserve: header.ownsPageHeader ? header.buttonsReserve : 0
+                        windowDragControls: header.ownsPageHeader ? windowControls : null
                         onAddAccountRequested: settingsModal.addAccountRequested()
                     }
                 }
+            }
+        }
+
+        DWindowHeader {
+            id: header
+
+            readonly property bool integrated: !settingsModal.isCompactMode
+            readonly property bool ownsPageHeader: integrated && !compositorDecorated
+
+            anchors.right: parent.right
+            width: integrated ? buttonsReserve : parent.width
+            visible: !integrated || ownsPageHeader
+            controls: windowControls
+            title: integrated ? "" : I18n.tr("Settings", "settings window header title")
+            onCloseRequested: settingsModal.hide()
+
+            DActionButton {
+                visible: settingsModal.isCompactMode
+                iconName: "menu"
+                buttonSize: Theme.buttonHeightXXS
+                Accessible.name: I18n.tr("Menu", "settings header button that shows the section list on narrow windows")
+                onClicked: settingsModal.menuVisible = !settingsModal.menuVisible
             }
         }
     }

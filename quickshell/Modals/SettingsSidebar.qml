@@ -97,7 +97,6 @@ Item {
             id: navColumn
             width: parent.width
             padding: SettingsMetrics.paneMargin
-            topPadding: 0
             spacing: SettingsMetrics.sidebarGroupGap
 
             Repeater {

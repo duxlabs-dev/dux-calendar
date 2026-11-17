@@ -144,7 +144,7 @@ Rectangle {
             text: root.title
             font.pixelSize: Theme.fontSizeMedium
             font.weight: Theme.fontWeightMedium
-            color: Theme.surfaceText
+            color: root.active ? Theme.onSelectedContainer : Theme.surfaceText
             elide: Text.ElideRight
             horizontalAlignment: Text.AlignLeft
         }
@@ -153,7 +153,7 @@ Rectangle {
             width: parent.width
             text: root.hint
             font.pixelSize: Theme.fontSizeSmall
-            color: Theme.surfaceVariantText
+            color: root.active ? Theme.onSelectedContainer : Theme.surfaceVariantText
             elide: Text.ElideRight
             visible: root.hint !== ""
             horizontalAlignment: Text.AlignLeft
