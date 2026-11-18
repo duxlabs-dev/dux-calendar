@@ -1341,7 +1341,7 @@ FloatingWindow {
                     StyledRect {
                         width: parent.width
                         height: Theme.textEditHeight
-                        color: Theme.surfaceContainerHigh
+                        color: Theme.chipSurface
                         radius: Theme.cornerRadiusXS
                         border.width: descArea.activeFocus ? Theme.outlineWidthFocused : Theme.outlineWidth
                         border.color: descArea.activeFocus ? Theme.primary : Theme.outlineVariant

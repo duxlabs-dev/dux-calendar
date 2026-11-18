@@ -24,10 +24,12 @@ Singleton {
     readonly property real buttonGroupCompactThreshold: 200
     readonly property real disabledOpacity: 0.38
     readonly property real highlightBlend: 0.2
-    readonly property color paneColor: Theme.floatingWindowPaneSurface
+    // On light surfaces the rows are the white cards, so the pane stays at the host tone, the sidebar recesses under it and controls step down to chips
+    readonly property color sidebarColor: Theme.lightSurfaces ? Theme.foregroundColor(Theme.hostRecessSurface, true) : "transparent"
+    readonly property color paneColor: Theme.lightSurfaces ? "transparent" : Theme.floatingWindowPaneSurface
     readonly property color sidebarRowColor: rowColor
-    readonly property color rowColor: Theme.foregroundColor(Theme.chipSurface, true)
-    readonly property color controlSurface: Theme.chipSurfaceNested
+    readonly property color rowColor: Theme.foregroundColor(Theme.hostChipSurface, true)
+    readonly property color controlSurface: Theme.lightSurfaces ? Theme.chipSurface : Theme.chipSurfaceNested
     readonly property color selectedRowColor: Theme.selectedContainer
     readonly property int transitionDuration: Theme.expressiveDurations.expressiveFastSpatial
     readonly property int fadeDuration: Theme.expressiveDurations.expressiveEffects

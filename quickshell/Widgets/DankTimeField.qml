@@ -115,7 +115,7 @@ Item {
 
         anchors.fill: parent
         radius: Theme.cornerRadiusXS
-        color: Theme.surfaceContainerHigh
+        color: Theme.chipSurface
         border.width: input.activeFocus ? Theme.outlineWidthFocused : Theme.outlineWidth
         border.color: (root.pickerOpen || input.activeFocus) ? Theme.primary : Theme.outlineVariant
 

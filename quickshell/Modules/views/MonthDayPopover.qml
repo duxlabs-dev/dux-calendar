@@ -107,7 +107,7 @@ Item {
         dim: false
 
         background: Rectangle {
-            color: Theme.surfaceContainerHigh
+            color: Theme.chipSurface
             radius: Theme.cornerRadiusM
         }
 

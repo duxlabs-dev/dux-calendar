@@ -285,7 +285,7 @@ FocusScope {
             id: card
             anchors.fill: parent
             radius: Theme.windowRadius
-            color: Theme.surfaceContainerHigh
+            color: Theme.chipSurface
 
             MouseArea {
                 anchors.fill: parent
@@ -371,7 +371,7 @@ FocusScope {
                         anchors.left: parent.left
                         anchors.leftMargin: Theme.spacingS
                         anchors.verticalCenter: parent.verticalCenter
-                        color: Theme.surfaceContainerHighest
+                        color: Theme.chipSurfaceNested
 
                         DIcon {
                             anchors.centerIn: parent
@@ -418,7 +418,7 @@ FocusScope {
                         anchors.right: parent.right
                         anchors.rightMargin: Theme.spacingS
                         anchors.verticalCenter: parent.verticalCenter
-                        color: delegateRoot.selected ? Theme.withAlpha(Theme.onSelectedContainer, Theme.stateLayerFocus) : Theme.surfaceContainerHighest
+                        color: delegateRoot.selected ? Theme.withAlpha(Theme.onSelectedContainer, Theme.stateLayerFocus) : Theme.chipSurfaceNested
 
                         StyledText {
                             id: dateText
@@ -446,7 +446,7 @@ FocusScope {
                     height: Theme.iconButtonSize
                     radius: Theme.cornerRadiusM
                     anchors.verticalCenter: parent.verticalCenter
-                    color: Theme.surfaceContainerHighest
+                    color: Theme.chipSurfaceNested
 
                     DIcon {
                         anchors.centerIn: parent

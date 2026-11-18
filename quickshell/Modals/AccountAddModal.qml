@@ -625,7 +625,7 @@ FloatingWindow {
                             width: (wizardColumn.width - Theme.spacingXS * accountModal.doneStep) / (accountModal.doneStep + 1)
                             height: Theme.spacingXS
                             radius: Theme.cornerRadiusXXS
-                            color: index <= accountModal.wizardStep ? Theme.primary : Theme.surfaceContainerHighest
+                            color: index <= accountModal.wizardStep ? Theme.primary : Theme.chipSurfaceNested
                         }
                     }
                 }

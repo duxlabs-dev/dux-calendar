@@ -102,7 +102,7 @@ Item {
 
     StyledRect {
         anchors.fill: parent
-        color: Theme.surfaceContainerHigh
+        color: Theme.chipSurface
         radius: Theme.cornerRadiusXL
         border.color: Theme.outlineVariant
         border.width: Theme.outlineWidth
