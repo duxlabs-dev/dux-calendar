@@ -566,14 +566,20 @@ Singleton {
         return withAlpha(blended, Math.max(0.3, blended.a));
     }
 
-    readonly property int currentAnimationBaseDuration: SettingsData.animationDuration
-    readonly property int currentAnimationSpeed: currentAnimationBaseDuration > 0 ? Style.AnimationSpeed.Custom : Style.AnimationSpeed.None
-    readonly property int shorterDuration: Math.round(currentAnimationBaseDuration * 0.2)
-    readonly property int shortDuration: Math.round(currentAnimationBaseDuration * 0.3)
-    readonly property int mediumDuration: Math.round(currentAnimationBaseDuration * 0.6)
-    readonly property int longDuration: currentAnimationBaseDuration
-    readonly property int standardEasing: Easing.OutCubic
-    readonly property int emphasizedEasing: Easing.OutQuart
+    readonly property var motionDurationScales: [0.5, 0.75, 1, 1.5, 2]
+    readonly property bool motionOff: SettingsData.motionDuration < 0
+    readonly property bool reduceMotion: motionOff || SettingsData.reduceMotion
+    readonly property bool animationsEnabled: !reduceMotion
+    readonly property real motionScale: motionOff ? 0 : (motionDurationScales[SettingsData.motionDuration] ?? 1)
+    readonly property real springScale: motionOff ? 1 : motionScale
+
+    function motionMs(specMs) {
+        return Math.round(specMs * motionScale);
+    }
+
+    readonly property int shorterDuration: motionMs(100)
+    readonly property int shortDuration: motionMs(150)
+    readonly property int mediumDuration: motionMs(300)
     readonly property bool elevationEnabled: true
     readonly property string elevationLightDirection: "top"
 
@@ -583,9 +589,6 @@ Singleton {
     readonly property real stateLayerDrag: 0.16
 
     readonly property var springSpecs: ({
-            "expressive": [560, 37],
-            "fast": [220, 23],
-            "default": [300, 24],
             "fastSpatial": [800, 2 * 0.6 * Math.sqrt(800)],
             "defaultSpatial": [380, 2 * 0.8 * Math.sqrt(380)],
             "slowSpatial": [200, 2 * 0.8 * Math.sqrt(200)],
@@ -594,17 +597,13 @@ Singleton {
             "slowEffects": [800, 2 * Math.sqrt(800)]
         })
     readonly property var springDampingScales: [1.22, 1.0, 0.82]
-    readonly property bool springMotionDisabled: currentAnimationBaseDuration <= 0
-    readonly property bool reduceMotion: SettingsData.reduceMotion
-    readonly property bool animationsEnabled: !reduceMotion && currentAnimationBaseDuration > 0
 
-    function springPreset(name, baseDuration) {
-        const spec = springSpecs[name] ?? springSpecs["default"];
-        const f = Math.max(0.05, baseDuration / 500);
-        const bounce = springDampingScales[Math.round(SettingsData.springBounce)] ?? 1;
+    function springPreset(name) {
+        const spec = springSpecs[name];
+        const dampingScale = name.endsWith("Spatial") ? (springDampingScales[SettingsData.springBounce] ?? 1) : 1;
         return {
-            "stiffness": spec[0] / (f * f),
-            "damping": spec[1] / f * bounce,
+            "stiffness": spec[0] / (springScale * springScale),
+            "damping": spec[1] / springScale * dampingScale,
             "mass": 1
         };
     }
@@ -634,12 +633,6 @@ Singleton {
         })
 
     readonly property var expressiveCurves: ({
-            "emphasized": [0.05, 0, 2 / 15, 0.06, 1 / 6, 0.4, 5 / 24, 0.82, 0.25, 1, 1, 1],
-            "emphasizedAccel": [0.3, 0, 0.8, 0.15, 1, 1],
-            "emphasizedDecel": [0.05, 0.7, 0.1, 1, 1, 1],
-            "standard": [0.2, 0, 0, 1, 1, 1],
-            "standardAccel": [0.3, 0, 1, 1, 1, 1],
-            "standardDecel": [0, 0, 0, 1, 1, 1],
             "expressiveFastSpatial": [0.42, 1.67, 0.21, 0.9, 1, 1],
             "expressiveDefaultSpatial": [0.38, 1.21, 0.22, 1, 1, 1],
             "expressiveSlowSpatial": [0.39, 1.29, 0.35, 0.98, 1, 1],
@@ -649,16 +642,12 @@ Singleton {
         })
 
     readonly property var expressiveDurations: ({
-            "fast": currentAnimationBaseDuration * 0.4,
-            "normal": currentAnimationBaseDuration * 0.8,
-            "large": currentAnimationBaseDuration * 1.2,
-            "extraLarge": currentAnimationBaseDuration * 2.0,
-            "expressiveFastSpatial": currentAnimationBaseDuration * 0.7,
-            "expressiveDefaultSpatial": currentAnimationBaseDuration,
-            "expressiveSlowSpatial": currentAnimationBaseDuration * 1.3,
-            "expressiveFastEffects": currentAnimationBaseDuration * 0.3,
-            "expressiveEffects": currentAnimationBaseDuration * 0.4,
-            "expressiveSlowEffects": currentAnimationBaseDuration * 0.6
+            "expressiveFastSpatial": motionMs(350),
+            "expressiveDefaultSpatial": motionMs(500),
+            "expressiveSlowSpatial": motionMs(650),
+            "expressiveFastEffects": motionMs(150),
+            "expressiveEffects": motionMs(200),
+            "expressiveSlowEffects": motionMs(300)
         })
 
     function elevationOffsetXFor(level, direction, fallback) {

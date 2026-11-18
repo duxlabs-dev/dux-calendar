@@ -129,6 +129,11 @@ Item {
         }
     ]
 
+    readonly property var motionDurationOptions: [I18n.tr("Off", "animation duration option"), I18n.tr("Shorter", "animation duration option"), I18n.tr("Short", "animation duration option"), I18n.tr("Medium", "animation duration option"), I18n.tr("Long", "animation duration option"), I18n.tr("Longer", "animation duration option")].map((label, index) => ({
+                label: label,
+                value: index - 1
+            }))
+
     readonly property var durationOptions: [
         {
             label: I18n.tr("15 minutes", "default event duration option"),
@@ -761,8 +766,9 @@ Item {
                                 Behavior on scale {
                                     enabled: Theme.animationsEnabled
                                     NumberAnimation {
-                                        duration: Theme.shortDuration
-                                        easing.type: Theme.emphasizedEasing
+                                        duration: Theme.expressiveDurations.expressiveFastSpatial
+                                        easing.type: Easing.BezierSpline
+                                        easing.bezierCurve: Theme.expressiveCurves.expressiveFastSpatial
                                     }
                                 }
 
@@ -961,17 +967,15 @@ Item {
             SettingsCard {
 
                 title: I18n.tr("Motion", "appearance settings section label")
-                SettingsSliderRow {
-                    text: I18n.tr("Duration", "animation duration slider label")
-                    minimumLabel: I18n.tr("Off", "animation duration slider label at zero")
-                    minimum: 0
-                    maximum: 1000
-                    unit: "ms"
-                    value: SettingsData.animationDuration
-                    onSliderValueChanged: newValue => SettingsData.animationDuration = newValue
+                OptionDropdownRow {
+                    text: I18n.tr("Duration", "animation duration setting label")
+                    optionList: root.motionDurationOptions
+                    current: SettingsData.motionDuration
+                    onPicked: value => SettingsData.motionDuration = value
                 }
 
                 SettingsButtonGroupRow {
+                    visible: !Theme.motionOff
                     text: I18n.tr("Spring", "spring bounce setting label")
                     model: [I18n.tr("Smooth", "spring bounce option"), I18n.tr("Balanced", "spring bounce option"), I18n.tr("Playful", "spring bounce option")]
                     currentIndex: SettingsData.springBounce
@@ -983,12 +987,14 @@ Item {
                 }
 
                 SettingsToggleRow {
+                    visible: !Theme.motionOff
                     text: I18n.tr("Ripple effects", "ripple effects toggle label")
                     checked: SettingsData.enableRippleEffects
                     onToggled: checked => SettingsData.enableRippleEffects = checked
                 }
 
                 SettingsToggleRow {
+                    visible: !Theme.motionOff
                     text: I18n.tr("Reduce motion", "reduce motion toggle label")
                     checked: SettingsData.reduceMotion
                     onToggled: checked => SettingsData.reduceMotion = checked

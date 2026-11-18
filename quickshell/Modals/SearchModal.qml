@@ -235,7 +235,7 @@ FocusScope {
         opacity: root.opened ? Theme.scrimAlpha : 0
 
         Behavior on opacity {
-            enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+            enabled: Theme.animationsEnabled
             DC.DAnim {
                 duration: Theme.expressiveDurations.expressiveEffects
                 easing.bezierCurve: Theme.expressiveCurves.expressiveEffects
@@ -258,7 +258,7 @@ FocusScope {
         opacity: root.opened ? 1 : 0
 
         Behavior on scale {
-            enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+            enabled: Theme.animationsEnabled
             DC.DAnim {
                 duration: Theme.expressiveDurations.expressiveDefaultSpatial
                 easing.bezierCurve: Theme.expressiveCurves.expressiveDefaultSpatial
@@ -266,7 +266,7 @@ FocusScope {
         }
 
         Behavior on opacity {
-            enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+            enabled: Theme.animationsEnabled
             DC.DAnim {
                 duration: Theme.expressiveDurations.expressiveEffects
                 easing.bezierCurve: Theme.expressiveCurves.expressiveEffects
@@ -318,7 +318,7 @@ FocusScope {
             clip: true
 
             Behavior on height {
-                enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+                enabled: Theme.animationsEnabled
                 DC.DAnim {
                     duration: Theme.expressiveDurations.expressiveEffects
                     easing.bezierCurve: Theme.expressiveCurves.expressiveEffects
@@ -356,10 +356,10 @@ FocusScope {
                     color: selected ? Theme.selectedContainer : Theme.surfaceContainerLow
 
                     Behavior on color {
-                        enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+                        enabled: Theme.animationsEnabled
                         DC.DColorAnim {
-                            duration: Theme.shorterDuration
-                            easing.bezierCurve: Theme.expressiveCurves.standardDecel
+                            duration: Theme.expressiveDurations.expressiveFastEffects
+                            easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
                         }
                     }
 

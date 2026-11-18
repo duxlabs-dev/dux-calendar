@@ -9,14 +9,6 @@ import qs.Common
 Singleton {
     id: root
 
-    enum AnimationSpeed {
-        None,
-        Short,
-        Medium,
-        Long,
-        Custom
-    }
-
     enum TextRenderType {
         Qt,
         Native,
@@ -34,7 +26,6 @@ Singleton {
     property bool popoutElevationEnabled: true
     property int textRenderType: SettingsData.TextRenderType.Qt
     property int textRenderQuality: SettingsData.TextRenderQuality.Default
-    property int animationSpeed: SettingsData.AnimationSpeed.Short
     property bool blurBorderEnabled: true
     property real blurBorderOpacity: 0.35
     property real blurLayerOutlineOpacity: 0
@@ -64,7 +55,7 @@ Singleton {
     // 0 (square) … 100; 50 keeps the Material shape scale
     property alias radiusStrength: adapter.radiusStrength
     // base transition length in ms, 0 disables animations
-    property alias animationDuration: adapter.animationDuration
+    property alias motionDuration: adapter.motionDuration
     property alias reduceMotion: adapter.reduceMotion
     // 0 smooth, 1 balanced, 2 playful
     property alias springBounce: adapter.springBounce
@@ -130,6 +121,26 @@ Singleton {
     property alias lastView: adapter.lastView
     // "accountId:noticeCode" entries the user closed in the accounts list
     property alias dismissedAccountNotices: adapter.dismissedAccountNotices
+
+    readonly property var motionStepMs: [250, 375, 500, 750, 1000]
+
+    function motionStep(durationMs) {
+        if (durationMs <= 0)
+            return -1;
+        return motionStepMs.reduce((nearest, ms, step) => Math.abs(ms - durationMs) < Math.abs(motionStepMs[nearest] - durationMs) ? step : nearest, 0);
+    }
+
+    function adoptLegacyAnimationDuration(text) {
+        let saved = null;
+        try {
+            saved = JSON.parse(text);
+        } catch (e) {
+            return;
+        }
+        if (typeof saved?.animationDuration !== "number" || "motionDuration" in saved)
+            return;
+        motionDuration = motionStep(saved.animationDuration);
+    }
 
     function isNoticeDismissed(accountId, code) {
         return dismissedAccountNotices.indexOf(accountId + ":" + code) !== -1;
@@ -217,7 +228,10 @@ Singleton {
         property bool _loaded: false
         property bool _selfWrite: false
 
-        onLoaded: _loaded = true
+        onLoaded: {
+            root.adoptLegacyAnimationDuration(text());
+            _loaded = true;
+        }
         onLoadFailed: _loaded = true
         onFileChanged: {
             if (_selfWrite) {
@@ -240,7 +254,7 @@ Singleton {
             property string presetTheme: "purple"
             property string customThemeFile: ""
             property int radiusStrength: 50
-            property int animationDuration: 250
+            property int motionDuration: 2
             property bool reduceMotion: false
             property int springBounce: 1
             property bool enableRippleEffects: true

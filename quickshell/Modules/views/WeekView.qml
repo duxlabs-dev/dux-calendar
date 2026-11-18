@@ -316,8 +316,9 @@ Item {
 
             Behavior on height {
                 NumberAnimation {
-                    duration: Theme.shorterDuration
-                    easing.type: Theme.standardEasing
+                    duration: Theme.expressiveDurations.expressiveFastEffects
+                    easing.type: Easing.BezierSpline
+                    easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
                 }
             }
 
@@ -440,8 +441,9 @@ Item {
 
             Behavior on height {
                 NumberAnimation {
-                    duration: Theme.shorterDuration
-                    easing.type: Theme.standardEasing
+                    duration: Theme.expressiveDurations.expressiveFastEffects
+                    easing.type: Easing.BezierSpline
+                    easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
                 }
             }
 
@@ -647,8 +649,9 @@ Item {
 
             Behavior on height {
                 NumberAnimation {
-                    duration: Theme.shorterDuration
-                    easing.type: Theme.standardEasing
+                    duration: Theme.expressiveDurations.expressiveFastEffects
+                    easing.type: Easing.BezierSpline
+                    easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
                 }
             }
 
@@ -968,8 +971,9 @@ Item {
         target: root
         property: "slidePx"
         to: 0
-        duration: Theme.shortDuration
-        easing.type: Theme.standardEasing
+        duration: Theme.expressiveDurations.expressiveFastEffects
+        easing.type: Easing.BezierSpline
+        easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
     }
 
     DankSlideArea {
