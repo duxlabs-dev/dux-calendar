@@ -175,7 +175,7 @@ Item {
 
                     Timer {
                         id: spinnerHold
-                        interval: 1200
+                        interval: Timing.holdShort
                     }
 
                     DSpinner {

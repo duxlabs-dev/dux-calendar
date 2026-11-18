@@ -182,7 +182,7 @@ FloatingWindow {
 
     Timer {
         id: previewTimer
-        interval: 100
+        interval: Timing.debounceShort
         onTriggered: importModal.refreshPreview()
     }
 

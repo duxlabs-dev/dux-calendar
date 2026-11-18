@@ -223,7 +223,7 @@ FocusScope {
 
     Timer {
         id: searchDebounce
-        interval: 250
+        interval: Timing.debounceLong
         repeat: false
         onTriggered: root._runSearch()
     }

@@ -292,7 +292,7 @@ Singleton {
 
     Timer {
         id: refreshDebounce
-        interval: 400
+        interval: Timing.debounceSlow
         repeat: false
         onTriggered: {
             root.refreshCalendars();
@@ -302,7 +302,7 @@ Singleton {
 
     Timer {
         id: tasksDebounce
-        interval: 400
+        interval: Timing.debounceSlow
         repeat: false
         onTriggered: root.reloadTasks()
     }

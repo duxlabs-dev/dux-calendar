@@ -218,7 +218,7 @@ ShellRoot {
 
     Timer {
         id: focusRetry
-        interval: 150
+        interval: Timing.settle
         repeat: false
         onTriggered: root.focusToplevel()
     }
