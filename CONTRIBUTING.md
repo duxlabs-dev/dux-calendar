@@ -81,12 +81,13 @@ This is a monorepo, the easiest thing to do is to open an editor in either `quic
 }
 ```
 
-3. Create empty `.qmlls.ini` file in `quickshell/` directory
+3. Generate `quickshell/.qmlls.ini` so qmlls can resolve `qs.*` and `Quickshell` imports. You don't need to create the file first; this command creates it:
 
 ```bash
-cd quickshell
-touch .qmlls.ini
+dcal qs tooling -p quickshell
 ```
+
+It does not start the app. The generated file is a symlink into `/run/user/<uid>`, so run it again after a reboot. If your dux-qt-base predates the `tooling` command, `rm -f quickshell/.qmlls.ini && touch quickshell/.qmlls.ini` and run the app from `quickshell/` once instead.
 
 4. Make your changes, test, and open a pull request.
 
