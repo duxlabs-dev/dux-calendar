@@ -902,6 +902,12 @@
   "Location": {
     "Location": "Helyszín"
   },
+  "Long": {
+    "Long": ""
+  },
+  "Longer": {
+    "Longer": ""
+  },
   "Low": {
     "Low": "Alacsony"
   },
@@ -1429,6 +1435,12 @@
   },
   "Shape": {
     "Shape": "Alak"
+  },
+  "Short": {
+    "Short": ""
+  },
+  "Shorter": {
+    "Shorter": ""
   },
   "Show": {
     "Show": "Megjelenítés"

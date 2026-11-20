@@ -902,6 +902,12 @@
   "Location": {
     "Location": "Posizione"
   },
+  "Long": {
+    "Long": ""
+  },
+  "Longer": {
+    "Longer": ""
+  },
   "Low": {
     "Low": "Bassa"
   },
@@ -1429,6 +1435,12 @@
   },
   "Shape": {
     "Shape": "Forma"
+  },
+  "Short": {
+    "Short": ""
+  },
+  "Shorter": {
+    "Shorter": ""
   },
   "Show": {
     "Show": "Mostra"

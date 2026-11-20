@@ -6,25 +6,25 @@
     "%1 PM": "%1 PM"
   },
   "%1 access wasn't granted. Reconnect this account to sync tasks.": {
-    "%1 access wasn't granted. Reconnect this account to sync tasks.": ""
+    "%1 access wasn't granted. Reconnect this account to sync tasks.": "Er is geen toegang tot %1 verleend. Verbind dit account opnieuw om taken te synchroniseren."
   },
   "%1 appointments fall outside core hours": {
     "%1 appointments fall outside core hours": "%1 afspraken vallen buiten de kernuren"
   },
   "%1 calendars via app-specific password.": {
-    "%1 calendars via app-specific password.": ""
+    "%1 calendars via app-specific password.": "%1-agenda's via een app-specifiek wachtwoord."
   },
   "%1 events selected": {
     "%1 events selected": "%1 afspraken geselecteerd"
   },
   "%1 not detected — using the %2 preset.": {
-    "%1 not detected — using the %2 preset.": ""
+    "%1 not detected — using the %2 preset.": "%1 niet gevonden — de voorinstelling %2 wordt gebruikt."
   },
   "%1 not detected, using %2.": {
-    "%1 not detected, using %2.": ""
+    "%1 not detected, using %2.": "%1 niet gevonden, %2 wordt gebruikt."
   },
   "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
-    "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": ""
+    "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": "%1 geeft vaak %2 terug in de eerste minuten nadat een app-registratie is aangemaakt of gewijzigd. Wacht een minuut of twee en probeer het opnieuw."
   },
   "%1 overlapping events": {
     "%1 overlapping events": "%1 overlappende afspraken"
@@ -33,19 +33,19 @@
     "%1 selected": "%1 geselecteerd"
   },
   "%1 theme missing or invalid — using the %2 preset.": {
-    "%1 theme missing or invalid — using the %2 preset.": ""
+    "%1 theme missing or invalid — using the %2 preset.": "%1-thema ontbreekt of is ongeldig — de voorinstelling %2 wordt gebruikt."
   },
   "%1 times": {
     "%1 times": "%1 keer"
   },
   "%1 will close and reopen with the new zoom.": {
-    "%1 will close and reopen with the new zoom.": ""
+    "%1 will close and reopen with the new zoom.": "%1 wordt afgesloten en opnieuw geopend met de nieuwe zoom."
   },
   "%1 · All day": {
     "%1 · All day": "%1 · De hele dag"
   },
   "%1, %2 and %3 calendars.": {
-    "%1, %2 and %3 calendars.": ""
+    "%1, %2 and %3 calendars.": "%1-, %2- en %3-agenda's."
   },
   "%1d before": {
     "%1d before": "%1d van tevoren"
@@ -69,10 +69,10 @@
     "%1w before": "%1w van tevoren"
   },
   "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": {
-    "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": ""
+    "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": "%2 is een agenda voor de moderne Linux-desktop met een <a href=\"%3\" style=\"text-decoration:none; color:%1;\">op Material 3 geïnspireerd</a> ontwerp, plus een aanpasbare CLI en socket-API voor integraties.<br /><br/>Het is gebouwd met %4, een QT6-framework voor het bouwen van desktopshells, en %5, een statisch getypeerde, gecompileerde programmeertaal."
   },
   "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
-    "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": ""
+    "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": "%3 is niet beschikbaar. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Schakel de API in</a> of verbind dit account opnieuw en vernieuw daarna om taken te synchroniseren."
   },
   "(untitled)": {
     "(untitled)": "(naamloos)"
@@ -168,13 +168,13 @@
     "5 minutes before": "5 minuten van tevoren"
   },
   "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": {
-    "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": ""
+    "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": "50 gebruikt %1-vormen. Lagere waarden verminderen de afronding, hogere waarden verhogen die."
   },
   "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": {
     "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT-licentie</a>"
   },
   "A folder of %1 files on this machine.": {
-    "A folder of %1 files on this machine.": ""
+    "A folder of %1 files on this machine.": "Een map met %1-bestanden op deze computer."
   },
   "API": {
     "API": "API"
@@ -204,7 +204,7 @@
     "Add": "Toevoegen"
   },
   "Add a %1, local, %2, or %3 account with a task list to create tasks.": {
-    "Add a %1, local, %2, or %3 account with a task list to create tasks.": ""
+    "Add a %1, local, %2, or %3 account with a task list to create tasks.": "Voeg een %1-, lokaal, %2- of %3-account met een takenlijst toe om taken aan te maken."
   },
   "Add a calendar": {
     "Add a calendar": "Agenda toevoegen"
@@ -429,7 +429,7 @@
     "Confirm delete": "Verwijderen bevestigen"
   },
   "Conflicts use events currently synced to %1. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to %1. You can still import an overlapping event.": ""
+    "Conflicts use events currently synced to %1. You can still import an overlapping event.": "Conflicten zijn gebaseerd op afspraken die momenteel met %1 zijn gesynchroniseerd. Je kunt een overlappende afspraak toch importeren."
   },
   "Connect": {
     "Connect": "Verbinden"
@@ -438,10 +438,10 @@
     "Connect %1": "%1 verbinden"
   },
   "Connect %1 Account": {
-    "Connect %1 Account": ""
+    "Connect %1 Account": "%1-account verbinden"
   },
   "Connect any %1-compatible server.": {
-    "Connect any %1-compatible server.": ""
+    "Connect any %1-compatible server.": "Verbind met een willekeurige %1-compatibele server."
   },
   "Connected": {
     "Connected": "Verbonden"
@@ -717,7 +717,7 @@
     "Enter client ID": "Client-ID invoeren"
   },
   "Enter your %1 server details. The connection is verified before the account is saved.": {
-    "Enter your %1 server details. The connection is verified before the account is saved.": ""
+    "Enter your %1 server details. The connection is verified before the account is saved.": "Voer de gegevens van je %1-server in. De verbinding wordt gecontroleerd voordat het account wordt opgeslagen."
   },
   "Enter your client ID": {
     "Enter your client ID": "Voer je client-ID in"
@@ -759,10 +759,10 @@
     "Focus ring": "Focusring"
   },
   "Follow %1 colors, falling back to a preset.": {
-    "Follow %1 colors, falling back to a preset.": ""
+    "Follow %1 colors, falling back to a preset.": "Kleuren van %1 volgen, met een voorinstelling als terugvaloptie."
   },
   "Follow colors generated by %1.": {
-    "Follow colors generated by %1.": ""
+    "Follow colors generated by %1.": "Kleuren volgen die door %1 zijn gegenereerd."
   },
   "Follow language": {
     "Follow language": "Taal volgen"
@@ -807,7 +807,7 @@
     "Import": "Importeren"
   },
   "Import %1": {
-    "Import %1": ""
+    "Import %1": "%1 importeren"
   },
   "Import %1 events": {
     "Import %1 events": "%1 afspraken importeren"
@@ -816,7 +816,7 @@
     "Import events": "Afspraken importeren"
   },
   "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": {
-    "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": ""
+    "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": "Importeer de %1 die je hebt gedownload bij het aanmaken van de client, of plak de client-ID en het clientgeheim handmatig."
   },
   "Importing...": {
     "Importing...": "Importeren..."
@@ -855,7 +855,7 @@
     "Language of the interface.": "Taal van de interface."
   },
   "Launch %1 in the background when you log in.": {
-    "Launch %1 in the background when you log in.": ""
+    "Launch %1 in the background when you log in.": "%1 op de achtergrond starten wanneer je je aanmeldt."
   },
   "Layer opacity": {
     "Layer opacity": "Laagdekking"
@@ -867,7 +867,7 @@
     "Lets the desktop show through the window. Text and controls stay solid.": "Laat het bureaublad door het venster heen zichtbaar zijn. Tekst en bedieningselementen blijven ondoorzichtig."
   },
   "Library": {
-    "Library": ""
+    "Library": "Bibliotheek"
   },
   "Light": {
     "Light": "Licht"
@@ -901,6 +901,12 @@
   },
   "Location": {
     "Location": "Locatie"
+  },
+  "Long": {
+    "Long": ""
+  },
+  "Longer": {
+    "Longer": ""
   },
   "Low": {
     "Low": "Laag"
@@ -1041,7 +1047,7 @@
     "Next year": "Volgend jaar"
   },
   "No OAuth client found in that file — expected the %1 downloaded from %2.": {
-    "No OAuth client found in that file — expected the %1 downloaded from %2.": ""
+    "No OAuth client found in that file — expected the %1 downloaded from %2.": "Geen OAuth-client gevonden in dat bestand — verwacht werd de %1 die je van %2 hebt gedownload."
   },
   "No accounts yet. Click \"Add account\" to connect one.": {
     "No accounts yet. Click \"Add account\" to connect one.": "Nog geen accounts. Klik op \"Account toevoegen\" om er een te verbinden."
@@ -1188,7 +1194,7 @@
     "Paste the Application (client) ID from your app registration's Overview page.": "Plak de Applicatie-ID (client-ID) van de overzichtspagina van je app-registratie."
   },
   "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": {
-    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": ""
+    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": "Plak de URL van een externe agendafeed om je erop te abonneren. De agenda is alleen-lezen en wordt op de achtergrond vernieuwd. %1-links worden geaccepteerd."
   },
   "Paste your credentials": {
     "Paste your credentials": "Plak je inloggegevens"
@@ -1215,7 +1221,7 @@
     "Playful": "Speels"
   },
   "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": {
-    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": ""
+    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": "Kies een map met %1-bestanden. Elke submap of elk %1-bestand wordt een agenda — compatibel met %2-indelingen. De map wordt aangemaakt als die nog niet bestaat."
   },
   "Preset": {
     "Preset": "Preset"
@@ -1272,7 +1278,7 @@
     "Recurring event · conflicts checked through %1": "Terugkerende afspraak · conflicten gecontroleerd tot en met %1"
   },
   "Recurring tasks are managed in %1.": {
-    "Recurring tasks are managed in %1.": ""
+    "Recurring tasks are managed in %1.": "Terugkerende taken worden beheerd in %1."
   },
   "Reduce motion": {
     "Reduce motion": "Beweging verminderen"
@@ -1308,10 +1314,10 @@
     "Remove reminder": "Herinnering verwijderen"
   },
   "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": ""
+    "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": "Verwijdert dit account en de bijbehorende agenda's en afspraken uit %1. Er wordt niets verwijderd bij de provider."
   },
   "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": ""
+    "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": "Verwijdert deze agenda en de bijbehorende afspraken uit %1. Als de provider de agenda nog aanbiedt, komt die bij de volgende synchronisatie terug."
   },
   "Remove…": {
     "Remove…": "Verwijderen…"
@@ -1356,13 +1362,13 @@
     "Restart required": "Herstart vereist"
   },
   "Revision": {
-    "Revision": ""
+    "Revision": "Revisie"
   },
   "Ripple effects": {
     "Ripple effects": "Rimpeleffecten"
   },
   "Runtime": {
-    "Runtime": ""
+    "Runtime": "Runtime"
   },
   "Save": {
     "Save": "Opslaan"
@@ -1392,7 +1398,7 @@
     "Secondary": "Secundair"
   },
   "Select %1": {
-    "Select %1": ""
+    "Select %1": "%1 selecteren"
   },
   "Select a range of events": {
     "Select a range of events": "Een reeks afspraken selecteren"
@@ -1422,7 +1428,7 @@
     "Server URL": "Server-URL"
   },
   "Set by %1.": {
-    "Set by %1.": ""
+    "Set by %1.": "Ingesteld door %1."
   },
   "Settings": {
     "Settings": "Instellingen"
@@ -1430,11 +1436,17 @@
   "Shape": {
     "Shape": "Vorm"
   },
+  "Short": {
+    "Short": ""
+  },
+  "Shorter": {
+    "Shorter": ""
+  },
   "Show": {
     "Show": "Tonen"
   },
   "Show %1 in the system tray.": {
-    "Show %1 in the system tray.": ""
+    "Show %1 in the system tray.": "%1 tonen in het systeemvak."
   },
   "Show all events in month view": {
     "Show all events in month view": "Alle afspraken tonen in maandoverzicht"
@@ -1470,13 +1482,13 @@
     "Sign in with %1": "Inloggen met %1"
   },
   "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": {
-    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": ""
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": "Meld je aan met %1 in je browser en je bent klaar — geen configuratie nodig. %2 synchroniseert je %3-agenda's, afspraken en taken."
   },
   "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": {
-    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": ""
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": "Meld je aan met %1 in je browser en je bent klaar — geen configuratie nodig. %2 synchroniseert je agenda's, afspraken en taken."
   },
   "Sign in with your %1 account.": {
-    "Sign in with your %1 account.": ""
+    "Sign in with your %1 account.": "Meld je aan met je %1-account."
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Log in met je Apple ID en een app-specifiek wachtwoord. Normale Apple ID-wachtwoorden werken niet."
@@ -1530,13 +1542,13 @@
     "Subscribe": "Abonneren"
   },
   "Subscribe to an external calendar by URL (%1).": {
-    "Subscribe to an external calendar by URL (%1).": ""
+    "Subscribe to an external calendar by URL (%1).": "Abonneer je op een externe agenda via een URL (%1)."
   },
   "Subscribing…": {
     "Subscribing…": "Abonneren…"
   },
   "Support %1": {
-    "Support %1": ""
+    "Support %1": "%1 steunen"
   },
   "Sync interval": {
     "Sync interval": "Synchronisatie-interval"
@@ -1548,7 +1560,7 @@
     "Sync now": "Nu synchroniseren"
   },
   "Synced as \"%2\". The name only changes in %1.": {
-    "Synced as \"%2\". The name only changes in %1.": ""
+    "Synced as \"%2\". The name only changes in %1.": "Gesynchroniseerd als \"%2\". De naam wordt alleen in %1 gewijzigd."
   },
   "System": {
     "System": "Systeem"
@@ -1665,7 +1677,7 @@
     "Use synced name": "Gesynchroniseerde naam gebruiken"
   },
   "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": {
-    "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": ""
+    "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": "Gebruik de agenda's die %1 al op deze computer beheert (%2, %3 en meer). Aanmelden is niet nodig — %2 regelt de inloggegevens en synchronisatie."
   },
   "Use your own OAuth client": {
     "Use your own OAuth client": "Gebruik je eigen OAuth-client"
@@ -1677,10 +1689,10 @@
     "Username (optional)": "Gebruikersnaam (optioneel)"
   },
   "Using %1 colors.": {
-    "Using %1 colors.": ""
+    "Using %1 colors.": "%1-kleuren worden gebruikt."
   },
   "Using %1 dynamic colors.": {
-    "Using %1 dynamic colors.": ""
+    "Using %1 dynamic colors.": "Dynamische kleuren van %1 worden gebruikt."
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "Controleer of desktopnotificaties werken."
@@ -1704,7 +1716,7 @@
     "Waiting for browser…": "Wachten op browser…"
   },
   "Waiting for the %1 daemon...": {
-    "Waiting for the %1 daemon...": ""
+    "Waiting for the %1 daemon...": "Wachten op de %1-daemon..."
   },
   "Week": {
     "Week": "Week"
@@ -1740,7 +1752,7 @@
     "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": "Je agenda's worden op de achtergrond gesynchroniseerd. Je kunt dit account beheren via Instellingen → Accounts."
   },
   "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": {
-    "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": ""
+    "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": "Je client-ID, geheim en vernieuwingstoken worden opgeslagen in de sleutelbos van het systeem (%1) indien beschikbaar, of anders in een versleuteld lokaal bestand."
   },
   "Your compositor does not support background blur.": {
     "Your compositor does not support background blur.": "Je compositor ondersteunt geen achtergrondvervaging."
@@ -1767,7 +1779,7 @@
     "e.g. 2022-01-01": "bijv. 2022-01-01"
   },
   "iCalendar subscription": {
-    "iCalendar subscription": ""
+    "iCalendar subscription": "iCalendar-abonnement"
   },
   "light": {
     "light": "licht"

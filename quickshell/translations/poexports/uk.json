@@ -902,6 +902,12 @@
   "Location": {
     "Location": "Місце"
   },
+  "Long": {
+    "Long": ""
+  },
+  "Longer": {
+    "Longer": ""
+  },
   "Low": {
     "Low": "Низький"
   },
@@ -1429,6 +1435,12 @@
   },
   "Shape": {
     "Shape": "Форма"
+  },
+  "Short": {
+    "Short": ""
+  },
+  "Shorter": {
+    "Shorter": ""
   },
   "Show": {
     "Show": "Показати"

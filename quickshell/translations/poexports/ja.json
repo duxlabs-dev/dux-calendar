@@ -902,6 +902,12 @@
   "Location": {
     "Location": "場所"
   },
+  "Long": {
+    "Long": ""
+  },
+  "Longer": {
+    "Longer": ""
+  },
   "Low": {
     "Low": "低"
   },
@@ -1429,6 +1435,12 @@
   },
   "Shape": {
     "Shape": ""
+  },
+  "Short": {
+    "Short": ""
+  },
+  "Shorter": {
+    "Shorter": ""
   },
   "Show": {
     "Show": "表示"

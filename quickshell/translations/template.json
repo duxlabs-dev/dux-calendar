@@ -1591,7 +1591,7 @@
   {
     "term": "Duration",
     "translation": "",
-    "context": "animation duration slider label",
+    "context": "animation duration setting label",
     "reference": "",
     "comment": ""
   },
@@ -2107,6 +2107,20 @@
     "comment": ""
   },
   {
+    "term": "Long",
+    "translation": "",
+    "context": "animation duration option",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Longer",
+    "translation": "",
+    "context": "animation duration option",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Low",
     "translation": "",
     "context": "task priority dropdown option",
@@ -2144,7 +2158,7 @@
   {
     "term": "Medium",
     "translation": "",
-    "context": "task priority dropdown option",
+    "context": "animation duration option | task priority dropdown option",
     "reference": "",
     "comment": ""
   },
@@ -2571,7 +2585,7 @@
   {
     "term": "Off",
     "translation": "",
-    "context": "animation duration slider label at zero",
+    "context": "animation duration option",
     "reference": "",
     "comment": ""
   },
@@ -3335,6 +3349,20 @@
     "term": "Shape",
     "translation": "",
     "context": "appearance settings section label",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Short",
+    "translation": "",
+    "context": "animation duration option",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Shorter",
+    "translation": "",
+    "context": "animation duration option",
     "reference": "",
     "comment": ""
   },
