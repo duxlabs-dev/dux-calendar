@@ -193,5 +193,8 @@ func mapEvent(e *ent.Event) map[string]any {
 	if len(e.Reminders) > 0 {
 		entry["reminders"] = e.Reminders
 	}
+	if e.OriginalStart != nil {
+		entry["originalStart"] = e.OriginalStart
+	}
 	return entry
 }

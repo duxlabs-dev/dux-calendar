@@ -347,7 +347,7 @@ FloatingWindow {
 
     function requestEventShift(event, dayOffset, minuteOffset) {
         eventSelection.ensureSelected(event);
-        const movesSeries = eventSelection.events(event).some(ev => (ev.recurringId || "") !== "" || (ev.recurrence || []).length > 0);
+        const movesSeries = eventSelection.events(event).some(ev => (ev.recurrence || []).length > 0);
         if (!movesSeries || !eventSelection.allWritable(event) || (dayOffset === 0 && minuteOffset === 0)) {
             eventSelection.moveBy(event, dayOffset, minuteOffset);
             return;
