@@ -28,10 +28,8 @@ Item {
 
             DButton {
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: I18n.tr("Support Dux Labs", "about page hero button, opens the Ko-fi donation page")
+                text: I18n.tr("Support %1", "about page hero button, opens the Ko-fi donation page, %1 is Dux Labs").arg("Dux Labs")
                 iconName: "favorite"
-                backgroundColor: Theme.primary
-                textColor: Theme.onPrimary
                 onClicked: Qt.openUrlExternally(root.kofiUrl)
             }
         }
@@ -39,7 +37,7 @@ Item {
         SettingsCard {
             SettingsRow {
                 body: StyledText {
-                    text: I18n.tr('Dux Calendar is a calendar for the modern Linux desktop with a <a href="https://m3.material.io/" style="text-decoration:none; color:%1;">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href="https://quickshell.org" style="text-decoration:none; color:%1;">Quickshell</a>, a QT6 framework for building desktop shells, and <a href="https://go.dev" style="text-decoration:none; color:%1;">Go</a>, a statically typed, compiled programming language.', 'about page project description with embedded links').arg(Theme.primary)
+                    text: I18n.tr('%2 is a calendar for the modern Linux desktop with a <a href="%3" style="text-decoration:none; color:%1;">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.', 'about page project description, %2 is the app name, %3 is the material design url, %4 is a Quickshell link, %5 is a Go link').arg(Theme.primary).arg("Dux Calendar").arg("https://m3.material.io/").arg(`<a href="https://quickshell.org" style="text-decoration:none; color:${Theme.primary};">Quickshell</a>`).arg(`<a href="https://go.dev" style="text-decoration:none; color:${Theme.primary};">Go</a>`)
                     textFormat: Text.RichText
                     font.pixelSize: Theme.fontSizeMedium
                     linkColor: Theme.primary
@@ -65,7 +63,7 @@ Item {
 
             SettingsLinkRow {
                 iconName: "code"
-                title: I18n.tr("GitHub", "about page resource button")
+                title: "GitHub"
                 subtitle: root.host(root.githubUrl)
                 url: root.githubUrl
             }
@@ -85,6 +83,34 @@ Item {
                     sourceSize: Qt.size(Theme.iconSize, Theme.iconSize)
                     smooth: true
                     fillMode: Image.PreserveAspectFit
+                }
+            }
+        }
+
+        SettingsCard {
+            title: I18n.tr("Runtime", "about page runtime section header")
+
+            SettingsRow {
+                title: RuntimeInfo.name
+                trailingBadge: RuntimeInfo.version
+            }
+
+            SettingsRow {
+                visible: RuntimeInfo.revision !== ""
+                title: I18n.tr("Revision", "about page runtime build revision")
+                subtitle: RuntimeInfo.revision
+            }
+
+            SettingsRow {
+                visible: RuntimeInfo.library !== ""
+                title: I18n.tr("Library", "about page runtime library path")
+                body: StyledText {
+                    width: parent.width
+                    text: RuntimeInfo.library
+                    textFormat: Text.PlainText
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: Theme.surfaceVariantText
+                    wrapMode: Text.WrapAnywhere
                 }
             }
         }

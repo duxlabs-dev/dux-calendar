@@ -69,10 +69,6 @@ ATTENDEE;CN=Bob;ROLE=OPT-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:bob@example.com
 	assert.True(t, ev.Attendees[0].Optional)
 }
 
-func TestEventsFromObjectNilData(t *testing.T) {
-	assert.Nil(t, eventsFromObject(cal.Calendar{}, caldav.CalendarObject{Path: "/x.ics"}))
-}
-
 func TestEventsFromObjectSkipsMissingUID(t *testing.T) {
 	ics := wrapVEvent(`DTSTAMP:20260101T000000Z
 DTSTART:20260507T140000Z

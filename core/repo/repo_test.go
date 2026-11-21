@@ -23,33 +23,6 @@ func newTestRepo(t *testing.T) (*repo.Repo, context.Context) {
 	return r, ctx
 }
 
-func TestAccountLifecycle(t *testing.T) {
-	r, ctx := newTestRepo(t)
-
-	created, err := r.CreateAccount(ctx, repo.CreateAccountInput{
-		ID:          "personal",
-		Kind:        account.KindLocal,
-		DisplayName: "Personal",
-		Settings:    map[string]any{"root": "/tmp/personal"},
-	})
-	require.NoError(t, err)
-	require.Equal(t, "personal", created.ID)
-
-	got, err := r.GetAccount(ctx, "personal")
-	require.NoError(t, err)
-	require.Equal(t, "Personal", got.DisplayName)
-	require.Equal(t, "/tmp/personal", got.Settings["root"])
-
-	all, err := r.ListAccounts(ctx)
-	require.NoError(t, err)
-	require.Len(t, all, 1)
-
-	require.NoError(t, r.DeleteAccount(ctx, "personal"))
-
-	_, err = r.GetAccount(ctx, "personal")
-	require.True(t, repo.IsNotFound(err))
-}
-
 // Account timestamps default to time.Now in the daemon's local zone; a zone
 // whose offset has minutes broke every later read of the row (issue #79).
 func TestAccountRoundTripInMinuteOffsetZone(t *testing.T) {

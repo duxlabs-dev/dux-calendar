@@ -312,7 +312,7 @@ Item {
         deleteConfirmLoader.active = true;
         deleteConfirmLoader.item.show({
             title: I18n.tr("Delete \"%1\"?", "confirm dialog title for deleting a calendar, %1 is the calendar name").arg(cal.name),
-            message: I18n.tr("Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.", "confirm dialog body for deleting a calendar"),
+            message: I18n.tr("Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.", "confirm dialog body for deleting a calendar, %1 is the app name").arg("Dux Calendar"),
             confirmText: I18n.tr("Delete", "confirm button for deleting a calendar"),
             danger: true
         });
@@ -323,7 +323,7 @@ Item {
         accountRemoveLoader.active = true;
         accountRemoveLoader.item.show({
             title: I18n.tr("Remove \"%1\"?", "confirm dialog title for removing an account, %1 is the account label").arg(DankCalService.accountLabel(acc)),
-            message: I18n.tr("Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.", "confirm dialog body for removing an account"),
+            message: I18n.tr("Removes this account and its calendars and events from %1. Nothing is deleted from the provider.", "confirm dialog body for removing an account, %1 is the app name").arg("Dux Calendar"),
             confirmText: I18n.tr("Remove", "confirm button for removing an account"),
             danger: true
         });
@@ -450,8 +450,9 @@ Item {
 
                 Behavior on rotation {
                     NumberAnimation {
-                        duration: Theme.shortDuration
-                        easing.type: Theme.standardEasing
+                        duration: Theme.expressiveDurations.expressiveDefaultSpatial
+                        easing.type: Easing.BezierSpline
+                        easing.bezierCurve: Theme.expressiveCurves.expressiveDefaultSpatial
                     }
                 }
             }
@@ -493,8 +494,6 @@ Item {
             text: I18n.tr("Create event", "sidebar button to create a new event")
             iconName: "add"
             buttonHeight: Theme.buttonHeightS
-            backgroundColor: Theme.primary
-            textColor: Theme.primaryText
             focusPolicy: Qt.NoFocus
             onClicked: root.createEventRequested()
         }
@@ -850,8 +849,7 @@ Item {
                     text: I18n.tr("Add task", "sidebar button to add a task")
                     iconName: "add"
                     buttonHeight: Theme.buttonHeightXS
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     focusPolicy: Qt.NoFocus
                     onClicked: root.createTaskRequested()
                 }
@@ -1025,8 +1023,7 @@ Item {
                     text: I18n.tr("Add account", "sidebar button to add a provider account")
                     iconName: "add"
                     buttonHeight: Theme.buttonHeightXS
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     focusPolicy: Qt.NoFocus
                     onClicked: root.addAccountRequested()
                 }

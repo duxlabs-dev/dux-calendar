@@ -28,7 +28,6 @@ pkgs.testers.runNixOSTest {
     machine.wait_for_unit("multi-user.target")
 
     machine.succeed("command -v dcal")
-    machine.succeed("command -v qs")
     machine.succeed("su -- danklinux -c 'dcal --help >/dev/null'")
     machine.succeed("test -f /run/current-system/sw/share/systemd/user/dcal.service")
     machine.succeed("test -f /run/current-system/sw/share/applications/dev.duxlabs.calendar.desktop")

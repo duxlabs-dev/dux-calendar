@@ -14,6 +14,13 @@
     "comment": ""
   },
   {
+    "term": "%1 access wasn't granted. Reconnect this account to sync tasks.",
+    "translation": "",
+    "context": "account notice when a task service permission is missing, %1 is Microsoft To Do",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "%1 appointments fall outside core hours",
     "translation": "",
     "context": "core hours warning banner, plural",
@@ -21,9 +28,37 @@
     "comment": ""
   },
   {
+    "term": "%1 calendars via app-specific password.",
+    "translation": "",
+    "context": "provider description in picker, %1 is Apple iCloud",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "%1 events selected",
     "translation": "",
     "context": "event context menu selection summary; %1 is event count",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "%1 not detected — using the %2 preset.",
+    "translation": "",
+    "context": "auto color source status when the shell is missing, %1 is Dux Shell, %2 is a preset name",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "%1 not detected, using %2.",
+    "translation": "",
+    "context": "auto font source status when the shell is missing, %1 is Dux Shell, %2 is a font family",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.",
+    "translation": "",
+    "context": "oauth hint, %1 is Microsoft, %2 is the server_error code",
     "reference": "",
     "comment": ""
   },
@@ -42,6 +77,13 @@
     "comment": ""
   },
   {
+    "term": "%1 theme missing or invalid — using the %2 preset.",
+    "translation": "",
+    "context": "color source fallback status, %1 is Matugen, %2 is a preset name",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "%1 times",
     "translation": "",
     "context": "recurrence label suffix for a fixed number of occurrences",
@@ -49,9 +91,23 @@
     "comment": ""
   },
   {
+    "term": "%1 will close and reopen with the new zoom.",
+    "translation": "",
+    "context": "interface zoom pending restart description, %1 is the app name",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "%1 · All day",
     "translation": "",
     "context": "event details time label for all-day events",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "%1, %2 and %3 calendars.",
+    "translation": "",
+    "context": "microsoft provider description in picker, %1 %2 %3 are Outlook, Office 365 and Exchange Online",
     "reference": "",
     "comment": ""
   },
@@ -101,6 +157,20 @@
     "term": "%1w before",
     "translation": "",
     "context": "event details short reminder offset in weeks",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.",
+    "translation": "",
+    "context": "about page project description, %2 is the app name, %3 is the material design url, %4 is a Quickshell link, %5 is a Go link",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.",
+    "translation": "",
+    "context": "account notice when a task service is disabled or its permission is missing, %2 is the api console url, %3 is Google Tasks",
     "reference": "",
     "comment": ""
   },
@@ -322,9 +392,9 @@
     "comment": ""
   },
   {
-    "term": "50 uses Material shapes. Lower values reduce rounding; higher values increase it.",
+    "term": "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.",
     "translation": "",
-    "context": "radius strength slider description",
+    "context": "radius strength slider description, %1 is Material",
     "reference": "",
     "comment": ""
   },
@@ -336,9 +406,9 @@
     "comment": ""
   },
   {
-    "term": "A folder of .ics files on this machine.",
+    "term": "A folder of %1 files on this machine.",
     "translation": "",
-    "context": "local provider description in picker",
+    "context": "local provider description in picker, %1 is the .ics file extension",
     "reference": "",
     "comment": ""
   },
@@ -406,9 +476,9 @@
     "comment": ""
   },
   {
-    "term": "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.",
+    "term": "Add a %1, local, %2, or %3 account with a task list to create tasks.",
     "translation": "",
-    "context": "task dialog hint when no task list is available",
+    "context": "task dialog hint when no task list is available, %1 is CalDAV, %2 is Google, %3 is Microsoft",
     "reference": "",
     "comment": ""
   },
@@ -605,13 +675,6 @@
     "term": "Apple ID",
     "translation": "",
     "context": "icloud username field label",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Apple iCloud calendars via app-specific password.",
-    "translation": "",
-    "context": "icloud provider description in picker",
     "reference": "",
     "comment": ""
   },
@@ -931,9 +994,9 @@
     "comment": ""
   },
   {
-    "term": "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.",
+    "term": "Conflicts use events currently synced to %1. You can still import an overlapping event.",
     "translation": "",
-    "context": "import preview explains the data and non-blocking conflicts",
+    "context": "import preview explains the data and non-blocking conflicts, %1 is the app name",
     "reference": "",
     "comment": ""
   },
@@ -952,23 +1015,16 @@
     "comment": ""
   },
   {
-    "term": "Connect Google Account",
+    "term": "Connect %1 Account",
     "translation": "",
-    "context": "button to start the one-click google sign-in",
+    "context": "button to start the one-click sign-in, %1 is Microsoft or Google",
     "reference": "",
     "comment": ""
   },
   {
-    "term": "Connect Microsoft Account",
+    "term": "Connect any %1-compatible server.",
     "translation": "",
-    "context": "button to start the one-click microsoft sign-in",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Connect any CalDAV-compatible server.",
-    "translation": "",
-    "context": "caldav provider description in picker",
+    "context": "provider description in picker, %1 is CalDAV",
     "reference": "",
     "comment": ""
   },
@@ -1528,35 +1584,7 @@
   {
     "term": "Duration",
     "translation": "",
-    "context": "animation duration slider label",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.",
-    "translation": "",
-    "context": "about page project description with embedded links",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Dux Calendar will close and reopen with the new zoom.",
-    "translation": "",
-    "context": "interface zoom pending restart description",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Dux Shell not detected — using the %1 preset.",
-    "translation": "",
-    "context": "auto color source status when DMS is missing",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Dux Shell not detected, using %1.",
-    "translation": "",
-    "context": "auto font source status when DMS is missing",
+    "context": "animation duration setting label",
     "reference": "",
     "comment": ""
   },
@@ -1638,9 +1666,9 @@
     "comment": ""
   },
   {
-    "term": "Enter your CalDAV server details. The connection is verified before the account is saved.",
+    "term": "Enter your %1 server details. The connection is verified before the account is saved.",
     "translation": "",
-    "context": "caldav sign-in form instructions",
+    "context": "sign-in form instructions, %1 is CalDAV",
     "reference": "",
     "comment": ""
   },
@@ -1683,13 +1711,6 @@
     "term": "Everything in this file is already on your calendar.",
     "translation": "",
     "context": "import dialog status when no event is new",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Evolution",
-    "translation": "",
-    "context": "evolution account display name field placeholder",
     "reference": "",
     "comment": ""
   },
@@ -1743,16 +1764,16 @@
     "comment": ""
   },
   {
-    "term": "Follow Dux Shell colors, falling back to a preset.",
+    "term": "Follow %1 colors, falling back to a preset.",
     "translation": "",
-    "context": "color source description for auto",
+    "context": "color source description for auto, %1 is Dux Shell",
     "reference": "",
     "comment": ""
   },
   {
-    "term": "Follow colors generated by Matugen.",
+    "term": "Follow colors generated by %1.",
     "translation": "",
-    "context": "color source description for Matugen",
+    "context": "color source description, %1 is Matugen",
     "reference": "",
     "comment": ""
   },
@@ -1799,13 +1820,6 @@
     "comment": ""
   },
   {
-    "term": "GitHub",
-    "translation": "",
-    "context": "about page resource button",
-    "reference": "",
-    "comment": ""
-  },
-  {
     "term": "Go to date",
     "translation": "",
     "context": "go to date dialog title | keyboard shortcut description",
@@ -1816,13 +1830,6 @@
     "term": "Go to today",
     "translation": "",
     "context": "keyboard shortcut description",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.",
-    "translation": "",
-    "context": "account notice when google tasks is disabled or its permission is missing",
     "reference": "",
     "comment": ""
   },
@@ -1869,16 +1876,16 @@
     "comment": ""
   },
   {
-    "term": "Import %1 events",
+    "term": "Import %1",
     "translation": "",
-    "context": "import dialog button naming how many events will be imported",
+    "context": "button to import google oauth client json, %1 is a file name",
     "reference": "",
     "comment": ""
   },
   {
-    "term": "Import client_secret.json",
+    "term": "Import %1 events",
     "translation": "",
-    "context": "button to import google oauth client json",
+    "context": "import dialog button naming how many events will be imported",
     "reference": "",
     "comment": ""
   },
@@ -1890,9 +1897,9 @@
     "comment": ""
   },
   {
-    "term": "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.",
+    "term": "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.",
     "translation": "",
-    "context": "google credentials step instructions",
+    "context": "google credentials step instructions, %1 is a file name",
     "reference": "",
     "comment": ""
   },
@@ -1981,9 +1988,9 @@
     "comment": ""
   },
   {
-    "term": "Launch Dux Calendar in the background when you log in.",
+    "term": "Launch %1 in the background when you log in.",
     "translation": "",
-    "context": "autostart setting description",
+    "context": "autostart setting description, %1 is the app name",
     "reference": "",
     "comment": ""
   },
@@ -2005,6 +2012,13 @@
     "term": "Lets the desktop show through the window. Text and controls stay solid.",
     "translation": "",
     "context": "window opacity slider description",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Library",
+    "translation": "",
+    "context": "about page runtime library path",
     "reference": "",
     "comment": ""
   },
@@ -2086,6 +2100,20 @@
     "comment": ""
   },
   {
+    "term": "Long",
+    "translation": "",
+    "context": "animation duration option",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Longer",
+    "translation": "",
+    "context": "animation duration option",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Low",
     "translation": "",
     "context": "task priority dropdown option",
@@ -2096,20 +2124,6 @@
     "term": "Marked as not done",
     "translation": "",
     "context": "toast after un-completing a task",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Matugen",
-    "translation": "",
-    "context": "color source button group option for Matugen",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Matugen theme missing or invalid — using the %1 preset.",
-    "translation": "",
-    "context": "Matugen color source fallback status",
     "reference": "",
     "comment": ""
   },
@@ -2137,7 +2151,7 @@
   {
     "term": "Medium",
     "translation": "",
-    "context": "task priority dropdown option",
+    "context": "animation duration option | task priority dropdown option",
     "reference": "",
     "comment": ""
   },
@@ -2173,20 +2187,6 @@
     "term": "Merge duplicate events",
     "translation": "",
     "context": "merge duplicate events setting label",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.",
-    "translation": "",
-    "context": "account notice when microsoft to do permission is missing",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.",
-    "translation": "",
-    "context": "hint about microsoft server_error during oauth",
     "reference": "",
     "comment": ""
   },
@@ -2436,9 +2436,9 @@
     "comment": ""
   },
   {
-    "term": "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.",
+    "term": "No OAuth client found in that file — expected the %1 downloaded from %2.",
     "translation": "",
-    "context": "error when credentials json lacks an oauth client",
+    "context": "error when credentials json lacks an oauth client, %1 is a file name, %2 is Google",
     "reference": "",
     "comment": ""
   },
@@ -2578,7 +2578,7 @@
   {
     "term": "Off",
     "translation": "",
-    "context": "animation duration slider label at zero",
+    "context": "animation duration option",
     "reference": "",
     "comment": ""
   },
@@ -2688,13 +2688,6 @@
     "comment": ""
   },
   {
-    "term": "Outlook, Office 365 and Exchange Online calendars.",
-    "translation": "",
-    "context": "microsoft provider description in picker",
-    "reference": "",
-    "comment": ""
-  },
-  {
     "term": "Overdue",
     "translation": "",
     "context": "tasks view section header for past-due tasks",
@@ -2786,9 +2779,9 @@
     "comment": ""
   },
   {
-    "term": "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.",
+    "term": "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.",
     "translation": "",
-    "context": "ical subscription form instructions",
+    "context": "ical subscription form instructions, %1 is a url scheme",
     "reference": "",
     "comment": ""
   },
@@ -2849,9 +2842,9 @@
     "comment": ""
   },
   {
-    "term": "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.",
+    "term": "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.",
     "translation": "",
-    "context": "local calendar directory form instructions",
+    "context": "local calendar directory form instructions, %1 is the .ics file extension, %2 names compatible tools",
     "reference": "",
     "comment": ""
   },
@@ -2982,9 +2975,9 @@
     "comment": ""
   },
   {
-    "term": "Recurring tasks are managed in Google Tasks.",
+    "term": "Recurring tasks are managed in %1.",
     "translation": "",
-    "context": "task form note when recurrence cannot be edited on google",
+    "context": "task form note when recurrence cannot be edited on google, %1 is Google Tasks",
     "reference": "",
     "comment": ""
   },
@@ -3066,16 +3059,16 @@
     "comment": ""
   },
   {
-    "term": "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.",
+    "term": "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.",
     "translation": "",
-    "context": "confirm dialog body for removing an account | remove account confirmation message",
+    "context": "confirm dialog body for removing an account, %1 is the app name | remove account confirmation message, %1 is the app name",
     "reference": "",
     "comment": ""
   },
   {
-    "term": "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.",
+    "term": "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.",
     "translation": "",
-    "context": "confirm dialog body for deleting a calendar | delete calendar confirmation message",
+    "context": "confirm dialog body for deleting a calendar, %1 is the app name | delete calendar confirmation message, %1 is the app name",
     "reference": "",
     "comment": ""
   },
@@ -3178,9 +3171,23 @@
     "comment": ""
   },
   {
+    "term": "Revision",
+    "translation": "",
+    "context": "about page runtime build revision",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Ripple effects",
     "translation": "",
     "context": "ripple effects toggle label",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Runtime",
+    "translation": "",
+    "context": "about page runtime section header",
     "reference": "",
     "comment": ""
   },
@@ -3248,6 +3255,13 @@
     "comment": ""
   },
   {
+    "term": "Select %1",
+    "translation": "",
+    "context": "file picker title for google client json, %1 is a file name",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Select a range of events",
     "translation": "",
     "context": "keyboard shortcut description",
@@ -3265,13 +3279,6 @@
     "term": "Select all events on the selected day",
     "translation": "",
     "context": "keyboard shortcut description",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Select client_secret.json",
-    "translation": "",
-    "context": "file picker title for google client json",
     "reference": "",
     "comment": ""
   },
@@ -3318,9 +3325,9 @@
     "comment": ""
   },
   {
-    "term": "Set by QT_SCALE_FACTOR.",
+    "term": "Set by %1.",
     "translation": "",
-    "context": "interface zoom slider description when the environment overrides it",
+    "context": "interface zoom slider description when the environment overrides it, %1 is an environment variable",
     "reference": "",
     "comment": ""
   },
@@ -3339,6 +3346,20 @@
     "comment": ""
   },
   {
+    "term": "Short",
+    "translation": "",
+    "context": "animation duration option",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Shorter",
+    "translation": "",
+    "context": "animation duration option",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Show",
     "translation": "",
     "context": "calendar context menu action to show a hidden calendar",
@@ -3346,9 +3367,9 @@
     "comment": ""
   },
   {
-    "term": "Show Dux Calendar in the system tray.",
+    "term": "Show %1 in the system tray.",
     "translation": "",
-    "context": "tray icon toggle description",
+    "context": "tray icon toggle description, %1 is the app name",
     "reference": "",
     "comment": ""
   },
@@ -3430,16 +3451,23 @@
     "comment": ""
   },
   {
-    "term": "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.",
+    "term": "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.",
     "translation": "",
-    "context": "google one-click sign-in intro text",
+    "context": "one-click sign-in intro text, %1 is Microsoft, %2 is the app name, %3 is Outlook",
     "reference": "",
     "comment": ""
   },
   {
-    "term": "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.",
+    "term": "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.",
     "translation": "",
-    "context": "microsoft one-click sign-in intro text",
+    "context": "one-click sign-in intro text, %1 is Google, %2 is the app name",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Sign in with your %1 account.",
+    "translation": "",
+    "context": "provider description in picker, %1 is Google",
     "reference": "",
     "comment": ""
   },
@@ -3447,13 +3475,6 @@
     "term": "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.",
     "translation": "",
     "context": "icloud sign-in form instructions",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Sign in with your Google account.",
-    "translation": "",
-    "context": "google provider description in picker",
     "reference": "",
     "comment": ""
   },
@@ -3570,9 +3591,9 @@
     "comment": ""
   },
   {
-    "term": "Subscribe to an external calendar by URL (webcal/https).",
+    "term": "Subscribe to an external calendar by URL (%1).",
     "translation": "",
-    "context": "ical provider description in picker",
+    "context": "ical provider description in picker, %1 lists the url schemes",
     "reference": "",
     "comment": ""
   },
@@ -3584,9 +3605,9 @@
     "comment": ""
   },
   {
-    "term": "Support Dux Labs",
+    "term": "Support %1",
     "translation": "",
-    "context": "about page hero button, opens the Ko-fi donation page",
+    "context": "about page hero button, opens the Ko-fi donation page, %1 is Dux Labs",
     "reference": "",
     "comment": ""
   },
@@ -3612,9 +3633,9 @@
     "comment": ""
   },
   {
-    "term": "Synced as \"%1\". The name only changes in Dux Calendar.",
+    "term": "Synced as \"%2\". The name only changes in %1.",
     "translation": "",
-    "context": "rename calendar dialog note showing provider name",
+    "context": "rename calendar dialog note, %1 is the app name, %2 is the provider name",
     "reference": "",
     "comment": ""
   },
@@ -3885,9 +3906,9 @@
     "comment": ""
   },
   {
-    "term": "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.",
+    "term": "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.",
     "translation": "",
-    "context": "evolution data server account form instructions",
+    "context": "account form instructions, %1 is Evolution Data Server, %2 is Evolution, %3 is GNOME Online Accounts",
     "reference": "",
     "comment": ""
   },
@@ -3913,16 +3934,16 @@
     "comment": ""
   },
   {
-    "term": "Using Dux Shell dynamic colors.",
+    "term": "Using %1 colors.",
     "translation": "",
-    "context": "auto color source status when DMS is active",
+    "context": "color source status when loaded, %1 is Matugen",
     "reference": "",
     "comment": ""
   },
   {
-    "term": "Using Matugen colors.",
+    "term": "Using %1 dynamic colors.",
     "translation": "",
-    "context": "Matugen color source status when loaded",
+    "context": "auto color source status when the shell is active, %1 is Dux Shell",
     "reference": "",
     "comment": ""
   },
@@ -3976,9 +3997,9 @@
     "comment": ""
   },
   {
-    "term": "Waiting for the dankcalendar daemon...",
+    "term": "Waiting for the %1 daemon...",
     "translation": "",
-    "context": "agenda placeholder while the daemon is not connected | tasks view placeholder while the daemon is not connected",
+    "context": "agenda placeholder while the daemon is not connected, %1 is the daemon name | tasks view placeholder while the daemon is not connected, %1 is the daemon name",
     "reference": "",
     "comment": ""
   },
@@ -4067,9 +4088,9 @@
     "comment": ""
   },
   {
-    "term": "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.",
+    "term": "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.",
     "translation": "",
-    "context": "security note body in oauth intro",
+    "context": "security note body in oauth intro, %1 lists keyring backends",
     "reference": "",
     "comment": ""
   },
@@ -4130,7 +4151,7 @@
     "comment": ""
   },
   {
-    "term": "iCal subscription",
+    "term": "iCalendar subscription",
     "translation": "",
     "context": "ical subscription provider name in account add modal",
     "reference": "",

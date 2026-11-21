@@ -60,7 +60,7 @@ func Providers() []Provider {
 		},
 		{
 			ID:           "ical",
-			Name:         "iCal subscription",
+			Name:         "iCalendar subscription",
 			Description:  "Subscribe to an external calendar by URL (webcal/https).",
 			Implemented:  true,
 			Capabilities: []string{"events", "calendars", "readonly"},

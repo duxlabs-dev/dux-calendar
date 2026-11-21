@@ -7,8 +7,9 @@
     </linearGradient>
   </defs>
   <g transform="translate(0 64) scale(0.0666667)">
+    <!-- The outline is a solid base under the body: shapes that only share an edge antialias into a seam. -->
+    <path d="M180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.02 0 23.51 9.2Q310-861.6 310-848v28h340v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.03 0 23.51 9.2Q715-861.6 715-848v28h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Z" fill="#553C9A"/>
     <rect x="180" y="-570" width="600" height="430" fill="url(#body)"/>
-    <path d="M180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.02 0 23.51 9.2Q310-861.6 310-848v28h340v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.03 0 23.51 9.2Q715-861.6 715-848v28h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Z" fill="#553C9A"/>
     <g fill="#9F7AEA">
       <circle cx="320" cy="-440" r="40"/><circle cx="480" cy="-440" r="40"/><circle cx="640" cy="-440" r="40"/>
       <circle cx="320" cy="-280" r="40"/><circle cx="640" cy="-280" r="40"/>

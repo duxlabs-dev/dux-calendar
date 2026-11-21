@@ -4,6 +4,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 import QtCore
+import qs.DCommon.Common as DC
 
 Singleton {
     id: root
@@ -12,6 +13,10 @@ Singleton {
     readonly property url xdgCache: StandardPaths.standardLocations(StandardPaths.GenericCacheLocation)[0]
     readonly property url cache: `${xdgCache}/dankcal`
     readonly property url imagecache: `${cache}/imagecache`
+
+    // False on a dux-qt-base without iconThemeRevision, whose icon provider fails on "?rev=".
+    readonly property bool iconThemeLive: "iconThemeRevision" in Quickshell
+    readonly property int iconThemeRevision: iconThemeLive ? Quickshell.iconThemeRevision : 0
 
     function stringify(path: url): string {
         return path.toString().replace(/%20/g, " ");
@@ -42,7 +47,15 @@ Singleton {
     function resolveIconPath(iconName: string): string {
         if (!iconName)
             return "";
-        return Quickshell.iconPath(iconName, true) || "";
+        return themeIconUrl(iconName);
+    }
+
+    // The inline half serves a DCommon that predates themeIconUrl.
+    function themeIconUrl(iconName: string): string {
+        if (typeof DC.Paths.themeIconUrl === "function")
+            return DC.Paths.themeIconUrl(iconName);
+        const url = Quickshell.iconPath(iconName, true) || "";
+        return url && iconThemeLive ? url + "?rev=" + iconThemeRevision : url;
     }
 
     function copyPathToClipboard(path: string): void {

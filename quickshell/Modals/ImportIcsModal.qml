@@ -182,7 +182,7 @@ FloatingWindow {
 
     Timer {
         id: previewTimer
-        interval: 100
+        interval: Timing.debounceShort
         onTriggered: importModal.refreshPreview()
     }
 
@@ -302,7 +302,7 @@ FloatingWindow {
 
                     StyledText {
                         width: parent.width
-                        text: I18n.tr("Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.", "import preview explains the data and non-blocking conflicts")
+                        text: I18n.tr("Conflicts use events currently synced to %1. You can still import an overlapping event.", "import preview explains the data and non-blocking conflicts, %1 is the app name").arg("Dux Calendar")
                         wrapMode: Text.WordWrap
                         color: Theme.surfaceVariantText
                         font.pixelSize: Theme.fontSizeSmall
@@ -435,8 +435,7 @@ FloatingWindow {
                                     DButton {
                                         text: I18n.tr("Open", "import row button to open the event already on the calendar")
                                         buttonHeight: Theme.buttonHeightXS
-                                        backgroundColor: Theme.secondaryContainer
-                                        textColor: Theme.onSecondaryContainer
+                                        variant: "tonal"
                                         anchors.verticalCenter: parent.verticalCenter
                                         onClicked: importModal.openExisting(row.existing)
                                     }
@@ -467,8 +466,7 @@ FloatingWindow {
 
                 DButton {
                     text: I18n.tr("Cancel", "import dialog button to close without importing")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     onClicked: importModal.hide()
                 }
 
@@ -476,8 +474,6 @@ FloatingWindow {
                     visible: importModal.noWritableCalendars
                     text: I18n.tr("Add a calendar", "import dialog button to add a calendar when none can hold events")
                     iconName: "add"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: {
                         importModal.addCalendarRequested();
                     }
@@ -488,8 +484,6 @@ FloatingWindow {
                     text: importModal.importLabel()
                     iconName: "check"
                     busy: importModal.importing
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !importModal.importing && !importModal.loading && importModal.previewReady && !importModal.schedulingOnly && importModal.pendingItems.length > 0
                     onClicked: importModal.importPending()
                 }

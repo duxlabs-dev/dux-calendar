@@ -313,7 +313,7 @@ FloatingWindow {
 
                     StyledText {
                         visible: taskModal.createMode && taskModal.noTaskLists
-                        text: I18n.tr("Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.", "task dialog hint when no task list is available")
+                        text: I18n.tr("Add a %1, local, %2, or %3 account with a task list to create tasks.", "task dialog hint when no task list is available, %1 is CalDAV, %2 is Google, %3 is Microsoft").arg("CalDAV").arg("Google").arg("Microsoft")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceVariantText
                         width: parent.width
@@ -451,7 +451,7 @@ FloatingWindow {
 
                     StyledText {
                         visible: !taskModal.recurrenceSupported
-                        text: I18n.tr("Recurring tasks are managed in Google Tasks.", "task form note when recurrence cannot be edited on google")
+                        text: I18n.tr("Recurring tasks are managed in %1.", "task form note when recurrence cannot be edited on google, %1 is Google Tasks").arg("Google Tasks")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.surfaceVariantText
                         width: parent.width
@@ -543,16 +543,15 @@ FloatingWindow {
                     visible: !taskModal.createMode
                     text: taskModal.confirmDelete ? I18n.tr("Confirm delete", "task form button to confirm deletion") : I18n.tr("Delete", "task form button to delete the task")
                     iconName: "delete_outline"
-                    backgroundColor: taskModal.confirmDelete ? Theme.errorContainer : "transparent"
-                    textColor: taskModal.confirmDelete ? Theme.onErrorContainer : Theme.error
+                    variant: taskModal.confirmDelete ? "tonal" : "text"
+                    danger: true
                     enabled: !taskModal.saving
                     onClicked: taskModal.removeTask()
                 }
 
                 DButton {
                     text: I18n.tr("Cancel", "task form button to discard changes")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     enabled: !taskModal.saving
                     onClicked: taskModal.hide()
                 }
@@ -560,8 +559,6 @@ FloatingWindow {
                 DButton {
                     text: I18n.tr("Save", "task form button to persist the task")
                     busy: taskModal.saving
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !taskModal.saving
                     onClicked: taskModal.save()
                 }

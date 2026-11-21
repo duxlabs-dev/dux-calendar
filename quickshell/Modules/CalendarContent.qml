@@ -88,8 +88,7 @@ Item {
                     text: I18n.tr("Today", "header button that jumps to the current date")
                     iconName: "today"
                     buttonHeight: Theme.buttonHeightS
-                    backgroundColor: Theme.secondaryContainer
-                    textColor: Theme.onSecondaryContainer
+                    variant: "tonal"
                     focusPolicy: Qt.NoFocus
                     anchors.verticalCenter: parent.verticalCenter
                     onClicked: root.todayRequested()
@@ -176,7 +175,7 @@ Item {
 
                     Timer {
                         id: spinnerHold
-                        interval: 1200
+                        interval: Timing.holdShort
                     }
 
                     DSpinner {
@@ -269,6 +268,7 @@ Item {
                     onEventRescheduleRequested: (ev, dayOffset, minuteOffset) => root.eventRescheduleRequested(ev, dayOffset, minuteOffset)
                     onShiftDaysRequested: days => root.shiftDaysRequested(days)
                     onCreateTimedRequested: (start, end) => root.createTimedRequested(start, end)
+                    onCreateRangeRequested: (startDay, endDay) => root.createRangeRequested(startDay, endDay)
                 }
             }
 

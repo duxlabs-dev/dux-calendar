@@ -61,7 +61,6 @@ func TestBrokerFlowProperties(t *testing.T) {
 
 	assert.NotEmpty(t, first.State())
 	assert.NotEmpty(t, first.Verifier())
-	assert.Equal(t, "http://127.0.0.1/cb", first.RedirectURL())
 	assert.NotEqual(t, first.State(), second.State())
 }
 

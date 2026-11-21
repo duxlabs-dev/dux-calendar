@@ -33,7 +33,7 @@ ASSETS_DIR=assets
 DESKTOP_ID=dev.duxlabs.calendar
 ASSET_INSTALL=PREFIX="$(PREFIX)" DESTDIR="$(DESTDIR)" DATA_DIR="$(DATA_DIR)" APPLICATIONS_DIR="$(APPLICATIONS_DIR)" ICON_DIR="$(ICON_DIR)" METAINFO_DIR="$(METAINFO_DIR)" sh scripts/install-assets.sh
 
-.PHONY: all build dev run clean test fmt vet migrate migrate-checksum update-common i18n-extract i18n-local i18n-test i18n-push i18n-sync i18n-check install install-bin install-icon install-desktop install-systemd uninstall uninstall-bin uninstall-shell uninstall-icon uninstall-desktop uninstall-systemd flatpak-build flatpak-run flatpak-lint flatpak-modules help
+.PHONY: all build dev run clean test fmt vet migrate migrate-checksum update-common update-qtbase i18n-extract i18n-local i18n-test i18n-push i18n-sync i18n-check install install-bin install-icon install-desktop install-systemd uninstall uninstall-bin uninstall-shell uninstall-icon uninstall-desktop uninstall-systemd flatpak-build flatpak-run flatpak-lint flatpak-modules help
 
 FLATPAK_ID=com.danklinux.dankcalendar
 FLATPAK_MANIFEST=distro/flatpak/$(FLATPAK_ID).yml
@@ -92,6 +92,10 @@ migrate-checksum:
 update-common:
 	git submodule update --remote --merge dux-qml-common
 	nix --extra-experimental-features 'nix-command flakes' flake update dank-qml-common
+
+update-qtbase:
+	git submodule update --remote --merge dux-qt-base
+	nix --extra-experimental-features 'nix-command flakes' flake update dux-qt-base
 
 i18n-extract:
 	@python3 $(SHELL_DIR)/translations/extract_translations.py
@@ -166,6 +170,7 @@ help:
 	@echo "  run                - Build and run against the in-repo quickshell config"
 	@echo "  clean / test / fmt / vet"
 	@echo "  update-common      - Bump the dux-qml-common submodule + flake input"
+	@echo "  update-qtbase      - Bump the dux-qt-base submodule + flake input"
 	@echo "  i18n-extract       - Regenerate translations/en.json from I18n.tr() calls"
 	@echo "  i18n-local         - Re-extract and show added/removed terms (no POEditor)"
 	@echo "  i18n-test          - Extract and validate, no POEditor calls"

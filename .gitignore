@@ -123,3 +123,7 @@ core/dankcal
 
 # Populated from quickshell/ by `make sync-shell` for embedded builds
 core/internal/shellembed/dist/
+
+# Populated by `make -C core qtbase` for QTBASE=1 builds
+core/internal/qtbaseembed/lib
+core/build/

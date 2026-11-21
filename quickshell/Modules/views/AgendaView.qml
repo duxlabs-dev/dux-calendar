@@ -107,7 +107,7 @@ Item {
 
             StyledText {
                 visible: root.sections.length === 0
-                text: DankCalService.connected ? I18n.tr("Nothing scheduled in the next %1 days", "agenda empty state, %1 is the number of days ahead").arg(root.daysAhead) : I18n.tr("Waiting for the dankcalendar daemon...", "agenda placeholder while the daemon is not connected")
+                text: DankCalService.connected ? I18n.tr("Nothing scheduled in the next %1 days", "agenda empty state, %1 is the number of days ahead").arg(root.daysAhead) : I18n.tr("Waiting for the %1 daemon...", "agenda placeholder while the daemon is not connected, %1 is the daemon name").arg("dankcalendar")
                 font.pixelSize: Theme.fontSizeMedium
                 color: Theme.surfaceVariantText
                 width: parent.width

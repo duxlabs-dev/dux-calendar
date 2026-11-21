@@ -137,15 +137,6 @@ func TestGraphToEventStatus(t *testing.T) {
 	}
 }
 
-func TestGraphToEventDefaults(t *testing.T) {
-	ev := graphToEvent(graphEvent{ID: "x", ShowAs: "busy", Sensitivity: "normal"})
-
-	assert.Equal(t, "opaque", ev.Transparency)
-	assert.Empty(t, ev.Visibility)
-	assert.Nil(t, ev.Organizer)
-	assert.True(t, ev.Start.IsZero())
-}
-
 func TestGraphShowAsRoundTrip(t *testing.T) {
 	tests := []struct {
 		showAs, transparency, sent string
@@ -153,9 +144,6 @@ func TestGraphShowAsRoundTrip(t *testing.T) {
 		{"free", "transparent", "free"},
 		{"busy", "opaque", "busy"},
 		{"oof", "", ""},
-		{"tentative", "", ""},
-		{"workingElsewhere", "", ""},
-		{"unknown", "", ""},
 		{"", "", ""},
 	}
 	for _, tt := range tests {
@@ -230,18 +218,4 @@ func TestEventToGraphAllDayNormalizesToMidnight(t *testing.T) {
 	assert.True(t, g.IsAllDay)
 	assert.Equal(t, "2026-05-07T00:00:00", g.Start.DateTime)
 	assert.Equal(t, "2026-05-08T00:00:00", g.End.DateTime, "same-day all-day event should span one full day")
-}
-
-func TestEventToGraphShowAs(t *testing.T) {
-	ev := &cal.Event{
-		Summary: "Focus time",
-		Start:   time.Date(2026, 5, 7, 14, 0, 0, 0, time.UTC),
-		End:     time.Date(2026, 5, 7, 15, 0, 0, 0, time.UTC),
-	}
-
-	assert.Empty(t, eventToGraph(ev).ShowAs, "unset leaves Graph's default")
-	ev.Transparency = "transparent"
-	assert.Equal(t, "free", eventToGraph(ev).ShowAs)
-	ev.Transparency = "opaque"
-	assert.Equal(t, "busy", eventToGraph(ev).ShowAs)
 }

@@ -113,7 +113,7 @@ MouseArea {
     }
 
     Timer {
-        interval: 16
+        interval: Timing.cappedTick
         repeat: true
         running: root.selecting && root.autoScrollDirection !== 0 && root.flickable !== null
         onTriggered: {

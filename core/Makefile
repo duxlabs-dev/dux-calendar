@@ -21,9 +21,37 @@ COMMIT?=$(COMMIT_HASH)
 
 BUILD_LDFLAGS=-ldflags='-s -w -X main.Version=$(VERSION) -X main.BuildTime=$(BUILD_TIME) -X main.Commit=$(COMMIT)'
 
-.PHONY: all build dev sync-shell completions install install-completions uninstall clean test cover fmt vet deps generate migrate migrate-checksum mocks help
+.PHONY: all build dev qtbase clean-qtbase sync-shell completions install install-completions uninstall clean test cover fmt vet deps generate migrate migrate-checksum mocks help
 
 all: build completions
+
+# QTBASE=1 builds the quickshell runtime from the dux-qt-base submodule and embeds it in dcal as libdux-qt-base.so,
+# which `dcal qs` dlopens. With the default QTBASE=0, `dcal qs` dlopens an installed libdux-qt-base.so.0
+# (next to dcal or in the system library dirs, e.g. a dux-qt-base package). `dcal run --qs-child` runs upstream qs instead.
+QTBASE ?= 0
+QTBASE_SRC ?= ../dux-qt-base
+QTBASE_BUILD ?= build/dux-qt-base
+QTBASE_LIB = $(QTBASE_BUILD)/src/libdux-qt-base.so.0
+QTBASE_EMBED_DIR = internal/qtbaseembed/lib
+ifeq ($(QTBASE),0)
+QTBASE_DEP =
+QTBASE_TAG =
+else
+QTBASE_DEP = qtbase
+QTBASE_TAG = withqtbase
+endif
+
+qtbase:
+	@test -f $(QTBASE_SRC)/CMakeLists.txt || { echo "dux-qt-base missing: run git submodule update --init"; exit 1; }
+	@test -f $(QTBASE_BUILD)/build.ninja || cmake -S $(QTBASE_SRC) -B $(QTBASE_BUILD) -GNinja -DCMAKE_BUILD_TYPE=Release \
+		-DDISTRIBUTOR=$(BINARY_NAME)-source -DGIT_REVISION=$$(git -C $(QTBASE_SRC) rev-parse --short=8 HEAD 2>/dev/null || echo unknown)
+	cmake --build $(QTBASE_BUILD)
+	@mkdir -p $(QTBASE_EMBED_DIR)
+	@strip --strip-unneeded -o $(QTBASE_EMBED_DIR)/libdux-qt-base.so.0 $(QTBASE_LIB)
+	@sha256sum $(QTBASE_EMBED_DIR)/libdux-qt-base.so.0 | cut -c1-16 > $(QTBASE_EMBED_DIR)/.dankrev
+
+clean-qtbase:
+	@rm -rf $(QTBASE_BUILD)
 
 # Copy the quickshell UI into the embed dir (gitignored) so tagged builds
 # can bake it into the binary. Dev-only files are stripped. tar -h dereferences
@@ -38,15 +66,15 @@ sync-shell:
 	@rm -rf $(EMBED_DIR)/scripts $(EMBED_DIR)/.claude
 	@rm -f $(EMBED_DIR)/translations/extract_translations.py
 
-build: sync-shell
+build: sync-shell $(QTBASE_DEP)
 	@echo "Building $(BINARY_NAME)..."
 	@mkdir -p $(BUILD_DIR)
-	CGO_ENABLED=0 $(GO) build -tags withshell $(BUILD_LDFLAGS) -o $(BUILD_DIR)/$(BINARY_NAME) ./$(SOURCE_DIR)
+	CGO_ENABLED=0 $(GO) build -tags 'withshell $(QTBASE_TAG)' $(BUILD_LDFLAGS) -o $(BUILD_DIR)/$(BINARY_NAME) ./$(SOURCE_DIR)
 	@echo "Build complete: $(BUILD_DIR)/$(BINARY_NAME)"
 
-dev:
+dev: $(QTBASE_DEP)
 	@mkdir -p $(BUILD_DIR)
-	CGO_ENABLED=0 $(GO) build -o $(BUILD_DIR)/$(BINARY_NAME) ./$(SOURCE_DIR)
+	CGO_ENABLED=0 $(GO) build -tags '$(QTBASE_TAG)' -o $(BUILD_DIR)/$(BINARY_NAME) ./$(SOURCE_DIR)
 
 completions: build
 	@mkdir -p $(COMPLETIONS_DIR)
@@ -71,7 +99,7 @@ uninstall:
 	@rm -f $(DESTDIR)$(FISHCOMP_DIR)/$(BINARY_NAME).fish
 
 clean:
-	@rm -rf $(BUILD_DIR) $(EMBED_DIR)
+	@rm -rf $(BUILD_DIR) $(EMBED_DIR) $(QTBASE_EMBED_DIR)
 
 test:
 	CGO_ENABLED=0 $(GO) test ./...
@@ -106,4 +134,5 @@ mocks:
 	mockery
 
 help:
-	@echo "Targets: build dev sync-shell completions install install-completions uninstall clean test cover fmt vet deps generate migrate migrate-checksum mocks"
+	@echo "Targets: build dev qtbase clean-qtbase sync-shell completions install install-completions uninstall clean test cover fmt vet deps generate migrate migrate-checksum mocks"
+	@echo "QTBASE=1 embeds the dux-qt-base runtime from the submodule; by default dcal needs an installed dux-qt-base"

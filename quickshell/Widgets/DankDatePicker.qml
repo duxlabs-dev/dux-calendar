@@ -55,7 +55,7 @@ Item {
 
         anchors.fill: parent
         radius: Theme.cornerRadiusXS
-        color: Theme.surfaceContainerHigh
+        color: Theme.chipSurface
         border.width: popup.visible || root.activeFocus ? Theme.outlineWidthFocused : Theme.outlineWidth
         border.color: popup.visible || root.activeFocus ? Theme.primary : Theme.outlineVariant
 
@@ -141,7 +141,7 @@ Item {
         onClosed: root.forceActiveFocus()
 
         background: Rectangle {
-            color: Theme.surfaceContainerHigh
+            color: Theme.chipSurface
             radius: Theme.cornerRadiusM
         }
 

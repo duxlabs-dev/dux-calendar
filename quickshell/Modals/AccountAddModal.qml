@@ -121,7 +121,7 @@ FloatingWindow {
         case "icloud":
             return "iCloud";
         case "ical":
-            return I18n.tr("iCal subscription", "ical subscription provider name in account add modal");
+            return I18n.tr("iCalendar subscription", "ical subscription provider name in account add modal");
         case "local":
             return I18n.tr("Local", "local provider name in account add modal");
         case "evolution":
@@ -187,7 +187,7 @@ FloatingWindow {
         }
         const client = doc.installed || doc.web;
         if (!client || !client.client_id) {
-            flowError = I18n.tr("No OAuth client found in that file — expected the client_secret_….json downloaded from Google.", "error when credentials json lacks an oauth client");
+            flowError = I18n.tr("No OAuth client found in that file — expected the %1 downloaded from %2.", "error when credentials json lacks an oauth client, %1 is a file name, %2 is Google").arg("client_secret_….json").arg("Google");
             return;
         }
         clientId = client.client_id;
@@ -460,6 +460,13 @@ FloatingWindow {
                 }
 
                 Grid {
+                    id: providerGrid
+                    readonly property real cardHeight: {
+                        let tallest = 0;
+                        for (let i = 0; i < children.length; i++)
+                            tallest = Math.max(tallest, children[i].naturalHeight || 0);
+                        return tallest;
+                    }
                     columns: 2
                     columnSpacing: Theme.spacingM
                     rowSpacing: Theme.spacingM
@@ -471,37 +478,37 @@ FloatingWindow {
                                 {
                                     "id": "google",
                                     "name": "Google",
-                                    "description": I18n.tr("Sign in with your Google account.", "google provider description in picker"),
+                                    "description": I18n.tr("Sign in with your %1 account.", "provider description in picker, %1 is Google").arg("Google"),
                                     "implemented": true
                                 },
                                 {
                                     "id": "microsoft",
                                     "name": "Microsoft",
-                                    "description": I18n.tr("Outlook, Office 365 and Exchange Online calendars.", "microsoft provider description in picker"),
+                                    "description": I18n.tr("%1, %2 and %3 calendars.", "microsoft provider description in picker, %1 %2 %3 are Outlook, Office 365 and Exchange Online").arg("Outlook").arg("Office 365").arg("Exchange Online"),
                                     "implemented": true
                                 },
                                 {
                                     "id": "caldav",
                                     "name": "CalDAV",
-                                    "description": I18n.tr("Connect any CalDAV-compatible server.", "caldav provider description in picker"),
+                                    "description": I18n.tr("Connect any %1-compatible server.", "provider description in picker, %1 is CalDAV").arg("CalDAV"),
                                     "implemented": true
                                 },
                                 {
                                     "id": "icloud",
                                     "name": "iCloud",
-                                    "description": I18n.tr("Apple iCloud calendars via app-specific password.", "icloud provider description in picker"),
+                                    "description": I18n.tr("%1 calendars via app-specific password.", "provider description in picker, %1 is Apple iCloud").arg("Apple iCloud"),
                                     "implemented": true
                                 },
                                 {
                                     "id": "ical",
-                                    "name": I18n.tr("iCal subscription", "ical subscription provider name in account add modal"),
-                                    "description": I18n.tr("Subscribe to an external calendar by URL (webcal/https).", "ical provider description in picker"),
+                                    "name": I18n.tr("iCalendar subscription", "ical subscription provider name in account add modal"),
+                                    "description": I18n.tr("Subscribe to an external calendar by URL (%1).", "ical provider description in picker, %1 lists the url schemes").arg("webcal/https"),
                                     "implemented": true
                                 },
                                 {
                                     "id": "local",
                                     "name": I18n.tr("Local", "local provider name in account add modal"),
-                                    "description": I18n.tr("A folder of .ics files on this machine.", "local provider description in picker"),
+                                    "description": I18n.tr("A folder of %1 files on this machine.", "local provider description in picker, %1 is the .ics file extension").arg(".ics"),
                                     "implemented": true
                                 }
                             ]
@@ -509,8 +516,9 @@ FloatingWindow {
 
                         StyledRect {
                             required property var modelData
+                            readonly property real naturalHeight: cardColumn.implicitHeight + Theme.spacingM * 2
                             width: (parent.width - Theme.spacingM) / 2
-                            height: cardColumn.implicitHeight + Theme.spacingM * 2
+                            height: providerGrid.cardHeight
                             color: Theme.surfaceContainerLow
                             radius: Theme.cornerRadiusL
                             opacity: modelData.implemented ? 1 : Theme.pendingOpacity
@@ -617,7 +625,7 @@ FloatingWindow {
                             width: (wizardColumn.width - Theme.spacingXS * accountModal.doneStep) / (accountModal.doneStep + 1)
                             height: Theme.spacingXS
                             radius: Theme.cornerRadiusXXS
-                            color: index <= accountModal.wizardStep ? Theme.primary : Theme.surfaceContainerHighest
+                            color: index <= accountModal.wizardStep ? Theme.primary : Theme.chipSurfaceNested
                         }
                     }
                 }
@@ -677,7 +685,7 @@ FloatingWindow {
             width: parent.width
 
             StyledText {
-                text: accountModal.isMicrosoft ? I18n.tr("Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.", "microsoft one-click sign-in intro text") : I18n.tr("Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.", "google one-click sign-in intro text")
+                text: accountModal.isMicrosoft ? I18n.tr("Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.", "one-click sign-in intro text, %1 is Microsoft, %2 is the app name, %3 is Outlook").arg("Microsoft").arg("Dux Calendar").arg("Outlook") : I18n.tr("Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.", "one-click sign-in intro text, %1 is Google, %2 is the app name").arg("Google").arg("Dux Calendar")
                 font.pixelSize: Theme.fontSizeMedium
                 color: Theme.surfaceText
                 width: parent.width
@@ -714,7 +722,7 @@ FloatingWindow {
                         }
                     }
                     StyledText {
-                        text: I18n.tr("Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.", "security note body in oauth intro")
+                        text: I18n.tr("Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.", "security note body in oauth intro, %1 lists keyring backends").arg("libsecret/kwallet")
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.onTertiaryContainer
                         width: parent.width
@@ -737,19 +745,16 @@ FloatingWindow {
                 spacing: Theme.spacingS
 
                 DButton {
-                    text: accountModal.isMicrosoft ? I18n.tr("Connect Microsoft Account", "button to start the one-click microsoft sign-in") : I18n.tr("Connect Google Account", "button to start the one-click google sign-in")
+                    text: I18n.tr("Connect %1 Account", "button to start the one-click sign-in, %1 is Microsoft or Google").arg(accountModal.isMicrosoft ? "Microsoft" : "Google")
                     iconName: "open_in_new"
                     busy: accountModal.flowInProgress
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !accountModal.flowInProgress
                     onClicked: accountModal.startOAuthFlow()
                 }
 
                 DButton {
                     text: I18n.tr("Use your own OAuth client", "button to open the advanced custom google client setup")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     enabled: !accountModal.flowInProgress
                     onClicked: accountModal.wizardStep = 1
                 }
@@ -881,8 +886,6 @@ FloatingWindow {
                 DButton {
                     text: (guideColumn.step && guideColumn.step.urlLabel) || I18n.tr("Open", "fallback label for guide step link button")
                     iconName: "open_in_new"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: {
                         if (guideColumn.step && guideColumn.step.url)
                             Qt.openUrlExternally(guideColumn.step.url);
@@ -892,8 +895,7 @@ FloatingWindow {
                 DButton {
                     text: I18n.tr("Copy link", "button to copy a setup guide url to the clipboard")
                     iconName: "content_copy"
-                    backgroundColor: Theme.secondaryContainer
-                    textColor: Theme.onSecondaryContainer
+                    variant: "tonal"
                     onClicked: {
                         if (guideColumn.step && guideColumn.step.url) {
                             Quickshell.clipboardText = guideColumn.step.url;
@@ -911,15 +913,12 @@ FloatingWindow {
                 DButton {
                     text: accountModal.wizardStep === accountModal.guideCount ? (accountModal.isMicrosoft ? I18n.tr("Enter client ID", "last guide step button to microsoft credentials") : I18n.tr("Paste credentials", "last guide step button to google credentials")) : I18n.tr("Continue", "guide step next button")
                     iconName: "arrow_forward"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: accountModal.wizardStep += 1
                 }
 
                 DButton {
                     text: I18n.tr("Back", "back button in account setup wizard")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     onClicked: accountModal.wizardStep -= 1
                 }
             }
@@ -934,7 +933,7 @@ FloatingWindow {
             width: parent.width
 
             StyledText {
-                text: accountModal.isMicrosoft ? I18n.tr("Paste the Application (client) ID from your app registration's Overview page.", "microsoft credentials step instructions") : I18n.tr("Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.", "google credentials step instructions")
+                text: accountModal.isMicrosoft ? I18n.tr("Paste the Application (client) ID from your app registration's Overview page.", "microsoft credentials step instructions") : I18n.tr("Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.", "google credentials step instructions, %1 is a file name").arg("client_secret_….json")
                 font.pixelSize: Theme.fontSizeMedium
                 color: Theme.surfaceText
                 width: parent.width
@@ -943,12 +942,11 @@ FloatingWindow {
 
             DButton {
                 visible: !accountModal.isMicrosoft
-                text: I18n.tr("Import client_secret.json", "button to import google oauth client json")
+                text: I18n.tr("Import %1", "button to import google oauth client json, %1 is a file name").arg("client_secret.json")
                 iconName: "upload_file"
-                backgroundColor: Theme.secondaryContainer
-                textColor: Theme.onSecondaryContainer
+                variant: "tonal"
                 onClicked: accountModal.openFilePicker({
-                    "title": I18n.tr("Select client_secret.json", "file picker title for google client json"),
+                    "title": I18n.tr("Select %1", "file picker title for google client json, %1 is a file name").arg("client_secret.json"),
                     "extensions": ["*.json"]
                 }, path => accountModal.importCredentialsFile(path))
             }
@@ -1001,16 +999,13 @@ FloatingWindow {
                     text: accountModal.flowInProgress ? I18n.tr("Starting…", "connect button while oauth flow starts") : I18n.tr("Connect", "account setup button to start provider sign-in")
                     iconName: "check"
                     busy: accountModal.flowInProgress
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     enabled: !accountModal.flowInProgress && accountModal.clientId.length > 0 && (accountModal.isMicrosoft || accountModal.clientSecret.length > 0)
                     onClicked: accountModal.startOAuthFlow()
                 }
 
                 DButton {
                     text: I18n.tr("Back", "back button in account setup wizard")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     enabled: !accountModal.flowInProgress
                     onClicked: accountModal.wizardStep = accountModal.guideCount
                 }
@@ -1064,7 +1059,7 @@ FloatingWindow {
 
             StyledText {
                 visible: accountModal.flowError.indexOf("server_error") !== -1
-                text: I18n.tr("Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.", "hint about microsoft server_error during oauth")
+                text: I18n.tr("%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.", "oauth hint, %1 is Microsoft, %2 is the server_error code").arg("Microsoft").arg("server_error")
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.surfaceVariantText
                 width: parent.width
@@ -1075,8 +1070,7 @@ FloatingWindow {
                 visible: accountModal.flowError === "" && accountModal.pendingAuthUrl !== ""
                 text: I18n.tr("Open browser again", "button to reopen oauth url in browser")
                 iconName: "open_in_new"
-                backgroundColor: Theme.secondaryContainer
-                textColor: Theme.onSecondaryContainer
+                variant: "tonal"
                 onClicked: Qt.openUrlExternally(accountModal.pendingAuthUrl)
             }
 
@@ -1089,8 +1083,6 @@ FloatingWindow {
                     visible: accountModal.flowError !== ""
                     text: I18n.tr("Try again", "button to retry oauth after failure")
                     iconName: "refresh"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: {
                         accountModal.cancelPendingFlow();
                         accountModal.flowError = "";
@@ -1100,8 +1092,7 @@ FloatingWindow {
 
                 DButton {
                     text: I18n.tr("Cancel", "button to cancel oauth browser step")
-                    backgroundColor: "transparent"
-                    textColor: Theme.primary
+                    variant: "text"
                     onClicked: {
                         accountModal.cancelPendingFlow();
                         accountModal.wizardStep = accountModal.flowReturnStep;
@@ -1170,8 +1161,6 @@ FloatingWindow {
                 DButton {
                     text: I18n.tr("Done", "button to close modal after account added")
                     iconName: "check"
-                    backgroundColor: Theme.primary
-                    textColor: Theme.primaryText
                     onClicked: accountModal.hide()
                 }
             }
@@ -1204,7 +1193,7 @@ FloatingWindow {
                 visible: !caldavRoot.done
 
                 StyledText {
-                    text: caldavRoot.isICloud ? I18n.tr("Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.", "icloud sign-in form instructions") : I18n.tr("Enter your CalDAV server details. The connection is verified before the account is saved.", "caldav sign-in form instructions")
+                    text: caldavRoot.isICloud ? I18n.tr("Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.", "icloud sign-in form instructions") : I18n.tr("Enter your %1 server details. The connection is verified before the account is saved.", "sign-in form instructions, %1 is CalDAV").arg("CalDAV")
                     font.pixelSize: Theme.fontSizeMedium
                     color: Theme.surfaceText
                     width: parent.width
@@ -1218,16 +1207,14 @@ FloatingWindow {
                     DButton {
                         text: I18n.tr("Generate app-specific password", "button to open apple app password page")
                         iconName: "open_in_new"
-                        backgroundColor: Theme.secondaryContainer
-                        textColor: Theme.onSecondaryContainer
+                        variant: "tonal"
                         onClicked: Qt.openUrlExternally("https://account.apple.com/account/manage")
                     }
 
                     DButton {
                         text: I18n.tr("Copy link", "button to copy a setup guide url to the clipboard")
                         iconName: "content_copy"
-                        backgroundColor: Theme.secondaryContainer
-                        textColor: Theme.onSecondaryContainer
+                        variant: "tonal"
                         onClicked: {
                             Quickshell.clipboardText = "https://account.apple.com/account/manage";
                             ToastService.info(I18n.tr("Copied to clipboard", "toast after copying text to the clipboard"));
@@ -1341,8 +1328,6 @@ FloatingWindow {
                         text: caldavRoot.busy ? I18n.tr("Connecting…", "connect button while caldav connection verifies") : I18n.tr("Connect", "account setup button to start provider sign-in")
                         iconName: "check"
                         busy: caldavRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !caldavRoot.busy && caldavRoot.serverUrl.length > 0 && caldavRoot.username.length > 0 && caldavRoot.password.length > 0
                         onClicked: {
                             caldavRoot.busy = true;
@@ -1393,7 +1378,7 @@ FloatingWindow {
                 visible: !localRoot.done
 
                 StyledText {
-                    text: I18n.tr("Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.", "local calendar directory form instructions")
+                    text: I18n.tr("Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.", "local calendar directory form instructions, %1 is the .ics file extension, %2 names compatible tools").arg(".ics").arg("vdirsyncer/khal")
                     font.pixelSize: Theme.fontSizeMedium
                     color: Theme.surfaceText
                     width: parent.width
@@ -1456,8 +1441,6 @@ FloatingWindow {
                         text: localRoot.busy ? I18n.tr("Adding…", "add button while local account is created") : I18n.tr("Add", "button to add local calendar account")
                         iconName: "check"
                         busy: localRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !localRoot.busy && localRoot.rootPath.length > 0
                         onClicked: {
                             localRoot.busy = true;
@@ -1507,7 +1490,7 @@ FloatingWindow {
                 visible: !evolutionRoot.done
 
                 StyledText {
-                    text: I18n.tr("Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.", "evolution data server account form instructions")
+                    text: I18n.tr("Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.", "account form instructions, %1 is Evolution Data Server, %2 is Evolution, %3 is GNOME Online Accounts").arg("Evolution Data Server").arg("Evolution").arg("GNOME Online Accounts")
                     font.pixelSize: Theme.fontSizeMedium
                     color: Theme.surfaceText
                     width: parent.width
@@ -1518,7 +1501,7 @@ FloatingWindow {
                     width: parent.width
                     outlined: true
                     labelText: I18n.tr("Display name (optional)", "optional account display name field label")
-                    placeholderText: I18n.tr("Evolution", "evolution account display name field placeholder")
+                    placeholderText: "Evolution"
                     leftIconName: "badge"
                     text: evolutionRoot.displayName
                     onTextChanged: evolutionRoot.displayName = text
@@ -1543,8 +1526,6 @@ FloatingWindow {
                         text: evolutionRoot.busy ? I18n.tr("Adding…", "add button while evolution account is created") : I18n.tr("Add", "button to add evolution account")
                         iconName: "check"
                         busy: evolutionRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !evolutionRoot.busy
                         onClicked: {
                             evolutionRoot.busy = true;
@@ -1597,7 +1578,7 @@ FloatingWindow {
                 visible: !icalRoot.done
 
                 StyledText {
-                    text: I18n.tr("Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.", "ical subscription form instructions")
+                    text: I18n.tr("Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.", "ical subscription form instructions, %1 is a url scheme").arg("webcal://")
                     font.pixelSize: Theme.fontSizeMedium
                     color: Theme.surfaceText
                     width: parent.width
@@ -1665,8 +1646,6 @@ FloatingWindow {
                         text: icalRoot.busy ? I18n.tr("Subscribing…", "subscribe button while ical feed is verified") : I18n.tr("Subscribe", "button to subscribe to an ical feed")
                         iconName: "check"
                         busy: icalRoot.busy
-                        backgroundColor: Theme.primary
-                        textColor: Theme.primaryText
                         enabled: !icalRoot.busy && icalRoot.feedUrl.length > 0
                         onClicked: {
                             icalRoot.busy = true;

@@ -337,20 +337,16 @@ DankOverlayDialog {
     actions: [
         DButton {
             text: I18n.tr("Reset to global", "per-calendar reminders dialog button to clear overrides")
-            backgroundColor: "transparent"
-            textColor: Theme.primary
+            variant: "text"
             onClicked: root.resetToGlobal()
         },
         DButton {
             text: I18n.tr("Cancel", "per-calendar reminders dialog button to cancel")
-            backgroundColor: Theme.secondaryContainer
-            textColor: Theme.onSecondaryContainer
+            variant: "tonal"
             onClicked: root.close()
         },
         DButton {
             text: I18n.tr("Save", "per-calendar reminders dialog button to save")
-            backgroundColor: Theme.primary
-            textColor: Theme.primaryText
             onClicked: root.submit()
         }
     ]

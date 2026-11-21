@@ -116,7 +116,7 @@ an XDG autostart entry that launches `dcal run -d --hidden`.
 
 ### Requirements
 
-- [Quickshell](https://quickshell.org) (`qs`)
+- dux-qt-base, the Dux build of [Quickshell](https://quickshell.org) that runs the UI (the `dux-qt-base` package, `libdux-qt-base0` on Debian and Ubuntu). `dcal run` refuses to start without it. `make QTBASE=1` builds it from the `dux-qt-base` submodule and embeds it in `dcal` instead. `dcal run --qs-child` (or `DANKCAL_QS_CHILD=1`) runs the UI on upstream `qs`, which is unsupported
 - Qt 6 declarative (including `Qt.labs.platform` for the tray icon)
 - Go 1.25+ (build only — the binary is pure Go, no CGO)
 

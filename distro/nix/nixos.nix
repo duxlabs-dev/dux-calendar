@@ -11,17 +11,13 @@ in
   imports = [ (import ./options.nix args) ];
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = [
-      cfg.package
-      cfg.quickshell.package
-    ];
+    environment.systemPackages = [ cfg.package ];
 
     systemd.packages = lib.mkIf cfg.systemd.enable [ cfg.package ];
 
     systemd.user.services.dcal = lib.mkIf cfg.systemd.enable {
       wantedBy = [ cfg.systemd.target ];
       restartIfChanged = cfg.systemd.restartIfChanged;
-      path = [ cfg.quickshell.package ];
     };
   };
 }

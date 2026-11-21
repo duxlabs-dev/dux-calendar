@@ -9,10 +9,10 @@ Singleton {
     readonly property real compactBreakpoint: 640
     readonly property real contentMaxWidth: Number.POSITIVE_INFINITY
     readonly property real pagePaddingV: Theme.spacingXL
-    readonly property real pageHeaderHeight: Theme.fontSizeXXLarge + Theme.spacingXL + Theme.spacingM
+    // Centers the page title on the first sidebar row
+    readonly property real pageHeaderHeight: navItemMinHeight + paneMargin * 2
     readonly property real paneMargin: Theme.windowInset
     readonly property real panePadding: Theme.spacingXL
-    readonly property real paneRadius: Theme.cornerRadiusL
     readonly property real rowPaddingH: Theme.spacingL + Theme.spacingXS
     readonly property real rowPaddingV: Theme.spacingL
     readonly property real rowContentSpacing: Theme.spacingL
@@ -24,11 +24,13 @@ Singleton {
     readonly property real buttonGroupCompactThreshold: 200
     readonly property real disabledOpacity: 0.38
     readonly property real highlightBlend: 0.2
-    readonly property color paneColor: Theme.floatingWindowPaneSurface
-    readonly property color sidebarRowColor: Theme.floatingWindowPaneSurface
-    readonly property color rowColor: Theme.foregroundColor(Theme.chipSurface, true)
-    readonly property color controlSurface: Theme.chipSurfaceNested
-    readonly property color selectedRowColor: Theme.blend(rowColor, Theme.onSurface, Theme.stateLayerDrag)
+    // On light surfaces the rows are the white cards, so the pane stays at the host tone, the sidebar recesses under it and controls step down to chips
+    readonly property color sidebarColor: Theme.lightSurfaces ? Theme.foregroundColor(Theme.hostRecessSurface, true) : "transparent"
+    readonly property color paneColor: Theme.lightSurfaces ? "transparent" : Theme.floatingWindowPaneSurface
+    readonly property color sidebarRowColor: rowColor
+    readonly property color rowColor: Theme.foregroundColor(Theme.hostChipSurface, true)
+    readonly property color controlSurface: Theme.lightSurfaces ? Theme.chipSurface : Theme.chipSurfaceNested
+    readonly property color selectedRowColor: Theme.selectedContainer
     readonly property int transitionDuration: Theme.expressiveDurations.expressiveFastSpatial
     readonly property int fadeDuration: Theme.expressiveDurations.expressiveEffects
 }

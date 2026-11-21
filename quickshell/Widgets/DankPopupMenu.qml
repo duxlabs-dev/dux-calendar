@@ -71,18 +71,19 @@ Popup {
         armCloseTimer.start();
     }
     onClosed: {
+        armCloseTimer.stop();
         closePolicy = Popup.CloseOnEscape;
         currentIndex = -1;
     }
 
     Timer {
         id: armCloseTimer
-        interval: 100
+        interval: Timing.settleShort
         onTriggered: root.closePolicy = Popup.CloseOnEscape | (root.dismissOnOutsidePress ? Popup.CloseOnPressOutside : Popup.CloseOnPressOutsideParent)
     }
 
     background: Rectangle {
-        color: Theme.surfaceContainerHigh
+        color: Theme.chipSurface
         radius: Theme.cornerRadiusM
     }
 

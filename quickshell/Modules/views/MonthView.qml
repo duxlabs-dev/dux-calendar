@@ -70,7 +70,7 @@ Item {
 
     Timer {
         id: scrollCooldown
-        interval: 100
+        interval: Timing.settleShort
         onTriggered: wheelHandler.scrollInProgress = false
     }
 

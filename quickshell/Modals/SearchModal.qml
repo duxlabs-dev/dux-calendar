@@ -223,7 +223,7 @@ FocusScope {
 
     Timer {
         id: searchDebounce
-        interval: 250
+        interval: Timing.debounceLong
         repeat: false
         onTriggered: root._runSearch()
     }
@@ -235,7 +235,7 @@ FocusScope {
         opacity: root.opened ? Theme.scrimAlpha : 0
 
         Behavior on opacity {
-            enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+            enabled: Theme.animationsEnabled
             DC.DAnim {
                 duration: Theme.expressiveDurations.expressiveEffects
                 easing.bezierCurve: Theme.expressiveCurves.expressiveEffects
@@ -258,7 +258,7 @@ FocusScope {
         opacity: root.opened ? 1 : 0
 
         Behavior on scale {
-            enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+            enabled: Theme.animationsEnabled
             DC.DAnim {
                 duration: Theme.expressiveDurations.expressiveDefaultSpatial
                 easing.bezierCurve: Theme.expressiveCurves.expressiveDefaultSpatial
@@ -266,7 +266,7 @@ FocusScope {
         }
 
         Behavior on opacity {
-            enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+            enabled: Theme.animationsEnabled
             DC.DAnim {
                 duration: Theme.expressiveDurations.expressiveEffects
                 easing.bezierCurve: Theme.expressiveCurves.expressiveEffects
@@ -285,7 +285,7 @@ FocusScope {
             id: card
             anchors.fill: parent
             radius: Theme.windowRadius
-            color: Theme.surfaceContainerHigh
+            color: Theme.chipSurface
 
             MouseArea {
                 anchors.fill: parent
@@ -318,7 +318,7 @@ FocusScope {
             clip: true
 
             Behavior on height {
-                enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+                enabled: Theme.animationsEnabled
                 DC.DAnim {
                     duration: Theme.expressiveDurations.expressiveEffects
                     easing.bezierCurve: Theme.expressiveCurves.expressiveEffects
@@ -356,10 +356,10 @@ FocusScope {
                     color: selected ? Theme.selectedContainer : Theme.surfaceContainerLow
 
                     Behavior on color {
-                        enabled: !SettingsData.reduceMotion && Theme.currentAnimationBaseDuration > 0
+                        enabled: Theme.animationsEnabled
                         DC.DColorAnim {
-                            duration: Theme.shorterDuration
-                            easing.bezierCurve: Theme.expressiveCurves.standardDecel
+                            duration: Theme.expressiveDurations.expressiveFastEffects
+                            easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
                         }
                     }
 
@@ -371,7 +371,7 @@ FocusScope {
                         anchors.left: parent.left
                         anchors.leftMargin: Theme.spacingS
                         anchors.verticalCenter: parent.verticalCenter
-                        color: Theme.surfaceContainerHighest
+                        color: Theme.chipSurfaceNested
 
                         DIcon {
                             anchors.centerIn: parent
@@ -418,7 +418,7 @@ FocusScope {
                         anchors.right: parent.right
                         anchors.rightMargin: Theme.spacingS
                         anchors.verticalCenter: parent.verticalCenter
-                        color: delegateRoot.selected ? Theme.withAlpha(Theme.onSelectedContainer, Theme.stateLayerFocus) : Theme.surfaceContainerHighest
+                        color: delegateRoot.selected ? Theme.withAlpha(Theme.onSelectedContainer, Theme.stateLayerFocus) : Theme.chipSurfaceNested
 
                         StyledText {
                             id: dateText
@@ -446,7 +446,7 @@ FocusScope {
                     height: Theme.iconButtonSize
                     radius: Theme.cornerRadiusM
                     anchors.verticalCenter: parent.verticalCenter
-                    color: Theme.surfaceContainerHighest
+                    color: Theme.chipSurfaceNested
 
                     DIcon {
                         anchors.centerIn: parent

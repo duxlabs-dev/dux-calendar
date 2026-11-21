@@ -5,11 +5,26 @@
   "%1 PM": {
     "%1 PM": "%1 PM"
   },
+  "%1 access wasn't granted. Reconnect this account to sync tasks.": {
+    "%1 access wasn't granted. Reconnect this account to sync tasks.": ""
+  },
   "%1 appointments fall outside core hours": {
     "%1 appointments fall outside core hours": "%1 cuộc hẹn nằm ngoài giờ làm việc chính"
   },
+  "%1 calendars via app-specific password.": {
+    "%1 calendars via app-specific password.": ""
+  },
   "%1 events selected": {
     "%1 events selected": "Đã chọn %1 sự kiện"
+  },
+  "%1 not detected — using the %2 preset.": {
+    "%1 not detected — using the %2 preset.": ""
+  },
+  "%1 not detected, using %2.": {
+    "%1 not detected, using %2.": ""
+  },
+  "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
+    "%1 often returns %2 for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": ""
   },
   "%1 overlapping events": {
     "%1 overlapping events": ""
@@ -17,11 +32,20 @@
   "%1 selected": {
     "%1 selected": "Đã chọn %1"
   },
+  "%1 theme missing or invalid — using the %2 preset.": {
+    "%1 theme missing or invalid — using the %2 preset.": ""
+  },
   "%1 times": {
     "%1 times": "%1 lần"
   },
+  "%1 will close and reopen with the new zoom.": {
+    "%1 will close and reopen with the new zoom.": ""
+  },
   "%1 · All day": {
     "%1 · All day": "%1 · Cả ngày"
+  },
+  "%1, %2 and %3 calendars.": {
+    "%1, %2 and %3 calendars.": ""
   },
   "%1d before": {
     "%1d before": "trước %1 ngày"
@@ -43,6 +67,12 @@
   },
   "%1w before": {
     "%1w before": "trước %1 tuần"
+  },
+  "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": {
+    "%2 is a calendar for the modern Linux desktop with a <a href=\"%3\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with %4, a QT6 framework for building desktop shells, and %5, a statically typed, compiled programming language.": ""
+  },
+  "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
+    "%3 is unavailable. <a href=\"%2\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": ""
   },
   "(untitled)": {
     "(untitled)": "(chưa đặt tên)"
@@ -137,17 +167,14 @@
   "5 minutes before": {
     "5 minutes before": "5 phút trước"
   },
-  "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": {
-    "50 uses Material shapes. Lower values reduce rounding; higher values increase it.": "50 sử dụng hình dạng Material. Giá trị thấp hơn sẽ giảm độ bo tròn; giá trị cao hơn sẽ tăng độ bo tròn."
+  "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": {
+    "50 uses %1 shapes. Lower values reduce rounding; higher values increase it.": ""
   },
   "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": {
     "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">MIT License</a>": "<a href=\"%2\" style=\"text-decoration:none; color:%1;\">Giấy phép MIT</a>"
   },
-  "A file with this name already exists. Do you want to overwrite it?": {
-    "A file with this name already exists. Do you want to overwrite it?": "Một tệp có tên này đã tồn tại. Bạn có muốn ghi đè không?"
-  },
-  "A folder of .ics files on this machine.": {
-    "A folder of .ics files on this machine.": "Một thư mục chứa các tệp .ics trên máy này."
+  "A folder of %1 files on this machine.": {
+    "A folder of %1 files on this machine.": ""
   },
   "API": {
     "API": "API"
@@ -176,8 +203,8 @@
   "Add": {
     "Add": "Thêm"
   },
-  "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": {
-    "Add a CalDAV, local, Google, or Microsoft account with a task list to create tasks.": "Thêm tài khoản CalDAV, cục bộ, Google hoặc Microsoft với danh sách tác vụ để tạo tác vụ."
+  "Add a %1, local, %2, or %3 account with a task list to create tasks.": {
+    "Add a %1, local, %2, or %3 account with a task list to create tasks.": ""
   },
   "Add a calendar": {
     "Add a calendar": "Thêm lịch"
@@ -245,9 +272,6 @@
   "Also in these calendars": {
     "Also in these calendars": ""
   },
-  "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": {
-    "Alt+←/Backspace: Back • F1/I: File Info • F10: Help • Esc: Close": "Alt+←/Backspace: Quay lại • F1/I: Thông tin tệp • F10: Trợ giúp • Esc: Đóng"
-  },
   "Always use the dark theme.": {
     "Always use the dark theme.": "Luôn dùng giao diện tối."
   },
@@ -266,17 +290,11 @@
   "Apple ID": {
     "Apple ID": "Apple ID"
   },
-  "Apple iCloud calendars via app-specific password.": {
-    "Apple iCloud calendars via app-specific password.": "Lịch Apple iCloud qua mật khẩu dành riêng cho ứng dụng."
-  },
   "Apply and restart": {
     "Apply and restart": ""
   },
   "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": {
     "Approve access in your browser. The window will return here automatically when %1 sends us back the authorization code.": "Cấp quyền truy cập trong trình duyệt. Cửa sổ sẽ tự động quay lại khi %1 gửi lại mã xác thực."
-  },
-  "Ascending": {
-    "Ascending": "Tăng dần"
   },
   "At start": {
     "At start": "Lúc bắt đầu"
@@ -313,9 +331,6 @@
   },
   "Balanced": {
     "Balanced": "Cân bằng"
-  },
-  "Begin setup": {
-    "Begin setup": "Bắt đầu thiết lập"
   },
   "Blurs what shows through the window. Needs an opacity below 100%.": {
     "Blurs what shows through the window. Needs an opacity below 100%.": ""
@@ -398,9 +413,6 @@
   "Color source": {
     "Color source": "Nguồn màu"
   },
-  "Colors are shared with DankMaterialShell when available.": {
-    "Colors are shared with DankMaterialShell when available.": "Màu sắc được chia sẻ với DankMaterialShell khi có thể."
-  },
   "Coming soon": {
     "Coming soon": "Sắp có"
   },
@@ -416,11 +428,8 @@
   "Confirm delete": {
     "Confirm delete": "Xác nhận xóa"
   },
-  "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to DankCalendar. You can still import an overlapping event.": ""
-  },
-  "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": {
-    "Conflicts use events currently synced to Dux Calendar. You can still import an overlapping event.": ""
+  "Conflicts use events currently synced to %1. You can still import an overlapping event.": {
+    "Conflicts use events currently synced to %1. You can still import an overlapping event.": ""
   },
   "Connect": {
     "Connect": "Kết nối"
@@ -428,14 +437,11 @@
   "Connect %1": {
     "Connect %1": "Kết nối %1"
   },
-  "Connect Google Account": {
-    "Connect Google Account": "Kết nối Tài khoản Google"
+  "Connect %1 Account": {
+    "Connect %1 Account": ""
   },
-  "Connect Microsoft Account": {
-    "Connect Microsoft Account": "Kết nối Tài khoản Microsoft"
-  },
-  "Connect any CalDAV-compatible server.": {
-    "Connect any CalDAV-compatible server.": "Kết nối bất kỳ máy chủ tương thích CalDAV nào."
+  "Connect any %1-compatible server.": {
+    "Connect any %1-compatible server.": ""
   },
   "Connected": {
     "Connected": "Đã kết nối"
@@ -472,9 +478,6 @@
   },
   "Copy link": {
     "Copy link": "Sao chép liên kết"
-  },
-  "Copy path": {
-    "Copy path": "Sao chép đường dẫn"
   },
   "Copy selected events": {
     "Copy selected events": "Sao chép các sự kiện đã chọn"
@@ -530,26 +533,11 @@
   "Cut selected events": {
     "Cut selected events": "Cắt các sự kiện đã chọn"
   },
-  "DMS dynamic": {
-    "DMS dynamic": "DMS dynamic"
-  },
-  "DMS dynamic colors detected when available.": {
-    "DMS dynamic colors detected when available.": "Màu động DMS được áp dụng khi phát hiện."
-  },
   "Daemon offline": {
     "Daemon offline": "Daemon ngoại tuyến"
   },
   "Daily": {
     "Daily": "Hàng ngày"
-  },
-  "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dank Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": "Dank Calendar là ứng dụng lịch cho màn hình Linux hiện đại với thiết kế lấy cảm hứng từ <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">Material 3</a>, cùng CLI và socket API có thể tùy biến để tích hợp.<br /><br/>Ứng dụng được xây dựng bằng <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, một framework QT6 để xây dựng desktop shell, và <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, một ngôn ngữ lập trình biên dịch kiểu tĩnh."
-  },
-  "Dank Linux Discord": {
-    "Dank Linux Discord": "Dank Linux Discord"
-  },
-  "DankMaterialShell not detected — using the %1 preset.": {
-    "DankMaterialShell not detected — using the %1 preset.": "DankMaterialShell không được phát hiện — sử dụng cài đặt %1."
   },
   "Dark": {
     "Dark": "Tối"
@@ -635,14 +623,8 @@
   "Delete…": {
     "Delete…": "Xóa…"
   },
-  "Descending": {
-    "Descending": "Giảm dần"
-  },
   "Description": {
     "Description": "Mô tả"
-  },
-  "Desktop": {
-    "Desktop": "Máy tính để bàn"
   },
   "Desktop notifications for upcoming events.": {
     "Desktop notifications for upcoming events.": "Thông báo trên màn hình cho các sự kiện sắp tới."
@@ -674,17 +656,11 @@
   "Docs": {
     "Docs": "Docs"
   },
-  "Documents": {
-    "Documents": "Tài liệu"
-  },
   "Does not repeat": {
     "Does not repeat": "Không lặp lại"
   },
   "Done": {
     "Done": "Xong"
-  },
-  "Downloads": {
-    "Downloads": "Tải xuống"
   },
   "Drag to pan · click to fit": {
     "Drag to pan · click to fit": "Kéo để di chuyển · nhấn để vừa khung"
@@ -706,18 +682,6 @@
   },
   "Duration": {
     "Duration": "Thời lượng"
-  },
-  "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": {
-    "Dux Calendar is a calendar for the modern Linux desktop with a <a href=\"https://m3.material.io/\" style=\"text-decoration:none; color:%1;\">material 3 inspired</a> design, plus a hackable CLI and socket API for integrations.<br /><br/>It is built with <a href=\"https://quickshell.org\" style=\"text-decoration:none; color:%1;\">Quickshell</a>, a QT6 framework for building desktop shells, and <a href=\"https://go.dev\" style=\"text-decoration:none; color:%1;\">Go</a>, a statically typed, compiled programming language.": ""
-  },
-  "Dux Calendar will close and reopen with the new zoom.": {
-    "Dux Calendar will close and reopen with the new zoom.": ""
-  },
-  "Dux Shell not detected — using the %1 preset.": {
-    "Dux Shell not detected — using the %1 preset.": ""
-  },
-  "Dux Shell not detected, using %1.": {
-    "Dux Shell not detected, using %1.": ""
   },
   "Edit": {
     "Edit": "Chỉnh sửa"
@@ -752,11 +716,8 @@
   "Enter client ID": {
     "Enter client ID": "Nhập Client ID"
   },
-  "Enter filename...": {
-    "Enter filename...": "Nhập tên tệp..."
-  },
-  "Enter your CalDAV server details. The connection is verified before the account is saved.": {
-    "Enter your CalDAV server details. The connection is verified before the account is saved.": "Nhập thông tin máy chủ CalDAV. Kết nối được xác minh trước khi lưu tài khoản."
+  "Enter your %1 server details. The connection is verified before the account is saved.": {
+    "Enter your %1 server details. The connection is verified before the account is saved.": ""
   },
   "Enter your client ID": {
     "Enter your client ID": "Nhập Client ID của bạn"
@@ -776,29 +737,14 @@
   "Everything in this file is already on your calendar.": {
     "Everything in this file is already on your calendar.": "Mọi thứ trong tệp này đều đã có trên lịch của bạn."
   },
-  "Evolution": {
-    "Evolution": "Evolution"
-  },
   "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": {
     "Expand day cells to fit every event instead of collapsing extras into \"+N more\".": "Mở rộng các ô ngày để phù hợp với mọi sự kiện thay vì thu gọn các ô bổ sung thành \"+N thêm\"."
-  },
-  "F1/I: Toggle • F10: Help": {
-    "F1/I: Toggle • F10: Help": "F1/I: Bật/tắt • F10: Trợ giúp"
   },
   "Family": {
     "Family": ""
   },
   "Feed URL": {
     "Feed URL": "URL Nguồn cấp dữ liệu"
-  },
-  "File Already Exists": {
-    "File Already Exists": "Tệp đã tồn tại"
-  },
-  "File Information": {
-    "File Information": "Thông tin tệp"
-  },
-  "Files - %1": {
-    "Files - %1": "Tệp - %1"
   },
   "First calendar": {
     "First calendar": "Lịch đầu tiên"
@@ -812,14 +758,11 @@
   "Focus ring": {
     "Focus ring": "Vòng nét tiêu điểm"
   },
-  "Follow DankMaterialShell colors, falling back to a preset.": {
-    "Follow DankMaterialShell colors, falling back to a preset.": "Theo dõi màu DankMaterialShell, quay lại cài đặt."
+  "Follow %1 colors, falling back to a preset.": {
+    "Follow %1 colors, falling back to a preset.": ""
   },
-  "Follow Dux Shell colors, falling back to a preset.": {
-    "Follow Dux Shell colors, falling back to a preset.": ""
-  },
-  "Follow colors generated by Matugen.": {
-    "Follow colors generated by Matugen.": ""
+  "Follow colors generated by %1.": {
+    "Follow colors generated by %1.": ""
   },
   "Follow language": {
     "Follow language": "Theo ngôn ngữ"
@@ -839,29 +782,17 @@
   "Generate app-specific password": {
     "Generate app-specific password": "Tạo mật khẩu dành riêng cho ứng dụng"
   },
-  "GitHub": {
-    "GitHub": "GitHub"
-  },
   "Go to date": {
     "Go to date": "Đi đến ngày"
   },
   "Go to today": {
     "Go to today": "Đến hôm nay"
   },
-  "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": {
-    "Google Tasks is unavailable. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Enable its API</a> or reconnect this account, then refresh, to sync tasks.": "Google Tasks không khả dụng. <a href=\"https://console.cloud.google.com/apis/library/tasks.googleapis.com\" style=\"text-decoration:none; color:%1;\">Bật API của nó</a> hoặc kết nối lại tài khoản này, sau đó làm mới để đồng bộ hóa tác vụ."
-  },
-  "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": {
-    "Google requires you to create your own OAuth client to read calendar data on your behalf. This is a one-time setup that takes about three minutes.": "Google yêu cầu bạn tạo OAuth client riêng để đọc dữ liệu lịch. Đây là thiết lập một lần, mất khoảng ba phút."
-  },
   "Hide": {
     "Hide": "Ẩn"
   },
   "High": {
     "High": "Cao"
-  },
-  "Home": {
-    "Home": "Thư mục gốc"
   },
   "Hour range shown in day and week views.": {
     "Hour range shown in day and week views.": "Phạm vi giờ được hiển thị trong chế độ xem ngày và tuần."
@@ -875,17 +806,17 @@
   "Import": {
     "Import": "Nhập"
   },
+  "Import %1": {
+    "Import %1": ""
+  },
   "Import %1 events": {
     "Import %1 events": "Nhập %1 sự kiện"
-  },
-  "Import client_secret.json": {
-    "Import client_secret.json": "Nhập client_secret.json"
   },
   "Import events": {
     "Import events": "Nhập sự kiện"
   },
-  "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": {
-    "Import the client_secret_….json you downloaded when creating the client, or paste the Client ID and Secret manually.": "Nhập tệp client_secret_….json đã tải về khi tạo client, hoặc dán Client ID và Secret thủ công."
+  "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": {
+    "Import the %1 you downloaded when creating the client, or paste the Client ID and Secret manually.": ""
   },
   "Importing...": {
     "Importing...": "Đang nhập..."
@@ -914,9 +845,6 @@
   "Keyring locked — unlock it to sync": {
     "Keyring locked — unlock it to sync": "Keyring bị khóa — mở khóa để đồng bộ"
   },
-  "Ko-fi": {
-    "Ko-fi": "Ko-fi"
-  },
   "Language": {
     "Language": "Ngôn ngữ"
   },
@@ -926,11 +854,8 @@
   "Language of the interface.": {
     "Language of the interface.": "Ngôn ngữ của giao diện."
   },
-  "Launch Dank Calendar in the background when you log in.": {
-    "Launch Dank Calendar in the background when you log in.": "Khởi động Dank Calendar nền khi đăng nhập."
-  },
-  "Launch Dux Calendar in the background when you log in.": {
-    "Launch Dux Calendar in the background when you log in.": ""
+  "Launch %1 in the background when you log in.": {
+    "Launch %1 in the background when you log in.": ""
   },
   "Layer opacity": {
     "Layer opacity": ""
@@ -940,6 +865,9 @@
   },
   "Lets the desktop show through the window. Text and controls stay solid.": {
     "Lets the desktop show through the window. Text and controls stay solid.": ""
+  },
+  "Library": {
+    "Library": ""
   },
   "Light": {
     "Light": "Sáng"
@@ -974,17 +902,17 @@
   "Location": {
     "Location": "Địa điểm"
   },
+  "Long": {
+    "Long": ""
+  },
+  "Longer": {
+    "Longer": ""
+  },
   "Low": {
     "Low": "Thấp"
   },
   "Marked as not done": {
     "Marked as not done": "Đánh dấu chưa hoàn thành"
-  },
-  "Matugen": {
-    "Matugen": ""
-  },
-  "Matugen theme missing or invalid — using the %1 preset.": {
-    "Matugen theme missing or invalid — using the %1 preset.": ""
   },
   "Maximum title lines per event in month view.": {
     "Maximum title lines per event in month view.": "Số dòng tiêu đề tối đa trên mỗi sự kiện trong chế độ xem tháng."
@@ -1013,20 +941,8 @@
   "Merge duplicate events": {
     "Merge duplicate events": ""
   },
-  "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": {
-    "Microsoft To Do access wasn't granted. Reconnect this account to sync tasks.": "Quyền truy cập Microsoft To Do không được cấp. Kết nối lại tài khoản này để đồng bộ hóa tác vụ."
-  },
-  "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": {
-    "Microsoft often returns server_error for the first few minutes after an app registration is created or changed. Wait a minute or two and try again.": "Microsoft thường trả về server_error trong vài phút đầu sau khi tạo hoặc thay đổi đăng ký ứng dụng. Hãy đợi một hoặc hai phút rồi thử lại."
-  },
-  "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": {
-    "Microsoft requires you to register your own app to read calendar data on your behalf. This is a one-time setup that takes about two minutes — no client secret needed.": "Microsoft yêu cầu bạn đăng ký ứng dụng riêng để đọc dữ liệu lịch. Đây là thiết lập một lần, mất khoảng hai phút — không cần client secret."
-  },
   "Minimize": {
     "Minimize": "Thu nhỏ"
-  },
-  "Modified": {
-    "Modified": "Đã sửa đổi"
   },
   "Monospace family": {
     "Monospace family": ""
@@ -1064,9 +980,6 @@
   "Move through sidebar items": {
     "Move through sidebar items": "Di chuyển qua các mục thanh bên"
   },
-  "Move to Trash": {
-    "Move to Trash": "Chuyển vào thùng rác"
-  },
   "Move to selected day": {
     "Move to selected day": "Di chuyển đến ngày đã chọn"
   },
@@ -1082,17 +995,11 @@
   "Moving a recurring event moves its entire series.": {
     "Moving a recurring event moves its entire series.": "Việc di chuyển một sự kiện lặp lại sẽ di chuyển toàn bộ chuỗi của nó."
   },
-  "Music": {
-    "Music": "Âm nhạc"
-  },
   "My calendars": {
     "My calendars": "Lịch của tôi"
   },
   "My server": {
     "My server": "Máy chủ của tôi"
-  },
-  "Name": {
-    "Name": "Tên"
   },
   "Names, visibility, removal": {
     "Names, visibility, removal": "Tên, hiển thị, gỡ bỏ"
@@ -1130,23 +1037,17 @@
   "Next day, week or month": {
     "Next day, week or month": "Ngày, tuần hoặc tháng tiếp theo"
   },
-  "Next event": {
-    "Next event": "Sự kiện tiếp theo"
-  },
   "Next event (next week in month view)": {
     "Next event (next week in month view)": "Sự kiện tiếp theo (tuần sau trong chế độ xem tháng)"
   },
   "Next month": {
     "Next month": "Tháng sau"
   },
-  "Next week": {
-    "Next week": "Tuần tiếp theo"
-  },
   "Next year": {
     "Next year": "Năm sau"
   },
-  "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": {
-    "No OAuth client found in that file — expected the client_secret_….json downloaded from Google.": "Không tìm thấy OAuth client trong tệp — cần tệp client_secret_….json tải từ Google."
+  "No OAuth client found in that file — expected the %1 downloaded from %2.": {
+    "No OAuth client found in that file — expected the %1 downloaded from %2.": ""
   },
   "No accounts yet. Click \"Add account\" to connect one.": {
     "No accounts yet. Click \"Add account\" to connect one.": "Chưa có tài khoản nào. Nhấn \"Thêm tài khoản\" để kết nối."
@@ -1244,9 +1145,6 @@
   "Open the existing meeting to handle this reply or cancellation.": {
     "Open the existing meeting to handle this reply or cancellation.": ""
   },
-  "Order": {
-    "Order": "Thứ tự"
-  },
   "Organized by %1": {
     "Organized by %1": "Được tổ chức bởi %1"
   },
@@ -1255,9 +1153,6 @@
   },
   "Outline the control that has keyboard focus.": {
     "Outline the control that has keyboard focus.": "Hiển thị đường viền quanh điều khiển đang nhận tiêu điểm bàn phím."
-  },
-  "Outlook, Office 365 and Exchange Online calendars.": {
-    "Outlook, Office 365 and Exchange Online calendars.": "Lịch Outlook, Office 365 và Exchange Online."
   },
   "Overdue": {
     "Overdue": "Quá hạn"
@@ -1268,14 +1163,8 @@
   "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": {
     "Override the global reminder settings for this calendar. Unchanged options follow the global defaults.": "Ghi đè cài đặt lời nhắc toàn cục cho lịch này. Các tùy chọn không thay đổi sẽ theo mặc định toàn cục."
   },
-  "Overwrite": {
-    "Overwrite": "Ghi đè"
-  },
   "Palette: %1": {
     "Palette: %1": "Bảng màu: %1"
-  },
-  "Part of the Dank Linux suite.": {
-    "Part of the Dank Linux suite.": "Một phần của bộ Dank Linux."
   },
   "Password": {
     "Password": "Mật khẩu"
@@ -1304,8 +1193,8 @@
   "Paste the Application (client) ID from your app registration's Overview page.": {
     "Paste the Application (client) ID from your app registration's Overview page.": "Dán Application (client) ID từ trang Overview của đăng ký ứng dụng."
   },
-  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": {
-    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. webcal:// links are accepted.": "Dán URL của một nguồn cấp dữ liệu lịch bên ngoài để đăng ký nó. Lịch chỉ đọc và làm mới trong nền. Liên kết webcal:// được chấp nhận."
+  "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": {
+    "Paste the URL of an external calendar feed to subscribe to it. The calendar is read-only and refreshes in the background. %1 links are accepted.": ""
   },
   "Paste your credentials": {
     "Paste your credentials": "Dán thông tin xác thực của bạn"
@@ -1325,17 +1214,14 @@
   "Pick time": {
     "Pick time": "Chọn giờ"
   },
-  "Pictures": {
-    "Pictures": "Hình ảnh"
-  },
   "Play a sound when a reminder fires.": {
     "Play a sound when a reminder fires.": "Phát âm thanh khi lời nhắc nhở kích hoạt."
   },
   "Playful": {
     "Playful": "Sinh động"
   },
-  "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": {
-    "Point at a directory of .ics files. Each subdirectory or .ics file becomes a calendar — compatible with vdirsyncer/khal layouts. The directory is created if it doesn't exist.": "Trỏ đến thư mục chứa các tệp .ics. Mỗi thư mục con hoặc tệp .ics sẽ thành một lịch — tương thích với cấu trúc vdirsyncer/khal. Thư mục được tạo nếu chưa tồn tại."
+  "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": {
+    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": ""
   },
   "Preset": {
     "Preset": "Cài đặt"
@@ -1352,17 +1238,11 @@
   "Previous day, week or month": {
     "Previous day, week or month": "Ngày, tuần hoặc tháng trước"
   },
-  "Previous event": {
-    "Previous event": "Sự kiện trước"
-  },
   "Previous event (previous week in month view)": {
     "Previous event (previous week in month view)": "Sự kiện trước (tuần trước trong chế độ xem tháng)"
   },
   "Previous month": {
     "Previous month": "Tháng trước"
-  },
-  "Previous week": {
-    "Previous week": "Tuần trước"
   },
   "Previous year": {
     "Previous year": "Năm trước"
@@ -1372,9 +1252,6 @@
   },
   "Priority": {
     "Priority": "Ưu tiên"
-  },
-  "Quick Access": {
-    "Quick Access": "Truy cập nhanh"
   },
   "Quit": {
     "Quit": "Thoát"
@@ -1400,8 +1277,8 @@
   "Recurring event · conflicts checked through %1": {
     "Recurring event · conflicts checked through %1": ""
   },
-  "Recurring tasks are managed in Google Tasks.": {
-    "Recurring tasks are managed in Google Tasks.": "Các tác vụ lặp lại được quản lý trong Google Tasks."
+  "Recurring tasks are managed in %1.": {
+    "Recurring tasks are managed in %1.": ""
   },
   "Reduce motion": {
     "Reduce motion": "Giảm chuyển động"
@@ -1436,17 +1313,11 @@
   "Remove reminder": {
     "Remove reminder": "Xóa lời nhắc"
   },
-  "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dank Calendar. Nothing is deleted from the provider.": "Gỡ bỏ tài khoản này cùng lịch và sự kiện khỏi Dank Calendar. Dữ liệu trên nhà cung cấp không bị xóa."
+  "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": {
+    "Removes this account and its calendars and events from %1. Nothing is deleted from the provider.": ""
   },
-  "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": {
-    "Removes this account and its calendars and events from Dux Calendar. Nothing is deleted from the provider.": ""
-  },
-  "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dank Calendar. If the provider still offers it, it will come back on the next sync.": "Gỡ bỏ lịch này và các sự kiện của nó khỏi Dank Calendar. Nếu nhà cung cấp vẫn còn lịch này, nó sẽ được khôi phục lần đồng bộ tiếp theo."
-  },
-  "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": {
-    "Removes this calendar and its events from Dux Calendar. If the provider still offers it, it will come back on the next sync.": ""
+  "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": {
+    "Removes this calendar and its events from %1. If the provider still offers it, it will come back on the next sync.": ""
   },
   "Remove…": {
     "Remove…": "Gỡ bỏ…"
@@ -1490,8 +1361,14 @@
   "Restart required": {
     "Restart required": ""
   },
+  "Revision": {
+    "Revision": ""
+  },
   "Ripple effects": {
     "Ripple effects": "Hiệu ứng gợn sóng"
+  },
+  "Runtime": {
+    "Runtime": ""
   },
   "Save": {
     "Save": "Lưu"
@@ -1520,8 +1397,8 @@
   "Secondary": {
     "Secondary": "Phụ"
   },
-  "Select File": {
-    "Select File": "Chọn tệp"
+  "Select %1": {
+    "Select %1": ""
   },
   "Select a range of events": {
     "Select a range of events": "Chọn một phạm vi sự kiện"
@@ -1531,9 +1408,6 @@
   },
   "Select all events on the selected day": {
     "Select all events on the selected day": "Chọn tất cả sự kiện trong ngày đã chọn"
-  },
-  "Select client_secret.json": {
-    "Select client_secret.json": "Chọn client_secret.json"
   },
   "Select days for a new event (month view)": {
     "Select days for a new event (month view)": "Chọn ngày cho sự kiện mới (chế độ xem tháng)"
@@ -1553,8 +1427,8 @@
   "Server URL": {
     "Server URL": "URL máy chủ"
   },
-  "Set by QT_SCALE_FACTOR.": {
-    "Set by QT_SCALE_FACTOR.": ""
+  "Set by %1.": {
+    "Set by %1.": ""
   },
   "Settings": {
     "Settings": "Cài đặt"
@@ -1562,14 +1436,17 @@
   "Shape": {
     "Shape": "Hình dạng"
   },
+  "Short": {
+    "Short": ""
+  },
+  "Shorter": {
+    "Shorter": ""
+  },
   "Show": {
     "Show": "Hiện"
   },
-  "Show Dank Calendar in the system tray.": {
-    "Show Dank Calendar in the system tray.": "Hiển thị Dank Calendar trong khay hệ thống."
-  },
-  "Show Dux Calendar in the system tray.": {
-    "Show Dux Calendar in the system tray.": ""
+  "Show %1 in the system tray.": {
+    "Show %1 in the system tray.": ""
   },
   "Show all events in month view": {
     "Show all events in month view": "Hiển thị tất cả các sự kiện trong chế độ xem tháng"
@@ -1604,32 +1481,23 @@
   "Sign in with %1": {
     "Sign in with %1": "Đăng nhập bằng %1"
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dank Calendar syncs your calendars, events, and tasks.": "Đăng nhập bằng Google trong trình duyệt của bạn và bạn đã xong — không cần thiết lập. Dank Calendar đồng bộ hóa các lịch, sự kiện và tác vụ của bạn."
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your %3 calendars, events, and tasks.": ""
   },
-  "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": {
-    "Sign in with Google in your browser and you're done — no setup needed. Dux Calendar syncs your calendars, events, and tasks.": ""
+  "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": {
+    "Sign in with %1 in your browser and you're done — no setup needed. %2 syncs your calendars, events, and tasks.": ""
   },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dank Calendar syncs your Outlook calendars, events, and tasks.": "Đăng nhập bằng Microsoft trong trình duyệt của bạn và bạn đã xong — không cần thiết lập. Dank Calendar đồng bộ hóa các lịch Outlook, sự kiện và tác vụ của bạn."
-  },
-  "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": {
-    "Sign in with Microsoft in your browser and you're done — no setup needed. Dux Calendar syncs your Outlook calendars, events, and tasks.": ""
+  "Sign in with your %1 account.": {
+    "Sign in with your %1 account.": ""
   },
   "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": {
     "Sign in with your Apple ID and an app-specific password. Regular Apple ID passwords will not work.": "Đăng nhập bằng Apple ID và mật khẩu dành riêng cho ứng dụng. Mật khẩu Apple ID thông thường sẽ không hoạt động."
-  },
-  "Sign in with your Google account.": {
-    "Sign in with your Google account.": "Đăng nhập bằng tài khoản Google."
   },
   "Sign-in expired — click to reconnect": {
     "Sign-in expired — click to reconnect": "Đăng nhập hết hạn — nhấp để kết nối lại"
   },
   "Sign-in expired — reconnect to keep syncing": {
     "Sign-in expired — reconnect to keep syncing": "Phiên đăng nhập hết hạn — kết nối lại để tiếp tục đồng bộ"
-  },
-  "Size": {
-    "Size": "Kích cỡ"
   },
   "Skip certificate verification": {
     "Skip certificate verification": "Bỏ qua xác minh chứng chỉ"
@@ -1642,9 +1510,6 @@
   },
   "Some calendars couldn't be synced; their events may be missing or out of date.": {
     "Some calendars couldn't be synced; their events may be missing or out of date.": "Không thể đồng bộ một số lịch; sự kiện của chúng có thể bị thiếu hoặc đã cũ."
-  },
-  "Sort By": {
-    "Sort By": "Sắp xếp theo"
   },
   "Spring": {
     "Spring": "Lò xo"
@@ -1673,23 +1538,17 @@
   "Step %1: %2": {
     "Step %1: %2": "Bước %1: %2"
   },
-  "Stock palette": {
-    "Stock palette": "Bảng màu mặc định"
-  },
   "Subscribe": {
     "Subscribe": "Đăng ký"
   },
-  "Subscribe to an external calendar by URL (webcal/https).": {
-    "Subscribe to an external calendar by URL (webcal/https).": "Đăng ký lịch bên ngoài theo URL (webcal/https)."
+  "Subscribe to an external calendar by URL (%1).": {
+    "Subscribe to an external calendar by URL (%1).": ""
   },
   "Subscribing…": {
     "Subscribing…": "Đang đăng ký..."
   },
-  "Support Dank Linux": {
-    "Support Dank Linux": ""
-  },
-  "Support Dux Labs": {
-    "Support Dux Labs": ""
+  "Support %1": {
+    "Support %1": ""
   },
   "Sync interval": {
     "Sync interval": "Khoảng thời gian đồng bộ"
@@ -1700,11 +1559,8 @@
   "Sync now": {
     "Sync now": "Đồng bộ ngay"
   },
-  "Synced as \"%1\". The name only changes in Dank Calendar.": {
-    "Synced as \"%1\". The name only changes in Dank Calendar.": "Đồng bộ với tên \"%1\". Tên chỉ thay đổi trong Dank Calendar."
-  },
-  "Synced as \"%1\". The name only changes in Dux Calendar.": {
-    "Synced as \"%1\". The name only changes in Dux Calendar.": ""
+  "Synced as \"%2\". The name only changes in %1.": {
+    "Synced as \"%2\". The name only changes in %1.": ""
   },
   "System": {
     "System": ""
@@ -1717,9 +1573,6 @@
   },
   "System preference unavailable — using dark.": {
     "System preference unavailable — using dark.": "Không có tùy chọn hệ thống — đang dùng giao diện tối."
-  },
-  "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": {
-    "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select": "Tab/Shift+Tab: Di chuyển • ←→↑↓: Di chuyển lưới • Enter/Space: Chọn"
   },
   "Task": {
     "Task": "Tác vụ"
@@ -1802,9 +1655,6 @@
   "Try again": {
     "Try again": "Thử lại"
   },
-  "Type": {
-    "Type": "Loại"
-  },
   "Type at least 2 characters to search events.": {
     "Type at least 2 characters to search events.": "Nhập ít nhất 2 ký tự để tìm kiếm sự kiện."
   },
@@ -1826,11 +1676,8 @@
   "Use synced name": {
     "Use synced name": "Dùng tên đã đồng bộ"
   },
-  "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": {
-    "Use the calendars Evolution Data Server already manages on this machine (Evolution, GNOME Online Accounts, and more). No sign-in is needed — Evolution handles credentials and syncing.": "Sử dụng các lịch mà Evolution Data Server đã quản lý trên máy này (Evolution, GNOME Online Accounts và hơn thế nữa). Không cần đăng nhập — Evolution xử lý thông tin đăng nhập và đồng bộ hóa."
-  },
-  "Use this folder": {
-    "Use this folder": "Dùng thư mục này"
+  "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": {
+    "Use the calendars %1 already manages on this machine (%2, %3, and more). No sign-in is needed — %2 handles credentials and syncing.": ""
   },
   "Use your own OAuth client": {
     "Use your own OAuth client": "Sử dụng máy khách OAuth của riêng bạn"
@@ -1841,14 +1688,11 @@
   "Username (optional)": {
     "Username (optional)": "Tên người dùng (tùy chọn)"
   },
-  "Using DankMaterialShell dynamic colors.": {
-    "Using DankMaterialShell dynamic colors.": "Sử dụng màu động của DankMaterialShell."
+  "Using %1 colors.": {
+    "Using %1 colors.": ""
   },
-  "Using Dux Shell dynamic colors.": {
-    "Using Dux Shell dynamic colors.": ""
-  },
-  "Using Matugen colors.": {
-    "Using Matugen colors.": ""
+  "Using %1 dynamic colors.": {
+    "Using %1 dynamic colors.": ""
   },
   "Verify desktop notifications are working.": {
     "Verify desktop notifications are working.": "Kiểm tra xem thông báo màn hình có hoạt động không."
@@ -1858,9 +1702,6 @@
   },
   "Version and links": {
     "Version and links": "Phiên bản và liên kết"
-  },
-  "Videos": {
-    "Videos": "Video"
   },
   "View": {
     "View": "Chế độ xem"
@@ -1874,8 +1715,8 @@
   "Waiting for browser…": {
     "Waiting for browser…": "Đang chờ trình duyệt…"
   },
-  "Waiting for the dankcalendar daemon...": {
-    "Waiting for the dankcalendar daemon...": "Đang chờ daemon dankcalendar..."
+  "Waiting for the %1 daemon...": {
+    "Waiting for the %1 daemon...": ""
   },
   "Week": {
     "Week": "Tuần"
@@ -1910,8 +1751,8 @@
   "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": {
     "Your calendars will sync in the background. You can manage this account from Settings → Accounts.": "Lịch của bạn sẽ đồng bộ nền. Bạn có thể quản lý tài khoản này từ Cài đặt → Tài khoản."
   },
-  "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": {
-    "Your client ID, secret, and refresh token are stored in the system keyring (libsecret/kwallet) when available, or an encrypted local file.": "Client ID, secret và refresh token của bạn được lưu trong keyring hệ thống (libsecret/kwallet) nếu có, hoặc trong tệp cục bộ được mã hóa."
+  "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": {
+    "Your client ID, secret, and refresh token are stored in the system keyring (%1) when available, or an encrypted local file.": ""
   },
   "Your compositor does not support background blur.": {
     "Your compositor does not support background blur.": ""
@@ -1937,8 +1778,8 @@
   "e.g. 2022-01-01": {
     "e.g. 2022-01-01": "ví dụ: 2022-01-01"
   },
-  "iCal subscription": {
-    "iCal subscription": "Đăng ký iCal"
+  "iCalendar subscription": {
+    "iCalendar subscription": ""
   },
   "light": {
     "light": "sáng"

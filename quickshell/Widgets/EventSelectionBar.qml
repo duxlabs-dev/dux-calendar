@@ -86,21 +86,23 @@ Item {
 
     Behavior on opacity {
         NumberAnimation {
-            duration: Theme.shortDuration
-            easing.type: Theme.standardEasing
+            duration: Theme.expressiveDurations.expressiveFastEffects
+            easing.type: Easing.BezierSpline
+            easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
         }
     }
 
     Behavior on scale {
         NumberAnimation {
-            duration: Theme.shortDuration
-            easing.type: Theme.standardEasing
+            duration: Theme.expressiveDurations.expressiveFastSpatial
+            easing.type: Easing.BezierSpline
+            easing.bezierCurve: Theme.expressiveCurves.expressiveFastSpatial
         }
     }
 
     StyledRect {
         anchors.fill: parent
-        color: Theme.surfaceContainerHigh
+        color: Theme.chipSurface
         radius: Theme.cornerRadiusXL
         border.color: Theme.outlineVariant
         border.width: Theme.outlineWidth

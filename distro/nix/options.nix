@@ -1,23 +1,35 @@
 {
+  config,
   lib,
   dcalPkgs,
-  pkgs,
   ...
 }:
 let
   inherit (lib) types;
 in
 {
+  imports = [
+    (lib.mkRemovedOptionModule [
+      "programs"
+      "dank-calendar"
+      "quickshell"
+      "package"
+    ] "The Quickshell runtime is embedded in dcal as dux-qt-base; set programs.dank-calendar.duxQtBase.package instead.")
+  ];
+
   options.programs.dank-calendar = {
     enable = lib.mkEnableOption "Dux Calendar";
 
-    package = lib.mkPackageOption dcalPkgs "dankcalendar" {
-      extraDescription = "The Dux Calendar package to use (defaults to be built from source)";
+    package = lib.mkOption {
+      type = types.package;
+      default = dcalPkgs.dankcalendar.override { duxQtBase = config.programs.dank-calendar.duxQtBase.package; };
+      defaultText = lib.literalExpression "dcalPkgs.dankcalendar.override { duxQtBase = config.programs.dank-calendar.duxQtBase.package; }";
+      description = "The Dux Calendar package to use (defaults to be built from source against duxQtBase.package)";
     };
 
-    quickshell = {
-      package = lib.mkPackageOption pkgs "quickshell" {
-        extraDescription = "The Quickshell package used to launch the calendar UI";
+    duxQtBase = {
+      package = lib.mkPackageOption dcalPkgs "dux-qt-base" {
+        extraDescription = "The Quickshell runtime library embedded in the dcal package (defaults to the pinned dux-qt-base flake input, built against this system's nixpkgs).";
       };
     };
 

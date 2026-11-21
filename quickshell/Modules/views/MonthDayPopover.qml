@@ -107,7 +107,7 @@ Item {
         dim: false
 
         background: Rectangle {
-            color: Theme.surfaceContainerHigh
+            color: Theme.chipSurface
             radius: Theme.cornerRadiusM
         }
 
@@ -218,8 +218,9 @@ Item {
                 property: "opacity"
                 from: 0
                 to: 1
-                duration: Theme.shortDuration
-                easing.type: Theme.standardEasing
+                duration: Theme.expressiveDurations.expressiveFastEffects
+                easing.type: Easing.BezierSpline
+                easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
             }
         }
 
@@ -228,8 +229,9 @@ Item {
                 property: "opacity"
                 from: 1
                 to: 0
-                duration: Theme.shorterDuration
-                easing.type: Theme.standardEasing
+                duration: Theme.expressiveDurations.expressiveFastEffects
+                easing.type: Easing.BezierSpline
+                easing.bezierCurve: Theme.expressiveCurves.expressiveFastEffects
             }
         }
     }

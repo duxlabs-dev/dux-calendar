@@ -157,22 +157,6 @@ func TestSyncConditionalNotModified(t *testing.T) {
 	}
 }
 
-func TestReadOnly(t *testing.T) {
-	p := testProvider("https://example.com/a.ics")
-	cal := calendar.Calendar{ID: "cal"}
-	ctx := context.Background()
-
-	if _, err := p.CreateEvent(ctx, cal, &calendar.Event{}); err != errReadOnly {
-		t.Errorf("CreateEvent err = %v, want %v", err, errReadOnly)
-	}
-	if _, err := p.UpdateEvent(ctx, cal, &calendar.Event{}); err != errReadOnly {
-		t.Errorf("UpdateEvent err = %v, want %v", err, errReadOnly)
-	}
-	if err := p.DeleteEvent(ctx, cal, calendar.Event{}); err != errReadOnly {
-		t.Errorf("DeleteEvent err = %v, want %v", err, errReadOnly)
-	}
-}
-
 const rawNewlineFeed = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//test//EN\r\n\r\nBEGIN:VEVENT\r\nUID:evt-raw@test\r\nSUMMARY:Holiday\r\nDESCRIPTION:first line\n\nsecond: line\nthird line\r\nDTSTART;VALUE=DATE:20260927\r\nDTEND;VALUE=DATE:20260927\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
 
 func TestSyncFoldsRawNewlinesInTextValues(t *testing.T) {

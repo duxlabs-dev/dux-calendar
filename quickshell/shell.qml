@@ -3,6 +3,8 @@
 //@ pragma Env QT_QUICK_CONTROLS_STYLE=Material
 //@ pragma UseQApplication
 //@ pragma AppId dev.duxlabs.calendar
+//@ pragma DiskCache
+//@ pragma RenderControl
 
 import QtQuick
 import Quickshell
@@ -99,7 +101,11 @@ ShellRoot {
     }
 
     function handleSubscribe(url) {
-        pendingCalendarOpens = pendingCalendarOpens.concat([{ "url": url }]);
+        pendingCalendarOpens = pendingCalendarOpens.concat([
+            {
+                "url": url
+            }
+        ]);
         showAndFocus();
         applyPendingCalendarOpen();
     }
@@ -107,7 +113,12 @@ ShellRoot {
     function handleImportIcs(ics, name) {
         if (ics === "")
             return;
-        pendingCalendarOpens = pendingCalendarOpens.concat([{ "ics": ics, "name": name }]);
+        pendingCalendarOpens = pendingCalendarOpens.concat([
+            {
+                "ics": ics,
+                "name": name
+            }
+        ]);
         showAndFocus();
         applyPendingCalendarOpen();
     }
@@ -207,7 +218,7 @@ ShellRoot {
 
     Timer {
         id: focusRetry
-        interval: 150
+        interval: Timing.settle
         repeat: false
         onTriggered: root.focusToplevel()
     }

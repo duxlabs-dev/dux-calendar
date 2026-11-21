@@ -21,7 +21,7 @@ Rectangle {
     width: Math.min(220, dragLabel.implicitWidth + Theme.spacingL * 2)
     height: 34
     radius: Theme.cornerRadiusS
-    color: Theme.surfaceContainerHigh
+    color: Theme.chipSurface
     border.color: Theme.primary
     border.width: 2
     z: 100

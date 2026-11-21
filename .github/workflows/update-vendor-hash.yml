@@ -9,6 +9,7 @@ on:
     paths:
       - "core/go.mod"
       - "core/go.sum"
+      - "core/**.go"
     branches:
       - master
       - "stable-*"
@@ -41,7 +42,7 @@ jobs:
         run: |
           set -euo pipefail
           echo "Attempting nix build to get new vendorHash..."
-          if output=$(nix build .#dankcalendar 2>&1); then
+          if output=$(nix build .#dankcalendar.goModules 2>&1); then
             echo "Build succeeded, no hash update needed"
             exit 0
           fi

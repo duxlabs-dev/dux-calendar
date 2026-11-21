@@ -28,10 +28,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.dank-calendar.systemd.target = lib.mkDefault config.wayland.systemd.target;
 
-    home.packages = [
-      cfg.package
-      cfg.quickshell.package
-    ];
+    home.packages = [ cfg.package ];
 
     systemd.user.services.dcal = lib.mkIf cfg.systemd.enable {
       Unit = {
