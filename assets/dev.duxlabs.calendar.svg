@@ -1,19 +1,28 @@
-<!-- calendar glyph from Material Symbols Rounded, Apache License 2.0, https://github.com/google/material-design-icons -->
+<!-- calendar glyph after Material Symbols Rounded, Apache License 2.0, https://github.com/google/material-design-icons -->
+<!-- Dux Calendar: lavender body with a 3px mid-tone rim just inside the outline. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="body" x1="8" y1="9.33" x2="56" y2="58.67" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F5F0FF"/>
       <stop offset="1" stop-color="#D0BCFF"/>
     </linearGradient>
+    <!-- A mask, not a clip-path: QtSvg ignores clip-path. It keeps the inner half of the rim stroke. -->
+    <mask id="inside" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect x="8" y="9.33" width="48" height="49.34" rx="5" fill="#fff"/>
+    </mask>
   </defs>
-  <g transform="translate(0 64) scale(0.0666667)">
-    <!-- The outline is a solid base under the body: shapes that only share an edge antialias into a seam. -->
-    <path d="M180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.02 0 23.51 9.2Q310-861.6 310-848v28h340v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.03 0 23.51 9.2Q715-861.6 715-848v28h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Z" fill="#553C9A"/>
-    <rect x="180" y="-570" width="600" height="430" fill="url(#body)"/>
-    <g fill="#9F7AEA">
-      <circle cx="320" cy="-440" r="40"/><circle cx="480" cy="-440" r="40"/><circle cx="640" cy="-440" r="40"/>
-      <circle cx="320" cy="-280" r="40"/><circle cx="640" cy="-280" r="40"/>
-    </g>
-    <circle cx="480" cy="-280" r="40" fill="#44337A"/>
+  <g mask="url(#inside)">
+    <rect x="8" y="9.33" width="48" height="49.34" rx="5" fill="url(#body)"/>
+    <rect x="8" y="9.33" width="48" height="15.67" fill="#9F7AEA"/>
+    <rect x="8" y="9.33" width="48" height="49.34" rx="5" fill="none" stroke="#9F7AEA" stroke-width="6"/>
   </g>
+  <g fill="#6B4FB8">
+    <rect x="16.33" y="4.67" width="4.67" height="9.33" rx="2.33"/>
+    <rect x="43" y="4.67" width="4.67" height="9.33" rx="2.33"/>
+  </g>
+  <g fill="#9F7AEA">
+    <circle cx="21.33" cy="34.67" r="2.67"/><circle cx="32" cy="34.67" r="2.67"/><circle cx="42.67" cy="34.67" r="2.67"/>
+    <circle cx="21.33" cy="45.33" r="2.67"/><circle cx="42.67" cy="45.33" r="2.67"/>
+  </g>
+  <circle cx="32" cy="45.33" r="2.67" fill="#6B4FB8"/>
 </svg>
