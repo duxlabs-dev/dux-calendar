@@ -719,6 +719,7 @@ Singleton {
         path: root.dmsColorsPath
         blockLoading: false
         watchChanges: true
+        printErrors: false
 
         onLoaded: {
             try {
@@ -736,7 +737,7 @@ Singleton {
 
         onLoadFailed: function (error) {
             if (!root.useLegacyDmsCache) {
-                root.useLegacyDmsCache = true;
+                Qt.callLater(() => root.useLegacyDmsCache = true);
                 return;
             }
             root.colorsLoaded = false;
