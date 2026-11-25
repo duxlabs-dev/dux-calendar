@@ -685,6 +685,7 @@ Singleton {
             "status": e.status || "confirmed",
             "recurrence": (e.recurrence || {}).rrule || [],
             "recurringId": e.recurringId || "",
+            "originalStart": e.originalStart || "",
             "attendees": e.attendees || [],
             "organizer": e.organizer || null,
             "reminders": e.reminders || [],

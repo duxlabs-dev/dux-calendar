@@ -13,6 +13,7 @@ import (
 	"testing"
 	"time"
 
+	ical "github.com/emersion/go-ical"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
@@ -557,4 +558,111 @@ func TestObjectPathEscapesSegments(t *testing.T) {
 	assert.Equal(t, "/dav/calendars/user/cal/abc@client.ics", objectPath("/dav/calendars/user/cal", "abc@client"))
 	assert.Equal(t, "/dav/calendars/user/cal/a%2Fb.ics", objectPath("/dav/calendars/user/cal/", "a/b"))
 	assert.Equal(t, "/dav/calendars/user/M%C3%B6j/x.ics", objectPath("/dav/calendars/user/Möj/", "x"))
+}
+
+func TestUpdateEventPreservesRecurrenceExceptions(t *testing.T) {
+	const objectHref = "/dav/calendars/user/cal/series.ics"
+	const objectICS = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//test//EN
+BEGIN:VEVENT
+UID:series
+DTSTAMP:20260101T000000Z
+DTSTART:20260601T090000Z
+DTEND:20260601T100000Z
+SUMMARY:Series
+RRULE:FREQ=WEEKLY
+END:VEVENT
+BEGIN:VEVENT
+UID:series
+DTSTAMP:20260101T000000Z
+RECURRENCE-ID:20260608T090000Z
+DTSTART:20260608T140000Z
+DTEND:20260608T150000Z
+SUMMARY:Moved
+END:VEVENT
+END:VCALENDAR
+`
+
+	var putBody []byte
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		path := strings.TrimSuffix(r.URL.Path, "/")
+		switch {
+		case r.Method == "PROPFIND" && path == "":
+			writeMultiStatus(w, principalXML)
+		case r.Method == "PROPFIND" && path == "/dav/principals/user":
+			writeMultiStatus(w, homeSetXML)
+		case r.Method == "GET" && path == objectHref:
+			w.Header().Set("Content-Type", "text/calendar")
+			w.Write([]byte(objectICS))
+		case r.Method == "PUT" && path == objectHref:
+			putBody, _ = io.ReadAll(r.Body)
+			w.Header().Set("ETag", `"2"`)
+			w.WriteHeader(http.StatusNoContent)
+		default:
+			w.WriteHeader(http.StatusMethodNotAllowed)
+		}
+	}))
+	t.Cleanup(server.Close)
+
+	p, err := New(context.Background(), cal.Account{ID: "acc"}, newSecrets(t), server.URL, "user")
+	require.NoError(t, err)
+
+	start := time.Date(2026, 6, 1, 10, 0, 0, 0, time.UTC)
+	master := &cal.Event{
+		UID:        "series",
+		RemoteID:   objectHref,
+		Summary:    "Series renamed",
+		Start:      start,
+		End:        start.Add(time.Hour),
+		Recurrence: &cal.Recurrence{RRule: []string{"FREQ=WEEKLY"}},
+	}
+	updated, err := p.UpdateEvent(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, master)
+	require.NoError(t, err)
+	assert.Equal(t, "2", updated.Etag)
+
+	doc := decodeICS(t, string(putBody))
+	require.Len(t, doc.Events(), 2)
+
+	var masterSummary, exceptionSummary string
+	for _, comp := range doc.Events() {
+		summary, _ := comp.Props.Text(ical.PropSummary)
+		if comp.Props.Get(ical.PropRecurrenceID) == nil {
+			masterSummary = summary
+		} else {
+			exceptionSummary = summary
+		}
+	}
+	assert.Equal(t, "Series renamed", masterSummary)
+	assert.Equal(t, "Moved", exceptionSummary)
+
+	putBody = nil
+	mapping, err := p.RebaseEventOccurrences(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, *master, 6*time.Hour)
+	require.NoError(t, err)
+	assert.Equal(t, map[string]string{
+		"series/20260608T090000Z": "series/20260608T150000Z",
+	}, mapping)
+
+	rebased := decodeICS(t, string(putBody))
+	require.Len(t, rebased.Events(), 2)
+	for _, comp := range rebased.Events() {
+		rid := comp.Props.Get(ical.PropRecurrenceID)
+		if rid == nil {
+			continue
+		}
+		assert.Equal(t, "20260608T150000Z", rid.Value)
+		start, _ := comp.Props.DateTime(ical.PropDateTimeStart, time.UTC)
+		assert.Equal(t, time.Date(2026, 6, 8, 14, 0, 0, 0, time.UTC), start)
+	}
+
+	putBody = nil
+	err = p.RemoveEventOccurrence(context.Background(), cal.Calendar{RemoteID: "/dav/calendars/user/cal/"}, cal.Event{
+		RemoteID:      objectHref,
+		RecurringID:   "series",
+		OriginalStart: time.Date(2026, 6, 8, 9, 0, 0, 0, time.UTC),
+	})
+	require.NoError(t, err)
+
+	removed := decodeICS(t, string(putBody))
+	require.Len(t, removed.Events(), 1)
 }

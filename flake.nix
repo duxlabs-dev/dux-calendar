@@ -206,6 +206,7 @@
               gnumake
 
               quickshell
+              (duxQtBaseFor pkgs)
 
               prek
               uv
@@ -215,9 +216,21 @@
               nil
             ];
 
+            # Let `make run` find the Qt QML modules and the dux-qt-base
+            # runtime built against this shell's Qt, without requiring a
+            # system-wide install.
+            QML_IMPORT_PATH = mkQmlImportPath pkgs (
+              with pkgs.kdePackages; [
+                qtdeclarative
+                qtsvg
+              ]
+            );
+
             shellHook = ''
               touch quickshell/.qmlls.ini 2>/dev/null
               if [ ! -f .git/hooks/pre-commit ]; then prek install; fi
+              mkdir -p core/bin
+              ln -sfn ${duxQtBaseFor pkgs}/lib/libdux-qt-base.so.0 core/bin/libdux-qt-base.so.0
             '';
           };
         }

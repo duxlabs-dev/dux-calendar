@@ -8,6 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	ical "github.com/emersion/go-ical"
 	"github.com/google/uuid"
@@ -53,9 +54,84 @@ func (p *Provider) ImportEvent(ctx context.Context, cal calendar.Calendar, ev *c
 }
 
 func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *calendar.Event) (*calendar.Event, error) {
-	if ev.UID == "" {
+	if ev.UID == "" && ev.RecurringID == "" {
 		return nil, fmt.Errorf("event missing UID")
 	}
+	source, err := p.calendarPath(cal)
+	if err != nil {
+		return nil, err
+	}
+
+	lookupUID := ev.UID
+	if ev.RecurringID != "" {
+		lookupUID = ev.RecurringID
+	}
+
+	path := source
+	var doc *ical.Calendar
+	switch {
+	case strings.HasPrefix(cal.RemoteID, "dir:"):
+		path, doc, err = findComponentFile(source, ical.CompEvent, lookupUID)
+	default:
+		doc, err = loadCalendarDoc(source)
+	}
+	if err != nil {
+		return nil, err
+	}
+
+	if ev.RecurringID != "" && !ev.OriginalStart.IsZero() {
+		rid, err := icalconv.ApplyEventOverride(doc, ev)
+		if err != nil {
+			return nil, err
+		}
+		if err := writeAtomic(path, doc); err != nil {
+			return nil, err
+		}
+		return storedOverride(cal, ev, rid), nil
+	}
+
+	if !icalconv.ReplaceMasterComponent(doc, ev.UID, icalconv.BuildEvent(ev, ev.UID).Component) {
+		return nil, fmt.Errorf("event not found")
+	}
+	if err := writeAtomic(path, doc); err != nil {
+		return nil, err
+	}
+	return storedEvent(cal, ev.UID, ev), nil
+}
+
+// RemoveEventOccurrence drops one RECURRENCE-ID override, leaving the master
+// and the rest of the series untouched.
+func (p *Provider) RemoveEventOccurrence(ctx context.Context, cal calendar.Calendar, ev calendar.Event) error {
+	if ev.RecurringID == "" {
+		return fmt.Errorf("event missing recurring id")
+	}
+	source, err := p.calendarPath(cal)
+	if err != nil {
+		return err
+	}
+
+	path := source
+	var doc *ical.Calendar
+	switch {
+	case strings.HasPrefix(cal.RemoteID, "dir:"):
+		path, doc, err = findComponentFile(source, ical.CompEvent, ev.RecurringID)
+	default:
+		doc, err = loadCalendarDoc(source)
+	}
+	if err != nil {
+		return err
+	}
+
+	removed, err := icalconv.RemoveEventOverride(doc, &ev)
+	if err != nil || !removed {
+		return err
+	}
+	return writeAtomic(path, doc)
+}
+
+// RebaseEventOccurrences moves every exception RECURRENCE-ID by delta while
+// keeping each exception's own start and end.
+func (p *Provider) RebaseEventOccurrences(ctx context.Context, cal calendar.Calendar, master calendar.Event, delta time.Duration) (map[string]string, error) {
 	source, err := p.calendarPath(cal)
 	if err != nil {
 		return nil, err
@@ -65,7 +141,7 @@ func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *c
 	var doc *ical.Calendar
 	switch {
 	case strings.HasPrefix(cal.RemoteID, "dir:"):
-		path, doc, err = findComponentFile(source, ical.CompEvent, ev.UID)
+		path, doc, err = findComponentFile(source, ical.CompEvent, master.UID)
 	default:
 		doc, err = loadCalendarDoc(source)
 	}
@@ -73,13 +149,19 @@ func (p *Provider) UpdateEvent(ctx context.Context, cal calendar.Calendar, ev *c
 		return nil, err
 	}
 
-	if !replaceComponent(doc, ical.CompEvent, ev.UID, icalconv.BuildEvent(ev, ev.UID).Component) {
-		return nil, fmt.Errorf("event not found")
+	mapping := icalconv.RebaseEventOverrides(doc, master.UID, delta)
+	if len(mapping) == 0 {
+		return mapping, nil
 	}
-	if err := writeAtomic(path, doc); err != nil {
-		return nil, err
-	}
-	return storedEvent(cal, ev.UID, ev), nil
+	return mapping, writeAtomic(path, doc)
+}
+
+func storedOverride(cal calendar.Calendar, ev *calendar.Event, rid string) *calendar.Event {
+	out := *ev
+	out.CalendarID = cal.ID
+	out.UID = ev.RecurringID + "/" + rid
+	out.RemoteID = ev.RecurringID
+	return &out
 }
 
 func (p *Provider) DeleteEvent(ctx context.Context, cal calendar.Calendar, ev calendar.Event) error {
