@@ -84,9 +84,16 @@
     "comment": ""
   },
   {
+    "term": "%1 time",
+    "translation": "",
+    "context": "recurrence label suffix for a fixed number of occurrences, singular, %1 is 1",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "%1 times",
     "translation": "",
-    "context": "recurrence label suffix for a fixed number of occurrences",
+    "context": "recurrence label suffix for a fixed number of occurrences, plural, %1 is a number",
     "reference": "",
     "comment": ""
   },

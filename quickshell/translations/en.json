@@ -72,10 +72,16 @@
     "comment": "color source fallback status, %1 is Matugen, %2 is a preset name"
   },
   {
+    "term": "%1 time",
+    "context": "%1 time",
+    "reference": "Services/DankCalService.qml:1185",
+    "comment": "recurrence label suffix for a fixed number of occurrences, singular, %1 is 1"
+  },
+  {
     "term": "%1 times",
     "context": "%1 times",
-    "reference": "Services/DankCalService.qml:1185",
-    "comment": "recurrence label suffix for a fixed number of occurrences"
+    "reference": "Services/DankCalService.qml:1187",
+    "comment": "recurrence label suffix for a fixed number of occurrences, plural, %1 is a number"
   },
   {
     "term": "%1 will close and reopen with the new zoom.",
@@ -422,7 +428,7 @@
   {
     "term": "Add account",
     "context": "Add account",
-    "reference": "Modules/CalendarSidebar.qml:1023, Modals/AccountAddModal.qml:220, Modals/AccountAddModal.qml:310, Modals/SettingsContent.qml:1432, Services/DankCalService.qml:1588",
+    "reference": "Modules/CalendarSidebar.qml:1023, Modals/AccountAddModal.qml:220, Modals/AccountAddModal.qml:310, Modals/SettingsContent.qml:1432, Services/DankCalService.qml:1590",
     "comment": "account add modal header title | account add modal window title | add account button on accounts page | sidebar button to add a provider account | toast action to re-add an account that failed to reconnect"
   },
   {
@@ -986,13 +992,13 @@
   {
     "term": "Couldn't reconnect. Add the account again to sign in.",
     "context": "Couldn't reconnect. Add the account again to sign in.",
-    "reference": "Services/DankCalService.qml:1618",
+    "reference": "Services/DankCalService.qml:1620",
     "comment": "toast when reconnecting an account fails"
   },
   {
     "term": "Couldn't update task",
     "context": "Couldn't update task",
-    "reference": "Services/DankCalService.qml:1344",
+    "reference": "Services/DankCalService.qml:1346",
     "comment": "toast when a task update fails"
   },
   {
@@ -1772,7 +1778,7 @@
   {
     "term": "Local",
     "context": "Local",
-    "reference": "Modals/AccountAddModal.qml:126, Modals/AccountAddModal.qml:510, Modals/SettingsContent.qml:1283, Services/DankCalService.qml:1831",
+    "reference": "Modals/AccountAddModal.qml:126, Modals/AccountAddModal.qml:510, Modals/SettingsContent.qml:1283, Services/DankCalService.qml:1833",
     "comment": "local provider name in account add modal | local provider name in account list | provider label for a local account"
   },
   {
@@ -1826,7 +1832,7 @@
   {
     "term": "Marked as not done",
     "context": "Marked as not done",
-    "reference": "Services/DankCalService.qml:1347",
+    "reference": "Services/DankCalService.qml:1349",
     "comment": "toast after un-completing a task"
   },
   {
@@ -3158,7 +3164,7 @@
   {
     "term": "Task completed",
     "context": "Task completed",
-    "reference": "Services/DankCalService.qml:1347",
+    "reference": "Services/DankCalService.qml:1349",
     "comment": "toast after completing a task"
   },
   {
@@ -3230,7 +3236,7 @@
   {
     "term": "This account cannot be reconnected — remove it and add it again.",
     "context": "This account cannot be reconnected — remove it and add it again.",
-    "reference": "Services/DankCalService.qml:1609",
+    "reference": "Services/DankCalService.qml:1611",
     "comment": "error when reconnect is unavailable for a provider"
   },
   {
@@ -3326,7 +3332,7 @@
   {
     "term": "Undo",
     "context": "Undo",
-    "reference": "Services/DankCalService.qml:1348",
+    "reference": "Services/DankCalService.qml:1350",
     "comment": "toast undo action"
   },
   {
@@ -3632,7 +3638,7 @@
   {
     "term": "until %1",
     "context": "until %1",
-    "reference": "Services/DankCalService.qml:1187",
+    "reference": "Services/DankCalService.qml:1189",
     "comment": "recurrence label suffix with an end date"
   },
   {

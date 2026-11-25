@@ -35,6 +35,9 @@
   "%1 theme missing or invalid — using the %2 preset.": {
     "%1 theme missing or invalid — using the %2 preset.": "%1-thema ontbreekt of is ongeldig — de voorinstelling %2 wordt gebruikt."
   },
+  "%1 time": {
+    "%1 time": ""
+  },
   "%1 times": {
     "%1 times": "%1 keer"
   },
@@ -903,10 +906,10 @@
     "Location": "Locatie"
   },
   "Long": {
-    "Long": ""
+    "Long": "Lang"
   },
   "Longer": {
-    "Longer": ""
+    "Longer": "Langer"
   },
   "Low": {
     "Low": "Laag"
@@ -1437,10 +1440,10 @@
     "Shape": "Vorm"
   },
   "Short": {
-    "Short": ""
+    "Short": "Kort"
   },
   "Shorter": {
-    "Shorter": ""
+    "Shorter": "Korter"
   },
   "Show": {
     "Show": "Tonen"

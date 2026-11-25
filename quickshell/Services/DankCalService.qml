@@ -1181,8 +1181,10 @@ Singleton {
             if (names.length > 0)
                 label += " " + I18n.tr("on %1", "recurrence label suffix listing weekdays, %1 like 'Mon, Wed'").arg(names.join(", "));
         }
-        if (count > 0)
-            label += ", " + I18n.tr("%1 times", "recurrence label suffix for a fixed number of occurrences").arg(count);
+        if (count === 1)
+            label += ", " + I18n.tr("%1 time", "recurrence label suffix for a fixed number of occurrences, singular, %1 is 1").arg(count);
+        else if (count > 1)
+            label += ", " + I18n.tr("%1 times", "recurrence label suffix for a fixed number of occurrences, plural, %1 is a number").arg(count);
         else if (until)
             label += ", " + I18n.tr("until %1", "recurrence label suffix with an end date").arg(SettingsData.formatDate(until, "MMM d, yyyy"));
         return label;

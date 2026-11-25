@@ -35,6 +35,9 @@
   "%1 theme missing or invalid — using the %2 preset.": {
     "%1 theme missing or invalid — using the %2 preset.": "سمة 1% غير موجودة أو تالفه — سيتم ضبط 2% السابق ."
   },
+  "%1 time": {
+    "%1 time": ""
+  },
   "%1 times": {
     "%1 times": "من المرات"
   },

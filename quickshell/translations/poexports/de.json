@@ -35,6 +35,9 @@
   "%1 theme missing or invalid — using the %2 preset.": {
     "%1 theme missing or invalid — using the %2 preset.": "%1 Theme fehlt oder ist ungültig – verwendet wird das %2 Preset."
   },
+  "%1 time": {
+    "%1 time": ""
+  },
   "%1 times": {
     "%1 times": "%1 Mal"
   },
@@ -882,7 +885,7 @@
     "Load colors from your own theme file.": "Farben aus Ihrer eigenen Theme-Datei laden."
   },
   "Loading setup instructions…": {
-    "Loading setup instructions…": "Einrichtungsanweisungen werden geladen …"
+    "Loading setup instructions…": "Anweisungen zur Einrichtung werden geladen …"
   },
   "Local": {
     "Local": "Lokal"
@@ -903,10 +906,10 @@
     "Location": "Ort"
   },
   "Long": {
-    "Long": ""
+    "Long": "Lang"
   },
   "Longer": {
-    "Longer": ""
+    "Longer": "Länger"
   },
   "Low": {
     "Low": "Niedrig"
@@ -1221,7 +1224,7 @@
     "Playful": "Spielerisch"
   },
   "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": {
-    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": "Geben Sie ein Verzeichnis mit %1-Dateien an. Jedes Unterverzeichnis oder jede %1-Datei wird zu einem Kalender – kompatibel mit %2-Layouts. Das Verzeichnis wird erstellt, falls es noch nicht existiert."
+    "Point at a directory of %1 files. Each subdirectory or %1 file becomes a calendar — compatible with %2 layouts. The directory is created if it doesn't exist.": "Verweisen Sie auf ein Verzeichnis mit %1-Dateien. Jedes Unterverzeichnis oder jede %1-Datei wird zu einem Kalender – kompatibel mit %2-Layouts. Das Verzeichnis wird erstellt, falls es noch nicht existiert."
   },
   "Preset": {
     "Preset": "Preset"
@@ -1374,7 +1377,7 @@
     "Save": "Speichern"
   },
   "Saving...": {
-    "Saving...": "Wird gespeichert ..."
+    "Saving...": "Speicherung ..."
   },
   "Scale": {
     "Scale": "Skalierung"
@@ -1392,7 +1395,7 @@
     "Search failed": "Suche fehlgeschlagen"
   },
   "Searching": {
-    "Searching": "Suche ..."
+    "Searching": "Wird gesucht"
   },
   "Secondary": {
     "Secondary": "Sekundär"
@@ -1437,10 +1440,10 @@
     "Shape": "Form"
   },
   "Short": {
-    "Short": ""
+    "Short": "Kurz"
   },
   "Shorter": {
-    "Shorter": ""
+    "Shorter": "Kürzer"
   },
   "Show": {
     "Show": "Anzeigen"
@@ -1455,10 +1458,10 @@
     "Show all-day reminders": "Ganztägige Erinnerungen anzeigen"
   },
   "Show an event that appears in several calendars once, with dots for the other calendars.": {
-    "Show an event that appears in several calendars once, with dots for the other calendars.": "Ein Ereignis, das in mehreren Kalendern erscheint, nur einmal an, und die anderen Kalender mit Punkten markieren."
+    "Show an event that appears in several calendars once, with dots for the other calendars.": "Ein Ereignis, das in mehreren Kalendern erscheint, nur einmal zeigen, die anderen Kalender mit Punkten markieren."
   },
   "Show calendar": {
-    "Show calendar": "Kalender anzeigen"
+    "Show calendar": "Kalender zeigen"
   },
   "Show task lists and the Tasks view when an account provides them.": {
     "Show task lists and the Tasks view when an account provides them.": "Aufgabenlisten und die Aufgabenansicht anzeigen, wenn ein Konto diese bereitstellt."
@@ -1695,7 +1698,7 @@
     "Using %1 dynamic colors.": "Unter Verwendung von %1 dynamischen Farben."
   },
   "Verify desktop notifications are working.": {
-    "Verify desktop notifications are working.": "Überprüfen, ob Desktop-Benachrichtigungen funktionieren."
+    "Verify desktop notifications are working.": "Verifizieren Sie, ob Desktop-Benachrichtigungen funktionieren."
   },
   "Version": {
     "Version": "Version"
@@ -1731,7 +1734,7 @@
     "Weekly": "Wöchentlich"
   },
   "Weight": {
-    "Weight": "Stärke"
+    "Weight": "Wichtung"
   },
   "What the window's close button does.": {
     "What the window's close button does.": "Was die Schließen-Schaltfläche des Fensters bewirkt."
